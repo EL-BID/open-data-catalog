@@ -9,7 +9,8 @@
     "description": "The Latin Macro Watch (LMW) is a macroeconomic and financial database that offers indicators on economic activity, fiscal and external accounts, financial markets, and forecasts. Historical data at monthly, quarterly, and annual frequencies will be available starting in 1990 and cover the 26 borrowing members of the Inter-American Development Bank. The database is currently undergoing a revision and enhancement process.",
     "tags": ["economy", "finance", "2021"],
     "year": [1990, 1991, 1992, 2024],
-    "url": "open-data-catalog/Economics/Latin-Macro-Watch-Dataset/tbnd-z94f",
+    "url": "open-data-catalog/Economics/Latin-Macro-Watch-Dataset/tbnd-z94f/index.html",
+    "download_link": "https://github.com/EL-BID/open-data-catalog/raw/refs/heads/main/data/tbnd-z94f/Latin_Macro_Watch_Dataset_20241022.csv?download=",
     "updates": "Updates monthly",
     "part_of_series": "Part of macroeconomic series",
     "connection_with_other_products": "Tied to IDB publication"
