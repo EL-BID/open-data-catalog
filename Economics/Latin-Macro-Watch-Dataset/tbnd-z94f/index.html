@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Latin Macro Watch Dataset</title>
+  <!-- Include Open Sans Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Title Section */
+    .title-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .title-left h1 {
+      margin: 0;
+      font-size: 1.5em;
+      color: #004e70;
+    }
+
+    .title-left p {
+      margin: 10px 0 0 0;
+      font-size: 1.2em;
+      color: #777;
+      /* Removed bold styling from 'by' */
+    }
+
+    .sector-name {
+      font-weight: bold; /* Only sector name is bold */
+    }
+
+    .title-right #download-button {
+      padding: 12px 25px;
+      background-color: #004e70;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    /* Main Section */
+    .main-section {
+      display: flex;
+      margin-top: 60px;
+    }
+
+    .main-left {
+      flex: 0 0 35%;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+
+    .main-right {
+      flex: 0 0 65%;
+      min-width: 250px;
+      box-sizing: border-box;
+    }
+
+    /* Categories */
+    #categories {
+      margin-bottom: 30px;
+    }
+
+    .category-pill {
+      display: inline-block;
+      background-color: #dbedf8;
+      color: #004e70;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 5px 5px 5px 0;
+      font-size: 0.9em;
+      font-weight: bold; /* Pills are bold */
+    }
+
+    /* Description */
+    #dataset-description {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    /* Metadata Section */
+    .metadata-title {
+      font-size: 1.5em;
+      color: #004e70;
+      margin-bottom: 20px;
+    }
+
+    /* Metadata Table */
+    #metadata-table {
+      border-top: 1px solid #ccc;
+    }
+
+    .metadata-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .metadata-name {
+      color: #555;
+      font-weight: normal; /* Field names not bold */
+    }
+
+    .metadata-value {
+      font-weight: bold; /* Only values are bold */
+      color: #333;
+    }
+
+    /* Show More Button */
+    #show-more-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #004e70;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      text-align: center;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .title-section, .main-section {
+        flex-direction: column;
+      }
+
+      .main-left, .main-right {
+        flex: 1 1 100%;
+      }
+
+      .title-right {
+        margin-top: 20px;
+      }
+    }
+  </style>
+
+  <!-- Header and Footer CSS (level up) -->
+  <link rel="stylesheet" href="../../../../header-footer.css">
+</head>
+<body>
+  <!-- Header -->
+  <div id="header"></div>
+
+  <div class="content">
+    <!-- Title and Sector -->
+    <div class="title-section">
+      <div class="title-left">
+        <h1 id="dataset-title">Dataset Title</h1>
+        <p id="dataset-sector">by <span class="sector-name">Sector Name</span></p>
+      </div>
+      <div class="title-right">
+        <button id="download-button">Download Current Dataset</button>
+      </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="main-section">
+      <!-- Left Side -->
+      <div class="main-left">
+        <!-- Categories -->
+        <div id="categories"></div>
+        <!-- Description -->
+        <p id="dataset-description"></p>
+      </div>
+      <!-- Right Side (Metadata) -->
+      <div class="main-right">
+        <!-- Metadata Title -->
+        <h2 class="metadata-title">Metadata</h2>
+        <div id="metadata-table"></div>
+        <!-- Show More Button -->
+        <button id="show-more-btn">Show More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Include Header and Footer -->
+  <script>
+    function includeHTML() {
+      // Include the header
+      fetch('/header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        });
+
+      // Include the footer
+      fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        });
+    }
+
+    includeHTML();
+  </script>
+
+  <!-- Populate Page with Dataset Metadata -->
+  <script>
+    // Function to populate the page
+    function populatePage(dataset) {
+      // Set Title and Sector
+      document.getElementById('dataset-title').textContent = dataset.title;
+      // Wrap the sector name in a span with class 'sector-name'
+      document.getElementById('dataset-sector').innerHTML = 'by <span class="sector-name">' + dataset.sector + '</span>';
+
+      // Set Description
+      document.getElementById('dataset-description').textContent = dataset.description;
+
+      // Populate Categories
+      const categoriesDiv = document.getElementById('categories');
+      dataset.categories.forEach(category => {
+        const pill = document.createElement('span');
+        pill.className = 'category-pill';
+        pill.textContent = category;
+        categoriesDiv.appendChild(pill);
+      });
+
+      // Set Download Button Link
+      document.getElementById('download-button').addEventListener('click', () => {
+        window.location.href = dataset.url;
+      });
+
+      // Populate Metadata with selected fields
+      const metadataTable = document.getElementById('metadata-table');
+      const metadataFields = {
+        "Regional Coverage": dataset.regional_coverage.join(', '),
+        "Temporal Coverage": dataset.temporal_coverage,
+        "Available Formats": dataset.available_formats.join(', '),
+        "Tags": dataset.tags.join(', '),
+        "Year": dataset.year.join(', '),
+        "Updates": dataset.updates,
+        "Part of Series": dataset.part_of_series,
+        "Connection with Other Products": dataset.connection_with_other_products
+      };
+
+      // Show only the first 7 items initially
+      const metadataKeys = Object.keys(metadataFields);
+      const maxItemsToShow = 7;
+      let itemsShown = 0;
+
+      metadataKeys.forEach((key, index) => {
+        const value = metadataFields[key];
+        if (value) { // Only include fields with a value
+          const row = document.createElement('div');
+          row.className = 'metadata-row';
+          row.dataset.index = index; // Store index for show more functionality
+
+          const nameDiv = document.createElement('div');
+          nameDiv.className = 'metadata-name';
+          nameDiv.textContent = key;
+
+          const valueDiv = document.createElement('div');
+          valueDiv.className = 'metadata-value';
+          valueDiv.textContent = value;
+
+          row.appendChild(nameDiv);
+          row.appendChild(valueDiv);
+
+          if (itemsShown < maxItemsToShow) {
+            metadataTable.appendChild(row);
+            itemsShown++;
+          } else {
+            row.style.display = 'none'; // Hide additional items
+            metadataTable.appendChild(row);
+          }
+        }
+      });
+
+      // Show More Button functionality
+      const showMoreBtn = document.getElementById('show-more-btn');
+      if (metadataKeys.length <= maxItemsToShow) {
+        showMoreBtn.style.display = 'none'; // Hide button if there's nothing more to show
+      } else {
+        let isExpanded = false;
+        showMoreBtn.addEventListener('click', () => {
+          isExpanded = !isExpanded;
+          const rows = metadataTable.querySelectorAll('.metadata-row');
+          rows.forEach((row, index) => {
+            if (index >= maxItemsToShow) {
+              row.style.display = isExpanded ? 'flex' : 'none';
+            }
+          });
+          showMoreBtn.textContent = isExpanded ? 'Show Less' : 'Show More';
+        });
+      }
+    }
+
+    // Fetch datasets from '/browse/datasets.json' and filter
+    fetch('/browse/datasets.json')
+      .then(response => response.json())
+      .then(data => {
+        // Find the dataset with the title 'Latin Macro Watch Dataset'
+        const dataset = data.find(item => item.title === 'Latin Macro Watch Dataset');
+
+        if (dataset) {
+          // Select specific fields from the dataset object
+          const selectedFields = {
+            title: dataset.title,
+            sector: dataset.sector,
+            description: dataset.description,
+            categories: dataset.categories,
+            regional_coverage: dataset.regional_coverage,
+            temporal_coverage: dataset.temporal_coverage,
+            available_formats: dataset.available_formats,
+            tags: dataset.tags,
+            year: dataset.year,
+            updates: dataset.updates,
+            url: dataset.url,
+            part_of_series: dataset.part_of_series,
+            connection_with_other_products: dataset.connection_with_other_products
+          };
+
+          populatePage(selectedFields);
+        } else {
+          // Handle the case where the dataset is not found
+          document.querySelector('.content').innerHTML = '<p>Dataset not found.</p>';
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching datasets:', error);
+        document.querySelector('.content').innerHTML = '<p>Error loading dataset information.</p>';
+      });
+  </script>
+</body>
+</html>
