@@ -158,7 +158,7 @@
   </style>
 
   <!-- Header and Footer CSS (level up) -->
-  <link rel="stylesheet" href="../../../../header-footer.css">
+  <link rel="stylesheet" href="../../../header-footer.css">
 </head>
 <body>
   <!-- Header -->
@@ -203,14 +203,14 @@
   <script>
     function includeHTML() {
       // Include the header
-      fetch('/header.html')
+      fetch('../../../header.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('header').innerHTML = data;
         });
 
       // Include the footer
-      fetch('/footer.html')
+      fetch('../../../footer.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('footer').innerHTML = data;
@@ -312,7 +312,7 @@
     }
 
     // Fetch datasets from '/browse/datasets.json' and filter
-    fetch('/browse/datasets.json')
+    fetch('/open-data-catalog/browse/datasets.json')
       .then(response => response.json())
       .then(data => {
         // Find the dataset with the title 'Latin Macro Watch Dataset'
