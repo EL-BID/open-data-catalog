@@ -1,0 +1,182 @@
+
+/* Styles for the landing page */
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-section {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+}
+
+.main-header {
+  flex: 0 0 30%;
+  max-width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.catalog-cards {
+  flex: 0 0 70%;
+  max-width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.catalog-card {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 40px);
+  display: flex;
+  align-items: center;
+}
+
+.card-icon {
+  width: 35%;
+  text-align: center;
+}
+
+.card-text {
+  width: 65%;
+  text-align: left;
+}
+
+.card-text h3 {
+  font-size: 35px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.card-text p {
+  font-size: 16px;
+  color: #888;
+  margin: 5px 0;
+}
+
+.catalog-link {
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 10px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+hr {
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Button Styles */
+.btn-catalog {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.btn-catalog-dataset {
+  background-color: #004e70;
+  color: white;
+}
+
+.btn-catalog-publication {
+  background-color: #009ade;
+  color: white;
+}
+
+/* Research section styles */
+.research-section {
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.research-section h3 {
+  text-align: left;
+  font-weight: 700;
+  color: #009ade;
+}
+
+.research-section p {
+  text-align: left;
+}
+
+.research-links h4 {
+  text-align: left;
+}
+
+.research-links table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.research-links th,
+.research-links td {
+  padding: 8px;
+  text-align: left;
+}
+
+.research-links th {
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.research-links td {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.research-links tr:hover {
+  background-color: #f9f9f9;
+}
+
+.dataset-link {
+  color: #004e70;
+  font-weight: bold;
+}
+
+.publication-link {
+  color: #348560;
+  font-weight: bold;
+}
+
+/* Custom colors for each card */
+.card-1 .card-text h3,
+.card-1 .catalog-link,
+.card-1 .card-icon i {
+  color: #004e70;
+}
+
+.card-2 .card-text h3,
+.card-2 .catalog-link,
+.card-2 .card-icon i {
+  color: #009ade;
+}
+
+.card-3 .card-text h3,
+.card-3 .catalog-link,
+.card-3 .card-icon i {
+  color: #7a6e27;
+}
+
+.card-4 .card-text h3,
+.card-4 .catalog-link,
+.card-4 .card-icon i {
+  color: #308144;
+}

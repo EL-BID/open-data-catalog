@@ -1,11 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Document</title>
-</head>
-<body>
- 
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDB | Open Data LAC</title>
+    <link rel="icon" href="assets/icons/favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <script src="js/include.js" defer></script>
+  </head>
+  <body>
+    <div data-include="components/header.html"></div>
+    <main>
+      <section class="landing-section">
+        <!-- Intro Text -->
+        <div class="main-header">
+          <h1>Welcome to IDB’s Open Data LAC</h1>
+          <p>The portal upholds our commitment to share data with the people of
+            Latin America and the Caribbean so they can make informed decisions
+            for progress in the region.</p>
+        </div>
+        <!-- Catalog Cards Section -->
+        <div class="catalog-cards">
+          <!-- Card 1: Datasets -->
+          <div class="catalog-card card-1">
+            <div class="card-icon">
+              <i class="fas fa-database fa-3x"></i>
+            </div>
+            <div class="card-text">
+              <h3>+200</h3>
+              <p>Unique datasets in our open data catalog</p>
+              <a href="browse/index.html" class="catalog-link">Browse the
+                catalog
+                →</a>
+            </div>
+          </div>
+          <!-- Card 2: Research Publications -->
+          <div class="catalog-card card-2">
+            <div class="card-icon">
+              <i class="fas fa-chart-line fa-3x"></i>
+            </div>
+            <div class="card-text">
+              <h3>+300</h3>
+              <p>Linked research datasets</p>
+              <a href="research/index.html" class="catalog-link">Dig into our
+                research →</a>
+            </div>
+          </div>
+          <!-- Card 3: Dashboards -->
+          <div class="catalog-card card-3">
+            <div class="card-icon">
+              <i class="fas fa-tachometer-alt fa-3x"></i>
+            </div>
+            <div class="card-text">
+              <h3>+20</h3>
+              <p>Data Portals powered by IDB data</p>
+              <a
+                href="https://www.iadb.org/en/knowledge-resources/data/data-platforms"
+                target="_blank" rel="noopener" class="catalog-link">Discover IDB
+                dashboards →</a>
+            </div>
+          </div>
+          <!-- Card 4: Indicators -->
+          <div class="catalog-card card-4">
+            <div class="card-icon">
+              <i class="fas fa-chart-bar fa-3x"></i>
+            </div>
+            <div class="card-text">
+              <h3>+400</h3>
+              <p>Indicators focused on Latin America and the Caribbean</p>
+              <a href="indicators/index.html" class="catalog-link">Learn from
+                our
+                indicators →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Separator Line -->
+      <hr>
+
+      <!-- Data-driven Research Section -->
+      <section class="research-section">
+        <h3>Data-driven research</h3>
+        <p>Our researchers analyze and process data to share knowledge that is
+          backed by the rigor of our data. Explore our most popular reports and
+          papers along with the datasets that make them happen.</p>
+
+        <!-- Buttons to Navigate to Catalog and Publications -->
+        <div style="text-align: left; margin-bottom: 20px;">
+          <a href="browse/index.html" rel="noopener"
+            class="btn-catalog btn-catalog-dataset">Explore the dataset
+            catalog</a>
+          <a href="https://publications.iadb.org/" target="_blank"
+            rel="noopener"
+            class="btn-catalog btn-catalog-publication">See the publication
+            catalog</a>
+        </div>
+
+        <!-- Recent Research Projects Table -->
+        <div class="research-links">
+          <h4>Recent Knowledge Products</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Knowledge Product</th>
+                <th>Dataset</th>
+                <th>Publication</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Grandmothers and the Gender Gap in the Mexican Labor
+                  Market</td>
+                <td><a href="https://mydata.iadb.org/resource/h3ek-xh3t"
+                    rel="noopener" class="dataset-link">Dataset →</a></td>
+                <td><a
+                    href="https://publications.iadb.org/en/grandmothers-and-gender-gap-mexican-labor-market"
+                    target="_blank" rel="noopener"
+                    class="publication-link">Publication →</a></td>
+              </tr>
+              <tr>
+                <td>Quality of Parenting Programs and Child Development
+                  Outcomes:
+                  The Case of Peru's Cuna Mas</td>
+                <td><a href="https://mydata.iadb.org/resource/2ack-9kw8"
+                    class="dataset-link">Dataset →</a></td>
+                <td><a
+                    href="https://publications.iadb.org/en/quality-parenting-programs-and-child-development-outcomes-case-perus-cuna-mas"
+                    target="_blank" rel="noopener"
+                    class="publication-link">Publication →</a></td>
+              </tr>
+              <tr>
+                <td>OLAS Household Survey Data Set</td>
+                <td><a
+                    href="https://mydata.iadb.org/Water-and-Sanitation/OLAS-SCL-WASH-Household-Survey-Dataset/bjat-gfsm/about_data"
+                    rel="noopener" class="dataset-link">Dataset →</a></td>
+                <td><a
+                    href="https://publications.iadb.org/en/fs-13-olas-household-survey-data-set"
+                    target="_blank" rel="noopener"
+                    class="publication-link">Publication →</a></td>
+              </tr>
+              <tr>
+                <td>Stylized Facts on the Quality of Banking Regulation in Latin
+                  America and the Caribbean</td>
+                <td><a
+                    href="https://mydata.iadb.org/Financial-Markets-and-Institutions/Survey-Data-for-Stylized-Facts-on-the-Quality-of-B/vckn-9t7x/about_data"
+                    rel="noopener" class="dataset-link">Dataset →</a></td>
+                <td><a
+                    href="https://publications.iadb.org/en/stylized-facts-quality-banking-regulation-latin-america-and-caribbean"
+                    target="_blank" rel="noopener"
+                    class="publication-link">Publication →</a></td>
+              </tr>
+              <tr>
+                <td>A Better World for Migrants in Latin America and the
+                  Caribbean: Dataset</td>
+                <td><a
+                    href="https://mydata.iadb.org/Research-Catalog/A-Better-World-for-Migrants-in-Latin-America-and-t/ac5w-5d2c/about_data"
+                    rel="noopener" class="dataset-link">Dataset →</a></td>
+                <td><a
+                    href="https://publications.iadb.org/en/better-world-migrants-latin-america-and-caribbean"
+                    target="_blank" rel="noopener"
+                    class="publication-link">Publication →</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Separator Line -->
+      <hr>
+
+      <!-- Thematic Dashboard Section -->
+      <section class="research-section">
+        <h3>Data Portals</h3>
+        <p>Our teams work tirelessly to gather and harmonize data to power
+          interactive data portals that visualize and expose the state of
+          affairs
+          in the region. These are our newest data portals.</p>
+
+        <!-- Buttons to Navigate to Data Portals -->
+        <div style="text-align: left; margin-bottom: 20px;">
+          <a
+            href="https://www.iadb.org/en/knowledge-resources/data/data-platforms"
+            class="btn-catalog btn-catalog-dataset">Discover all portals</a>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <div data-include="components/footer.html"></div>
+  </body>
 </html>
