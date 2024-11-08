@@ -1,0 +1,8 @@
+<div *ngIf="dataset">
+  <h2>{{ dataset.name }}</h2>
+  <p>{{ dataset.description }}</p>
+  <p><strong>ID:</strong> {{ dataset.id }}</p>
+  <p><strong>Filename:</strong> {{ dataset.filename }}</p>
+
+  <button (click)="downloadDataset()">Descargar CSV</button>
+</div>
