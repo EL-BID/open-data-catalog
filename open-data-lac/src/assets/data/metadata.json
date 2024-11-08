@@ -12,6 +12,13 @@
     "description": "Este es el dataset de ejemplo 2",
     "filename": "dataset2",
     "category": "health"
+  },
+  {
+    "id": "3",
+    "name": "Dataset 3",
+    "description": "Este es el dataset de ejemplo 3",
+    "filename": "dataset3",
+    "category": "social"
   }
 ]
 
