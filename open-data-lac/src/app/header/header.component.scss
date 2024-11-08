@@ -1,0 +1,87 @@
+/* Styles for header and footer */
+
+/* Header styles */
+/* General header styles */
+header {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* First frame (Investors, News, English) */
+.header-frame-1 {
+  background-color: #f0f4f6;
+  padding: 15px 20px;
+}
+
+.header-actions-left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-actions-left a {
+  color: #24506b;
+  margin-left: 15px;
+  margin-right: 30px;
+  /* font-weight: 600; */
+  text-decoration: none;
+}
+
+/* Second frame (IDB logo and main navigation) */
+.header-frame-2 {
+  background-color: #ffffff;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  margin-right: 50px; /* Add space between the logo and the navigation */
+  height: 50px;
+}
+
+/* Remove default list item bullets (circles) */
+.header-nav ul {
+  display: flex;
+  gap: 40px; /* Increase space between each navigation link */
+  list-style: none; /* This removes the default bullets */
+  padding: 0; /* Ensure no extra padding */
+  margin: 0;  /* Remove default margin */
+}
+
+.header-nav ul li {
+  margin: 0; /* Ensure no extra margin around the list items */
+}
+
+.header-nav ul li a {
+  color: #002f56;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.header-nav ul li a:hover {
+  text-decoration: underline; /* Optional: Add underline on hover for clarity */
+}
+
+
+/* Third frame (Breadcrumbs navigation) */
+.header-frame-3 {
+  background-color: #24506b;
+  padding: 20px 20px;
+}
+
+.header-breadcrumbs {
+  margin-left: 30px;
+  color: white;
+}
+
+.header-breadcrumbs a {
+  color: white;
+  text-decoration: none;
+  /* font-weight: 600; */
+}
+
+.header-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+

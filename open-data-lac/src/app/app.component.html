@@ -1,9 +1,3 @@
-<!-- app.component.html -->
-<h1>Bienvenido al Portal de Datos</h1>
-<p>Explora nuestros datasets y visualizaciones.</p>
-<!-- app.component.html -->
-<nav>
-  <a routerLink="/" routerLinkActive="active">Home</a>
-  <a routerLink="/dataset-catalog" routerLinkActive="active">Dataset Catalog</a>
-</nav>
-<router-outlet></router-outlet> <!-- Lugar donde se mostrarán los componentes según la ruta -->
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
