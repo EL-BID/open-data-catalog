@@ -1,125 +1,204 @@
+/* Variables */
 
-/* Styles for the landing page */
+:root {
+  --main-blue: #004E70;
+  --sky-blue: #196e8c;
+  --olive: #7a6e27;
+  --forest-green: #308144;
+  --white-color: #ffffff;
+}
+
+/* Font colors */
+
+.odl-main-blue-color {
+  color: var(--main-blue);
+}
+
+.odl-sky-blue-color {
+  color: var(--sky-blue);
+}
+
+.odl-olive-color {
+  color: var(--olive);
+}
+
+.odl-forest-green-color {
+  color: var(--forest-green);
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #3C3B3B;
+  line-height: 1.4;
   background-color: #fff;
-  margin: 0;
-  padding: 0;
 }
 
-.landing-section {
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+p {
+  margin: 1.6rem 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* General */
+
+.odl-section {
+  display: flex;
+  justify-content: center;
+  padding: 8rem 4rem;
+}
+
+.odl-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.odl-two-1-2-columns-container {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
-  padding: 40px 20px;
-  margin-bottom: 30px;
+  gap: 6rem;
 }
 
-.main-header {
-  flex: 0 0 30%;
-  max-width: 30%;
-  padding: 20px;
+.odl-two-1-2-columns-left {
+  flex: 0 0 25%;
+  max-width: 25%;
   box-sizing: border-box;
 }
 
-.catalog-cards {
-  flex: 0 0 70%;
-  max-width: 70%;
+.odl-two-1-2-columns-right {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  gap: 2rem;
+  align-self: center;
+  justify-content: center;
   box-sizing: border-box;
 }
 
 .catalog-card {
-  background-color: white;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 1rem;
   box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: calc(50% - 40px);
+  box-shadow: 0 0 40px 0 rgb(64 74 79 / 20%);
+  width: calc(50% - 2rem);
   display: flex;
   align-items: center;
 }
 
 .card-icon {
-  width: 35%;
+  width: 25%;
   text-align: center;
 }
 
 .card-text {
-  width: 65%;
+  width: 75%;
   text-align: left;
 }
 
-.card-text h3 {
-  font-size: 35px;
+.card-number {
+  font-size: 3rem;
   margin: 0;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .card-text p {
-  font-size: 16px;
-  color: #888;
   margin: 5px 0;
 }
 
 .catalog-link {
   text-decoration: none;
-  font-size: 14px;
   margin-top: 10px;
   display: inline-block;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 hr {
-  border-top: 1px solid #ccc;
-  margin: 20px 0;
+  max-width: 1440px;
+  margin: auto;
+  border-top: 1px solid #D3D2D1;
 }
 
-/* Button Styles */
+/* Button styles */
 .btn-catalog {
   padding: 10px 20px;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 1rem;
   margin-top: 20px;
   display: inline-block;
   cursor: pointer;
   margin-right: 10px;
-  font-weight: bold;
+  font-weight: 600;
+  color: white;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-catalog:hover {
+  text-decoration: none;
 }
 
 .btn-catalog-dataset {
-  background-color: #004e70;
-  color: white;
+  background-color: var(--main-blue);
+  border-color: var(--main-blue);
 }
 
 .btn-catalog-publication {
-  background-color: #009ade;
-  color: white;
+  color: var(--sky-blue);
+  background-color: white;
+  border: 2px solid var(--sky-blue);
 }
 
-/* Research section styles */
-.research-section {
-  padding: 30px;
-  flex-wrap: wrap;
+.btn-catalog-portals {
+  background-color: var(--olive);
+  border-color: var(--olive);
 }
 
-.research-section h3 {
-  text-align: left;
-  font-weight: 700;
-  color: #009ade;
+.btn-catalog-dataset:hover,
+.btn-catalog-dataset:focus,
+.btn-catalog-dataset.active {
+  box-shadow: 0px 4px 8px rgba(0, 78, 112, 0.3); /* Sombra sutil de main blue */
 }
 
-.research-section p {
-  text-align: left;
+.btn-catalog-publication:hover,
+.btn-catalog-publication:focus,
+.btn-catalog-publication.active {
+  box-shadow: 0px 4px 8px rgba(25, 110, 140, 0.3); /* Sombra sutil de sky blue */
 }
 
-.research-links h4 {
-  text-align: left;
+.btn-catalog-portals:hover,
+.btn-catalog-portals:focus,
+.btn-catalog-portals.active {
+  box-shadow: 0px 4px 8px rgba(122, 110, 39, 0.3); /* Sombra sutil de olive */
 }
 
 .research-links table {
@@ -127,56 +206,61 @@ hr {
   border-collapse: collapse;
 }
 
-.research-links th,
 .research-links td {
-  padding: 8px;
+  padding: 1rem;
   text-align: left;
 }
 
-.research-links th {
-  border-bottom: 1px solid #ddd;
-  font-weight: bold;
-}
-
 .research-links td {
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #D3D2D1;
 }
 
 .research-links tr:hover {
   background-color: #f9f9f9;
 }
 
-.dataset-link {
-  color: #004e70;
-  font-weight: bold;
+.research-links a {
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.publication-link {
-  color: #348560;
-  font-weight: bold;
+.research-links a:hover {
+  text-decoration: underline;
 }
 
-/* Custom colors for each card */
-.card-1 .card-text h3,
+.research-links td:nth-child(1) {
+  width: 66%;
+  font-weight: 600;
+}
+
+.research-links td:nth-child(2), .research-links td:nth-child(3) {
+  width: 17%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card-1 .card-number,
 .card-1 .catalog-link,
-.card-1 .card-icon i {
-  color: #004e70;
+.card-1 .card-icon i,
+.dataset-link {
+  color: var(--main-blue);
 }
 
-.card-2 .card-text h3,
+.card-2 .card-number,
 .card-2 .catalog-link,
-.card-2 .card-icon i {
-  color: #009ade;
+.card-2 .card-icon i,
+.publication-link {
+  color: var(--sky-blue);
 }
 
-.card-3 .card-text h3,
+.card-3 .card-number,
 .card-3 .catalog-link,
 .card-3 .card-icon i {
-  color: #7a6e27;
+  color: var(--olive);
 }
 
-.card-4 .card-text h3,
+.card-4 .card-number,
 .card-4 .catalog-link,
 .card-4 .card-icon i {
-  color: #308144;
+  color: var(--forest-green);
 }
