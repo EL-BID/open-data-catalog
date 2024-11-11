@@ -1,0 +1,42 @@
+<div *ngIf="dataset">
+  <h2>{{ dataset?.name }}</h2>
+  <p>{{ dataset?.description }}</p>
+  <p><strong>ID:</strong> {{ dataset?.id }}</p>
+  <p><strong>Filename:</strong> {{ dataset?.filename }}</p>
+
+  <button (click)="downloadDataset()">Descargar CSV</button>
+</div>
+
+<div *ngIf="loading">Cargando dataset...</div>
+
+<table *ngIf="!loading && datasetContent.length > 0">
+  <thead>
+    <tr>
+      <!-- Iteramos sobre las claves del primer objeto de datasetContent -->
+      <th *ngFor="let key of objectKeys(datasetContent[0])">{{ key }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Iteramos sobre las filas del dataset -->
+    <tr *ngFor="let row of paginatedDataset">
+      <td *ngFor="let key of objectKeys(row)">{{ row[key] }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Mensaje cuando no haya datos disponibles -->
+<div *ngIf="!loading && datasetContent.length === 0">
+  No se encontraron datos para mostrar.
+</div>
+
+<!-- Paginación -->
+<div *ngIf="datasetContent.length > rowsPerPage">
+  <button (click)="previousPage()" [disabled]="currentPage === 0">Anterior</button>
+  <button (click)="nextPage()" [disabled]="(currentPage + 1) * rowsPerPage >= datasetContent.length">Siguiente</button>
+</div>
+
+
+
+
+
+
