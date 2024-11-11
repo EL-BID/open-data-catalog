@@ -1,0 +1,77 @@
+/* General footer styles */
+footer {
+  background-color: #01374e;
+  padding:90px 30px;
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* First line: Footer navigation (centered) */
+.footer-nav {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex; /* Inline flex to center the list */
+  gap: 20px;
+}
+
+.footer-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Second line: Social media icons on the left, logos on the right */
+.footer-second-line {
+  display: flex;
+  justify-content: space-between; /* Space between icons and logos */
+  align-items: center; /* Align items vertically */
+  width: 100%;
+}
+
+/* Social media icons (left aligned) */
+.footer-social-media {
+  display: flex;
+  gap: 30px;
+}
+
+/* Font Awesome icons */
+.footer-social-media i {
+  font-size: 24px;
+  color: white;
+}
+
+/* Styling for image-based social media icons (if used instead of Font Awesome) */
+.footer-social-media img {
+  height: 30px;
+  width: auto;
+}
+
+.footer-social-media a:hover i,
+.footer-social-media a:hover img {
+  color: #ccc; /* For Font Awesome icons */
+  filter: brightness(80%); /* For image icons */
+}
+
+/* Logos (right aligned) */
+.footer-logos {
+  display: flex;
+  justify-content: flex-end; /* Align the combined logo to the right */
+  margin-left: auto; /* Ensures the logos are pushed to the right */
+}
+
+/* Combined logo image */
+.footer-logos img.combined-logos {
+  max-height: 40px; /* Adjust the height to whatever looks best */
+  width: auto; /* Maintain aspect ratio */
+}
