@@ -1,3 +1,2 @@
 * text=auto
-data/* filter=lfs diff=lfs merge=lfs -text
-*.csv filter=lfs diff=lfs merge=lfs -text
+src/assets/datasets/*.csv filter=lfs diff=lfs merge=lfs -text
