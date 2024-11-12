@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/open-data-lac",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -93,7 +93,7 @@
               {
                 "glob": "**/*",
                 "input": "src/assets",
-                "output": "/assets"
+                "output": "assets"
               },
               {
                 "glob": "**/*",
@@ -106,12 +106,6 @@
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []
-          }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "dir": "dist/browser"
           }
         }
       }
