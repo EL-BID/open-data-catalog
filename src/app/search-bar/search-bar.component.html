@@ -1,0 +1,40 @@
+<div class="search-bar">
+  <label for="search-input" class="visually-hidden">Buscar</label>
+  <span class="search-icon" aria-hidden="true">
+    <fa-icon [icon]="faSearch"></fa-icon>
+  </span>
+  <input
+    type="text"
+    id="search-input"
+    [(ngModel)]="searchTerm"
+    (input)="onSearchTermChange()"
+    (keyup.enter)="onSearch()"
+    (keydown)="handleKeydown($event)"
+    placeholder="Buscar datasets"
+    aria-label="Buscar en los datasets"
+    role="searchbox"
+    class="search-input"
+    aria-autocomplete="list"
+    aria-controls="suggestions-list"
+    [attr.aria-expanded]="filteredSuggestions.length > 0 ? 'true' : 'false'"
+  />
+
+  <!-- Botón para limpiar la búsqueda, solo visible cuando hay un término de búsqueda -->
+  <button *ngIf="searchTerm" class="clear-button"
+    (click)="clearSearch()"
+    aria-label="Limpiar búsqueda"
+  >
+    <fa-icon [icon]="faTimes"></fa-icon> </button>
+
+  <ul *ngIf="filteredSuggestions.length > 0" id="suggestions-list" class="suggestions-list" role="listbox">
+    <li *ngFor="let suggestion of filteredSuggestions; let i = index"
+        (click)="selectSuggestion(suggestion.title)"
+        class="suggestion-item"
+        role="option"
+        [class.selected]="i === selectedIndex"
+        [ngClass]="{'highlighted': i === selectedIndex}">
+      {{ suggestion.title }}
+    </li>
+  </ul>
+
+</div>

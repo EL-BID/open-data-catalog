@@ -1,0 +1,30 @@
+<div class="dataset-list-container">
+  <!-- Mostrar mensaje si no hay resultados -->
+  <div *ngIf="noResults" class="no-results-message">
+    <p>No se encontraron resultados para "{{ searchTerm }}".</p>
+  </div>
+
+  <!-- Mostrar los datasets si hay resultados -->
+  <div class="dataset-list" *ngFor="let dataset of filteredDatasets">
+    <div class="dataset-item">
+      <div class="dataset-info">
+        <h2 (click)="viewDataset(dataset.category, dataset.filename)" class="clickable-title" tabindex="0">
+          {{ dataset.title }}
+        </h2>
+        <div class="dataset-categories">{{ dataset.categories }}</div>
+        <p class="metadata-item">Regional Coverage:
+          <strong>{{ dataset.regional_coverage }}</strong></p>
+        <p class="metadata-item">Temporal Coverage:
+          <strong>{{ dataset.temporal_coverage }}</strong></p>
+        <p class="metadata-item">Available Formats:
+          <strong>{{ dataset.available_formats.join(', ') }}</strong></p>
+      </div>
+      <div class="metadata-sidebar">
+        <h4>RELEVANT METADATA</h4>
+        <p><span class="check-icon">✔</span> {{dataset.updates}}</p>
+        <p><span class="check-icon">✔</span>{{dataset.part_of_series}}</p>
+        <p><span class="check-icon">✔</span>{{dataset.connection_with_other_products}}</p>
+      </div>
+    </div>
+  </div>
+</div>

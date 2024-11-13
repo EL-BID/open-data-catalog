@@ -1,0 +1,110 @@
+.clickable-title {
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--main-blue);
+}
+
+.clickable-title:hover {
+  color: var(--sky-blue);
+  text-decoration: underline;
+}
+
+
+
+/* Dataset Item Styles */
+.dataset-item {
+  display: flex; /* Change to flex to accommodate side-by-side layout */
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Grey border */
+  border-radius: 5px;
+  background-color: transparent; /* No background color */
+}
+
+.dataset-info {
+  width: 65%; /* Adjust width as needed */
+}
+
+.metadata-sidebar {
+  width: 30%; /* Adjust width as needed */
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align to the bottom */
+}
+
+.metadata-sidebar h4 {
+  margin-top: 0;
+  color: #605f59;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.metadata-sidebar p {
+  color: #605f59;
+  margin: 5px 0;
+}
+
+.metadata-sidebar p strong {
+  color: #605f59;
+  font-weight: bold;
+}
+
+.dataset-item h3 {
+  margin-top: 0;
+  margin-bottom: 5px; /* Reduce space below title */
+  color: #004e70;
+  font-size: 1.25em;
+}
+
+.dataset-item .by-line {
+  margin: 0; /* No margin to keep it close to title */
+}
+
+.dataset-item .dataset-categories {
+  margin-top: 15px; /* Increase space above categories */
+  margin-bottom: 15px; /* Increase space below categories */
+}
+
+.dataset-item .category-pill {
+  display: inline-block;
+  background-color: #dbedf8;
+  color: #004e70;
+  padding: 3px 8px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  margin-right: 5px;
+}
+
+/* Remove hover effect on pills */
+.dataset-item .category-pill:hover {
+  background-color: #dbedf8; /* Keep same color on hover */
+}
+
+.dataset-item p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.dataset-item .metadata-item {
+  margin-top: 10px; /* Space between metadata items */
+}
+
+.dataset-item p strong {
+  color: #333;
+  font-weight: bold;
+}
+
+.dataset-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #004e70;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dataset-link:hover {
+  text-decoration: underline;
+}
+
