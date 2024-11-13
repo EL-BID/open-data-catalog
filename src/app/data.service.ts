@@ -14,7 +14,7 @@ export class DataService {
 
   // Método para obtener metadata del dataset desde JSON
   getMetadata(): Observable<any[]> {
-    return this.http.get<any[]>('/assets/data/metadata.json');
+    return this.http.get<any[]>('./assets/data/metadata.json');
   }
 
   // Método para actualizar el término de búsqueda
