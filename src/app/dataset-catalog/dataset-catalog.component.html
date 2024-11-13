@@ -1,9 +1,28 @@
-<div *ngFor="let dataset of datasets">
-  <div class="dataset-card">
-    <h3>{{ dataset.name }}</h3>
-    <p>{{ dataset.description }}</p>
-    <button (click)="viewDataset(dataset.category, dataset.filename)">Ver detalles</button>
-  </div>
-</div>
-
-
+<main>
+  <section class="odl-headline-section">
+    <div class="odl-container">
+      <div class="odl-headline-icon-container">
+        <div class="headline-text"><h1 class="odl-main-blue-color">Dataset
+            Catalog</h1></div>
+        <div class="headline-icon">
+          <img src="./assets/images/icons/dataset-icon.png" alt="dataset icon">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="odl-search-section">
+    <div class="odl-container">
+      <app-search-bar (search)="onSearch($event)"></app-search-bar>
+    </div>
+  </section>
+  <section class="odl-section">
+    <div class="odl-container">
+      <div class="odl-two-1-4-columns-container">
+        <div class="odl-two-1-4-columns-left">
+          <app-filters></app-filters>
+        </div>
+        <app-search-results [searchTerm]="searchTerm"></app-search-results>
+      </div>
+    </div>
+  </section>
+</main>

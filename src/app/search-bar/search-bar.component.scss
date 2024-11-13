@@ -1,0 +1,95 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.search-icon {
+  position: absolute;
+  left: 2rem;
+  font-size: 1.8rem;
+  color: var(--main-blue);
+}
+
+.search-input {
+  width: 100%;
+  padding: 2rem 2rem 2rem 6rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  color: inherit;
+  border: 1px solid #D3D2D1;
+  box-shadow: 0px 0px 40px 0px rgba(64, 74, 79, 0.2);
+  border-radius: 0.5rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--sky-blue);
+}
+
+/* Estilos para el botón de la "X" */
+.clear-button {
+  position: absolute;
+  right: 10px;  /* Ajuste para alinear la "X" al borde derecho */
+  top: 50%;
+  transform: translateY(-50%); /* Centrar verticalmente */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.8rem;
+  color: #aaa;
+}
+
+.clear-button:hover {
+  color: #333;
+}
+
+.clear-button:focus {
+  outline: none;
+}
+
+.clear-button:focus-visible {
+  outline: 2px solid #007bff; /* O el color de tu elección */
+  outline-offset: 2px;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 1px solid #D3D2D1;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  max-height: 261.95px;
+  box-shadow: 0px 0px 40px 0px rgba(64, 74, 79, 0.2);
+  z-index: 10;
+}
+
+.suggestion-item {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.suggestions-list .highlighted {
+  background-color: #d3d3d3; /* Color de fondo para resaltar la sugerencia */
+}
