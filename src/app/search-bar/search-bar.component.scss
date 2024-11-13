@@ -93,3 +93,13 @@
 .suggestions-list .highlighted {
   background-color: #d3d3d3; /* Color de fondo para resaltar la sugerencia */
 }
+
+.suggestion-item.highlighted {
+  background-color: #f0f0f0; /* o cualquier otro estilo de resaltado */
+}
+
+.suggestion-item.selected {
+  font-weight: bold;
+  color: #007bff;
+}
+

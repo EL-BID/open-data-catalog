@@ -57,14 +57,17 @@ export class SearchBarComponent implements OnInit {
     } else {
       this.filteredSuggestions = []; // Si no hay término de búsqueda, no mostrar sugerencias
     }
+    // Restablecer el índice seleccionado cuando el término de búsqueda cambia
+    this.selectedIndex = -1;
     // Emitir la búsqueda también para actualizar los resultados de manera inmediata
     this.search.emit(this.searchTerm);
   }
 
   // Método para seleccionar una sugerencia y realizar la búsqueda
-  selectSuggestion(suggestion: string): void {
+  selectSuggestion(suggestion: string, index:number): void {
     console.log('Sugerencia seleccionada:', suggestion);
     this.searchTerm = suggestion;  // Establecer el término de búsqueda con la sugerencia seleccionada
+    this.selectedIndex = index;    // Actualizar el índice seleccionado
     this.filteredSuggestions = [];  // Limpiar la lista de sugerencias
     this.search.emit(this.searchTerm);  // Emitir el evento con el término actualizado
   }
@@ -94,42 +97,14 @@ export class SearchBarComponent implements OnInit {
     }
   }
 
-  // Detectar cuando el elemento pierde el foco (por ejemplo, al usar TAB)
-  @HostListener('focusout', ['$event'])
-  onFocusOut(event: FocusEvent): void {
-    const searchInputElement = document.querySelector('.search-bar'); // Reemplaza con el selector de tu barra de búsqueda
-    const suggestionListElement = document.querySelector('.suggestions-list'); // Reemplaza con el selector de la lista de sugerencias
-
-    // Si el elemento que pierde el foco no es ni la barra de búsqueda ni las sugerencias, cerrar las sugerencias
-    if (searchInputElement && suggestionListElement) {
-      const lostFocusOnSearch = !searchInputElement.contains(event.relatedTarget as Node);
-      const lostFocusOnSuggestions = !suggestionListElement.contains(event.relatedTarget as Node);
-
-      if (lostFocusOnSearch && lostFocusOnSuggestions) {
-        this.filteredSuggestions = [];
-      }
-    }
-  }
-
   // Método para manejar las teclas de dirección y Enter
   handleKeydown(event: KeyboardEvent): void {
-    if (event.key === 'ArrowDown') {
-      // Mover hacia abajo en las sugerencias
-      if (this.selectedIndex < this.filteredSuggestions.length - 1) {
-        this.selectedIndex++;
-      }
-    } else if (event.key === 'ArrowUp') {
-      // Mover hacia arriba en las sugerencias
-      if (this.selectedIndex > 0) {
-        this.selectedIndex--;
-      }
+    if (event.key === 'ArrowDown' && this.selectedIndex < this.filteredSuggestions.length - 1) {
+      this.selectedIndex++;
+    } else if (event.key === 'ArrowUp' && this.selectedIndex > 0) {
+      this.selectedIndex--;
     } else if (event.key === 'Enter' && this.selectedIndex !== -1) {
-      // Seleccionar la sugerencia actual
-      this.selectSuggestion(this.filteredSuggestions[this.selectedIndex].title);
+      this.selectSuggestion(this.filteredSuggestions[this.selectedIndex].title, this.selectedIndex);
     }
-
-    // Agregar consola para depuración
-    console.log('Selected Index:', this.selectedIndex);
-    console.log('Filtered Suggestions:', this.filteredSuggestions);
   }
 }

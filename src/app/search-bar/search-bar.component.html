@@ -28,7 +28,7 @@
 
   <ul *ngIf="filteredSuggestions.length > 0" id="suggestions-list" class="suggestions-list" role="listbox">
     <li *ngFor="let suggestion of filteredSuggestions; let i = index"
-        (click)="selectSuggestion(suggestion.title)"
+        (click)="selectSuggestion(suggestion.title, i)"
         class="suggestion-item"
         role="option"
         [class.selected]="i === selectedIndex"
