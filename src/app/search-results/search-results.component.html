@@ -1,4 +1,9 @@
 <div class="dataset-list-container">
+  <!-- Mostrar el número de resultados solo si hay un término de búsqueda -->
+  <div *ngIf="filteredDatasets.length > 0 && searchTerm" class="result-count">
+    <p>Se encontraron {{ resultCount }} resultados para "{{ searchTerm }}".</p>
+  </div>
+
   <!-- Mostrar mensaje si no hay resultados -->
   <div *ngIf="noResults" class="no-results-message">
     <p>No se encontraron resultados para "{{ searchTerm }}".</p>

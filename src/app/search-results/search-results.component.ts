@@ -16,14 +16,16 @@ export class SearchResultsComponent implements OnChanges {
   datasets: any[] = [];  // Datos de datasets completos
   filteredDatasets: any[] = [];  // Datos de datasets filtrados según búsqueda
   noResults: boolean = false; // Indicador para mostrar el mensaje de "no resultados"
+  resultCount: number = 0; // Número de resultados
 
-  constructor(private dataService: DataService, private router: Router) {}
+  constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
     // Obtener los datasets cuando se cargue el componente
     this.dataService.getMetadata().subscribe(data => {
       this.datasets = data;  // Guarda todos los datasets
       this.filteredDatasets = data;  // Muestra todos los datasets inicialmente
+      this.resultCount = this.filteredDatasets.length; // Actualiza el contador
       this.noResults = this.filteredDatasets.length === 0; // Si no hay datos, marcar no resultados
       console.log('Datasets cargados:', this.datasets);  // Verifica los datasets cargados
     });
@@ -44,9 +46,11 @@ export class SearchResultsComponent implements OnChanges {
     } else {
       this.filteredDatasets = this.datasets;  // Si no hay búsqueda, muestra todos los datasets
     }
-     // Verificar si se encontraron resultados
-     this.noResults = this.filteredDatasets.length === 0;
-     console.log('Filtered Datasets:', this.filteredDatasets);  // Verifica qué resultados se están mostrando
+    // Actualizar el número de resultados
+    this.resultCount = this.filteredDatasets.length;
+    // Verificar si se encontraron resultados
+    this.noResults = this.filteredDatasets.length === 0;
+    console.log('Filtered Datasets:', this.filteredDatasets);  // Verifica qué resultados se están mostrando
   }
 
   viewDataset(category: string, filename: string): void {
