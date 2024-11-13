@@ -25,13 +25,14 @@ export class SearchResultsComponent implements OnChanges {
       this.datasets = data;  // Guarda todos los datasets
       this.filteredDatasets = data;  // Muestra todos los datasets inicialmente
       this.noResults = this.filteredDatasets.length === 0; // Si no hay datos, marcar no resultados
+      console.log('Datasets cargados:', this.datasets);  // Verifica los datasets cargados
     });
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['searchTerm']) {
-      // Ejecuta el filtro cada vez que el searchTerm cambia
-      this.filterDatasets(this.searchTerm);
+      console.log('Nuevo término de búsqueda en SearchResults:', this.searchTerm);  // Verifica que el término cambie
+      this.filterDatasets(this.searchTerm); // Ejecuta el filtro cada vez que el searchTerm cambia
     }
   }
 
@@ -45,6 +46,7 @@ export class SearchResultsComponent implements OnChanges {
     }
      // Verificar si se encontraron resultados
      this.noResults = this.filteredDatasets.length === 0;
+     console.log('Filtered Datasets:', this.filteredDatasets);  // Verifica qué resultados se están mostrando
   }
 
   viewDataset(category: string, filename: string): void {
