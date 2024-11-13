@@ -22,7 +22,7 @@ export class SearchBarComponent implements OnInit {
 
   @Output() search: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
     // Cargar datasets al inicializar el componente
@@ -57,37 +57,39 @@ export class SearchBarComponent implements OnInit {
     } else {
       this.filteredSuggestions = []; // Si no hay término de búsqueda, no mostrar sugerencias
     }
-
     // Emitir la búsqueda también para actualizar los resultados de manera inmediata
     this.search.emit(this.searchTerm);
   }
 
   // Método para seleccionar una sugerencia y realizar la búsqueda
   selectSuggestion(suggestion: string): void {
-    this.searchTerm = suggestion;
-    this.filteredSuggestions = [];
-    this.onSearch(); // Ejecutar la búsqueda al seleccionar la sugerencia
+    console.log('Sugerencia seleccionada:', suggestion);
+    this.searchTerm = suggestion;  // Establecer el término de búsqueda con la sugerencia seleccionada
+    this.filteredSuggestions = [];  // Limpiar la lista de sugerencias
+    this.search.emit(this.searchTerm);  // Emitir el evento con el término actualizado
   }
 
-   // Método para limpiar la búsqueda
-   clearSearch(): void {
+  // Método para limpiar la búsqueda
+  clearSearch(): void {
     this.searchTerm = '';  // Limpiar el término de búsqueda
     this.filteredSuggestions = [];  // Limpiar las sugerencias filtradas
     this.search.emit(this.searchTerm);  // Emitir el evento con un término vacío
   }
+
   // Detectar clics fuera de la barra de búsqueda y las sugerencias
   @HostListener('document:click', ['$event'])
   onClickOutside(event: MouseEvent): void {
-    const searchInputElement = document.querySelector('.search-bar'); // Reemplaza con el selector de tu barra de búsqueda
-    const suggestionListElement = document.querySelector('.suggestions-list'); // Reemplaza con el selector de la lista de sugerencias
+    // No ejecutar este código si se hace clic dentro de la lista de sugerencias
+    const searchInputElement = document.querySelector('.search-bar');
+    const suggestionListElement = document.querySelector('.suggestions-list');
 
     if (searchInputElement && suggestionListElement) {
       const clickedInsideSearch = searchInputElement.contains(event.target as Node);
       const clickedInsideSuggestions = suggestionListElement.contains(event.target as Node);
 
-      // Si el clic es fuera de la barra de búsqueda y las sugerencias, ocultar las sugerencias
+      // Solo limpiar las sugerencias si no se hace clic ni dentro de la barra de búsqueda ni dentro de las sugerencias
       if (!clickedInsideSearch && !clickedInsideSuggestions) {
-        this.filteredSuggestions = [];
+        this.filteredSuggestions = []; // Limpiar sugerencias solo si se hace clic fuera
       }
     }
   }
@@ -130,6 +132,4 @@ export class SearchBarComponent implements OnInit {
     console.log('Selected Index:', this.selectedIndex);
     console.log('Filtered Suggestions:', this.filteredSuggestions);
   }
-
-
 }

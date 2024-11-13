@@ -16,6 +16,7 @@ export class DatasetCatalogComponent {
 
   // Este método recibe el término de búsqueda desde el componente hijo SearchBar
   onSearch(searchTerm: string): void {
+    console.log('Término de búsqueda recibido en DatasetCatalog:', searchTerm);  // Depuración
     this.searchTerm = searchTerm;
   }
 }
