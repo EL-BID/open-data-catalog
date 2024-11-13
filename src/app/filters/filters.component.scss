@@ -1,0 +1,41 @@
+.filters-section, .dataset-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.filters-section h2 {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  font-weight: bold; /* Titles of filters in bold */
+  display: block;
+  margin-bottom: 10px;
+}
+
+.filter-options label {
+  font-weight: normal; /* Filter options not bold */
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.filter-options input[type="checkbox"] {
+  margin-right: 5px;
+}
