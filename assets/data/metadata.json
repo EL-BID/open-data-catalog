@@ -15,7 +15,8 @@
     "download_link": "https://github.com/EL-BID/open-data-catalog/raw/refs/heads/main/data/tbnd-z94f/Latin_Macro_Watch_Dataset_20241022.csv?download=",
     "updates": "Updates monthly",
     "part_of_series": "Part of macroeconomic series",
-    "connection_with_other_products": "Tied to IDB publication"
+    "connection_with_other_products": "Tied to IDB publication",
+    "publishDate": "2014-10-01"
   },
   {
     "id": 2,
@@ -34,7 +35,8 @@
     "download_link": "https://github.com/EL-BID/open-data-catalog/raw/refs/heads/main/data/tbnd-z94f/Latin_Macro_Watch_Dataset_20241022.csv?download=",
     "updates": "Updates monthly",
     "part_of_series": "Part of macroeconomic series",
-    "connection_with_other_products": "Tied to IDB publication"
+    "connection_with_other_products": "Tied to IDB publication",
+    "publishDate": "2012-10-01"
   },
   {
     "id": 3,
@@ -53,7 +55,8 @@
     "download_link": "https://github.com/EL-BID/open-data-catalog/raw/refs/heads/main/data/tbnd-z94f/Latin_Macro_Watch_Dataset_20241022.csv?download=",
     "updates": "Updates monthly",
     "part_of_series": "Part of macroeconomic series",
-    "connection_with_other_products": "Tied to IDB publication"
+    "connection_with_other_products": "Tied to IDB publication",
+    "publishDate": "2022-10-01"
   }
 ]
 
