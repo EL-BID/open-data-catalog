@@ -1,5 +1,4 @@
-// search-results.component.ts
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -13,44 +12,45 @@ import { CommonModule } from '@angular/common';
 })
 export class SearchResultsComponent implements OnChanges {
   @Input() searchTerm: string = '';  // Recibe el término de búsqueda
-  datasets: any[] = [];  // Datos de datasets completos
-  filteredDatasets: any[] = [];  // Datos de datasets filtrados según búsqueda
-  noResults: boolean = false; // Indicador para mostrar el mensaje de "no resultados"
-  resultCount: number = 0; // Número de resultados
+  @Input() sortBy: string = 'title'; // Recibe el criterio de ordenamiento
+  @Input() filters: any = {};  // Recibe los filtros aplicados (como categorías)
+  @Output() resultCountChange = new EventEmitter<number>();
+  @Output() noResultsChange = new EventEmitter<boolean>();
+
+  datasets: any[] = [];
+  filteredDatasets: any[] = [];
 
   constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
-    // Obtener los datasets cuando se cargue el componente
     this.dataService.getMetadata().subscribe(data => {
-      this.datasets = data;  // Guarda todos los datasets
-      this.filteredDatasets = data;  // Muestra todos los datasets inicialmente
-      this.resultCount = this.filteredDatasets.length; // Actualiza el contador
-      this.noResults = this.filteredDatasets.length === 0; // Si no hay datos, marcar no resultados
-      console.log('Datasets cargados:', this.datasets);  // Verifica los datasets cargados
+      this.datasets = data;
+      this.applyFilters();  // Filtra y ordena en la carga inicial
     });
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['searchTerm']) {
-      console.log('Nuevo término de búsqueda en SearchResults:', this.searchTerm);  // Verifica que el término cambie
-      this.filterDatasets(this.searchTerm); // Ejecuta el filtro cada vez que el searchTerm cambia
+    if (changes['searchTerm'] || changes['sortBy'] || changes['filters']) {
+      this.applyFilters(); // Filtra y ordena cada vez que hay un cambio
     }
   }
 
-  filterDatasets(searchTerm: string): void {
-    if (searchTerm) {
-      this.filteredDatasets = this.datasets.filter(dataset =>
-        dataset.title.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    } else {
-      this.filteredDatasets = this.datasets;  // Si no hay búsqueda, muestra todos los datasets
+  private applyFilters(): void {
+    this.filteredDatasets = this.datasets.filter(dataset =>
+      dataset.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+
+    this.sortDatasets();
+    this.resultCountChange.emit(this.filteredDatasets.length);
+    this.noResultsChange.emit(this.filteredDatasets.length === 0);
+  }
+
+  private sortDatasets(): void {
+    if (this.sortBy === 'title') {
+      this.filteredDatasets.sort((a, b) => a.title.localeCompare(b.title));
+    } else if (this.sortBy === 'date') {
+      this.filteredDatasets.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
     }
-    // Actualizar el número de resultados
-    this.resultCount = this.filteredDatasets.length;
-    // Verificar si se encontraron resultados
-    this.noResults = this.filteredDatasets.length === 0;
-    console.log('Filtered Datasets:', this.filteredDatasets);  // Verifica qué resultados se están mostrando
   }
 
   viewDataset(category: string, filename: string): void {

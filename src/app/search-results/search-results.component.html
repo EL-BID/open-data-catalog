@@ -1,19 +1,9 @@
 <div class="dataset-list-container">
-  <!-- Mostrar el número de resultados solo si hay un término de búsqueda -->
-  <div *ngIf="filteredDatasets.length > 0 && searchTerm" class="result-count">
-    <p>Se encontraron {{ resultCount }} resultados para "{{ searchTerm }}".</p>
-  </div>
-
-  <!-- Mostrar mensaje si no hay resultados -->
-  <div *ngIf="noResults" class="no-results-message">
-    <p>No se encontraron resultados para "{{ searchTerm }}".</p>
-  </div>
-
-  <!-- Mostrar los datasets si hay resultados -->
   <div class="dataset-list" *ngFor="let dataset of filteredDatasets">
     <div class="dataset-item">
       <div class="dataset-info">
-        <h2 (click)="viewDataset(dataset.category, dataset.filename)" class="clickable-title" tabindex="0">
+        <h2 (click)="viewDataset(dataset.category, dataset.filename)"
+          class="clickable-title" tabindex="0">
           {{ dataset.title }}
         </h2>
         <div class="dataset-categories">{{ dataset.categories }}</div>
@@ -23,12 +13,15 @@
           <strong>{{ dataset.temporal_coverage }}</strong></p>
         <p class="metadata-item">Available Formats:
           <strong>{{ dataset.available_formats.join(', ') }}</strong></p>
+        <p class="metadata-item">Published Date:
+          <strong>{{ dataset.publishDate }}</strong></p>
       </div>
       <div class="metadata-sidebar">
         <h4>RELEVANT METADATA</h4>
         <p><span class="check-icon">✔</span> {{dataset.updates}}</p>
         <p><span class="check-icon">✔</span>{{dataset.part_of_series}}</p>
-        <p><span class="check-icon">✔</span>{{dataset.connection_with_other_products}}</p>
+        <p><span
+            class="check-icon">✔</span>{{dataset.connection_with_other_products}}</p>
       </div>
     </div>
   </div>
