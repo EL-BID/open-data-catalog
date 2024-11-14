@@ -17,6 +17,11 @@ export class DataService {
     return this.http.get<any[]>('./assets/data/metadata.json');
   }
 
+  // Método para obtener filtros (categorías, años, etc.) desde un archivo JSON
+  getFilters(): Observable<any> {
+    return this.http.get<any>('./assets/data/filters.json');
+  }
+
   // Método para actualizar el término de búsqueda
   setSearchTerm(term: string): void {
     this.searchTermSource.next(term);

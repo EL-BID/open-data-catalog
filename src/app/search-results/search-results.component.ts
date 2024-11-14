@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -20,7 +20,7 @@ export class SearchResultsComponent implements OnChanges {
   datasets: any[] = [];
   filteredDatasets: any[] = [];
 
-  constructor(private dataService: DataService, private router: Router) { }
+  constructor(private dataService: DataService, private router: Router, private changeDetectorRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.dataService.getMetadata().subscribe(data => {
@@ -31,19 +31,31 @@ export class SearchResultsComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['searchTerm'] || changes['sortBy'] || changes['filters']) {
-      this.applyFilters(); // Filtra y ordena cada vez que hay un cambio
+      setTimeout(() => this.applyFilters());
     }
   }
 
   private applyFilters(): void {
-    this.filteredDatasets = this.datasets.filter(dataset =>
-      dataset.title.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
+    const { categories = [], years = [] } = this.filters || {};
+
+    this.filteredDatasets = this.datasets.filter(dataset => {
+      // Convertimos los valores a minúsculas para evitar problemas de mayúsculas/minúsculas
+      const matchSearchTerm = dataset.title.toLowerCase().includes(this.searchTerm.toLowerCase());
+
+      // Filtramos usando la propiedad 'categories' en el JSON
+      const matchCategory = categories.length === 0 || categories.some((cat: string) => dataset.categories.toLowerCase() === cat.toLowerCase());
+
+      // Aseguramos que el año está dentro del array de años seleccionados, si hay alguno
+      const matchYear = years.length === 0 || years.some((year: number) => dataset.year.includes(year));
+
+      return matchSearchTerm && matchCategory && matchYear;
+    });
 
     this.sortDatasets();
     this.resultCountChange.emit(this.filteredDatasets.length);
     this.noResultsChange.emit(this.filteredDatasets.length === 0);
   }
+
 
   private sortDatasets(): void {
     if (this.sortBy === 'title') {

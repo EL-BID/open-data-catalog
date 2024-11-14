@@ -7,37 +7,24 @@
       <hr class="separator">
       <label>Category</label>
       <div class="filter-options" id="categoryFilter">
-        <label><input type="checkbox" value="Economy"> Economy</label>
-        <label><input type="checkbox" value="Environment"> Environment</label>
-        <label><input type="checkbox" value="Health"> Health</label>
-        <label><input type="checkbox" value="Education"> Education</label>
+        <label *ngFor="let category of categories">
+          <input type="checkbox" [(ngModel)]="selectedFilters[category]" (change)="emitFilters()">
+          {{ category }}
+        </label>
       </div>
     </div>
+
     <!-- Years (multiple selection) -->
     <div class="filter-group">
       <hr class="separator">
       <label>Year</label>
       <div class="filter-options" id="yearFilter">
-        <!-- The visible options -->
         <div class="filter-options-visible">
-          <!-- First five options -->
-          <label><input type="checkbox" value="2021"><span>2021</span></label>
-          <label><input type="checkbox" value="2020"><span>2020</span></label>
-          <label><input type="checkbox" value="2019"><span>2019</span></label>
-          <label><input type="checkbox" value="2018"><span>2018</span></label>
-          <label><input type="checkbox" value="2017"><span>2017</span></label>
+          <label *ngFor="let year of years">
+            <input type="checkbox" [(ngModel)]="selectedFilters[year]" (change)="emitFilters()">
+            <span>{{ year }}</span>
+          </label>
         </div>
-        <!-- The hidden options -->
-        <div class="filter-options-hidden" style="display: none;">
-          <!-- Additional options -->
-          <label><input type="checkbox" value="2016"><span>2016</span></label>
-          <label><input type="checkbox" value="2015"><span>2015</span></label>
-          <!-- Add more years down to 1990 -->
-          <!-- ... -->
-          <label><input type="checkbox" value="1990"><span>1990</span></label>
-        </div>
-        <!-- More/Less button -->
-        <button type="button" class="more-less-button">More</button>
       </div>
     </div>
   </div>
