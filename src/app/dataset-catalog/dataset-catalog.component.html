@@ -19,9 +19,23 @@
     <div class="odl-container">
       <div class="odl-two-1-4-columns-container">
         <div class="odl-two-1-4-columns-left">
-          <app-filters></app-filters>
+          <app-filters (filtersChanged)="onFiltersChanged($event)"></app-filters>
         </div>
-        <app-search-results [searchTerm]="searchTerm"></app-search-results>
+        <div>
+          <div class="top-bar">
+            <app-results-header
+              [resultCount]="resultCount"
+              [searchTerm]="searchTerm"
+              [noResults]="noResults">
+            </app-results-header>
+            <app-sort (sortChanged)="onSortChanged($event)"></app-sort>
+          </div>
+          <app-search-results [searchTerm]="searchTerm"
+            [sortBy]="sortBy"
+            [filters]="filters"
+            (resultCountChange)="updateResultCount($event)"
+            (noResultsChange)="updateNoResults($event)"></app-search-results>
+        </div>
       </div>
     </div>
   </section>

@@ -1,0 +1,9 @@
+<div class="results-header">
+  <div *ngIf="resultCount > 0 && searchTerm" class="result-count">
+    <p>Se encontraron {{ resultCount }} resultados para "{{ searchTerm }}".</p>
+  </div>
+
+  <div *ngIf="noResults" class="no-results-message">
+    <p>No se encontraron resultados para "{{ searchTerm }}".</p>
+  </div>
+</div>
