@@ -23,12 +23,16 @@
         </div>
         <div>
           <div class="top-bar">
-            <app-results-header
+            <div class="results">
+              <app-results-header
               [resultCount]="resultCount"
               [searchTerm]="searchTerm"
               [noResults]="noResults">
             </app-results-header>
-            <app-sort (sortChanged)="onSortChanged($event)"></app-sort>
+            </div>
+            <div class="sort">
+              <app-sort (sortChanged)="onSortChanged($event)"></app-sort>
+            </div>
           </div>
           <app-search-results [searchTerm]="searchTerm"
             [sortBy]="sortBy"

@@ -14,8 +14,8 @@
             {{ topic }}
           </label>
         </div>
-        <button *ngIf="hasMoreTopics || hasLessTopics" (click)="toggleTopics()" (keydown.enter)="toggleTopics()" class="link-button">
-          {{ hasMoreTopics ? 'More' : 'Less' }}
+        <button *ngIf="visibleTopics.length < topics.length" (click)="showAllTopics()" class="link-button">
+          More
         </button>
       </div>
     </div>
@@ -60,8 +60,8 @@
             <span>{{ year }}</span>
           </label>
         </div>
-        <button *ngIf="hasMoreYears || hasLessYears" (click)="toggleYears()" (keydown.enter)="toggleYears()" class="link-button">
-          {{ hasMoreYears ? 'More' : 'Less' }}
+        <button *ngIf="visibleYears.length < years.length" (click)="showAllYears()" class="link-button">
+          More
         </button>
       </div>
     </div>

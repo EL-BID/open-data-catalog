@@ -59,7 +59,7 @@
 
 a {
   cursor: pointer;
-  color: blue;
+  color: var(--main-blue);
   text-decoration: underline;
 }
 
@@ -77,15 +77,14 @@ a {
 
 .region-label:focus .arrow-icon,
 .region-label:hover .arrow-icon {
-  color: #007bff; /* Cambiar color al pasar el cursor o hacer foco */
+  color: var(--sky-blue); /* Cambiar color al pasar el cursor o hacer foco */
 }
 
 
 .link-button {
   background: none;
   border: none;
-  color: #007bff; /* El color azul típico de enlaces */
-  text-decoration: underline;
+  color: var(--main-blue);
   cursor: pointer;
   font-size: 1em;
   padding: 0;
@@ -94,5 +93,5 @@ a {
 .link-button:focus,
 .link-button:hover {
   text-decoration: none;
-  outline: 2px solid #007bff; /* Estilo de enfoque para accesibilidad */
+  outline: 2px solid var(--sky-blue); /* Estilo de enfoque para accesibilidad */
 }
