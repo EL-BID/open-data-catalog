@@ -11,21 +11,22 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./search-results.component.scss']
 })
 export class SearchResultsComponent implements OnChanges {
-  @Input() searchTerm: string = '';  // Recibe el término de búsqueda
-  @Input() sortBy: string = 'title'; // Recibe el criterio de ordenamiento
-  @Input() filters: any = {};  // Recibe los filtros aplicados (como categorías)
+  @Input() searchTerm: string = '';
+  @Input() sortBy: string = 'title';
+  @Input() filters: any = {};
   @Output() resultCountChange = new EventEmitter<number>();
   @Output() noResultsChange = new EventEmitter<boolean>();
 
   datasets: any[] = [];
   filteredDatasets: any[] = [];
+  isDescriptionExpanded: { [key: number]: boolean } = {}; // Usamos id en lugar de filename
 
   constructor(private dataService: DataService, private router: Router, private changeDetectorRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.dataService.getMetadata().subscribe(data => {
       this.datasets = data;
-      this.applyFilters();  // Filtra y ordena en la carga inicial
+      this.applyFilters();
     });
   }
 
@@ -39,29 +40,22 @@ export class SearchResultsComponent implements OnChanges {
     const { topics = [], countries = [], years = [], languages = [] } = this.filters || {};
 
     this.filteredDatasets = this.datasets.filter(dataset => {
-      // Convertimos los valores a minúsculas para evitar problemas de mayúsculas/minúsculas
       const matchSearchTerm = dataset.title.toLowerCase().includes(this.searchTerm.toLowerCase());
-
-      // Filtramos usando el tema (ahora considerando que theme puede ser un string o un array)
-      const matchTopic = topics.length === 0 || topics.some((top: string) => {
-        // Si dataset.theme es un string, lo comparamos directamente
-        if (typeof dataset.theme === 'string') {
-          return dataset.theme.toLowerCase() === top.toLowerCase();
-        }
-        // Si dataset.theme es un array, verificamos si alguno de sus elementos coincide con el tema seleccionado
-        return dataset.theme.some((theme: string) => theme.toLowerCase() === top.toLowerCase());
-      });
-
-      // Filtramos usando el filtro de regiones/paises (spatial)
+       // Filtrar por temas (temas pueden ser un string o un array de strings)
+    const matchTopic = topics.length === 0 || topics.some((top: string) => {
+      if (Array.isArray(dataset.theme)) {
+        // Si dataset.theme es un array, verificar si contiene el tema
+        return dataset.theme.some((t: string) => t.toLowerCase() === top.toLowerCase());
+      } else {
+        // Si dataset.theme es un string, comparar directamente
+        return dataset.theme && dataset.theme.toLowerCase() === top.toLowerCase();
+      }
+    });
       const matchCountries = countries.length === 0 || this.isMatchingSpatial(countries, dataset.spatial);
-
-      // Filtramos usando el año (comparando solo el año de 'issued' con los años seleccionados)
       const matchYear = years.length === 0 || years.some((year: string) => {
-        const issuedYear = dataset.issued ? dataset.issued.split('-')[0] : ''; // Extraemos solo el año
-        return issuedYear === year; // Comparamos el año de 'issued' con el año del filtro
+        const issuedYear = dataset.issued ? dataset.issued.split('-')[0] : '';
+        return issuedYear === year;
       });
-
-      // Filtramos usando el idioma (compara las abreviaturas con las seleccionadas)
       const matchLanguage = languages.length === 0 || languages.some((lang: string) => dataset.language.toLowerCase() === lang.toLowerCase());
 
       return matchSearchTerm && matchTopic && matchCountries && matchYear && matchLanguage;
@@ -73,19 +67,11 @@ export class SearchResultsComponent implements OnChanges {
   }
 
   private isMatchingSpatial(selectedCountries: string[], spatial: string | string[]): boolean {
-    console.log("selectedCountries:", selectedCountries);
-    console.log("spatial:", spatial);
-
-    // Si spatial es una cadena (un solo país), lo convertimos a un array con ese país
     if (typeof spatial === 'string') {
       spatial = [spatial];
     }
-
-    // Convertimos todo a minúsculas para una comparación más sencilla
     const selectedCountriesLower = selectedCountries.map(country => country.toLowerCase());
     const spatialLower = spatial.map(country => country.toLowerCase());
-
-    // Compara si al menos uno de los países en spatial está en los países seleccionados
     return spatialLower.some(country => selectedCountriesLower.includes(country));
   }
 
@@ -93,8 +79,27 @@ export class SearchResultsComponent implements OnChanges {
     if (this.sortBy === 'title') {
       this.filteredDatasets.sort((a, b) => a.title.localeCompare(b.title));
     } else if (this.sortBy === 'date') {
-      this.filteredDatasets.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
+      this.filteredDatasets.sort((a, b) => {
+        const issuedA = a.issued ? new Date(a.issued).getTime() : 0;
+        const issuedB = b.issued ? new Date(b.issued).getTime() : 0;
+        return issuedB - issuedA; // Orden descendente por fecha (más reciente primero)
+      });
     }
+  }
+
+  getLimitedCountries(spatial: string[]): string {
+    if (!Array.isArray(spatial)) {
+      return spatial;
+    }
+    const sortedCountries = spatial.sort((a, b) => a.localeCompare(b));
+    const limitedCountries = sortedCountries.slice(0, 5);
+    return limitedCountries.join(', ') + (spatial.length > 5 ? ',...' : '');
+  }
+
+  // Cambiar el método para usar 'id' en lugar de 'filename'
+  toggleDescription(id: number): void {
+    // Usamos el id del dataset para controlar su expansión de descripción
+    this.isDescriptionExpanded[id] = !this.isDescriptionExpanded[id];
   }
 
   viewDataset(category: string, filename: string): void {

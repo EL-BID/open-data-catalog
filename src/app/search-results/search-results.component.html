@@ -1,25 +1,39 @@
 <div class="dataset-list-container">
   <div class="dataset-list" *ngFor="let dataset of filteredDatasets">
     <div class="dataset-item">
-      <div class="dataset-info">
-        <h2 (click)="viewDataset(dataset.mydata_category, dataset.filename)" class="clickable-title" tabindex="0">
+      <div class="dataset-header">
+        <h2 (click)="viewDataset(dataset.mydata_category, dataset.filename)"
+          class="clickable-title" tabindex="0">
           {{ dataset.title }}
         </h2>
         <span>By <strong>{{ dataset.unitResponsible }}</strong></span>
-        <div class="dataset-categories">{{ dataset.theme }}</div>
-        <p>{{ dataset.description }}</p>
       </div>
-      <div class="metadata-sidebar">
-        <h4>RELEVANT METADATA</h4>
-        <p class="metadata-item">Geographic Coverage:
-          <strong>{{ dataset.spatial }}</strong>
-        </p>
-        <p class="metadata-item">Temporal Coverage:
-          <strong>{{ dataset.temporal }}</strong>
-        </p>
-        <p class="metadata-item">Published Date:
-          <strong>{{ dataset.issued }}</strong>
-        </p>
+      <div class="dataset-categories">{{ dataset.theme }}</div>
+      <div class="dataset-metadata">
+        <div class="metadata-left">
+          <div class="dataset-description-container">
+            <p class="dataset-description"
+              [class.expanded]="isDescriptionExpanded[dataset.id]">{{
+              dataset.description }}</p>
+            <button *ngIf="dataset.description"
+              (click)="toggleDescription(dataset.id)" class="read-more-button">
+              {{ isDescriptionExpanded[dataset.id] ? 'Leer menos' : 'Leer más'
+              }}
+            </button>
+          </div>
+        </div>
+        <div class="metadata-sidebar">
+          <p class="metadata-item">✓ Geographic Coverage:
+            <strong [title]="dataset.spatial.join(', ')">{{
+              getLimitedCountries(dataset.spatial) }}</strong>
+          </p>
+          <p class="metadata-item">✓ Temporal Coverage:
+            <strong>{{ dataset.temporal }}</strong>
+          </p>
+          <p class="metadata-item">✓ Published Date:
+            <strong>{{ dataset.issued }}</strong>
+          </p>
+        </div>
       </div>
     </div>
   </div>

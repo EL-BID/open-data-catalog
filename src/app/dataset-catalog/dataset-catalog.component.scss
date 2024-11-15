@@ -11,3 +11,17 @@
 .headline-icon img {
   width: 5rem;
 }
+
+
+
+.top-bar {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.sort {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}

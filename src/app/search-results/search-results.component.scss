@@ -13,25 +13,28 @@
 
 /* Dataset Item Styles */
 .dataset-item {
-  display: flex; /* Change to flex to accommodate side-by-side layout */
-  justify-content: space-between;
-  padding: 20px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc; /* Grey border */
-  border-radius: 5px;
-  background-color: transparent; /* No background color */
+  display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
 }
 
-.dataset-info {
-  width: 65%; /* Adjust width as needed */
+.dataset-metadata {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4rem;
+}
+
+.metadata-left {
+  width: 65%;
 }
 
 .metadata-sidebar {
   width: 30%; /* Adjust width as needed */
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* Align to the bottom */
 }
 
 .metadata-sidebar h4 {
@@ -87,10 +90,6 @@
   color: #555;
 }
 
-.dataset-item .metadata-item {
-  margin-top: 10px; /* Space between metadata items */
-}
-
 .dataset-item p strong {
   color: #333;
   font-weight: bold;
@@ -108,3 +107,38 @@
   text-decoration: underline;
 }
 
+.dataset-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.dataset-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Número de líneas antes del truncado */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.dataset-description.expanded {
+  -webkit-line-clamp: unset; /* Sin límite de líneas cuando esté expandido */
+  overflow: visible;
+}
+
+.read-more-button {
+  background: none;
+  border: none;
+  color: var(--main-blue);
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  font-size: 14px;
+}
+
+.read-more-button:hover {
+  color: var(--sky-blue);
+  text-decoration: underline;
+}
