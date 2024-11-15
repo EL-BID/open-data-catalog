@@ -2,27 +2,58 @@
   <h2>Refine your search</h2>
   <!-- Filters -->
   <div class="filters">
-    <!-- Categories (multiple selection) -->
+    <!-- Topics (multiple selection) -->
     <div class="filter-group">
       <hr class="separator">
-      <label>Category</label>
-      <div class="filter-options" id="categoryFilter">
-        <label *ngFor="let category of categories">
-          <input type="checkbox" [(ngModel)]="selectedFilters[category]" (change)="emitFilters()">
-          {{ category }}
+      <label>Topics</label>
+      <div class="filter-options" id="topicFilter">
+        <label *ngFor="let topic of topics">
+          <input type="checkbox" [(ngModel)]="selectedFilters[topic]" (change)="emitFilters()">
+          {{ topic }}
         </label>
       </div>
     </div>
 
-    <!-- Years (multiple selection) -->
+    <!-- Regions & Countries -->
     <div class="filter-group">
       <hr class="separator">
-      <label>Year</label>
+      <label>Regions & Countries</label>
+      <div class="filter-options" id="regionFilter">
+        <div *ngFor="let region of regions | keyvalue">
+          <strong>{{ region.key }}</strong>  <!-- Nombre de la región -->
+          <div *ngFor="let country of region.value">
+            <label>
+              <input type="checkbox" [(ngModel)]="selectedFilters[country]" (change)="emitFilters()">
+              {{ country }}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Publication Year (multiple selection) -->
+    <div class="filter-group">
+      <hr class="separator">
+      <label>Publication Year</label>
       <div class="filter-options" id="yearFilter">
         <div class="filter-options-visible">
           <label *ngFor="let year of years">
             <input type="checkbox" [(ngModel)]="selectedFilters[year]" (change)="emitFilters()">
             <span>{{ year }}</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+     <!-- Language (multiple selection) -->
+     <div class="filter-group">
+      <hr class="separator">
+      <label>Dataset Language</label>
+      <div class="filter-options" id="languageFilter">
+        <div class="filter-options-visible">
+          <label *ngFor="let language of languages">
+            <input type="checkbox" [(ngModel)]="selectedFilters[language]" (change)="emitFilters()">
+            <span>{{ language }}</span>
           </label>
         </div>
       </div>
