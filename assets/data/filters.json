@@ -1,5 +1,36 @@
 {
-  "categories": ["Economy", "Environment", "Health", "Education"],
-  "years": ["2021", "2020", "2019", "2018", "2017"]
+  "topics": [
+    "Disaster Risk Management",
+    "Social Protection",
+    "Climate Change",
+    "Sustainable Development",
+    "Social Development",
+    "Education",
+    "Health",
+    "Gender",
+    "Labor Markets",
+    "Poverty",
+    "Digital Transformation",
+    "Telecommunications",
+    "Infrastructure",
+    "Innovation",
+    "Economic Development",
+    "Finance",
+    "Public Policy",
+    "Regional Integration",
+    "Social Security",
+    "Employment",
+    "Agriculture",
+    "Rural Development",
+    "Sustainability"
+  ],
+  "regions": {
+    "Caribbean": ["Bahamas", "Barbados", "Cuba", "Dominican Republic", "Haiti", "Jamaica", "Puerto Rico", "Trinidad and Tobago"],
+    "Central America": ["Costa Rica", "El Salvador", "Guatemala", "Honduras", "Nicaragua", "Panama"],
+    "South America": ["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Guyana", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela"]
+  },
+  "years": [
+    "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010"
+  ],
+  "languages": ["English", "Spanish", "Portuguese", "French"]
 }
-
