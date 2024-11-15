@@ -12,11 +12,20 @@ import { FormsModule } from '@angular/forms';  // Importa FormsModule
 })
 export class FiltersComponent implements OnInit {
   @Output() filtersChanged = new EventEmitter<any>();  // Emisor para los filtros seleccionados
-  categories: string[] = [];
+  topics: string[] = [];
+  regions: { [key: string]: string[] } = {};  // Aquí almacenamos las regiones
   years: string[] = [];
+  languages: string[] = [];
   selectedFilters: { [key: string]: boolean } = {};
 
-  constructor(private dataService: DataService) {}
+  languageMapping: { [key: string]: string } = {
+    "English": "en",
+    "Spanish": "es",
+    "Portuguese": "pt",
+    "French": "fr"
+  };
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
     // Cargar los filtros desde el servicio
@@ -25,29 +34,52 @@ export class FiltersComponent implements OnInit {
 
   loadFilters() {
     this.dataService.getFilters().subscribe(data => {
-      // Asignar las categorías y años desde el archivo JSON
-      this.categories = data.categories;
+      // Asignar las categorías, años e idiomas desde el archivo JSON
+      this.topics = data.topics.sort();  // Ordenamos los temas alfabéticamente
+      this.regions = data.regions;  // Cargamos las regiones
       this.years = data.years;
+      this.languages = data.languages;
 
       // Inicializar los filtros seleccionados a false por defecto
-      this.categories.forEach(category => {
-        this.selectedFilters[category] = false;
+      this.topics.forEach(topic => {
+        this.selectedFilters[topic] = false;
+      });
+
+      // Inicializar filtros de regiones con países
+      Object.keys(this.regions).forEach(region => {
+        this.regions[region].forEach(country => {
+          this.selectedFilters[country] = false;
+        });
       });
 
       this.years.forEach(year => {
         this.selectedFilters[year] = false;
+      });
+
+      this.languages.forEach(language => {
+        this.selectedFilters[language] = false;
       });
     });
   }
 
   emitFilters() {
     // Emitir los filtros seleccionados
-    const selectedCategories = this.categories.filter(category => this.selectedFilters[category]);
+    const selectedTopics = this.topics.filter(topic => this.selectedFilters[topic]);
+   // Aquí usamos un tipo explícito de string[] para selectedCountries
+   const selectedCountries: string[] = Object.keys(this.regions).reduce((selected: string[], region: string) => {
+    // Reducir a un array de países seleccionados dentro de cada región
+    const selectedInRegion = this.regions[region].filter(country => this.selectedFilters[country]);
+    return [...selected, ...selectedInRegion];  // Concatenamos los países seleccionados
+  }, []);
     const selectedYears = this.years.filter(year => this.selectedFilters[year]);
+    const selectedLanguages = this.languages.filter(language => this.selectedFilters[language])
+      .map(language => this.languageMapping[language]);  // Mapeamos los idiomas seleccionados
 
     this.filtersChanged.emit({
-      categories: selectedCategories,
-      years: selectedYears
+      topics: selectedTopics,
+      countries: selectedCountries,
+      years: selectedYears,
+      languages: selectedLanguages
     });
   }
 }
