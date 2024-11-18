@@ -9,8 +9,6 @@
   text-decoration: underline;
 }
 
-
-
 /* Dataset Item Styles */
 .dataset-item {
   display: flex;
@@ -65,10 +63,23 @@
   margin: 0; /* No margin to keep it close to title */
 }
 
-.dataset-item .dataset-categories {
-  margin-top: 15px; /* Increase space above categories */
-  margin-bottom: 15px; /* Increase space below categories */
+.dataset-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
 }
+
+.category-box {
+  background-color: #DBEDF8;
+  padding: 4px 8px;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--main-blue);
+  font-weight: 700;
+  border: none;
+}
+
 
 .dataset-item .category-pill {
   display: inline-block;
@@ -87,18 +98,12 @@
 
 .dataset-item p {
   margin: 5px 0;
-  color: #555;
-}
-
-.dataset-item p strong {
-  color: #333;
-  font-weight: bold;
 }
 
 .dataset-link {
   display: inline-block;
   margin-top: 10px;
-  color: #004e70;
+  color: var(--main-blue);
   text-decoration: none;
   font-weight: bold;
 }

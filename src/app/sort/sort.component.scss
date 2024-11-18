@@ -33,9 +33,9 @@
 }
 
 .select-input:hover {
-  background-color: #f9f9f9; /* Fondo ligeramente más claro al pasar el mouse */
+  background-color: #f9f9f9;
 }
 
 .select-container:hover::after {
-  color: #007bff; /* Cambia el color de la flecha al pasar el mouse */
+  color: var(--sky-blue);
 }
