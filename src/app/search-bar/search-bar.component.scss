@@ -54,7 +54,7 @@
 }
 
 .clear-button:hover {
-  color: #333;
+  color: var(--sky-blue);
 }
 
 .clear-button:focus {
@@ -62,7 +62,7 @@
 }
 
 .clear-button:focus-visible {
-  outline: 2px solid #007bff; /* O el color de tu elección */
+  outline: 2px solid var(--sky-blue);
   outline-offset: 2px;
 }
 
@@ -91,15 +91,11 @@
 }
 
 .suggestions-list .highlighted {
-  background-color: #d3d3d3; /* Color de fondo para resaltar la sugerencia */
-}
-
-.suggestion-item.highlighted {
-  background-color: #f0f0f0; /* o cualquier otro estilo de resaltado */
+  background-color: #f0f0f0; /* Color de fondo para resaltar la sugerencia */
 }
 
 .suggestion-item.selected {
   font-weight: bold;
-  color: #007bff;
+  color: var(--sky-blue);
 }
 
