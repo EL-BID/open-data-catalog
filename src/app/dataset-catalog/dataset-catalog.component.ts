@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, AfterViewInit  } from '@angular/core';
+import { ChangeDetectorRef, Component, AfterViewInit, OnInit  } from '@angular/core';
 import { SearchBarComponent } from "../search-bar/search-bar.component";
 import { FiltersComponent } from "../filters/filters.component";
 import { SearchResultsComponent } from '../search-results/search-results.component';
@@ -18,6 +18,9 @@ export class DatasetCatalogComponent implements AfterViewInit {
   filters: any = {};  // Filtros seleccionados, como por ejemplo, categoría o tipo de datos
   resultCount: number = 0; // Nueva propiedad para el conteo de resultados
   noResults: boolean = false; // Nueva propiedad para indicar si no hay resultados
+  datasetPath: string | null = null;
+  currentPage = 0;
+  rowsPerPage = 10;
 
   constructor(private cdr: ChangeDetectorRef) { }
 
@@ -55,4 +58,22 @@ export class DatasetCatalogComponent implements AfterViewInit {
   updateNoResults(noResults: boolean): void {
     this.noResults = noResults;
   }
+
+  // get paginatedDataset() {
+  //   const start = this.currentPage * this.rowsPerPage;
+  //   const end = start + this.rowsPerPage;
+  //   return this.datasetContent.slice(start, end);
+  // }
+
+  // nextPage() {
+  //   if ((this.currentPage + 1) * this.rowsPerPage < this.datasetContent.length) {
+  //     this.currentPage++;
+  //   }
+  // }
+
+  // previousPage() {
+  //   if (this.currentPage > 0) {
+  //     this.currentPage--;
+  //   }
+  // }
 }

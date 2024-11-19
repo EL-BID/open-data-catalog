@@ -63,24 +63,6 @@
   margin: 0; /* No margin to keep it close to title */
 }
 
-.dataset-categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 3rem;
-}
-
-.category-box {
-  background-color: #DBEDF8;
-  padding: 4px 8px;
-  border-radius: 0.5rem;
-  font-size: 1.4rem;
-  color: var(--main-blue);
-  font-weight: 700;
-  border: none;
-}
-
-
 .dataset-item .category-pill {
   display: inline-block;
   background-color: #dbedf8;
