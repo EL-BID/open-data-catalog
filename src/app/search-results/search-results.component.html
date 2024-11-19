@@ -2,7 +2,7 @@
   <div class="dataset-list" *ngFor="let dataset of filteredDatasets">
     <div class="dataset-item">
       <div class="dataset-header">
-        <h2 (click)="viewDataset(dataset.mydata_category, dataset.filename)"
+        <h2 (click)="viewDataset(dataset.mydata_category, dataset.title_original, dataset.mydata_id)"
           class="clickable-title" tabindex="0">
           {{ dataset.title }}
         </h2>

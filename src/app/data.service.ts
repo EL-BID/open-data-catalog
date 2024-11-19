@@ -38,16 +38,16 @@ export class DataService {
     );
   }
 
-  // Método para obtener el archivo CSV del dataset
-  getDataset(category: string, filename: string): Observable<any> {
-    return this.http.get(`/assets/datasets/${category}/${filename}.csv`, { responseType: 'text' });
+  // Método para obtener un dataset (CSV) desde la carpeta /datasets
+  getDataset(filename: string): Observable<any> {
+    console.log('Filename recibido:', filename);  // Verifica el nombre del archivo recibido
+    return this.http.get(`./assets/datasets/${filename}.csv`, { responseType: 'text' });
   }
+
 
   // Método para descargar el dataset CSV (opcional)
-  downloadDataset(category: string, filename: string): Observable<Blob> {
-    // Asegúrate de que solo pase el nombre del archivo con su extensión
-    return this.http.get(`/assets/datasets/${category}/${filename}.csv`, { responseType: 'blob' });
+  downloadDataset(filename: string): Observable<Blob> {
+    return this.http.get(`./assets/datasets/${filename}.csv`, { responseType: 'blob' });
   }
-
 
 }

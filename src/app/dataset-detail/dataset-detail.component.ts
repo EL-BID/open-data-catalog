@@ -12,72 +12,108 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./dataset-detail.component.scss']
 })
 export class DatasetDetailComponent implements OnInit {
-  category: string | null = null;
+  mydataCategory: string | null = null;
+  titleOriginal: string | null = null;
+  mydataId: string | null = null;
   filename: string | null = null;
   dataset: any;
-  datasetContent: any[] = [];  // Array para almacenar los objetos JSON de cada fila
-  loading = true; // Variable de estado de carga
+  datasetContent: any[] = [];
+  loading = true;
+  datasetPath: string | null = null;
   currentPage = 0;
-  rowsPerPage = 10;  // Número de filas por página
+  rowsPerPage = 10;
 
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService
   ) {}
 
-  ngOnInit(): void {
-    this.category = this.route.snapshot.paramMap.get('category');
-    this.filename = this.route.snapshot.paramMap.get('filename');
 
-    if (this.category && this.filename) {
-      this.loadDatasetMetadata();
-      this.loadDatasetContent();
-    } else {
-      console.error('No se han proporcionado los parámetros de category o filename.');
-      this.loading = false; // Detener carga si no hay parámetros
-    }
+  ngOnInit(): void {
+     this.mydataCategory = this.route.snapshot.paramMap.get('mydata_category');
+     this.titleOriginal = this.route.snapshot.paramMap.get('title_original');
+     this.mydataId = this.route.snapshot.paramMap.get('mydata_id');
+
+     console.log("mydataCategory:", this.mydataCategory);  // Verificar que se está capturando correctamente
+  console.log("titleOriginal:", this.titleOriginal);    // Verificar que se está capturando correctamente
+  console.log("mydataId:", this.mydataId);              // Verificar que se está capturando correctamente
+
+
+     this.loadMetadata();
+   }
+
+    // Función de normalización para comparar títulos
+  normalizeTitle(title: string | null): string {
+    return title ? title.trim().replace(/[^a-zA-Z0-9 ]/g, '-').substring(0, 50) : '';  // Normalizamos y cortamos a 50 caracteres
   }
 
-  loadDatasetMetadata(): void {
+  loadMetadata(): void {
     this.dataService.getMetadata().subscribe(data => {
-      this.dataset = data.find(d => d.category === this.category && d.filename === this.filename);
-      if (!this.dataset) {
-        console.error('Dataset no encontrado.');
+      console.log('Metadata:', data);
+      console.log('titleOriginal en la URL:', this.titleOriginal);
+
+      if (this.titleOriginal) {
+        const formattedTitleFromUrl = this.titleOriginal
+          .replace(/[^a-zA-Z0-9]+/g, '-')
+          .substring(0, 50);
+
+        // Busca el dataset, considerando si `mydataCategory` es nulo o no
+        this.dataset = data.find(d => {
+          const formattedTitleFromMetadata = d.title_original
+            .replace(/[^a-zA-Z0-9]+/g, '-')
+            .substring(0, 50);
+
+          const categoryMatches = this.mydataCategory ? d.mydata_category === this.mydataCategory : true;
+          const idMatches = d.mydata_id === this.mydataId;
+
+          console.log('Comparando con title_original en metadata:', formattedTitleFromMetadata);
+
+          return (
+            categoryMatches &&
+            idMatches &&
+            formattedTitleFromMetadata === formattedTitleFromUrl
+          );
+        });
+
+        if (this.dataset) {
+          this.loadDatasetContent();
+        } else {
+          console.error('Dataset no encontrado en la metadata. Revisa los parámetros.');
+          this.loading = false;
+        }
+      } else {
+        console.error('titleOriginal es nulo o no definido.');
+        this.loading = false;
       }
+    }, error => {
+      console.error('Error al cargar la metadata:', error);
+      this.loading = false;
     });
   }
 
+
+
+  // Método para cargar el contenido del dataset
   loadDatasetContent(): void {
-    if (this.category && this.filename) {
-      this.loading = true;
-      console.log(`Cargando dataset para categoría: ${this.category}, archivo: ${this.filename}`);
+    if (this.dataset) {
+      const filenameFromMetadata = this.dataset.filename;
 
-      this.dataService.getDataset(this.category, this.filename).subscribe(
-        content => {
+      if (filenameFromMetadata) {
+        // Asegúrate de pasar solo el nombre del archivo
+        const formattedFilename = filenameFromMetadata.replace(/[^a-zA-Z0-9\-\.]+/g, '-');
+
+        this.dataService.getDataset(formattedFilename).subscribe(content => {
           console.log('Contenido recibido:', content);
-
-          if (!content || content.length === 0) {
-            console.error('El contenido del CSV está vacío o no se recibió correctamente');
-            this.loading = false;
-            return;
-          }
 
           // Usar PapaParse para procesar el CSV
           Papa.parse(content, {
             header: true,
             delimiter: ",",
-            skipEmptyLines: true, // Omite líneas vacías
-            dynamicTyping: true,   // Convierte los tipos de datos según el contenido
+            skipEmptyLines: true,
+            dynamicTyping: true,
             complete: (result) => {
               console.log('Resultado del parseo:', result);
-              if (result.errors.length > 0) {
-                result.errors.forEach(error => {
-                  console.error('Error en el CSV:', error.message);
-                });
-              } else {
-                // Guardar el contenido parseado
-                this.datasetContent = result.data;
-              }
+              this.datasetContent = result.data;
               this.loading = false;
             },
             error: (error) => {
@@ -85,34 +121,43 @@ export class DatasetDetailComponent implements OnInit {
               this.loading = false;
             }
           });
-        },
-        error => {
+        }, error => {
           console.error('Error al cargar el dataset:', error);
           this.loading = false;
-        }
-      );
+        });
+      } else {
+        console.error('No se encontró el filename en la metadata.');
+        this.loading = false;
+      }
+    } else {
+      console.error('No se ha encontrado el dataset en la metadata.');
+      this.loading = false;
     }
   }
 
-  // Método para obtener las claves de un objeto (las cabeceras de las columnas)
-  objectKeys(obj: any) {
-    return Object.keys(obj);
-  }
+
 
   downloadDataset(): void {
-    if (this.category && this.filename) {
-      this.dataService.downloadDataset(this.category, this.filename).subscribe((response: Blob) => {
+    if (this.titleOriginal) {
+      const formattedFilename = this.titleOriginal.replace(/[^a-zA-Z0-9]+/g, '-');
+
+      this.dataService.downloadDataset(formattedFilename).subscribe((response: Blob) => {
         const blob = new Blob([response], { type: 'text/csv' });
         const link = document.createElement('a');
         const url = URL.createObjectURL(blob);
         link.href = url;
-        link.download = `${this.filename}.csv`;
+        link.download = `${formattedFilename}.csv`;
         link.click();
         URL.revokeObjectURL(url);
       });
     } else {
       console.error('Filename no disponible para descargar');
     }
+  }
+
+  // Método para obtener las claves de un objeto (las cabeceras de las columnas)
+  objectKeys(obj: any) {
+    return Object.keys(obj);
   }
 
   get paginatedDataset() {
