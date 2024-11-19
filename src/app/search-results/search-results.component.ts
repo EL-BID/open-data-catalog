@@ -102,7 +102,34 @@ export class SearchResultsComponent implements OnChanges {
     this.isDescriptionExpanded[id] = !this.isDescriptionExpanded[id];
   }
 
-  viewDataset(category: string, filename: string): void {
-    this.router.navigate([`/dataset/${category}/${filename}`]);
+  viewDataset(mydata_category: string, title_original: string, mydata_id?: string): void {
+    // Formatear la categoría y el título reemplazando caracteres no deseados por guiones y limitando a 50 caracteres
+    const formattedCategory = mydata_category
+      ? mydata_category.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 50)
+      : '';
+    const formattedTitle = title_original
+      .replace(/[^a-zA-Z0-9]+/g, '-')
+      .substring(0, 50);
+
+    // Construcción de la ruta en función de los parámetros disponibles
+    let route = '';
+    if (formattedCategory && mydata_id) {
+      // Si tenemos category y mydata_id
+      route = `/${formattedCategory}/${formattedTitle}/${mydata_id}`;
+    } else if (formattedCategory) {
+      // Si solo tenemos category
+      route = `/${formattedCategory}/${formattedTitle}`;
+    } else if (mydata_id) {
+      // Si solo tenemos mydata_id
+      route = `/dataset/${formattedTitle}/${mydata_id}`;
+    } else {
+      // Si solo tenemos title
+      route = `/dataset/${formattedTitle}`;
+    }
+
+    // Navegar a la ruta generada
+    this.router.navigate([route]);
   }
+
+
 }
