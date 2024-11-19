@@ -1,46 +1,47 @@
-<main>
-  <section class="odl-headline-section">
-    <div class="odl-container">
-      <div class="odl-headline-icon-container">
-        <div class="headline-text"><h1 class="odl-main-blue-color">Dataset
-            Catalog</h1></div>
-        <div class="headline-icon">
-          <img src="./assets/images/icons/dataset-icon.png" alt="dataset icon">
-        </div>
+<section class="odl-headline-section">
+  <div class="odl-container">
+    <div class="odl-headline-icon-container">
+      <div class="headline-text">
+        <h1 class="odl-main-blue-color">Dataset
+          Catalog</h1>
+      </div>
+      <div class="headline-icon">
+        <img src="./assets/images/icons/dataset-icon.png" alt="dataset icon">
       </div>
     </div>
-  </section>
-  <section class="odl-search-section">
-    <div class="odl-container">
-      <app-search-bar (search)="onSearch($event)"></app-search-bar>
-    </div>
-  </section>
-  <section class="odl-section">
-    <div class="odl-container">
-      <div class="odl-two-1-4-columns-container">
-        <div class="odl-two-1-4-columns-left">
-          <app-filters (filtersChanged)="onFiltersChanged($event)"></app-filters>
-        </div>
-        <div>
-          <div class="top-bar">
-            <div class="results">
-              <app-results-header
-              [resultCount]="resultCount"
-              [searchTerm]="searchTerm"
-              [noResults]="noResults">
+  </div>
+</section>
+<section class="odl-search-section">
+  <div class="odl-container">
+    <app-search-bar (search)="onSearch($event)"></app-search-bar>
+  </div>
+</section>
+<section class="odl-section">
+  <div class="odl-container">
+    <div class="odl-two-1-4-columns-container">
+      <div class="odl-two-1-4-columns-left">
+        <app-filters (filtersChanged)="onFiltersChanged($event)"></app-filters>
+      </div>
+      <div>
+        <div class="top-bar">
+          <div class="results">
+            <app-results-header [resultCount]="resultCount" [searchTerm]="searchTerm" [noResults]="noResults">
             </app-results-header>
-            </div>
-            <div class="sort">
-              <app-sort (sortChanged)="onSortChanged($event)"></app-sort>
-            </div>
           </div>
-          <app-search-results [searchTerm]="searchTerm"
-            [sortBy]="sortBy"
-            [filters]="filters"
-            (resultCountChange)="updateResultCount($event)"
-            (noResultsChange)="updateNoResults($event)"></app-search-results>
+          <div class="sort">
+            <app-sort (sortChanged)="onSortChanged($event)"></app-sort>
+          </div>
         </div>
+        <app-search-results [searchTerm]="searchTerm" [sortBy]="sortBy" [filters]="filters"
+          (resultCountChange)="updateResultCount($event)"
+          (noResultsChange)="updateNoResults($event)"></app-search-results>
+        <!-- Paginación -->
+        <!-- <div *ngIf="datasetContent.length > rowsPerPage">
+          <button (click)="previousPage()" [disabled]="currentPage === 0">Anterior</button>
+          <button (click)="nextPage()"
+            [disabled]="(currentPage + 1) * rowsPerPage >= datasetContent.length">Siguiente</button>
+        </div> -->
       </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>

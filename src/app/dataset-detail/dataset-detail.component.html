@@ -1,39 +1,41 @@
-<div *ngIf="dataset">
-  <h2>{{ dataset?.title }}</h2>
-  <p>{{ dataset?.description }}</p>
-  <p><strong>ID:</strong> {{ dataset?.id }}</p>
-  <p><strong>Filename:</strong> {{ dataset?.filename }}</p>
+<section class="odl-headline-section">
+  <div class="odl-container">
+    <div *ngIf="dataset">
+      <div class="dataset-header">
+        <h1 class="odl-main-blue-color dataset-detail-title">{{ dataset?.title }}</h1>
+        <span>By <strong>{{ dataset.unitResponsible }}</strong></span>
+      </div>
+      <div class="dataset-categories">
+        <span class="category-box" *ngFor="let theme of dataset.theme">{{ theme }}</span>
+      </div>
+      <p>{{ dataset?.description }}</p>
+    </div>
+  </div>
+</section>
 
-  <button (click)="downloadDataset()">Descargar CSV</button>
-</div>
+<!-- <button (click)="downloadDataset()">Descargar CSV</button> -->
 
-<div *ngIf="loading">Cargando dataset...</div>
+<!-- <div *ngIf="loading">Cargando dataset...</div>
 
 <table *ngIf="!loading && datasetContent.length > 0">
   <thead>
     <tr>
-      <!-- Iteramos sobre las claves del primer objeto de datasetContent -->
+      Iteramos sobre las claves del primer objeto de datasetContent
       <th *ngFor="let key of objectKeys(datasetContent[0])">{{ key }}</th>
     </tr>
   </thead>
   <tbody>
-    <!-- Iteramos sobre las filas del dataset -->
+    Iteramos sobre las filas del dataset
     <tr *ngFor="let row of paginatedDataset">
       <td *ngFor="let key of objectKeys(row)">{{ row[key] }}</td>
     </tr>
   </tbody>
 </table>
 
-<!-- Mensaje cuando no haya datos disponibles -->
+ Mensaje cuando no haya datos disponibles
 <div *ngIf="!loading && datasetContent.length === 0">
   No se encontraron datos para mostrar.
-</div>
-
-<!-- Paginación -->
-<div *ngIf="datasetContent.length > rowsPerPage">
-  <button (click)="previousPage()" [disabled]="currentPage === 0">Anterior</button>
-  <button (click)="nextPage()" [disabled]="(currentPage + 1) * rowsPerPage >= datasetContent.length">Siguiente</button>
-</div>
+</div> -->
 
 
 

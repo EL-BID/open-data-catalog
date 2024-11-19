@@ -19,30 +19,23 @@ export class DatasetDetailComponent implements OnInit {
   dataset: any;
   datasetContent: any[] = [];
   loading = true;
-  datasetPath: string | null = null;
-  currentPage = 0;
-  rowsPerPage = 10;
 
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService
-  ) {}
-
+  ) { }
 
   ngOnInit(): void {
-     this.mydataCategory = this.route.snapshot.paramMap.get('mydata_category');
-     this.titleOriginal = this.route.snapshot.paramMap.get('title_original');
-     this.mydataId = this.route.snapshot.paramMap.get('mydata_id');
+    this.mydataCategory = this.route.snapshot.paramMap.get('mydata_category');
+    this.titleOriginal = this.route.snapshot.paramMap.get('title_original');
+    this.mydataId = this.route.snapshot.paramMap.get('mydata_id');
+    console.log("mydataCategory:", this.mydataCategory);
+    console.log("titleOriginal:", this.titleOriginal);
+    console.log("mydataId:", this.mydataId);
+    this.loadMetadata();
+  }
 
-     console.log("mydataCategory:", this.mydataCategory);  // Verificar que se está capturando correctamente
-  console.log("titleOriginal:", this.titleOriginal);    // Verificar que se está capturando correctamente
-  console.log("mydataId:", this.mydataId);              // Verificar que se está capturando correctamente
-
-
-     this.loadMetadata();
-   }
-
-    // Función de normalización para comparar títulos
+  // Función de normalización para comparar títulos
   normalizeTitle(title: string | null): string {
     return title ? title.trim().replace(/[^a-zA-Z0-9 ]/g, '-').substring(0, 50) : '';  // Normalizamos y cortamos a 50 caracteres
   }
@@ -91,8 +84,6 @@ export class DatasetDetailComponent implements OnInit {
     });
   }
 
-
-
   // Método para cargar el contenido del dataset
   loadDatasetContent(): void {
     if (this.dataset) {
@@ -135,8 +126,6 @@ export class DatasetDetailComponent implements OnInit {
     }
   }
 
-
-
   downloadDataset(): void {
     if (this.titleOriginal) {
       const formattedFilename = this.titleOriginal.replace(/[^a-zA-Z0-9]+/g, '-');
@@ -158,23 +147,5 @@ export class DatasetDetailComponent implements OnInit {
   // Método para obtener las claves de un objeto (las cabeceras de las columnas)
   objectKeys(obj: any) {
     return Object.keys(obj);
-  }
-
-  get paginatedDataset() {
-    const start = this.currentPage * this.rowsPerPage;
-    const end = start + this.rowsPerPage;
-    return this.datasetContent.slice(start, end);
-  }
-
-  nextPage() {
-    if ((this.currentPage + 1) * this.rowsPerPage < this.datasetContent.length) {
-      this.currentPage++;
-    }
-  }
-
-  previousPage() {
-    if (this.currentPage > 0) {
-      this.currentPage--;
-    }
   }
 }
