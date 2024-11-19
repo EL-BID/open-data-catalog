@@ -47,59 +47,6 @@ hr {
   border-top: 1px solid #D3D2D1;
 }
 
-/* Button styles */
-.btn-catalog {
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 1rem;
-  margin-top: 20px;
-  display: inline-block;
-  cursor: pointer;
-  margin-right: 10px;
-  font-weight: 600;
-  color: white;
-  border: 2px solid transparent;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-catalog:hover {
-  text-decoration: none;
-}
-
-.btn-catalog-dataset {
-  background-color: var(--main-blue);
-  border-color: var(--main-blue);
-}
-
-.btn-catalog-publication {
-  color: var(--sky-blue);
-  background-color: white;
-  border: 2px solid var(--sky-blue);
-}
-
-.btn-catalog-portals {
-  background-color: var(--olive);
-  border-color: var(--olive);
-}
-
-.btn-catalog-dataset:hover,
-.btn-catalog-dataset:focus,
-.btn-catalog-dataset.active {
-  box-shadow: 0px 4px 8px rgba(0, 78, 112, 0.3); /* Sombra sutil de main blue */
-}
-
-.btn-catalog-publication:hover,
-.btn-catalog-publication:focus,
-.btn-catalog-publication.active {
-  box-shadow: 0px 4px 8px rgba(25, 110, 140, 0.3); /* Sombra sutil de sky blue */
-}
-
-.btn-catalog-portals:hover,
-.btn-catalog-portals:focus,
-.btn-catalog-portals.active {
-  box-shadow: 0px 4px 8px rgba(122, 110, 39, 0.3); /* Sombra sutil de olive */
-}
-
 .research-links table {
   width: 100%;
   border-collapse: collapse;

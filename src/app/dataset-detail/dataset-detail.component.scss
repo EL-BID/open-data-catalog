@@ -13,7 +13,16 @@ th {
   background-color: #f2f2f2;
 }
 
-
 .dataset-detail-title {
   font-size: 34px;
+}
+
+.dataset-header {
+  display: flex;
+  gap: 8rem;
+  justify-content: space-between;
+}
+
+.dataset-title-and-sector {
+  width: 75%;
 }

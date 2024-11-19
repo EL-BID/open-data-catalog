@@ -127,8 +127,11 @@ export class DatasetDetailComponent implements OnInit {
   }
 
   downloadDataset(): void {
-    if (this.titleOriginal) {
-      const formattedFilename = this.titleOriginal.replace(/[^a-zA-Z0-9]+/g, '-');
+    if (this.dataset && this.dataset.filename) {
+      const filenameFromMetadata = this.dataset.filename;
+
+      // Formateamos el nombre del archivo para asegurar que es seguro
+      const formattedFilename = filenameFromMetadata.replace(/[^a-zA-Z0-9\-\.]+/g, '-');
 
       this.dataService.downloadDataset(formattedFilename).subscribe((response: Blob) => {
         const blob = new Blob([response], { type: 'text/csv' });
@@ -138,9 +141,11 @@ export class DatasetDetailComponent implements OnInit {
         link.download = `${formattedFilename}.csv`;
         link.click();
         URL.revokeObjectURL(url);
+      }, error => {
+        console.error('Error al descargar el dataset:', error);
       });
     } else {
-      console.error('Filename no disponible para descargar');
+      console.error('Filename no disponible en la metadata para descargar');
     }
   }
 
