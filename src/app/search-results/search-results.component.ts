@@ -37,7 +37,7 @@ export class SearchResultsComponent implements OnChanges {
   }
 
   private applyFilters(): void {
-    const { topics = [], countries = [], years = [], languages = [] } = this.filters || {};
+    const { topics = [], countries = [], years = [], languages = [], idbKnowledges = [] } = this.filters || {};
 
     this.filteredDatasets = this.datasets.filter(dataset => {
       const matchSearchTerm = dataset.title.toLowerCase().includes(this.searchTerm.toLowerCase());
@@ -57,8 +57,16 @@ export class SearchResultsComponent implements OnChanges {
         return issuedYear === year;
       });
       const matchLanguage = languages.length === 0 || languages.some((lang: string) => dataset.language.toLowerCase() === lang.toLowerCase());
+      const matchIdbKnowledge = idbKnowledges.length === 0 || idbKnowledges.some((knowledge: string) => {
+        if (knowledge === "Tied research publication") {
+          // Si la opción "Tied research publication" está seleccionada, solo filtrar datasets cuyo "source" no sea vacío
+          return dataset.source && dataset.source.trim() !== "";
+        }
+        // Si no se ha seleccionado "Tied research publication", no filtra por el campo source
+        return true;
+      });
 
-      return matchSearchTerm && matchTopic && matchCountries && matchYear && matchLanguage;
+      return matchSearchTerm && matchTopic && matchCountries && matchYear && matchLanguage && matchIdbKnowledge;
     });
 
     this.sortDatasets();

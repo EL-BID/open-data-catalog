@@ -20,6 +20,7 @@ export class FiltersComponent implements OnInit {
   regions: { [key: string]: string[] } = {};
   years: string[] = [];
   languages: string[] = [];
+  idbKnowledges: string[] = [];
   selectedFilters: { [key: string]: boolean } = {};
   expandedRegions: { [key: string]: boolean } = {};
 
@@ -48,25 +49,24 @@ export class FiltersComponent implements OnInit {
       this.regions = data.regions;
       this.years = data.years;
       this.languages = data.languages;
-
+      this.idbKnowledges = data.idbKnowledges;
       this.topics.forEach(topic => {
         this.selectedFilters[topic] = false;
       });
-
       Object.keys(this.regions).forEach(region => {
         this.regions[region].forEach(country => {
           this.selectedFilters[country] = false;
         });
       });
-
       this.years.forEach(year => {
         this.selectedFilters[year] = false;
       });
-
       this.languages.forEach(language => {
         this.selectedFilters[language] = false;
       });
-
+      this.idbKnowledges.forEach(idbKnowledge => {
+        this.selectedFilters[idbKnowledge] = false;
+      });
       this.updateVisibleFilters();
     });
   }
@@ -74,19 +74,16 @@ export class FiltersComponent implements OnInit {
   updateVisibleFilters() {
     const topicsPerPage = 5;
     const yearsPerPage = 5;
-
-    // Solo mostramos los primeros 5 elementos de los topics y los años inicialmente.
     this.visibleTopics = this.topics.slice(0, topicsPerPage);
     this.visibleYears = this.years.slice(0, yearsPerPage);
   }
 
-  // Esta función ahora solo muestra todos los elementos al hacer clic en el botón "See More"
   showAllTopics() {
-    this.visibleTopics = [...this.topics];  // Mostrar todos los topics
+    this.visibleTopics = [...this.topics];
   }
 
   showAllYears() {
-    this.visibleYears = [...this.years];  // Mostrar todos los años
+    this.visibleYears = [...this.years];
   }
 
   toggleRegion(regionKey: string): void {
@@ -103,12 +100,14 @@ export class FiltersComponent implements OnInit {
     const selectedYears = this.years.filter(year => this.selectedFilters[year]);
     const selectedLanguages = this.languages.filter(language => this.selectedFilters[language])
       .map(language => this.languageMapping[language]);
+    const selectedIdbKnowledges = this.idbKnowledges.filter(idbKnowledge => this.selectedFilters[idbKnowledge]);
 
     this.filtersChanged.emit({
       topics: selectedTopics,
       countries: selectedCountries,
       years: selectedYears,
-      languages: selectedLanguages
+      languages: selectedLanguages,
+      idbKnowledges: selectedIdbKnowledges,
     });
   }
 
@@ -124,6 +123,9 @@ export class FiltersComponent implements OnInit {
         this.selectedFilters[value] = !this.selectedFilters[value];
         break;
       case 'language':
+        this.selectedFilters[value] = !this.selectedFilters[value];
+        break;
+      case 'idbKnowledge':
         this.selectedFilters[value] = !this.selectedFilters[value];
         break;
     }
