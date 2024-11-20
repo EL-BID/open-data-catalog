@@ -80,5 +80,20 @@
         </div>
       </div>
     </div>
+
+    <!-- Linked IDB Knowledge (multiple selection) -->
+    <div class="filter-group">
+      <hr class="separator">
+      <label>Linked IDB Knowledge</label>
+      <div class="filter-options" id="idbKnowledgeFilter">
+        <div class="filter-options-visible">
+          <label *ngFor="let idbKnowledge of idbKnowledges">
+            <input type="checkbox" [(ngModel)]="selectedFilters[idbKnowledge]" (change)="emitFilters()"
+              (keydown.enter)="onCheckboxKeydown(idbKnowledge, 'idbKnowledge')">
+            <span>{{ idbKnowledge }}</span>
+          </label>
+        </div>
+      </div>
+    </div>
   </div>
 </aside>
