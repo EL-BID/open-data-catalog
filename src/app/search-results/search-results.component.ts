@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class SearchResultsComponent implements OnChanges {
   @Input() searchTerm: string = '';
-  @Input() sortBy: string = 'title';
+  @Input() sortBy: string = 'date';
   @Input() filters: any = {};
   @Output() resultCountChange = new EventEmitter<number>();
   @Output() noResultsChange = new EventEmitter<boolean>();
@@ -90,7 +90,7 @@ export class SearchResultsComponent implements OnChanges {
       this.filteredDatasets.sort((a, b) => {
         const issuedA = a.issued ? new Date(a.issued).getTime() : 0;
         const issuedB = b.issued ? new Date(b.issued).getTime() : 0;
-        return issuedB - issuedA; // Orden descendente por fecha (más reciente primero)
+        return issuedB - issuedA;
       });
     }
   }

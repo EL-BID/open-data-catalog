@@ -12,6 +12,6 @@ export class SortComponent {
 
   onSortChanged(event: Event): void {
     const value = (event.target as HTMLSelectElement).value;
-    this.sortChanged.emit(value);  // Emitir el valor seleccionado como string
+    this.sortChanged.emit(value);
   }
 }
