@@ -12,17 +12,78 @@ th, td {
 th {
   background-color: #f2f2f2;
 }
-
-.dataset-detail-title {
-  font-size: 34px;
-}
-
 .dataset-header {
   display: flex;
-  gap: 8rem;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.dataset-title-and-sector {
-  width: 75%;
+/* Metadata Section */
+.dataset-detail-title {
+  font-size: 3.4rem;
+}
+
+.h2-metadata {
+  font-size: 2.2rem;
+}
+
+.metadata-category {
+  margin: 3rem 2rem;
+  padding: 3rem;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+}
+
+.metadata-category h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.metadata-category ul {
+  margin: 0 3rem;
+}
+
+.metadata-category ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.metadata-category ul li:last-child {
+  border-bottom: none;
+}
+
+.metadata-category ul > li > div:first-child {
+  width: 150px;
+  font-weight: bold;
+}
+
+.metadata-category ul > li > div:last-child {
+  flex: 1; /* Permite que el contenido crezca */
+  word-wrap: break-word; /* Ajusta el texto largo */
+}
+
+.download-icon {
+  font-size: 1.6rem;
+  margin-left: 1rem;
+}
+
+.metadata-category-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.metadata-icon {
+  font-size: 1.8rem;
+  color: var(--main-blue);
+  display: flex; /* Asegúrate de que se centre dentro del contenedor */
+  align-items: center; /* Centrado vertical dentro del icono */
+}
+
+.metadata-category-title h3 {
+  margin: 0; /* Elimina márgenes innecesarios */
 }
