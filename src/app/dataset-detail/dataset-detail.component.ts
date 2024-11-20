@@ -3,15 +3,22 @@ import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../data.service';
 import * as Papa from 'papaparse';  // Importa PapaParse para procesar CSV
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faDownload, faEarthAmerica, faCircleInfo, faDatabase, faUserShield } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dataset-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FontAwesomeModule],
   templateUrl: './dataset-detail.component.html',
   styleUrls: ['./dataset-detail.component.scss']
 })
 export class DatasetDetailComponent implements OnInit {
+  faDownload = faDownload;
+  faEarthAmerica = faEarthAmerica;
+  faCircleInfo = faCircleInfo;
+  faDatabase = faDatabase;
+  faUserShield = faUserShield;
   mydataCategory: string | null = null;
   titleOriginal: string | null = null;
   mydataId: string | null = null;
@@ -33,11 +40,6 @@ export class DatasetDetailComponent implements OnInit {
     console.log("titleOriginal:", this.titleOriginal);
     console.log("mydataId:", this.mydataId);
     this.loadMetadata();
-  }
-
-  // Función de normalización para comparar títulos
-  normalizeTitle(title: string | null): string {
-    return title ? title.trim().replace(/[^a-zA-Z0-9 ]/g, '-').substring(0, 50) : '';  // Normalizamos y cortamos a 50 caracteres
   }
 
   loadMetadata(): void {
@@ -153,4 +155,90 @@ export class DatasetDetailComponent implements OnInit {
   objectKeys(obj: any) {
     return Object.keys(obj);
   }
+
+  sortCountries(spatial: string | string[]): string {
+    if (!spatial) {
+      return '';
+    }
+
+    if (typeof spatial === 'string') {
+      // Si es un string, devolver directamente
+      return spatial;
+    }
+
+    if (Array.isArray(spatial)) {
+      // Ordenar si es un array
+      const sortedCountries = spatial.sort((a, b) => a.localeCompare(b));
+
+      if (sortedCountries.length === 1) {
+        // Si solo hay un país, devolverlo directamente
+        return sortedCountries[0];
+      } else if (sortedCountries.length === 2) {
+        // Si hay dos países, unirlos con "and"
+        return sortedCountries.join(' and ');
+      } else {
+        // Si hay más de dos países, unirlos con comas y "and" antes del último
+        const allExceptLast = sortedCountries.slice(0, -1).join(', ');
+        const lastCountry = sortedCountries[sortedCountries.length - 1];
+        return `${allExceptLast} and ${lastCountry}`;
+      }
+    }
+
+    return '';
+  }
+
+  getAuthors(): string {
+    // Obtener los autores personales y organizacionales, asegurándose de eliminar cualquier espacio extra al final
+    const personalAuthors = this.dataset?.creator_personal?.trim() || ''; // 'trim()' elimina los espacios al principio y al final
+    const organizationalAuthors = this.dataset?.creator_organizational?.trim() || ''; // Igual para los autores organizacionales
+
+    // Concatenar los autores personales y organizacionales
+    const authors = [personalAuthors, organizationalAuthors]
+      .filter(author => author)  // Elimina cualquier autor vacío
+      .join('; ');  // Une los autores con un punto y coma y un espacio
+
+    // Devolver el string final, donde se eliminan los espacios incorrectos después del punto y coma, si es necesario
+    return authors.replace(/;\s+/g, '; ').trim();  // Asegura que no haya espacios extra al final
+  }
+
+  getLicense(): string {
+    // Obtener la URL de la licencia desde el JSON
+    const licenseUrl = this.dataset?.license || '';  // Si no hay licencia, se usa una cadena vacía
+
+    // Obtener la fecha de emisión (issued) desde el JSON y convertirla a un formato de fecha
+    const issuedDate = new Date(this.dataset?.issued || '');
+    const cutoffDate = new Date('2022-05-11');  // Fecha de corte: 11 de mayo de 2022
+
+    // Si la fecha de emisión es anterior a la fecha de corte, se asigna la licencia 3.0
+    const defaultLicense = issuedDate < cutoffDate
+      ? 'https://creativecommons.org/licenses/by/3.0/igo/legalcode'
+      : 'https://creativecommons.org/licenses/by/4.0/legalcode';
+
+    // Si ya hay una URL de licencia en el JSON, usala, de lo contrario usa el valor por defecto basado en la fecha
+    const finalLicenseUrl = licenseUrl || defaultLicense;
+
+    // Si el enlace de la licencia es una URL, lo convierte en un link HTML
+    return `<a href="${finalLicenseUrl}" target="_blank" rel="noopener noreferrer">${finalLicenseUrl}</a>`;
+  }
+
+  // Método para asegurarse de que keywords sea un array y luego ordenarlos
+  getSortedKeywords(): string[] {
+    if (Array.isArray(this.dataset?.keyword)) {
+      // Si las keywords son un array, limpiamos los espacios antes de ordenar
+      return this.dataset?.keyword
+        .map((keyword: string) => keyword.trim())  // Eliminar los espacios al inicio y final
+        .sort((a: string, b: string) => a.localeCompare(b)); // Ordenar
+    }
+
+    if (typeof this.dataset?.keyword === 'string') {
+      // Si las keywords son un string, las convertimos en un array
+      return this.dataset?.keyword
+        .split(',')
+        .map((keyword: string) => keyword.trim())  // Limpiar los espacios en blanco
+        .sort((a: string, b: string) => a.localeCompare(b));  // Ordenar
+    }
+
+    return []; // Si no hay keywords, devolvemos un array vacío
+  }
+
 }

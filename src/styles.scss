@@ -118,6 +118,12 @@ a:hover {
   text-decoration: underline;
 }
 
+hr {
+  max-width: 1440px;
+  margin: auto;
+  border-top: 1px solid #D3D2D1;
+}
+
 /* General */
 
 .odl-section {
@@ -208,13 +214,14 @@ a:hover {
 
 /* Button styles */
 .btn-catalog {
-  padding: 10px 20px;
+  padding: 10px 25px;
   text-decoration: none;
   border-radius: 1rem;
   margin-top: 20px;
   display: inline-block;
   cursor: pointer;
   margin-right: 10px;
+  font-family: inherit;
   font-size: 1.6rem;
   font-weight: 600;
   color: white;
