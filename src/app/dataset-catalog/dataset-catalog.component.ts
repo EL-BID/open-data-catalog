@@ -14,7 +14,7 @@ import { ResultsHeaderComponent } from '../results-header/results-header.compone
 })
 export class DatasetCatalogComponent implements AfterViewInit {
   searchTerm: string = '';  // Término de búsqueda inicial
-  sortBy: string = 'title'; // Criterio de ordenamiento inicial
+  sortBy: string = 'date'; // Criterio de ordenamiento inicial
   filters: any = {};  // Filtros seleccionados, como por ejemplo, categoría o tipo de datos
   resultCount: number = 0; // Nueva propiedad para el conteo de resultados
   noResults: boolean = false; // Nueva propiedad para indicar si no hay resultados
