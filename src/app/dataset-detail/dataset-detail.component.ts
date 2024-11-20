@@ -4,7 +4,7 @@ import { DataService } from '../data.service';
 import * as Papa from 'papaparse';  // Importa PapaParse para procesar CSV
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faDownload, faEarthAmerica, faCircleInfo, faDatabase, faUserShield } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faEarthAmerica, faCircleInfo, faDatabase, faUserShield, faLink } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dataset-detail',
@@ -19,6 +19,7 @@ export class DatasetDetailComponent implements OnInit {
   faCircleInfo = faCircleInfo;
   faDatabase = faDatabase;
   faUserShield = faUserShield;
+  faLink = faLink;
   mydataCategory: string | null = null;
   titleOriginal: string | null = null;
   mydataId: string | null = null;
@@ -214,11 +215,8 @@ export class DatasetDetailComponent implements OnInit {
       ? 'https://creativecommons.org/licenses/by/3.0/igo/legalcode'
       : 'https://creativecommons.org/licenses/by/4.0/legalcode';
 
-    // Si ya hay una URL de licencia en el JSON, usala, de lo contrario usa el valor por defecto basado en la fecha
     const finalLicenseUrl = licenseUrl || defaultLicense;
-
-    // Si el enlace de la licencia es una URL, lo convierte en un link HTML
-    return `<a href="${finalLicenseUrl}" target="_blank" rel="noopener noreferrer">${finalLicenseUrl}</a>`;
+    return finalLicenseUrl;
   }
 
   // Método para asegurarse de que keywords sea un array y luego ordenarlos
