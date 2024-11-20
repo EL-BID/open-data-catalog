@@ -80,6 +80,7 @@
         "filename": "social-indicators-of-latin-america-and-the-caribbean",
         "language": "en",
         "title": "Social Indicators of Latin America and the Caribbean",
+        "source": "https://dx.doi.org/10.18235/0009569",
         "description": "Social Indicator is a diverse dataset of indicators designed to capture social conditions in Latin America and the Caribbean. The indicators are derived from national household survey data, Censuses, and other sources covering 21 countries from 1990 to date. While the Sociómetro includes traditional global indicators, the database also includes tailor-made indicators in five areas: Demographics, Education, Labor Market, Housing, and Income, to better capture conditions in LAC. Moreover, unlike traditional aggregate indicators, the Sociómetro indicators are disaggregated by ethnicity and race (when available) and by gender, geographic residence, education, and income quintile. The management and implementation of the Sociómetro are provided by the Social Sector (SCL) of the Vice Presidency of Knowledge and Sectors to strengthen the analytical content of projects and studies. The indicators are not intended to serve as official data for any particular country but instead aim to provide a comparable set of social indicators for the Latin American region.",
         "temporal": "1990 - 2022",
         "keyword": [

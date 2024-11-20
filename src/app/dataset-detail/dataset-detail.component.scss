@@ -87,3 +87,12 @@ th {
 .metadata-category-title h3 {
   margin: 0; /* Elimina márgenes innecesarios */
 }
+
+a.metadata-link {
+  color: var(--main-blue);
+  text-decoration: none;
+}
+
+.metadata-link:hover {
+  text-decoration: underline;
+}

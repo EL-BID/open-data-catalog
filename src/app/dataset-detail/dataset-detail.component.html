@@ -89,7 +89,11 @@
         </li>
         <li>
           <div>✓ License:</div>
-          <div [innerHTML]="getLicense()"></div>
+          <div>
+            <a *ngIf="dataset?.license" [href]="getLicense()" target="_blank" rel="noopener noreferrer" class="metadata-link">
+              {{ getLicense() }}
+            </a>
+          </div>
         </li>
         <li>
           <div>✓ Author(s): </div>
@@ -99,6 +103,30 @@
     </div>
   </div>
 </section>
+<hr>
+
+<section *ngIf="dataset?.source" class="odl-section">
+  <div class="odl-container">
+    <h2 class="h2-metadata">Related IDB Publication</h2>
+    <div class="metadata-category">
+      <div class="metadata-category-title">
+        <span class="metadata-icon" aria-hidden="true"><fa-icon [icon]="faLink"></fa-icon></span>
+        <h3>Source</h3>
+      </div>
+      <ul>
+        <li>
+          <div>✓ Publication DOI:</div>
+          <div>
+            <a [href]="dataset.source" target="_blank" rel="noopener noreferrer" class="metadata-link">
+              {{ dataset.source }}
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
 <!-- <div *ngIf="loading">Cargando dataset...</div>
 
