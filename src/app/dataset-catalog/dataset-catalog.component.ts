@@ -1,4 +1,5 @@
-import { ChangeDetectorRef, Component, AfterViewInit  } from '@angular/core';
+import { ChangeDetectorRef, Component, AfterViewInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SearchBarComponent } from "../search-bar/search-bar.component";
 import { FiltersComponent } from "../filters/filters.component";
 import { SearchResultsComponent } from '../search-results/search-results.component';
@@ -22,33 +23,70 @@ export class DatasetCatalogComponent implements AfterViewInit {
   currentPage = 0;
   rowsPerPage = 10;
 
-  constructor(private cdr: ChangeDetectorRef) { }
+  constructor(private cdr: ChangeDetectorRef, private route: ActivatedRoute, private router: Router) { }
 
   ngAfterViewInit(): void {
     this.cdr.detectChanges();
+    this.loadFiltersFromUrl();  // Cargar filtros desde la URL al inicializar
   }
 
+  // Cargar filtros desde la URL
+  loadFiltersFromUrl(): void {
+    this.route.queryParams.subscribe(params => {
+      // Actualizamos los filtros con los parámetros de la URL
+      this.filters = {
+        topics: params['topics'] ? params['topics'].split(',') : [],
+        countries: params['countries'] ? params['countries'].split(',') : [],
+        years: params['years'] ? params['years'].split(',') : [],
+        languages: params['languages'] ? params['languages'].split(',') : [],
+        idbKnowledges: params['idbKnowledges'] ? params['idbKnowledges'].split(',') : []
+      };
+    });
+  }
+
+  // Manejar el cambio en la búsqueda
   onSearch(searchTerm: string): void {
     console.log('Término de búsqueda recibido en DatasetCatalog:', searchTerm);
     this.searchTerm = searchTerm;
     this.cdr.detectChanges();
+    this.updateUrlWithFilters(); // Actualizar la URL al cambiar el término de búsqueda
   }
 
+  // Manejar el cambio en los filtros
+  onFiltersChanged(updatedFilters: any): void {
+    console.log('Filtros cambiados a:', updatedFilters);
+    this.filters = updatedFilters;
+    this.updateUrlWithFilters();  // Actualizar la URL al cambiar los filtros
+  }
+
+  // Actualizar los parámetros de la URL con los filtros
+  updateUrlWithFilters(): void {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {
+        topics: this.filters.topics.join(','),
+        countries: this.filters.countries.join(','),
+        years: this.filters.years.join(','),
+        languages: this.filters.languages.join(','),
+        idbKnowledges: this.filters.idbKnowledges.join(',')
+      },
+      queryParamsHandling: 'merge'  // Mantener los demás parámetros en la URL
+    });
+  }
+
+  // Manejar el cambio en el criterio de ordenamiento
   onSortChanged(sortBy: string): void {
     console.log('Criterio de ordenamiento cambiado a:', sortBy);
     this.sortBy = sortBy;
   }
 
-  onFiltersChanged(filters: any): void {
-    console.log('Filtros cambiados a:', filters);
-    this.filters = filters;
-  }
-
+  // Actualizar el conteo de resultados
   updateResultCount(count: number): void {
     this.resultCount = count;
     this.cdr.detectChanges();
   }
 
+  // Actualizar si no hay resultados
   updateNoResults(noResults: boolean): void {
     this.noResults = noResults;
   }
