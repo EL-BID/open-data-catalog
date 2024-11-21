@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, AfterViewInit, ViewChildren, ElementRef, QueryList } from '@angular/core';
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -10,16 +10,19 @@ import { CommonModule } from '@angular/common';
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.scss']
 })
-export class SearchResultsComponent implements OnChanges {
+export class SearchResultsComponent implements OnChanges, AfterViewInit {
   @Input() searchTerm: string = '';
   @Input() sortBy: string = 'date';
   @Input() filters: any = {};
   @Output() resultCountChange = new EventEmitter<number>();
   @Output() noResultsChange = new EventEmitter<boolean>();
 
+  @ViewChildren('descRef') descriptions!: QueryList<ElementRef>;
+
   datasets: any[] = [];
   filteredDatasets: any[] = [];
-  isDescriptionExpanded: { [key: number]: boolean } = {}; // Usamos id en lugar de filename
+  isDescriptionExpanded: { [key: number]: boolean } = {};
+  showReadMoreButton: { [key: number]: boolean } = {};
 
   constructor(private dataService: DataService, private router: Router, private changeDetectorRef: ChangeDetectorRef) { }
 
@@ -27,6 +30,7 @@ export class SearchResultsComponent implements OnChanges {
     this.dataService.getMetadata().subscribe(data => {
       this.datasets = data;
       this.applyFilters();
+      setTimeout(() => this.checkTruncation(), 0); // Espera a que las vistas se actualicen
     });
   }
 
@@ -34,6 +38,11 @@ export class SearchResultsComponent implements OnChanges {
     if (changes['searchTerm'] || changes['sortBy'] || changes['filters']) {
       setTimeout(() => this.applyFilters());
     }
+  }
+
+  ngAfterViewInit(): void {
+    // Lógica que se ejecuta después de que las vistas secundarias estén inicializadas.
+    this.checkTruncation();
   }
 
   private applyFilters(): void {
@@ -72,6 +81,8 @@ export class SearchResultsComponent implements OnChanges {
     this.sortDatasets();
     this.resultCountChange.emit(this.filteredDatasets.length);
     this.noResultsChange.emit(this.filteredDatasets.length === 0);
+
+    setTimeout(() => this.checkTruncation(), 0); // Recalcula después de aplicar los filtros
   }
 
   private isMatchingSpatial(selectedCountries: string[], spatial: string | string[]): boolean {
@@ -95,19 +106,19 @@ export class SearchResultsComponent implements OnChanges {
     }
   }
 
-  getLimitedCountries(spatial: string[]): string {
-    if (!Array.isArray(spatial)) {
-      return spatial;
-    }
-    const sortedCountries = spatial.sort((a, b) => a.localeCompare(b));
-    const limitedCountries = sortedCountries.slice(0, 5);
-    return limitedCountries.join(', ') + (spatial.length > 5 ? ',...' : '');
+  private checkTruncation(): void {
+    this.filteredDatasets.forEach(dataset => {
+      const descriptionElement = this.descriptions.toArray().find((desc: ElementRef) => desc.nativeElement.innerText.trim() === dataset.description.trim());
+      if (descriptionElement) {
+        const isTruncated = descriptionElement.nativeElement.scrollHeight > descriptionElement.nativeElement.offsetHeight;
+        this.showReadMoreButton[dataset.id] = isTruncated;
+        this.isDescriptionExpanded[dataset.id] = false;  // Inicialmente está colapsada
+      }
+    });
   }
 
-  // Cambiar el método para usar 'id' en lugar de 'filename'
-  toggleDescription(id: number): void {
-    // Usamos el id del dataset para controlar su expansión de descripción
-    this.isDescriptionExpanded[id] = !this.isDescriptionExpanded[id];
+  toggleDescription(datasetId: number): void {
+    this.isDescriptionExpanded[datasetId] = !this.isDescriptionExpanded[datasetId];
   }
 
   viewDataset(mydata_category: string, title_original: string, mydata_id?: string): void {
@@ -139,5 +150,13 @@ export class SearchResultsComponent implements OnChanges {
     this.router.navigate([route]);
   }
 
+  getLimitedCountries(spatial: string[]): string {
+    if (!Array.isArray(spatial)) {
+      return spatial;
+    }
+    const sortedCountries = spatial.sort((a, b) => a.localeCompare(b));
+    const limitedCountries = sortedCountries.slice(0, 5);
+    return limitedCountries.join(', ') + (spatial.length > 5 ? ',...' : '');
+  }
 
 }
