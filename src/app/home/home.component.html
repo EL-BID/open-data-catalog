@@ -31,8 +31,7 @@
         <div class="card-text">
           <span class="card-number">+300</span>
           <p>Linked research datasets</p>
-          <a [routerLink]="['/dataset-catalog']" class="catalog-link">Dig into our
-            research →</a>
+          <a [routerLink]="['/browse']" [queryParams]="{ idbKnowledges: 'Tied research publication' }" class="catalog-link">Dig into our research →</a>
         </div>
       </div>
       <!--Card 3: Dashboards-->
