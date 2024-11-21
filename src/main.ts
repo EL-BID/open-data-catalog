@@ -12,3 +12,9 @@ bootstrapApplication(AppComponent, {
   ]
 })
   .catch((err) => console.error(err));
+
+// Deshabilitar la restauración del desplazamiento por defecto en el navegador
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';  // Siempre iniciar desde arriba
+}
+
