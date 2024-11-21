@@ -79,10 +79,12 @@ export class FiltersComponent implements OnInit {
 
   showAllTopics() {
     this.visibleTopics = [...this.topics];
+    this.cdr.detectChanges();  // Fuerza la actualización en la vista
   }
 
   showAllYears() {
     this.visibleYears = [...this.years];
+    this.cdr.detectChanges();  // Fuerza la actualización en la vista
   }
 
   toggleRegion(regionKey: string): void {
