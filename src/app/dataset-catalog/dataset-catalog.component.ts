@@ -83,7 +83,6 @@ export class DatasetCatalogComponent implements AfterViewInit {
     });
   }
 
-
   // Manejar el cambio en el criterio de ordenamiento
   onSortChanged(sortBy: string): void {
     console.log('Criterio de ordenamiento cambiado a:', sortBy);

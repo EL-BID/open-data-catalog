@@ -1,7 +1,8 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';  // Asegúrate de importar Router de '@angular/router'
-import { RouterLink, RouterModule, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter, pairwise } from 'rxjs/operators'; // pairwise para rastrear la URL anterior
 import { CommonModule } from '@angular/common';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -10,16 +11,14 @@ import { FooterComponent } from './footer/footer.component';
   standalone: true,
   imports: [
     CommonModule,
-    RouterModule,   // Asegúrate de importar RouterModule
+    RouterModule,
     RouterOutlet,
-    RouterLink,
-    RouterLinkActive,
     HeaderComponent,
     FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]  // Asegúrate de añadir esto si usas Web Components
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent implements OnInit {
   title = 'open-data-lac';
@@ -27,21 +26,23 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    // Asegura que al inicializar siempre se desplace al inicio
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    // Suscribirse a eventos de navegación y distinguir entre cambios de ruta y query params
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd), // Solo NavigationEnd
+        pairwise() // Obtener la URL anterior y la actual
+      )
+      .subscribe(([prev, curr]: [NavigationEnd, NavigationEnd]) => {
+        const prevUrl = new URL(prev.urlAfterRedirects, window.location.origin);
+        const currUrl = new URL(curr.urlAfterRedirects, window.location.origin);
 
-    // Suscripción a cambios de ruta
-    this.router.events.subscribe((event: any) => {
-      if (event instanceof NavigationEnd) {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
-    });
+        // Condición: Desplazarse hacia arriba solo si el pathname cambia
+        if (prevUrl.pathname !== currUrl.pathname) {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+      });
   }
-
 }
