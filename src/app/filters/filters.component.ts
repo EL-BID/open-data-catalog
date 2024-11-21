@@ -6,7 +6,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // Importa
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'; // Importar los íconos
 import { ChangeDetectorRef } from '@angular/core';
 
-
 @Component({
   selector: 'app-filters',
   standalone: true,
