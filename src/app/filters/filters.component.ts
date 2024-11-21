@@ -64,28 +64,31 @@ export class FiltersComponent implements OnInit {
 
       // Establecer los filtros seleccionados desde la URL (si existen)
       const urlFilters = this.filters || {}; // Esto debe venir del DatasetCatalogComponent
+      const urlTopics = this.getQueryParam('topics'); // Obtener el valor de topics de la URL
+      const urlCountries = this.getQueryParam('countries'); // Obtener el valor de countries de la URL
+      const urlYears = this.getQueryParam('years'); // Obtener el valor de years de la URL
+      const urlLanguages = this.getQueryParam('languages'); // Obtener el valor de languages de la URL
       const urlIdbKnowledges = this.getQueryParam('idbKnowledges'); // Obtener el valor de idbKnowledges de la URL
 
       // Marcar los checkboxes según los filtros de la URL
       this.topics.forEach(topic => {
-        this.selectedFilters[topic] = urlFilters.topics?.includes(topic) || false;
+        this.selectedFilters[topic] = urlTopics.includes(topic);
       });
 
       Object.keys(this.regions).forEach(region => {
         this.regions[region].forEach(country => {
-          this.selectedFilters[country] = urlFilters.countries?.includes(country) || false;
+          this.selectedFilters[country] = urlCountries.includes(country);
         });
       });
 
       this.years.forEach(year => {
-        this.selectedFilters[year] = urlFilters.years?.includes(year) || false;
+        this.selectedFilters[year] = urlYears.includes(year);
       });
 
       this.languages.forEach(language => {
-        this.selectedFilters[language] = urlFilters.languages?.includes(language) || false;
+        this.selectedFilters[language] = urlLanguages.includes(language);
       });
 
-      // Aquí se añade la comparación correcta para idbKnowledges
       this.idbKnowledges.forEach(idbKnowledge => {
         this.selectedFilters[idbKnowledge] = urlIdbKnowledges.includes(idbKnowledge);
       });
@@ -93,6 +96,7 @@ export class FiltersComponent implements OnInit {
       this.updateVisibleFilters();
     });
   }
+
 
   getQueryParam(param: string): string[] {
     const urlParams = new URLSearchParams(window.location.search);
