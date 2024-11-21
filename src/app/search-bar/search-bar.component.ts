@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter, OnInit, HostListener } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router'; // Importar para acceder y actualizar la URL
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -22,7 +23,7 @@ export class SearchBarComponent implements OnInit {
 
   @Output() search: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     // Cargar datasets al inicializar el componente
@@ -34,6 +35,16 @@ export class SearchBarComponent implements OnInit {
         console.error('Error al cargar el archivo metadata.json', error);
       }
     );
+    // Leer el parámetro "search" de la URL
+    this.loadSearchTermFromUrl();
+  }
+
+  loadSearchTermFromUrl(): void {
+    const search = this.route.snapshot.queryParamMap.get('search');
+    if (search) {
+      this.searchTerm = search;  // Establecer el término de búsqueda desde la URL
+      this.search.emit(this.searchTerm);  // Emitir el evento con el término cargado
+    }
   }
 
   // Método llamado cuando el usuario presiona el ícono o botón de búsqueda
@@ -42,41 +53,63 @@ export class SearchBarComponent implements OnInit {
       this.search.emit(this.searchTerm.trim());
       this.filteredSuggestions = []; // Cerrar la lista de sugerencias
       this.dataService.setSearchTerm(this.searchTerm); // Actualizar el término en DataService
+
+      // Actualizar la URL con el término de búsqueda
+      this.router.navigate([], {
+        queryParams: { search: this.searchTerm },
+        queryParamsHandling: 'merge', // Para que no se pierdan otros parámetros en la URL
+      });
     }
   }
 
-  // Método para actualizar las sugerencias en tiempo real mientras el usuario escribe
-  onSearchTermChange(): void {
-    this.dataService.setSearchTerm(this.searchTerm); // Actualizar el término de búsqueda en el servicio
+ // Método para actualizar las sugerencias en tiempo real mientras el usuario escribe
+ onSearchTermChange(): void {
+  this.dataService.setSearchTerm(this.searchTerm); // Actualizar el término de búsqueda en el servicio
 
-    if (this.searchTerm) {
-      // Filtrar las sugerencias basadas en el título de los datasets
-      this.filteredSuggestions = this.datasets.filter(dataset =>
-        dataset.title.toLowerCase().includes(this.searchTerm.toLowerCase())
-      );
-    } else {
-      this.filteredSuggestions = []; // Si no hay término de búsqueda, no mostrar sugerencias
-    }
-    // Restablecer el índice seleccionado cuando el término de búsqueda cambia
-    this.selectedIndex = -1;
-    // Emitir la búsqueda también para actualizar los resultados de manera inmediata
-    this.search.emit(this.searchTerm);
+  if (this.searchTerm) {
+    // Filtrar las sugerencias basadas en el título de los datasets
+    this.filteredSuggestions = this.datasets.filter(dataset =>
+      dataset.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  } else {
+    this.filteredSuggestions = []; // Si no hay término de búsqueda, no mostrar sugerencias
   }
+  // Restablecer el índice seleccionado cuando el término de búsqueda cambia
+  this.selectedIndex = -1;
+  // Emitir la búsqueda también para actualizar los resultados de manera inmediata
+  this.search.emit(this.searchTerm);
+
+  // Actualizar la URL con el nuevo término de búsqueda
+  this.router.navigate([], {
+    queryParams: { search: this.searchTerm },
+    queryParamsHandling: 'merge', // Para que no se pierdan otros parámetros en la URL
+  });
+}
 
   // Método para seleccionar una sugerencia y realizar la búsqueda
   selectSuggestion(suggestion: string, index:number): void {
-    console.log('Sugerencia seleccionada:', suggestion);
     this.searchTerm = suggestion;  // Establecer el término de búsqueda con la sugerencia seleccionada
     this.selectedIndex = index;    // Actualizar el índice seleccionado
     this.filteredSuggestions = [];  // Limpiar la lista de sugerencias
     this.search.emit(this.searchTerm);  // Emitir el evento con el término actualizado
-  }
 
+    // Actualizar la URL con el término de búsqueda
+    this.router.navigate([], {
+      queryParams: { search: this.searchTerm },
+      queryParamsHandling: 'merge', // Para que no se pierdan otros parámetros en la URL
+    });
+  }
   // Método para limpiar la búsqueda
   clearSearch(): void {
     this.searchTerm = '';  // Limpiar el término de búsqueda
     this.filteredSuggestions = [];  // Limpiar las sugerencias filtradas
     this.search.emit(this.searchTerm);  // Emitir el evento con un término vacío
+
+    // Actualizar la URL para eliminar el parámetro de búsqueda
+    this.router.navigate([], {
+      queryParams: { search: null },
+      queryParamsHandling: 'merge', // Para que no se pierdan otros parámetros en la URL
+    });
   }
 
   // Detectar clics fuera de la barra de búsqueda y las sugerencias
@@ -107,4 +140,5 @@ export class SearchBarComponent implements OnInit {
       this.selectSuggestion(this.filteredSuggestions[this.selectedIndex].title, this.selectedIndex);
     }
   }
+
 }

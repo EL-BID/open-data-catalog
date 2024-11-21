@@ -44,6 +44,9 @@ export class DatasetCatalogComponent implements AfterViewInit {
 
       // Actualizar la página según los parámetros de la URL
       this.currentPage = params['page'] ? +params['page'] : 1;
+
+      // Si el parámetro sortBy está presente en la URL, actualizar el valor de sortBy
+      this.sortBy = params['sortBy'] || this.sortBy; // Si no hay parámetro, se usa el valor por defecto
     });
   }
 
@@ -67,22 +70,27 @@ export class DatasetCatalogComponent implements AfterViewInit {
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: {
+        search: this.searchTerm, // Término de búsqueda primero
         topics: this.filters.topics.join(','),
         countries: this.filters.countries.join(','),
         years: this.filters.years.join(','),
         languages: this.filters.languages.join(','),
         idbKnowledges: this.filters.idbKnowledges.join(','),
-        page: this.currentPage // Incluir la página actual
+        sortBy: this.sortBy, // Ordenamiento después de la búsqueda
+        page: this.currentPage // Página al final
       },
-      queryParamsHandling: 'merge'  // Mantener los demás parámetros en la URL
+      queryParamsHandling: 'merge' // Mantener los demás parámetros en la URL
     });
   }
+
 
   // Manejar el cambio en el criterio de ordenamiento
   onSortChanged(sortBy: string): void {
     console.log('Criterio de ordenamiento cambiado a:', sortBy);
     this.sortBy = sortBy;
+    this.updateUrlWithFilters();  // Actualizar la URL con el nuevo criterio de ordenamiento
   }
+
 
   // Actualizar el conteo de resultados
   updateResultCount(count: number): void {
