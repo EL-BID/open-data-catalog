@@ -14,13 +14,12 @@
       <div class="dataset-metadata">
         <div class="metadata-left">
           <div class="dataset-description-container">
-            <p class="dataset-description"
-              [class.expanded]="isDescriptionExpanded[dataset.id]">{{
-              dataset.description }}</p>
-            <button *ngIf="dataset.description"
-              (click)="toggleDescription(dataset.id)" class="read-more-button">
-              {{ isDescriptionExpanded[dataset.id] ? 'Read less' : 'Read more'
-              }}
+            <p class="dataset-description" [class.expanded]="isDescriptionExpanded[dataset.id]" #descRef>
+              {{ dataset.description }}
+            </p>
+            <button *ngIf="showReadMoreButton[dataset.id]" (click)="toggleDescription(dataset.id)"
+              class="read-more-button">
+              {{ isDescriptionExpanded[dataset.id] ? 'Read less' : 'Read more' }}
             </button>
           </div>
         </div>

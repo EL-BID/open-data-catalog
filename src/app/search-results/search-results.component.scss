@@ -102,16 +102,18 @@
 
 .dataset-description {
   display: -webkit-box;
-  -webkit-line-clamp: 5; /* Número de líneas antes del truncado */
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 10px;
+  position: relative;
   color: #555;
+  transition: max-height 0.3s ease-out;
 }
 
 .dataset-description.expanded {
-  -webkit-line-clamp: unset; /* Sin límite de líneas cuando esté expandido */
+  -webkit-line-clamp: unset; /* Quita la limitación de líneas al expandir */
+  max-height: none; /* Muestra todo el contenido al expandir */
   overflow: visible;
 }
 
@@ -135,3 +137,14 @@
   text-decoration: none;
   outline: 2px solid var(--sky-blue);
 }
+
+.truncated-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  max-height: calc(1.5rem * 5);
+}
+
