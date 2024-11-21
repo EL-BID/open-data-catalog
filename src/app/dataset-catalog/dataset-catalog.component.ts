@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, AfterViewInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SearchBarComponent } from "../search-bar/search-bar.component";
 import { FiltersComponent } from "../filters/filters.component";
@@ -13,7 +13,7 @@ import { ResultsHeaderComponent } from '../results-header/results-header.compone
   templateUrl: './dataset-catalog.component.html',
   styleUrls: ['./dataset-catalog.component.scss']
 })
-export class DatasetCatalogComponent implements AfterViewInit {
+export class DatasetCatalogComponent implements OnInit {
   searchTerm: string = '';
   sortBy: string = 'date';
   filters: any = {};
@@ -25,15 +25,39 @@ export class DatasetCatalogComponent implements AfterViewInit {
 
   constructor(private cdr: ChangeDetectorRef, private route: ActivatedRoute, private router: Router) { }
 
-  ngAfterViewInit(): void {
-    this.cdr.detectChanges();
+  ngOnInit(): void {
+    this.checkCategoryParam();  // Verificar el parámetro 'category' al inicializar
     this.loadFiltersFromUrl();  // Cargar filtros desde la URL al inicializar
+  }
+
+  // Comprobar si hay un parámetro 'category' en la URL
+  checkCategoryParam(): void {
+    this.route.queryParams.subscribe(params => {
+      console.log(params);  // Verifica los parámetros que llegan
+      if (params['category']) {
+        // Si la categoría es 'Research Catalog', redirigimos a la nueva URL
+        if (params['category'] === 'Research Catalog') {
+          this.router.navigate([], {
+            relativeTo: this.route,
+            queryParams: { idbKnowledges: 'Tied research publication' }, // Redirigir con el nuevo parámetro
+            queryParamsHandling: 'replace' // Reemplaza los parámetros existentes en la URL
+          });
+        }
+        // Si la categoría es 'Indicator Catalog', redirigimos a la URL correspondiente
+        else if (params['category'] === 'Indicator Catalog') {
+          this.router.navigate([], {
+            relativeTo: this.route,
+            queryParams: { idbKnowledges: 'Feeds20%indicators' }, // Redirigir con el nuevo parámetro
+            queryParamsHandling: 'replace' // Reemplaza los parámetros existentes en la URL
+          });
+        }
+      }
+    });
   }
 
   // Cargar filtros desde la URL
   loadFiltersFromUrl(): void {
     this.route.queryParams.subscribe(params => {
-      // Actualizamos los filtros con los parámetros de la URL
       this.filters = {
         topics: params['topics'] ? params['topics'].split(',') : [],
         countries: params['countries'] ? params['countries'].split(',') : [],
