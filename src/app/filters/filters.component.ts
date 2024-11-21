@@ -1,5 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { DataService } from '../data.service';  // Importar el DataService
+import { ActivatedRoute } from '@angular/router'; // Importar ActivatedRoute para capturar los parámetros de la URL
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';  // Importa FormsModule
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // Importar el módulo de FontAwesome
@@ -14,6 +15,7 @@ import { ChangeDetectorRef } from '@angular/core';
   styleUrl: './filters.component.scss'
 })
 export class FiltersComponent implements OnInit {
+  @Input() filters: any = {};  // Recibir filtros desde DatasetCatalogComponent
   @Output() filtersChanged = new EventEmitter<any>();
   topics: string[] = [];
   regions: { [key: string]: string[] } = {};
@@ -36,10 +38,20 @@ export class FiltersComponent implements OnInit {
     "French": "fr"
   };
 
-  constructor(private dataService: DataService, private cdr: ChangeDetectorRef) { }
+  constructor(
+    private dataService: DataService,
+    private cdr: ChangeDetectorRef,
+    private route: ActivatedRoute // Inyectar ActivatedRoute para obtener parámetros de la URL
+  ) { }
 
   ngOnInit(): void {
     this.loadFilters();
+  }
+
+   // Método para manejar el cambio de filtros
+   onFilterChange(updatedFilters: any): void {
+    this.filters = updatedFilters;
+    this.filtersChanged.emit(this.filters);  // Emitir el cambio a DatasetCatalogComponent
   }
 
   loadFilters() {
@@ -49,26 +61,45 @@ export class FiltersComponent implements OnInit {
       this.years = data.years;
       this.languages = data.languages;
       this.idbKnowledges = data.idbKnowledges;
+
+      // Establecer los filtros seleccionados desde la URL (si existen)
+      const urlFilters = this.filters || {}; // Esto debe venir del DatasetCatalogComponent
+      const urlIdbKnowledges = this.getQueryParam('idbKnowledges'); // Obtener el valor de idbKnowledges de la URL
+
+      // Marcar los checkboxes según los filtros de la URL
       this.topics.forEach(topic => {
-        this.selectedFilters[topic] = false;
+        this.selectedFilters[topic] = urlFilters.topics?.includes(topic) || false;
       });
+
       Object.keys(this.regions).forEach(region => {
         this.regions[region].forEach(country => {
-          this.selectedFilters[country] = false;
+          this.selectedFilters[country] = urlFilters.countries?.includes(country) || false;
         });
       });
+
       this.years.forEach(year => {
-        this.selectedFilters[year] = false;
+        this.selectedFilters[year] = urlFilters.years?.includes(year) || false;
       });
+
       this.languages.forEach(language => {
-        this.selectedFilters[language] = false;
+        this.selectedFilters[language] = urlFilters.languages?.includes(language) || false;
       });
+
+      // Aquí se añade la comparación correcta para idbKnowledges
       this.idbKnowledges.forEach(idbKnowledge => {
-        this.selectedFilters[idbKnowledge] = false;
+        this.selectedFilters[idbKnowledge] = urlIdbKnowledges.includes(idbKnowledge);
       });
+
       this.updateVisibleFilters();
     });
   }
+
+  getQueryParam(param: string): string[] {
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramValue = urlParams.get(param);
+    return paramValue ? paramValue.split(',').map(p => decodeURIComponent(p.trim())) : [];
+  }
+
 
   updateVisibleFilters() {
     const topicsPerPage = 5;
@@ -102,6 +133,8 @@ export class FiltersComponent implements OnInit {
     const selectedLanguages = this.languages.filter(language => this.selectedFilters[language])
       .map(language => this.languageMapping[language]);
     const selectedIdbKnowledges = this.idbKnowledges.filter(idbKnowledge => this.selectedFilters[idbKnowledge]);
+
+    console.log(this.selectedFilters);  // Verifica si los filtros están correctos
 
     this.filtersChanged.emit({
       topics: selectedTopics,

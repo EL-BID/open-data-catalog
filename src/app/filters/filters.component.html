@@ -9,8 +9,11 @@
       <div class="filter-options" id="topicFilter">
         <div class="filter-options-visible">
           <label *ngFor="let topic of visibleTopics">
-            <input type="checkbox" [(ngModel)]="selectedFilters[topic]" (change)="emitFilters()"
-              (keydown.enter)="onCheckboxKeydown(topic, 'topic')">
+            <input
+            type="checkbox"
+            [(ngModel)]="selectedFilters[topic]"
+            (change)="emitFilters()"
+            (keydown.enter)="onCheckboxKeydown(topic, 'topic')">
             {{ topic }}
           </label>
         </div>
@@ -38,8 +41,11 @@
           <div *ngIf="expandedRegions[region.key]">
             <div *ngFor="let country of region.value">
               <label>
-                <input type="checkbox" [(ngModel)]="selectedFilters[country]" (change)="emitFilters()"
-                  (keydown.enter)="onCheckboxKeydown(country, 'country')">
+                <input
+                type="checkbox"
+                [(ngModel)]="selectedFilters[country]"
+                (change)="emitFilters()"
+                (keydown.enter)="onCheckboxKeydown(country, 'country')">
                 {{ country }}
               </label>
             </div>
@@ -55,8 +61,11 @@
       <div class="filter-options" id="yearFilter">
         <div class="filter-options-visible">
           <label *ngFor="let year of visibleYears">
-            <input type="checkbox" [(ngModel)]="selectedFilters[year]" (change)="emitFilters()"
-              (keydown.enter)="onCheckboxKeydown(year, 'year')">
+            <input
+            type="checkbox"
+            [(ngModel)]="selectedFilters[year]"
+            (change)="emitFilters()"
+            (keydown.enter)="onCheckboxKeydown(year, 'year')">
             <span>{{ year }}</span>
           </label>
         </div>
@@ -73,8 +82,11 @@
       <div class="filter-options" id="languageFilter">
         <div class="filter-options-visible">
           <label *ngFor="let language of languages">
-            <input type="checkbox" [(ngModel)]="selectedFilters[language]" (change)="emitFilters()"
-              (keydown.enter)="onCheckboxKeydown(language, 'language')">
+            <input
+            type="checkbox"
+            [(ngModel)]="selectedFilters[language]"
+            (change)="emitFilters()"
+            (keydown.enter)="onCheckboxKeydown(language, 'language')">
             <span>{{ language }}</span>
           </label>
         </div>
@@ -88,8 +100,11 @@
       <div class="filter-options" id="idbKnowledgeFilter">
         <div class="filter-options-visible">
           <label *ngFor="let idbKnowledge of idbKnowledges">
-            <input type="checkbox" [(ngModel)]="selectedFilters[idbKnowledge]" (change)="emitFilters()"
-              (keydown.enter)="onCheckboxKeydown(idbKnowledge, 'idbKnowledge')">
+            <input
+            type="checkbox"
+            [(ngModel)]="selectedFilters[idbKnowledge]"
+            (change)="emitFilters()"
+            (keydown.enter)="onCheckboxKeydown(idbKnowledge, 'idbKnowledge')">
             <span>{{ idbKnowledge }}</span>
           </label>
         </div>
