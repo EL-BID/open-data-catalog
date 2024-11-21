@@ -20,8 +20,8 @@ export class DatasetCatalogComponent implements AfterViewInit {
   resultCount: number = 0;
   noResults: boolean = false;
   datasetPath: string | null = null;
-  currentPage = 0;
-  rowsPerPage = 10;
+  currentPage: number = 1;  // Página inicial ajustada a 1
+  rowsPerPage: number = 10;
 
   constructor(private cdr: ChangeDetectorRef, private route: ActivatedRoute, private router: Router) { }
 
@@ -41,6 +41,9 @@ export class DatasetCatalogComponent implements AfterViewInit {
         languages: params['languages'] ? params['languages'].split(',') : [],
         idbKnowledges: params['idbKnowledges'] ? params['idbKnowledges'].split(',') : []
       };
+
+      // Actualizar la página según los parámetros de la URL
+      this.currentPage = params['page'] ? +params['page'] : 1;
     });
   }
 
@@ -59,7 +62,7 @@ export class DatasetCatalogComponent implements AfterViewInit {
     this.updateUrlWithFilters();  // Actualizar la URL al cambiar los filtros
   }
 
-  // Actualizar los parámetros de la URL con los filtros
+  // Actualizar los parámetros de la URL con los filtros y la página actual
   updateUrlWithFilters(): void {
     this.router.navigate([], {
       relativeTo: this.route,
@@ -68,7 +71,8 @@ export class DatasetCatalogComponent implements AfterViewInit {
         countries: this.filters.countries.join(','),
         years: this.filters.years.join(','),
         languages: this.filters.languages.join(','),
-        idbKnowledges: this.filters.idbKnowledges.join(',')
+        idbKnowledges: this.filters.idbKnowledges.join(','),
+        page: this.currentPage // Incluir la página actual
       },
       queryParamsHandling: 'merge'  // Mantener los demás parámetros en la URL
     });
@@ -89,5 +93,16 @@ export class DatasetCatalogComponent implements AfterViewInit {
   // Actualizar si no hay resultados
   updateNoResults(noResults: boolean): void {
     this.noResults = noResults;
+  }
+
+  // Cambiar de página para la paginación
+  changePage(page: number): void {
+    this.currentPage = page;
+    this.updateUrlWithFilters();  // Actualizar la URL al cambiar de página
+  }
+
+  // Función para calcular el total de páginas disponibles
+  getTotalPages(): number {
+    return Math.ceil(this.resultCount / this.rowsPerPage);
   }
 }
