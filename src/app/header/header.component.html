@@ -27,16 +27,17 @@
   <!-- Third frame -->
   <div class="header-frame-3">
     <nav class="header-breadcrumbs">
-      <!-- Enlaces estáticos -->
+      <!-- Static breadcrumbs -->
       <a href="https://www.iadb.org/en">Home</a> &rarr;
-      <a href="https://www.iadb.org/en/knowledge-resources">Knowledge Resources</a> &rarr;
-      <a routerLink="/">Open Data LAC</a> &rarr;
+      <span>Knowledge Resources</span> &rarr;
 
-      <!-- Enlaces dinámicos -->
-      <ng-container *ngFor="let breadcrumb of breadcrumbs; let isLast = last">
-        <a *ngIf="!isLast" [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
-        <span *ngIf="isLast">{{ breadcrumb.label }}</span>
-        <span *ngIf="!isLast"> &rarr; </span>
+      <!-- Dynamic breadcrumbs -->
+      <ng-container *ngFor="let breadcrumb of breadcrumbs; let last = last">
+        <!-- Breadcrumb link -->
+        <a *ngIf="!last" [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
+        <span *ngIf="last">{{ breadcrumb.label }}</span>
+        <!-- Separator -->
+        <span *ngIf="!last"> &rarr; </span>
       </ng-container>
     </nav>
   </div>
