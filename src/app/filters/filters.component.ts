@@ -1,12 +1,10 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
-import { DataService } from '../data.service';  // Importar el DataService
-import { ActivatedRoute } from '@angular/router'; // Importar ActivatedRoute para capturar los parámetros de la URL
+import { Component, OnInit, EventEmitter, Input, Output, ChangeDetectorRef } from '@angular/core';
+import { DataService } from '../data.service';
+import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';  // Importa FormsModule
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // Importar el módulo de FontAwesome
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'; // Importar los íconos
-import { ChangeDetectorRef } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-filters',
   standalone: true,
@@ -15,7 +13,7 @@ import { ChangeDetectorRef } from '@angular/core';
   styleUrl: './filters.component.scss'
 })
 export class FiltersComponent implements OnInit {
-  @Input() filters: any = {};  // Recibir filtros desde DatasetCatalogComponent
+  @Input() filters: any = {};
   @Output() filtersChanged = new EventEmitter<any>();
   topics: string[] = [];
   regions: { [key: string]: string[] } = {};
@@ -41,17 +39,16 @@ export class FiltersComponent implements OnInit {
   constructor(
     private dataService: DataService,
     private cdr: ChangeDetectorRef,
-    private route: ActivatedRoute // Inyectar ActivatedRoute para obtener parámetros de la URL
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     this.loadFilters();
   }
 
-   // Método para manejar el cambio de filtros
    onFilterChange(updatedFilters: any): void {
     this.filters = updatedFilters;
-    this.filtersChanged.emit(this.filters);  // Emitir el cambio a DatasetCatalogComponent
+    this.filtersChanged.emit(this.filters);
   }
 
   loadFilters() {
@@ -62,15 +59,13 @@ export class FiltersComponent implements OnInit {
       this.languages = data.languages;
       this.idbKnowledges = data.idbKnowledges;
 
-      // Establecer los filtros seleccionados desde la URL (si existen)
-      const urlFilters = this.filters || {}; // Esto debe venir del DatasetCatalogComponent
-      const urlTopics = this.getQueryParam('topics'); // Obtener el valor de topics de la URL
-      const urlCountries = this.getQueryParam('countries'); // Obtener el valor de countries de la URL
-      const urlYears = this.getQueryParam('years'); // Obtener el valor de years de la URL
-      const urlLanguages = this.getQueryParam('languages'); // Obtener el valor de languages de la URL
-      const urlIdbKnowledges = this.getQueryParam('idbKnowledges'); // Obtener el valor de idbKnowledges de la URL
+      const urlFilters = this.filters || {};
+      const urlTopics = this.getQueryParam('topics');
+      const urlCountries = this.getQueryParam('countries');
+      const urlYears = this.getQueryParam('years');
+      const urlLanguages = this.getQueryParam('languages');
+      const urlIdbKnowledges = this.getQueryParam('idbKnowledges');
 
-      // Marcar los checkboxes según los filtros de la URL
       this.topics.forEach(topic => {
         this.selectedFilters[topic] = urlTopics.includes(topic);
       });
@@ -97,13 +92,11 @@ export class FiltersComponent implements OnInit {
     });
   }
 
-
   getQueryParam(param: string): string[] {
     const urlParams = new URLSearchParams(window.location.search);
     const paramValue = urlParams.get(param);
     return paramValue ? paramValue.split(',').map(p => decodeURIComponent(p.trim())) : [];
   }
-
 
   updateVisibleFilters() {
     const topicsPerPage = 5;
@@ -138,7 +131,7 @@ export class FiltersComponent implements OnInit {
       .map(language => this.languageMapping[language]);
     const selectedIdbKnowledges = this.idbKnowledges.filter(idbKnowledge => this.selectedFilters[idbKnowledge]);
 
-    console.log(this.selectedFilters);  // Verifica si los filtros están correctos
+    console.log(this.selectedFilters);
 
     this.filtersChanged.emit({
       topics: selectedTopics,

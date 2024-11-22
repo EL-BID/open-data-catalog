@@ -7,27 +7,23 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class DataService {
-  private searchTermSource = new BehaviorSubject<string>('');  // Fuente del término de búsqueda
-  searchTerm$ = this.searchTermSource.asObservable();           // Observable para el término de búsqueda
+  private searchTermSource = new BehaviorSubject<string>('');
+  searchTerm$ = this.searchTermSource.asObservable();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  // Método para obtener metadata del dataset desde JSON
   getMetadata(): Observable<any[]> {
     return this.http.get<any[]>('./assets/data/metadata.json');
   }
 
-  // Método para obtener filtros (categorías, años, etc.) desde un archivo JSON
   getFilters(): Observable<any> {
     return this.http.get<any>('./assets/data/filters.json');
   }
 
-  // Método para actualizar el término de búsqueda
   setSearchTerm(term: string): void {
     this.searchTermSource.next(term);
   }
 
-  // Método para buscar metadata basado en el término de búsqueda
   searchMetadata(): Observable<any[]> {
     return this.getMetadata().pipe(
       map(datasets =>
@@ -38,16 +34,12 @@ export class DataService {
     );
   }
 
-  // Método para obtener un dataset (CSV) desde la carpeta /datasets
   getDataset(filename: string): Observable<any> {
-    console.log('Filename recibido:', filename);  // Verifica el nombre del archivo recibido
+    console.log('Filename recibido:', filename);
     return this.http.get(`./assets/datasets/${filename}.csv`, { responseType: 'text' });
   }
 
-
-  // Método para descargar el dataset CSV (opcional)
   downloadDataset(filename: string): Observable<Blob> {
     return this.http.get(`./assets/datasets/${filename}.csv`, { responseType: 'blob' });
   }
-
 }
