@@ -84,4 +84,6 @@ header {
   text-decoration: underline;
 }
 
-
+.header-breadcrumbs [aria-current="page"] {
+  font-weight: 600;
+}

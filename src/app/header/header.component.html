@@ -26,16 +26,15 @@
 
   <!-- Third frame -->
   <div class="header-frame-3">
-    <nav class="header-breadcrumbs">
+    <nav class="header-breadcrumbs" aria-label="Breadcrumb">
       <!-- Static breadcrumbs -->
       <a href="https://www.iadb.org/en">Home</a> &rarr;
       <span>Knowledge Resources</span> &rarr;
-
       <!-- Dynamic breadcrumbs -->
       <ng-container *ngFor="let breadcrumb of breadcrumbs; let last = last">
         <!-- Breadcrumb link -->
         <a *ngIf="!last" [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
-        <span *ngIf="last">{{ breadcrumb.label }}</span>
+        <span *ngIf="last" aria-current="page">{{ breadcrumb.label }}</span>
         <!-- Separator -->
         <span *ngIf="!last"> &rarr; </span>
       </ng-container>
