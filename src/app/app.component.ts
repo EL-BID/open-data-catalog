@@ -1,6 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { Router, RouterModule, RouterOutlet, NavigationEnd } from '@angular/router';
-import { filter, pairwise } from 'rxjs/operators';
+import { Title } from '@angular/platform-browser';
+import { Router, RouterModule, RouterOutlet, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { filter, map, mergeMap, pairwise } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -22,9 +23,26 @@ import { FooterComponent } from './footer/footer.component';
 export class AppComponent implements OnInit {
   title = 'open-data-lac';
 
-  constructor(private router: Router) {}
+  constructor(private titleService: Title, private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(() => this.activatedRoute),
+        map(route => {
+          while (route.firstChild) {
+            route = route.firstChild;
+          }
+          return route;
+        }),
+        mergeMap(route => route.data)
+      )
+      .subscribe(data => {
+        const pageTitle = data['title'] || 'IDB | Open Data LAC';
+        this.titleService.setTitle(pageTitle);
+      });
+
     this.router.events
       .pipe(
         filter(event => event instanceof NavigationEnd),
