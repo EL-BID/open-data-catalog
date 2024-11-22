@@ -66,6 +66,9 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
         if (knowledge === "Tied research publication") {
           return dataset.source && dataset.source.trim() !== "";
         }
+        if (knowledge === "Feeds indicators") {
+          return dataset.mydata_category === "indicator-catalog";
+        }
         return true;
       });
 
