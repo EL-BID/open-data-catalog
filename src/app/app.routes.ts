@@ -4,7 +4,8 @@ import { DatasetCatalogComponent } from './dataset-catalog/dataset-catalog.compo
 import { DatasetDetailComponent } from './dataset-detail/dataset-detail.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, data: { breadcrumb: null } },
+  { path: '', component: HomeComponent, data: { breadcrumb: 'Open Data LAC' } },
+  { path: 'home', component: HomeComponent, data: { breadcrumb: 'Open Data LAC' } },
   { path: 'browse', component: DatasetCatalogComponent, data: { breadcrumb: 'Dataset Catalog' } },
   { path: 'dataset-catalog', redirectTo: 'browse', pathMatch: 'full' },
 

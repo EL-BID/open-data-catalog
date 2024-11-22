@@ -16,15 +16,17 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(() => {
-        this.breadcrumbs = this.createBreadcrumbs(this.activatedRoute.root);
-        this.insertDatasetCatalogBreadcrumb();
-      });
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
+      this.breadcrumbs = this.createBreadcrumbs(this.activatedRoute.root);
+      this.ensureOpenDataLACBreadcrumb();
+    });
   }
 
-  private createBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: { label: string; url: string }[] = []): any[] {
+  private createBreadcrumbs(
+    route: ActivatedRoute,
+    url: string = '',
+    breadcrumbs: { label: string; url: string }[] = []
+  ): { label: string; url: string }[] {
     const children: ActivatedRoute[] = route.children;
 
     if (children.length === 0) {
@@ -35,48 +37,33 @@ export class HeaderComponent implements OnInit {
       const routeURL: string = child.snapshot.url.map(segment => segment.path).join('/');
       if (routeURL !== '') {
         url += `/${routeURL}`;
-
         let breadcrumbLabel = child.snapshot.data['breadcrumb'] || routeURL;
 
-        // Personalización dinámica: Reemplazar "Dataset Detail" por "Dataset"
+        // Handle special case: "Dataset Detail"
         if (breadcrumbLabel === 'Dataset Detail') {
           breadcrumbLabel = 'Dataset';
-
-          // Agregar "Dataset Catalog" antes de "Dataset" si no existe en los breadcrumbs
-          const catalogExists = breadcrumbs.some(b => b.label === 'Dataset Catalog');
+          const catalogExists = breadcrumbs.some(breadcrumb => breadcrumb.label === 'Dataset Catalog');
           if (!catalogExists) {
-            breadcrumbs.push({
-              label: 'Dataset Catalog',
-              url: '/browse',
-            });
+            breadcrumbs.push({ label: 'Dataset Catalog', url: '/browse' });
           }
         }
 
-        breadcrumbs.push({
-          label: breadcrumbLabel,
-          url,
-        });
+        breadcrumbs.push({ label: breadcrumbLabel, url });
       }
+
       return this.createBreadcrumbs(child, url, breadcrumbs);
     }
+
     return breadcrumbs;
   }
 
-  private insertDatasetCatalogBreadcrumb(): void {
-    const isDatasetDetailRoute = this.breadcrumbs.some(breadcrumb =>
-      breadcrumb.label === 'Dataset Detail'
-    );
-
-    if (isDatasetDetailRoute) {
-      const catalogBreadcrumb = this.breadcrumbs.find(breadcrumb => breadcrumb.label === 'Dataset Catalog');
-      if (!catalogBreadcrumb) {
-        const catalogUrl = '/browse';
-        this.breadcrumbs.splice(
-          this.breadcrumbs.length - 1, // Insert before "Dataset Detail"
-          0,
-          { label: 'Dataset Catalog', url: catalogUrl }
-        );
-      }
+  private ensureOpenDataLACBreadcrumb(): void {
+    const openDataLACExists = this.breadcrumbs.some(breadcrumb => breadcrumb.label === 'Open Data LAC');
+    if (!openDataLACExists) {
+      this.breadcrumbs.splice(0, 0, {
+        label: 'Open Data LAC',
+        url: '/'
+      });
     }
   }
 }
