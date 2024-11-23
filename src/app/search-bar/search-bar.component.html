@@ -19,14 +19,14 @@
     [attr.aria-expanded]="filteredSuggestions.length > 0 ? 'true' : 'false'"
   />
 
-  <!-- Botón para limpiar la búsqueda, solo visible cuando hay un término de búsqueda -->
   <button *ngIf="searchTerm" class="clear-button"
     (click)="clearSearch()"
     aria-label="Limpiar búsqueda"
+    aria-hidden="false"
   >
     <fa-icon [icon]="faTimes"></fa-icon> </button>
 
-  <ul *ngIf="filteredSuggestions.length > 0" id="suggestions-list" class="suggestions-list" role="listbox">
+  <ul *ngIf="filteredSuggestions.length > 0" id="suggestions-list" class="suggestions-list" role="listbox" aria-labelledby="search-input">
     <li *ngFor="let suggestion of filteredSuggestions; let i = index"
         (click)="selectSuggestion(suggestion.title, i)"
         class="suggestion-item"

@@ -42,7 +42,7 @@
 /* Estilos para el botón de la "X" */
 .clear-button {
   position: absolute;
-  right: 10px;  /* Ajuste para alinear la "X" al borde derecho */
+  right: 2rem;  /* Ajuste para alinear la "X" al borde derecho */
   top: 50%;
   transform: translateY(-50%); /* Centrar verticalmente */
   background: none;
@@ -75,7 +75,7 @@
   border: 1px solid #D3D2D1;
   border-radius: 0.5rem;
   background-color: #fff;
-  max-height: 261.95px;
+  max-height: 272px;
   box-shadow: 0px 0px 40px 0px rgba(64, 74, 79, 0.2);
   z-index: 10;
 }
