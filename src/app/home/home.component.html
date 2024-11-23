@@ -5,10 +5,8 @@
     <div class="odl-two-1-2-columns-left">
       <h1>Welcome to IDB’s Open Data LAC</h1>
       <p>The portal upholds our commitment to share data with the people
-        of
-        Latin America and the Caribbean so they can make informed
-        decisions
-        for progress in the region.</p>
+        of Latin America and the Caribbean so they can make informed
+        decisions for progress in the region.</p>
     </div>
     <!--Cards-->
     <div class="odl-two-1-2-columns-right">
@@ -18,7 +16,7 @@
           <img src="./assets/images/icons/dataset-icon.png" alt="dataset icon">
         </div>
         <div class="card-text">
-          <span class="card-number">+200</span>
+          <span class="card-number">{{ counts.datasets }}</span>
           <p>Unique datasets in our open data catalog</p>
           <a [routerLink]="['/dataset-catalog']" class="catalog-link">Browse the catalog →</a>
         </div>
@@ -29,10 +27,12 @@
           <img src="./assets/images/icons/research-icon.png" alt="research icon">
         </div>
         <div class="card-text">
-          <span class="card-number">+300</span>
+          <span class="card-number">{{ counts.linkedResearchDatasets }}</span>
           <p>Linked research datasets</p>
           <a [routerLink]="['/browse']" [queryParams]="{ idbKnowledges: 'Tied research publication' }"
-            class="catalog-link">Dig into our research →</a>
+            class="catalog-link">
+            Dig into our research →
+          </a>
         </div>
       </div>
       <!--Card 3: Dashboards-->
@@ -41,12 +41,10 @@
           <img src="./assets/images/icons/thematic-platforms-icon.png" alt="thematic platforms icon">
         </div>
         <div class="card-text">
-          <span class="card-number">+20</span>
+          <span class="card-number">+20 </span>
           <p>Data Portals powered by IDB data</p>
           <a href="https://www.iadb.org/en/knowledge-resources/data/data-platforms" target="_blank" rel="noopener"
-            class="catalog-link">Discover
-            IDB
-            dashboards →</a>
+            class="catalog-link">Discover IDB dashboards →</a>
         </div>
       </div>
       <!--Card 4: Indicators-->
@@ -58,9 +56,7 @@
           <span class="card-number">+400</span>
           <p>Indicators focused on Latin America and the Caribbean</p>
           <a [routerLink]="['/browse']" [queryParams]="{ idbKnowledges: 'Feeds indicators' }" class="catalog-link">Learn
-            from
-            our
-            indicators →</a>
+            from our indicators →</a>
         </div>
       </div>
     </div>
