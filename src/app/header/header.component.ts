@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterModule, RouterLinkActive, RouterOutlet, ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { RouterLink, RouterModule, ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterModule, RouterLinkActive, RouterOutlet],
+  imports: [CommonModule, RouterLink, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
