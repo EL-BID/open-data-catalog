@@ -42,4 +42,24 @@ export class DataService {
   downloadDataset(filename: string): Observable<Blob> {
     return this.http.get(`./assets/datasets/${filename}.csv`, { responseType: 'blob' });
   }
+
+  private formatNumber(count: number): string {
+    if (count < 10) {
+      return `${count}`;
+    }
+    const divisor = count < 100 ? 10 : count < 1000 ? 50 : 500;
+    const rounded = Math.floor(count / divisor) * divisor;
+    return `+${rounded}`;
+  }
+
+  getFormattedCounts(metadata: any[]): { datasets: string, linkedResearchDatasets: string} {
+    const totalDatasets = metadata.length;
+    const totalLinkedResearchDatasets = metadata.filter(item => item.source).length;
+
+    return {
+      datasets: this.formatNumber(totalDatasets),
+      linkedResearchDatasets: this.formatNumber(totalLinkedResearchDatasets),
+    };
+  }
+
 }
