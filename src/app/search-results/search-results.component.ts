@@ -75,10 +75,10 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
       return matchSearchTerm && matchTopic && matchCountries && matchYear && matchLanguage && matchIdbKnowledge;
     });
 
-    this.sortDatasets();  // No olvides ordenar los datasets si es necesario
+    this.sortDatasets();
     this.resultCountChange.emit(this.filteredDatasets.length);
     this.noResultsChange.emit(this.filteredDatasets.length === 0);
-    setTimeout(() => this.checkTruncation(), 0);  // Revisar truncamiento de descripciones
+    setTimeout(() => this.checkTruncation(), 0);
   }
 
   private isMatchingSpatial(selectedCountries: string[], spatial: string | string[]): boolean {
