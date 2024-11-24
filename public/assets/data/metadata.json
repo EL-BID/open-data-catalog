@@ -471,13 +471,14 @@
         "license": "https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode"
     },
     {
-      "id": 6,
+      "id": 7,
       "mydata_category": "indicator-catalog",
       "title_original": "IDB Agrimonitor - PSE Agricultural Policy Monitoring System (data)",
       "mydata_id": "2dqw-u35p",
       "filename": "agrimonitor-data",
+      "source": "http://dx.doi.org/10.18235/0013258",
       "language": "es",
-      "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos)",
+      "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos) - Research",
       "description": "Agrimonitor es la base de datos de Estimaciones de Apoyo a Productos (PSE) del BID a nivel de país para los países de América Latina y el Caribe. Permite a los responsables de las políticas y a los analistas de políticas hacer un seguimiento de las políticas agrícolas y evaluar y medir la composición del apoyo a la agricultura. Los indicadores de PSE relacionados con las magnitudes y la composición ayudan a describir y abordar mejor los desafíos clave que enfrenta la agricultura en la próxima década.",
       "temporal": "2003-2017",
       "keyword": [
@@ -534,7 +535,7 @@
           "https://agrimonitor.iadb.org/en"
       ],
       "modified": "2024-04-24",
-      "issued": "2016-07-15",
+      "issued": "2019-07-15",
       "accrualPeriodicity": "",
       "publisher": "Banco Interamericano de Desarrollo",
       "creator_personal": "",
@@ -544,13 +545,14 @@
       "license": "https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode"
   },
   {
-    "id": 6,
+    "id": 8,
     "mydata_category": "indicator-catalog",
     "title_original": "IDB Agrimonitor - PSE Agricultural Policy Monitoring System (data)",
     "mydata_id": "2dqw-u35p",
     "filename": "agrimonitor-data",
+    "source": "http://dx.doi.org/10.18235/0013260",
     "language": "es",
-    "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos)",
+    "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos) - Research 2",
     "description": "Agrimonitor es la base de datos de Estimaciones de Apoyo a Productos (PSE) del BID a nivel de país para los países de América Latina y el Caribe. Permite a los responsables de las políticas y a los analistas de políticas hacer un seguimiento de las políticas agrícolas y evaluar y medir la composición del apoyo a la agricultura. Los indicadores de PSE relacionados con las magnitudes y la composición ayudan a describir y abordar mejor los desafíos clave que enfrenta la agricultura en la próxima década.",
     "temporal": "2003-2017",
     "keyword": [
@@ -607,7 +609,7 @@
         "https://agrimonitor.iadb.org/en"
     ],
     "modified": "2024-04-24",
-    "issued": "2016-07-15",
+    "issued": "2020-07-15",
     "accrualPeriodicity": "",
     "publisher": "Banco Interamericano de Desarrollo",
     "creator_personal": "",
@@ -617,13 +619,14 @@
     "license": "https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode"
 },
 {
-  "id": 6,
+  "id": 9,
   "mydata_category": "indicator-catalog",
   "title_original": "IDB Agrimonitor - PSE Agricultural Policy Monitoring System (data)",
   "mydata_id": "2dqw-u35p",
   "filename": "agrimonitor-data",
+  "source": "http://dx.doi.org/10.18235/0013249",
   "language": "es",
-  "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos)",
+  "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos) - Research 3",
   "description": "Agrimonitor es la base de datos de Estimaciones de Apoyo a Productos (PSE) del BID a nivel de país para los países de América Latina y el Caribe. Permite a los responsables de las políticas y a los analistas de políticas hacer un seguimiento de las políticas agrícolas y evaluar y medir la composición del apoyo a la agricultura. Los indicadores de PSE relacionados con las magnitudes y la composición ayudan a describir y abordar mejor los desafíos clave que enfrenta la agricultura en la próxima década.",
   "temporal": "2003-2017",
   "keyword": [
@@ -680,7 +683,7 @@
       "https://agrimonitor.iadb.org/en"
   ],
   "modified": "2024-04-24",
-  "issued": "2016-07-15",
+  "issued": "2021-07-15",
   "accrualPeriodicity": "",
   "publisher": "Banco Interamericano de Desarrollo",
   "creator_personal": "",
@@ -690,13 +693,14 @@
   "license": "https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode"
 },
 {
-  "id": 6,
+  "id": 10,
   "mydata_category": "indicator-catalog",
   "title_original": "IDB Agrimonitor - PSE Agricultural Policy Monitoring System (data)",
   "mydata_id": "2dqw-u35p",
   "filename": "agrimonitor-data",
+  "source": "http://dx.doi.org/10.18235/0013246",
   "language": "es",
-  "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos)",
+  "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos) - Research 4",
   "description": "Agrimonitor es la base de datos de Estimaciones de Apoyo a Productos (PSE) del BID a nivel de país para los países de América Latina y el Caribe. Permite a los responsables de las políticas y a los analistas de políticas hacer un seguimiento de las políticas agrícolas y evaluar y medir la composición del apoyo a la agricultura. Los indicadores de PSE relacionados con las magnitudes y la composición ayudan a describir y abordar mejor los desafíos clave que enfrenta la agricultura en la próxima década.",
   "temporal": "2003-2017",
   "keyword": [
@@ -753,7 +757,7 @@
       "https://agrimonitor.iadb.org/en"
   ],
   "modified": "2024-04-24",
-  "issued": "2016-07-15",
+  "issued": "2022-07-15",
   "accrualPeriodicity": "",
   "publisher": "Banco Interamericano de Desarrollo",
   "creator_personal": "",
@@ -763,13 +767,14 @@
   "license": "https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode"
 },
 {
-  "id": 6,
+  "id": 11,
   "mydata_category": "indicator-catalog",
   "title_original": "IDB Agrimonitor - PSE Agricultural Policy Monitoring System (data)",
   "mydata_id": "2dqw-u35p",
   "filename": "agrimonitor-data",
+  "source": "http://dx.doi.org/10.18235/0013239",
   "language": "es",
-  "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos)",
+  "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos) - Research 5",
   "description": "Agrimonitor es la base de datos de Estimaciones de Apoyo a Productos (PSE) del BID a nivel de país para los países de América Latina y el Caribe. Permite a los responsables de las políticas y a los analistas de políticas hacer un seguimiento de las políticas agrícolas y evaluar y medir la composición del apoyo a la agricultura. Los indicadores de PSE relacionados con las magnitudes y la composición ayudan a describir y abordar mejor los desafíos clave que enfrenta la agricultura en la próxima década.",
   "temporal": "2003-2017",
   "keyword": [
@@ -826,7 +831,7 @@
       "https://agrimonitor.iadb.org/en"
   ],
   "modified": "2024-04-24",
-  "issued": "2016-07-15",
+  "issued": "2023-07-15",
   "accrualPeriodicity": "",
   "publisher": "Banco Interamericano de Desarrollo",
   "creator_personal": "",
@@ -836,13 +841,14 @@
   "license": "https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode"
 },
 {
-  "id": 6,
+  "id": 12,
   "mydata_category": "indicator-catalog",
   "title_original": "IDB Agrimonitor - PSE Agricultural Policy Monitoring System (data)",
   "mydata_id": "2dqw-u35p",
   "filename": "agrimonitor-data",
+  "source": "http://dx.doi.org/10.18235/0013241",
   "language": "es",
-  "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos)",
+  "title": "BID Agrimonitor - Sistema de Monitoreo de Políticas Agrícolas del PSE (datos) - Research 6",
   "description": "Agrimonitor es la base de datos de Estimaciones de Apoyo a Productos (PSE) del BID a nivel de país para los países de América Latina y el Caribe. Permite a los responsables de las políticas y a los analistas de políticas hacer un seguimiento de las políticas agrícolas y evaluar y medir la composición del apoyo a la agricultura. Los indicadores de PSE relacionados con las magnitudes y la composición ayudan a describir y abordar mejor los desafíos clave que enfrenta la agricultura en la próxima década.",
   "temporal": "2003-2017",
   "keyword": [
@@ -899,7 +905,7 @@
       "https://agrimonitor.iadb.org/en"
   ],
   "modified": "2024-04-24",
-  "issued": "2016-07-15",
+  "issued": "2024-07-15",
   "accrualPeriodicity": "",
   "publisher": "Banco Interamericano de Desarrollo",
   "creator_personal": "",
