@@ -118,24 +118,7 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
   }
 
   viewDataset(mydata_category: string, title_original: string, mydata_id?: string): void {
-    const formattedCategory = mydata_category
-      ? mydata_category.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 50)
-      : '';
-    const formattedTitle = title_original
-      .replace(/[^a-zA-Z0-9]+/g, '-')
-      .substring(0, 50);
-
-    let route = '';
-    if (formattedCategory && mydata_id) {
-      route = `/${formattedCategory}/${formattedTitle}/${mydata_id}`;
-    } else if (formattedCategory) {
-      route = `/${formattedCategory}/${formattedTitle}`;
-    } else if (mydata_id) {
-      route = `/dataset/${formattedTitle}/${mydata_id}`;
-    } else {
-      route = `/dataset/${formattedTitle}`;
-    }
-
+    const route = this.dataService.generateDatasetRoute(mydata_category, title_original, mydata_id);
     this.router.navigate([route]);
   }
 

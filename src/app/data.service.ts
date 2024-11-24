@@ -16,6 +16,17 @@ export class DataService {
     return this.http.get<any[]>('./assets/data/metadata.json');
   }
 
+  getRecentLinkedResearchDatasets(): Observable<any[]> {
+    return this.getMetadata().pipe(
+      map(datasets =>
+        datasets
+          .filter(dataset => dataset.source)
+          .sort((a, b) => new Date(b.issued).getTime() - new Date(a.issued).getTime())
+          .slice(0, 5)
+      )
+    );
+  }
+
   getFilters(): Observable<any> {
     return this.http.get<any>('./assets/data/filters.json');
   }
@@ -52,7 +63,7 @@ export class DataService {
     return `+${rounded}`;
   }
 
-  getFormattedCounts(metadata: any[]): { datasets: string, linkedResearchDatasets: string} {
+  getFormattedCounts(metadata: any[]): { datasets: string, linkedResearchDatasets: string } {
     const totalDatasets = metadata.length;
     const totalLinkedResearchDatasets = metadata.filter(item => item.source).length;
 
@@ -60,6 +71,28 @@ export class DataService {
       datasets: this.formatNumber(totalDatasets),
       linkedResearchDatasets: this.formatNumber(totalLinkedResearchDatasets),
     };
+  }
+
+  generateDatasetRoute(mydata_category: string, title_original: string, mydata_id?: string): string {
+    const formattedCategory = mydata_category
+      ? mydata_category.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 50)
+      : '';
+    const formattedTitle = title_original
+      .replace(/[^a-zA-Z0-9]+/g, '-')
+      .substring(0, 50);
+
+    let route = '';
+    if (formattedCategory && mydata_id) {
+      route = `/${formattedCategory}/${formattedTitle}/${mydata_id}`;
+    } else if (formattedCategory) {
+      route = `/${formattedCategory}/${formattedTitle}`;
+    } else if (mydata_id) {
+      route = `/dataset/${formattedTitle}/${mydata_id}`;
+    } else {
+      route = `/dataset/${formattedTitle}`;
+    }
+
+    return route;
   }
 
 }
