@@ -64,7 +64,8 @@ export class SearchBarComponent implements OnInit {
     if (this.searchTerm) {
       this.filteredSuggestions = this.datasets.filter(dataset =>
         dataset.title.toLowerCase().includes(this.searchTerm.toLowerCase())
-      );
+      )
+      .slice(0, 5);
     } else {
       this.filteredSuggestions = [];
     }
