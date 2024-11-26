@@ -2,16 +2,19 @@
   <div class="odl-container">
     <div *ngIf="dataset">
       <div class="dataset-header">
-        <h1 class="odl-main-blue-color dataset-detail-title">{{ dataset?.title }}</h1>
+        <h1 class="odl-main-blue-color dataset-detail-title">{{ dataset?.title
+          }}</h1>
         <span>By <strong>{{ dataset.unitResponsible }}</strong></span>
       </div>
       <div class="dataset-categories">
-        <span class="category-box" *ngFor="let theme of dataset.theme">{{ theme }}</span>
+        <span class="category-box" *ngFor="let theme of dataset.theme">{{ theme
+          }}</span>
       </div>
       <p>{{ dataset?.description }}</p>
       <div class="dataset-download">
-        <button (click)="downloadDataset()" class="btn-catalog btn-catalog-dataset">Download Dataset <span
-            class="download-icon" aria-hidden="true"><fa-icon [icon]="faDownload"></fa-icon></span></button>
+        <a *ngIf="dataset?.fileUrl" [href]="dataset.fileUrl" class="btn-catalog btn-catalog-dataset" download>
+          Download Dataset <span class="download-icon" aria-hidden="true"><fa-icon [icon]="faDownload"></fa-icon></span>
+        </a>
       </div>
     </div>
   </div>

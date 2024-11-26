@@ -85,28 +85,6 @@ export class DatasetDetailComponent implements OnInit {
     });
   }
 
-  downloadDataset(): void {
-    if (this.dataset && this.dataset.filename) {
-      const filenameFromMetadata = this.dataset.filename;
-
-      const formattedFilename = filenameFromMetadata.replace(/[^a-zA-Z0-9\-\.]+/g, '-');
-
-      this.dataService.downloadDataset(formattedFilename).subscribe((response: Blob) => {
-        const blob = new Blob([response], { type: 'text/csv' });
-        const link = document.createElement('a');
-        const url = URL.createObjectURL(blob);
-        link.href = url;
-        link.download = `${formattedFilename}.csv`;
-        link.click();
-        URL.revokeObjectURL(url);
-      }, error => {
-        console.error('Error al descargar el dataset:', error);
-      });
-    } else {
-      console.error('Filename no disponible en la metadata para descargar');
-    }
-  }
-
   sortCountries(spatial: string | string[]): string {
     if (!spatial) {
       return '';
