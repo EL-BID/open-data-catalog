@@ -22,8 +22,9 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent implements OnInit {
   title = 'open-data-lac';
+  private isFirstChange = true;
 
-  constructor(private titleService: Title, private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(private titleService: Title, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.router.events
@@ -51,6 +52,24 @@ export class AppComponent implements OnInit {
       .subscribe(([prev, curr]: [NavigationEnd, NavigationEnd]) => {
         const prevUrl = new URL(prev.urlAfterRedirects, window.location.origin);
         const currUrl = new URL(curr.urlAfterRedirects, window.location.origin);
+        const prevPage = prevUrl.searchParams.get('page');
+        const currPage = currUrl.searchParams.get('page');
+
+        if (currPage && prevPage !== currPage) {
+          if (!this.isFirstChange) {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          } else {
+            this.isFirstChange = false;
+          }
+        }
+
+        if (prevUrl.pathname === currUrl.pathname && prevPage === currPage) {
+          return;
+        }
+
         if (prevUrl.pathname !== currUrl.pathname) {
           window.scrollTo({
             top: 0,
