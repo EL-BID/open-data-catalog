@@ -14,6 +14,8 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
   @Input() searchTerm: string = '';
   @Input() sortBy: string = 'date';
   @Input() filters: any = {};
+  @Input() currentPage: number = 1;
+  @Input() rowsPerPage: number = 10;
   @Output() resultCountChange = new EventEmitter<number>();
   @Output() noResultsChange = new EventEmitter<boolean>();
 
@@ -28,6 +30,7 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
 
   ngOnInit(): void {
     this.dataService.getMetadata().subscribe(data => {
+      console.log("Datos obtenidos desde el servicio:", data);
       this.datasets = data;
       this.applyFilters();
       setTimeout(() => this.checkTruncation(), 0);
@@ -35,8 +38,9 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['searchTerm'] || changes['sortBy'] || changes['filters']) {
-      setTimeout(() => this.applyFilters());
+    if (changes['searchTerm'] || changes['sortBy'] || changes['filters'] || changes['currentPage']) {
+      console.log('Cambios detectados en los inputs:', changes);
+      this.applyFilters();
     }
   }
 
@@ -44,7 +48,15 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
     this.checkTruncation();
   }
 
+  onPageChanged(page: number): void {
+    console.log('Cambio de página recibido:', page);
+    this.currentPage = page;
+    this.applyFilters();
+  }
+
   private applyFilters(): void {
+    console.log("Aplicando filtros:", this.filters, "Página actual:", this.currentPage);
+
     const { topics = [], countries = [], years = [], languages = [], idbKnowledges = [] } = this.filters || {};
 
     this.filteredDatasets = this.datasets.filter(dataset => {
@@ -72,13 +84,32 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
         return true;
       });
 
+      console.log(`Dataset ${dataset.title} - Filtro aplicado:`, {
+        matchSearchTerm,
+        matchTopic,
+        matchCountries,
+        matchYear,
+        matchLanguage,
+        matchIdbKnowledge
+      });
+
       return matchSearchTerm && matchTopic && matchCountries && matchYear && matchLanguage && matchIdbKnowledge;
     });
 
-    this.sortDatasets();
+    console.log('Datos filtrados:', this.filteredDatasets);
+
     this.resultCountChange.emit(this.filteredDatasets.length);
     this.noResultsChange.emit(this.filteredDatasets.length === 0);
+
+    const startIndex = (this.currentPage - 1) * this.rowsPerPage;
+    const endIndex = startIndex + this.rowsPerPage;
+    console.log(`Mostrando resultados de ${startIndex} a ${endIndex}`);
+
+    this.filteredDatasets = this.filteredDatasets.slice(startIndex, endIndex);
+
+    this.sortDatasets();
     setTimeout(() => this.checkTruncation(), 0);
+
   }
 
   private isMatchingSpatial(selectedCountries: string[], spatial: string | string[]): boolean {
@@ -100,6 +131,8 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
         return issuedB - issuedA;
       });
     }
+    console.log('Datasets ordenados:', this.filteredDatasets);  // Verificamos los datos ordenados
+
   }
 
   private checkTruncation(): void {
