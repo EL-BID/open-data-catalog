@@ -45,15 +45,6 @@ export class DataService {
     );
   }
 
-  getDataset(filename: string): Observable<any> {
-    console.log('Filename recibido:', filename);
-    return this.http.get(`./assets/datasets/${filename}.csv`, { responseType: 'text' });
-  }
-
-  downloadDataset(filename: string): Observable<Blob> {
-    return this.http.get(`./assets/datasets/${filename}.csv`, { responseType: 'blob' });
-  }
-
   private formatNumber(count: number): string {
     if (count < 10) {
       return `${count}`;
