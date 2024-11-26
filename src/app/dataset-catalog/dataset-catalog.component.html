@@ -32,15 +32,21 @@
             <app-sort (sortChanged)="onSortChanged($event)"></app-sort>
           </div>
         </div>
-        <app-search-results [searchTerm]="searchTerm" [sortBy]="sortBy" [filters]="filters"
+        <app-search-results
+          [searchTerm]="searchTerm"
+          [sortBy]="sortBy"
+          [filters]="filters"
           (resultCountChange)="updateResultCount($event)"
-          (noResultsChange)="updateNoResults($event)"></app-search-results>
-        <!-- Paginación -->
-        <!-- <div *ngIf="datasetContent.length > rowsPerPage">
-          <button (click)="previousPage()" [disabled]="currentPage === 0">Anterior</button>
-          <button (click)="nextPage()"
-            [disabled]="(currentPage + 1) * rowsPerPage >= datasetContent.length">Siguiente</button>
-        </div> -->
+          (noResultsChange)="updateNoResults($event)"
+          [currentPage]="currentPage"
+          [rowsPerPage]="rowsPerPage">
+        </app-search-results>
+        <app-pagination
+          [currentPage]="currentPage"
+          [totalItems]="resultCount"
+          [itemsPerPage]="rowsPerPage"
+          (pageChanged)="onPageChange($event)">
+        </app-pagination>
       </div>
     </div>
   </div>
