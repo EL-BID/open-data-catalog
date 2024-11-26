@@ -1,24 +1,23 @@
 <div class="pagination-container">
-  <ul class="pagination" role="navigation" aria-label="Paginación">
-    <!-- Botón de Página Anterior -->
-    <li *ngIf="currentPage > 1" class="pagination-item">
-      <a (click)="onPageChange(currentPage - 1)" [attr.aria-label]="'Página anterior'" class="pagination-link">
-        &laquo; Anterior
-      </a>
-    </li>
+  <nav role="navigation" aria-label="Paginación">
+    <ul class="pagination">
+      <li *ngIf="currentPage > 1" class="pagination-item">
+        <a (click)="onPageChange(currentPage - 1)" [attr.aria-label]="'Previous page'" class="pagination-link">
+          &laquo; Previous
+        </a>
+      </li>
 
-    <!-- Páginas generadas -->
-    <li *ngFor="let page of pages" [class.active]="page === currentPage" class="pagination-item">
-      <a (click)="onPageChange(page)" [attr.aria-label]="'Ir a la página ' + page" class="pagination-link">
-        {{ page }}
-      </a>
-    </li>
+      <li *ngFor="let page of pages" [class.active]="page === currentPage" class="pagination-item">
+        <a (click)="onPageChange(page)" [attr.aria-label]="'Ir a la página ' + page" class="pagination-link">
+          {{ page }}
+        </a>
+      </li>
 
-    <!-- Botón de Página Siguiente -->
-    <li *ngIf="currentPage < totalPages" class="pagination-item">
-      <a (click)="onPageChange(currentPage + 1)" [attr.aria-label]="'Página siguiente'" class="pagination-link">
-        Siguiente &raquo;
-      </a>
-    </li>
-  </ul>
+      <li *ngIf="currentPage < totalPages" class="pagination-item">
+        <a (click)="onPageChange(currentPage + 1)" [attr.aria-label]="'Next page'" class="pagination-link">
+          Next &raquo;
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
