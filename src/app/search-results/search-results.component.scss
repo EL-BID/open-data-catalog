@@ -9,7 +9,6 @@
   text-decoration: underline;
 }
 
-/* Dataset Item Styles */
 .dataset-item {
   display: flex;
     flex-direction: column;
@@ -32,7 +31,7 @@
 }
 
 .metadata-sidebar {
-  width: 30%; /* Adjust width as needed */
+  width: 30%;
 }
 
 .metadata-sidebar h4 {
@@ -54,13 +53,13 @@
 
 .dataset-item h3 {
   margin-top: 0;
-  margin-bottom: 5px; /* Reduce space below title */
+  margin-bottom: 5px;
   color: #004e70;
   font-size: 1.25em;
 }
 
 .dataset-item .by-line {
-  margin: 0; /* No margin to keep it close to title */
+  margin: 0;
 }
 
 .dataset-item .category-pill {
@@ -73,13 +72,12 @@
   margin-right: 5px;
 }
 
-/* Remove hover effect on pills */
-.dataset-item .category-pill:hover {
-  background-color: #dbedf8; /* Keep same color on hover */
-}
-
 .dataset-item p {
   margin: 5px 0;
+}
+
+.dataset-item:hover {
+  background-color: rgba(219, 237, 248, 0.4);
 }
 
 .dataset-link {
@@ -112,8 +110,8 @@
 }
 
 .dataset-description.expanded {
-  -webkit-line-clamp: unset; /* Quita la limitación de líneas al expandir */
-  max-height: none; /* Muestra todo el contenido al expandir */
+  -webkit-line-clamp: unset;
+  max-height: none;
   overflow: visible;
 }
 
