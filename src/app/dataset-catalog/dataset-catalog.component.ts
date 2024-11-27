@@ -88,6 +88,15 @@ export class DatasetCatalogComponent implements OnInit {
      this.updateUrlWithFilters();
   }
 
+  removeFilter(event: { category: string, value: string }): void {
+    const { category, value } = event;
+    if (this.filters[category]) {
+      this.filters[category] = this.filters[category].filter((val: string) => val !== value);
+      this.updateUrlWithFilters();
+      this.cdr.detectChanges();  // Forzar la detección de cambios
+    }
+  }
+
   updateUrlWithFilters(): void {
     console.log('Actualizando URL con filtros...');
     this.router.navigate([], {

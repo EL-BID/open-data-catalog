@@ -12,16 +12,14 @@
   width: 5rem;
 }
 
-
-
 .top-bar {
   display: flex;
-  gap: 4rem;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 6rem;
   margin-bottom: 4rem;
 }
 
-.sort {
+.odl-right {
   width: 100%;
-  display: flex;
-  justify-content: end;
 }
