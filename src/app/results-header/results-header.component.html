@@ -1,9 +1,12 @@
 <div class="results-header">
-  <div *ngIf="resultCount > 0 && searchTerm" class="result-count">
-    <p>Se encontraron {{ resultCount }} resultados para "{{ searchTerm }}".</p>
-  </div>
-
-  <div *ngIf="noResults" class="no-results-message">
-    <p>No se encontraron resultados para "{{ searchTerm }}".</p>
+  <p *ngIf="resultCount > 0">{{ resultCount }} Results</p>
+  <p *ngIf="noResults">No Results</p>
+  <div *ngIf="hasFilters" class="filter-boxes-container">
+    <div *ngFor="let filter of formatFilters(filters)" class="filter-boxes">
+      <div class="filter-chip">
+        <div>{{ filter.value }}</div>
+        <button class="remove-filter" (click)="removeFilter(filter.category, filter.value)">X</button>
+      </div>
+    </div>
   </div>
 </div>

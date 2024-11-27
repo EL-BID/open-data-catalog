@@ -22,29 +22,27 @@
       <div class="odl-two-1-4-columns-left">
         <app-filters (filtersChanged)="onFiltersChanged($event)"></app-filters>
       </div>
-      <div>
+      <div class="odl-right">
         <div class="top-bar">
           <div class="results">
-            <app-results-header [resultCount]="resultCount" [searchTerm]="searchTerm" [noResults]="noResults">
+            <app-results-header
+              [resultCount]="resultCount"
+              [searchTerm]="searchTerm"
+              [filters]="filters"
+              [noResults]="noResults"
+              (filtersChanged)="onFiltersChanged($event)"
+              (filterRemoved)="removeFilter($event)">
             </app-results-header>
           </div>
           <div class="sort">
             <app-sort (sortChanged)="onSortChanged($event)"></app-sort>
           </div>
         </div>
-        <app-search-results
-          [searchTerm]="searchTerm"
-          [sortBy]="sortBy"
-          [filters]="filters"
-          (resultCountChange)="updateResultCount($event)"
-          (noResultsChange)="updateNoResults($event)"
-          [currentPage]="currentPage"
-          [rowsPerPage]="rowsPerPage">
+        <app-search-results [searchTerm]="searchTerm" [sortBy]="sortBy" [filters]="filters"
+          (resultCountChange)="updateResultCount($event)" (noResultsChange)="updateNoResults($event)"
+          [currentPage]="currentPage" [rowsPerPage]="rowsPerPage">
         </app-search-results>
-        <app-pagination
-          [currentPage]="currentPage"
-          [totalItems]="resultCount"
-          [itemsPerPage]="rowsPerPage"
+        <app-pagination [currentPage]="currentPage" [totalItems]="resultCount" [itemsPerPage]="rowsPerPage"
           (pageChanged)="onPageChange($event)">
         </app-pagination>
       </div>

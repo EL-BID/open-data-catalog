@@ -131,7 +131,7 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
         return issuedB - issuedA;
       });
     }
-    console.log('Datasets ordenados:', this.filteredDatasets);  // Verificamos los datos ordenados
+    console.log('Datasets ordenados:', this.filteredDatasets);
 
   }
 

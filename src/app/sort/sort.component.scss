@@ -1,30 +1,37 @@
 .select-container {
   position: relative;
-  width: 100%;
+  width: auto;
   display: flex;
-  align-items: center; /* Asegura que el contenido esté centrado verticalmente */
+  gap: 2rem;
+  align-items: center;
+
+  label {
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+  }
 }
 
 .select-input {
-  width: 100%;
-  padding: 1.2rem 2.5rem; /* Espacio a la derecha para la flecha */
+  font-family: inherit;
+  width: 213px;
+  padding: 1.2rem 1.6rem;
   font-size: 1.6rem;
   border: 1px solid #D3D2D1;
   box-shadow: 0px 0px 40px 0px rgba(64, 74, 79, 0.2);
   border-radius: 0.5rem;
-  appearance: none; /* Oculta el estilo predeterminado del select */
+  appearance: none;
   background-color: #fff;
   cursor: pointer;
 }
 
-/* Flecha centrada y estilizada */
 .select-container::after {
-  content: '▼'; /* Flecha como símbolo */
+  content: '▼';
   position: absolute;
-  right: 1.5rem;
-  font-size: 1.4rem; /* Tamaño ajustado para la flecha */
-  color: #aaa;
-  pointer-events: none; /* Para que no interfiera con el select */
+  right: 1.6rem;
+  font-size: 1.4rem;
+  color: var(--main-blue);
+  pointer-events: none;
 }
 
 .select-input:focus {
@@ -39,3 +46,4 @@
 .select-container:hover::after {
   color: var(--sky-blue);
 }
+
