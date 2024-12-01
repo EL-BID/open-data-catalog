@@ -5,7 +5,9 @@
     <div *ngFor="let filter of formatFilters(filters)" class="filter-boxes">
       <div class="filter-chip">
         <div>{{ filter.value }}</div>
-        <button class="remove-filter" (click)="removeFilter(filter.category, filter.value)">X</button>
+        <button class="remove-filter"
+        (pointerdown)="removeFilter(filter.category, filter.value)"
+        (keydown.enter)="removeFilter(filter.category, filter.value)">X</button>
       </div>
     </div>
   </div>
