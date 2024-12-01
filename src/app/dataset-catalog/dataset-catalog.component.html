@@ -20,7 +20,7 @@
   <div class="odl-container">
     <div class="odl-two-1-4-columns-container">
       <div class="odl-two-1-4-columns-left">
-        <app-filters (filtersChanged)="onFiltersChanged($event)"></app-filters>
+        <app-filters [filters]="filters" (filtersChanged)="onFiltersChanged($event)"></app-filters>
       </div>
       <div class="odl-right">
         <div class="top-bar">

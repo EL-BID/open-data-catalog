@@ -13,16 +13,17 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './filters.component.scss'
 })
 export class FiltersComponent implements OnInit {
-  @Input() filters: any = {};
+  @Input() filters: { [key: string]: string[] } = {};
   @Output() filtersChanged = new EventEmitter<any>();
+
   topics: string[] = [];
   regions: { [key: string]: string[] } = {};
   years: string[] = [];
   languages: string[] = [];
   idbKnowledges: string[] = [];
+
   selectedFilters: { [key: string]: boolean } = {};
   expandedRegions: { [key: string]: boolean } = {};
-
   visibleTopics: string[] = [];
   visibleYears: string[] = [];
 
@@ -46,12 +47,32 @@ export class FiltersComponent implements OnInit {
     this.loadFilters();
   }
 
-   onFilterChange(updatedFilters: any): void {
-    this.filters = updatedFilters;
+  ngOnChanges(): void {
+    this.syncCheckboxes();
+  }
+
+  syncCheckboxes(): void {
+    this.selectedFilters = {};
+    Object.keys(this.filters).forEach(category => {
+      this.filters[category].forEach(value => {
+        this.selectedFilters[value] = true;
+      });
+    });
+    this.cdr.detectChanges();
+  }
+
+  onFilterChange(): void {
     this.filtersChanged.emit(this.filters);
   }
 
-  loadFilters() {
+  removeFilter(category: string, value: string): void {
+    if (this.filters[category]) {
+      this.filters[category] = this.filters[category].filter((val: string) => val !== value);
+      this.onFilterChange();
+    }
+  }
+
+  loadFilters(): void {
     this.dataService.getFilters().subscribe(data => {
       this.topics = data.topics.sort();
       this.regions = data.regions;
@@ -59,36 +80,39 @@ export class FiltersComponent implements OnInit {
       this.languages = data.languages;
       this.idbKnowledges = data.idbKnowledges;
 
-      const urlFilters = this.filters || {};
-      const urlTopics = this.getQueryParam('topics');
-      const urlCountries = this.getQueryParam('countries');
-      const urlYears = this.getQueryParam('years');
-      const urlLanguages = this.getQueryParam('languages');
-      const urlIdbKnowledges = this.getQueryParam('idbKnowledges');
-
-      this.topics.forEach(topic => {
-        this.selectedFilters[topic] = urlTopics.includes(topic);
-      });
-
-      Object.keys(this.regions).forEach(region => {
-        this.regions[region].forEach(country => {
-          this.selectedFilters[country] = urlCountries.includes(country);
-        });
-      });
-
-      this.years.forEach(year => {
-        this.selectedFilters[year] = urlYears.includes(year);
-      });
-
-      this.languages.forEach(language => {
-        this.selectedFilters[language] = urlLanguages.includes(language);
-      });
-
-      this.idbKnowledges.forEach(idbKnowledge => {
-        this.selectedFilters[idbKnowledge] = urlIdbKnowledges.includes(idbKnowledge);
-      });
-
+      this.initializeSelectedFilters();
       this.updateVisibleFilters();
+    });
+  }
+
+  initializeSelectedFilters(): void {
+    const urlFilters = this.filters || {};
+    const urlTopics = this.getQueryParam('topics');
+    const urlCountries = this.getQueryParam('countries');
+    const urlYears = this.getQueryParam('years');
+    const urlLanguages = this.getQueryParam('languages');
+    const urlIdbKnowledges = this.getQueryParam('idbKnowledges');
+
+    this.topics.forEach(topic => {
+      this.selectedFilters[topic] = urlTopics.includes(topic);
+    });
+
+    Object.keys(this.regions).forEach(region => {
+      this.regions[region].forEach(country => {
+        this.selectedFilters[country] = urlCountries.includes(country);
+      });
+    });
+
+    this.years.forEach(year => {
+      this.selectedFilters[year] = urlYears.includes(year);
+    });
+
+    this.languages.forEach(language => {
+      this.selectedFilters[language] = urlLanguages.includes(language);
+    });
+
+    this.idbKnowledges.forEach(idbKnowledge => {
+      this.selectedFilters[idbKnowledge] = urlIdbKnowledges.includes(idbKnowledge);
     });
   }
 
@@ -107,12 +131,12 @@ export class FiltersComponent implements OnInit {
 
   showAllTopics() {
     this.visibleTopics = [...this.topics];
-    this.cdr.detectChanges();  // Fuerza la actualización en la vista
+    this.cdr.detectChanges();
   }
 
   showAllYears() {
     this.visibleYears = [...this.years];
-    this.cdr.detectChanges();  // Fuerza la actualización en la vista
+    this.cdr.detectChanges();
   }
 
   toggleRegion(regionKey: string): void {
@@ -127,7 +151,8 @@ export class FiltersComponent implements OnInit {
       return [...selected, ...selectedInRegion];
     }, []);
     const selectedYears = this.years.filter(year => this.selectedFilters[year]);
-    const selectedLanguages = this.languages.filter(language => this.selectedFilters[language])
+    const selectedLanguages = this.languages
+      .filter(language => this.selectedFilters[language])
       .map(language => this.languageMapping[language]);
     const selectedIdbKnowledges = this.idbKnowledges.filter(idbKnowledge => this.selectedFilters[idbKnowledge]);
 
