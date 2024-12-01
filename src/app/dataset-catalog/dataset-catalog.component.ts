@@ -84,6 +84,7 @@ export class DatasetCatalogComponent implements OnInit {
   onFiltersChanged(updatedFilters: any): void {
     console.log('Filtros cambiados a:', updatedFilters);
     this.filters = updatedFilters;
+    this.syncFilters();
      this.currentPage = 1;
      this.updateUrlWithFilters();
   }
@@ -92,9 +93,14 @@ export class DatasetCatalogComponent implements OnInit {
     const { category, value } = event;
     if (this.filters[category]) {
       this.filters[category] = this.filters[category].filter((val: string) => val !== value);
+      this.syncFilters();
       this.updateUrlWithFilters();
-      this.cdr.detectChanges();  // Forzar la detección de cambios
+      this.cdr.detectChanges();
     }
+  }
+
+  syncFilters(): void {
+    this.filters = { ...this.filters };
   }
 
   updateUrlWithFilters(): void {
