@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, NgZone, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SearchBarComponent } from "../search-bar/search-bar.component";
 import { FiltersComponent } from "../filters/filters.component";
@@ -12,7 +12,8 @@ import { PaginationComponent } from '../pagination/pagination.component';
   standalone: true,
   imports: [SearchBarComponent, FiltersComponent, SearchResultsComponent, SortComponent, ResultsHeaderComponent, PaginationComponent],
   templateUrl: './dataset-catalog.component.html',
-  styleUrls: ['./dataset-catalog.component.scss']
+  styleUrls: ['./dataset-catalog.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DatasetCatalogComponent implements OnInit {
   searchTerm: string = '';
@@ -24,7 +25,7 @@ export class DatasetCatalogComponent implements OnInit {
   currentPage: number = 1;
   rowsPerPage: number = 10;
 
-  constructor(private cdr: ChangeDetectorRef, private route: ActivatedRoute, private router: Router) { }
+  constructor(private cdr: ChangeDetectorRef, private route: ActivatedRoute, private router: Router, private zone: NgZone) { }
 
   ngOnInit(): void {
     console.log('ngOnInit: Verificando parámetros de categoría');
@@ -76,8 +77,10 @@ export class DatasetCatalogComponent implements OnInit {
 
   onSearch(searchTerm: string): void {
     console.log('Término de búsqueda recibido en DatasetCatalog:', searchTerm);
-    this.searchTerm = searchTerm;
-    this.cdr.detectChanges();
+    this.zone.run(() => {
+      this.searchTerm = searchTerm;
+      this.cdr.detectChanges();
+    });
     this.updateUrlWithFilters();
   }
 
