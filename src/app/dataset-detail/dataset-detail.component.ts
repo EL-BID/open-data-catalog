@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../data.service';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -29,7 +29,8 @@ export class DatasetDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private dataService: DataService
+    private dataService: DataService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -49,30 +50,33 @@ export class DatasetDetailComponent implements OnInit {
       console.log('mydataId:', this.mydataId);
 
       if (this.mydataCategory === 'resource' && this.titleOriginal) {
-        // Caso especial: buscar por titleOriginal como ID
-        this.dataset = data.find(d => d.mydata_id === this.titleOriginal);
+        this.dataset = data.find(d => d.mydata_id?.toLowerCase() === this.titleOriginal?.toLowerCase());
 
-        if (this.dataset) {
-          console.log('Dataset encontrado para resource:', this.dataset);
-        } else {
+        if (!this.dataset) {
           console.error('Dataset no encontrado para category: resource y ID:', this.titleOriginal);
+          // Redirigir a la página de error (404)
+          this.router.navigate(['/not-found']);
         }
       } else if (this.titleOriginal) {
-        // Lógica general: buscar por categoría, ID y título
-        const formattedTitleFromUrl = this.titleOriginal.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 50);
+        const formattedTitleFromUrl = this.titleOriginal.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 50).toLowerCase();
 
         this.dataset = data.find(d => {
-          const formattedTitleFromMetadata = d.title_original.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 50);
-          const categoryMatches = this.mydataCategory ? d.mydata_category === this.mydataCategory : true;
-          const idMatches = d.mydata_id === this.mydataId;
+          const formattedTitleFromMetadata = d.title_original
+            ?.replace(/[^a-zA-Z0-9]+/g, '-')
+            .substring(0, 50)
+            .toLowerCase();
+          const categoryMatches = this.mydataCategory
+            ? d.mydata_category?.toLowerCase() === this.mydataCategory.toLowerCase()
+            : true;
+          const idMatches = d.mydata_id?.toLowerCase() === this.mydataId?.toLowerCase();
 
           return categoryMatches && idMatches && formattedTitleFromMetadata === formattedTitleFromUrl;
         });
 
-        if (this.dataset) {
-          console.log('Dataset encontrado:', this.dataset);
-        } else {
+        if (!this.dataset) {
           console.error('Dataset no encontrado en la metadata. Revisa los parámetros.');
+          // Redirigir a la página de error (404)
+          this.router.navigate(['/not-found']);
         }
       } else {
         console.error('Parámetros insuficientes para buscar el dataset.');
@@ -82,8 +86,11 @@ export class DatasetDetailComponent implements OnInit {
     }, error => {
       console.error('Error al cargar la metadata:', error);
       this.loading = false;
+      // Redirigir a la página de error (404)
+      this.router.navigate(['/not-found']);
     });
   }
+
 
   sortCountries(spatial: string | string[]): string {
     if (!spatial) {
