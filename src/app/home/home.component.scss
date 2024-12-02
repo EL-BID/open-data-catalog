@@ -104,3 +104,19 @@
 .card-4 .card-icon i {
   color: var(--forest-green);
 }
+
+
+@media (max-width: 767.98px) {
+  .catalog-card {
+    width: 100%;
+  }
+
+  .table-responsive {
+    display: block; /* Asegura que el contenedor se comporte correctamente */
+    width: 100%;
+  }
+
+  .table-responsive table {
+    display: block; /* Asegura que la tabla se ajuste a su contenedor */
+  }
+}

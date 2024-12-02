@@ -89,19 +89,21 @@
     </div>
     <!-- Recent Research Projects Table -->
     <div class="odl-two-1-2-columns-right research-links">
-      <table>
-        <tbody>
-          <tr *ngFor="let dataset of recentDatasets">
-            <td>{{ dataset.title }}</td>
-            <td>
-              <a [routerLink]="generateDatasetUrl(dataset)" class="dataset-link">Dataset →</a>
-            </td>
-            <td>
-              <a href="{{ dataset.source }}" target="_blank" rel="noopener" class="publication-link">Publication →</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table>
+          <tbody>
+            <tr *ngFor="let dataset of recentDatasets">
+              <td>{{ dataset.title }}</td>
+              <td>
+                <a [routerLink]="generateDatasetUrl(dataset)" class="dataset-link">Dataset →</a>
+              </td>
+              <td>
+                <a href="{{ dataset.source }}" target="_blank" rel="noopener" class="publication-link">Publication →</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
