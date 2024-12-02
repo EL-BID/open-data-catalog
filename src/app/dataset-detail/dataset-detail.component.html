@@ -33,7 +33,7 @@
           <div>✓ Temporal:</div>
           <div>{{ dataset?.temporal }}</div>
         </li>
-        <li>
+        <li *ngIf="dataset?.spatial">
           <div>✓ Geographical:</div>
           <div>{{ sortCountries(dataset?.spatial) }}</div>
         </li>
@@ -52,7 +52,6 @@
             {{ getSortedKeywords().join(', ') }}
           </div>
         </li>
-
         <li>
           <div>✓ Published Date:</div>
           <div>{{ dataset?.issued }}</div>
