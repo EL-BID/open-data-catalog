@@ -495,15 +495,14 @@
         "temporal": "2015-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Management",
+            "Evaluation"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Risk Management",
+            "Sector Evaluation"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -545,15 +544,13 @@
             "Projects"
         ],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Safeguard",
+            "Social Development"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Poverty Level"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Operational",
         "dataSource": "Inter-American Development Bank",
@@ -590,15 +587,14 @@
         "temporal": "2007-2017",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Economy",
+            "Science and Technology"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Digital Connectivity",
+            "Broadband Service"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Centro de Información para la Mejora de los Aprendizajes",
@@ -633,15 +629,12 @@
         "temporal": "2005-2012",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Economy"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Macroeconomy"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Centro de Información para la Mejora de los Aprendizajes",
@@ -676,15 +669,14 @@
         "temporal": "1995-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Labor",
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Labor Market",
+            "Pension"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Emerging and Sustainable Cities Initiative",
@@ -725,11 +717,10 @@
             "Public Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Agriculture Support",
+            "Agricultural Policy"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Surveys",
@@ -767,15 +758,12 @@
         "temporal": "1975-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Infrastructure Work"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Urban Transport"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -814,15 +802,15 @@
         "temporal": "2016-2016",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Science and Technology",
+            "Management"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Open Government",
+            "Program Management"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Social Security Observatory",
@@ -857,15 +845,15 @@
         "temporal": "1990-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Education",
+            "Management"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Learning",
+            "Education Management",
+            "Educational Test"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Tax Administration and Ministries of Finance; Organisation for Economic Co-operation and Development;Economic Commission for Latin America and the Caribbean",
@@ -903,15 +891,16 @@
         "temporal": "2007-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Economy",
+            "Financial Sector",
+            "Education"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Education Expenditure",
+            "Educational Test"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank; Organization for Economic Cooperation and Development (OECD); International Labour Organization (ILO); International Monetary Fund (IMF).",
@@ -946,15 +935,15 @@
         "temporal": "1950-2014",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Rural and Urban Development",
+            "Science and Technology",
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Smart City",
+            "Sustainable City"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "PennWorld Table 8.0",
@@ -991,15 +980,14 @@
         "temporal": "1975-2017",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Education",
+            "Science and Technology"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Educational Test",
+            "Educational Research"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -1038,15 +1026,15 @@
         "temporal": "2005-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
             "Public Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Political Party",
+            "Political Reform",
+            "Democracy",
+            "Elections"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Association of Banks of Peru (ASBANC), ASBANC Economic Studies Department.",
@@ -1086,15 +1074,12 @@
         "temporal": "2005-2020",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Social Protection"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Mexico National Institute of Statistics and Geography",
@@ -1131,15 +1116,16 @@
         "temporal": "2016-2016",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Management",
+            "Economy"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Fiscal Transparency",
+            "Fiscal Burden",
+            "Government Revenue"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -1176,15 +1162,15 @@
         "temporal": "2017-2017",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Private Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Regulatory Governance",
+            "Public Finance",
+            "Public Employment"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -1221,15 +1207,13 @@
         "temporal": "2018-2018",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Economy"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Productivity",
+            "Productivity Growth"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -1266,15 +1250,15 @@
         "temporal": "2021-2021",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
             "Public Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Political Party",
+            "Political Reform",
+            "Democracy",
+            "Elections"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -1319,15 +1303,15 @@
         "temporal": "2022-2023",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
+            "Financial Sector",
             "Public Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Financial Inclusion",
+            "Financial Institution",
+            "Banking Regulation"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank;Swiss Embassy in Bolivia",
@@ -1368,15 +1352,14 @@
         "temporal": "2020-2021",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Social Development",
+            "Labor"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Gender Role",
+            "Labor Market Outcome"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "",
@@ -1417,15 +1400,15 @@
         "temporal": "2023-2023",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Environment and Natural Resource",
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Climate Change",
+            "Climate Finance",
+            "Environmental Sustainability"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "",
@@ -1466,15 +1449,15 @@
         "temporal": "",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Environment and Natural Resource",
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Climate Change",
+            "Climate Finance",
+            "Environmental Sustainability"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank;Swiss Embassy in Bolivia",
@@ -1515,15 +1498,15 @@
         "temporal": "2020 – 2021",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Environment and Natural Resource",
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Climate Change",
+            "Climate Finance",
+            "Environmental Sustainability"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank;United Nations Development Programme",
@@ -1562,15 +1545,15 @@
         "temporal": "",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Rural and Urban Development",
+            "Social Development"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Household Survey",
+            "Human Migration",
+            "Economic Migration"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Operational",
         "dataSource": "",
@@ -1609,15 +1592,12 @@
         "temporal": "2011-2019",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Labor"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Skills"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Multiple sources",
@@ -1657,15 +1637,12 @@
         "temporal": "2013-2013",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Labor"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Labor Market"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Multiple sources",
@@ -1706,15 +1683,12 @@
         "temporal": "2022-2022",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Labor"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Labor Market"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -1749,15 +1723,12 @@
         "temporal": "2010-2023",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Private Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Small Business"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Operational",
         "dataSource": "Inter-American Development Bank",
@@ -1792,15 +1763,12 @@
         "temporal": "2003-2023",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Private Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Small Business"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Household National Surveys of Latin America and the Caribbean; Water and Sanitation Observatory for Latin America and the Caribbean (OLAS)",
@@ -1835,15 +1803,12 @@
         "temporal": "2003-2023",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Integration and Trade"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "International Sanction"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Household National Surveys of Latin America and the Caribbean; Water and Sanitation Observatory for Latin America and the Caribbean (OLAS)",
@@ -1878,15 +1843,12 @@
         "temporal": "2018-2022",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Labor"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Skills"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "UN-Water Global Analysis and Assessment of Sanitation and Drinking-water, World Health Organization",
@@ -1922,15 +1884,16 @@
         "temporal": "2018-2018",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Safeguard",
+            "Public Sector",
+            "Integration and Trade"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Social Protection",
+            "Crime and Violence",
+            "Law Enforcement"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "",
@@ -1967,15 +1930,15 @@
         "temporal": "2018-2021",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Safeguard",
+            "Social Development"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Social Protection",
+            "Poverty",
+            "Human Migration"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -2010,15 +1973,18 @@
         "temporal": "2021-2021",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Economy",
+            "Financial Sector",
+            "Management"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Public Expenditure",
+            "Contract Management",
+            "Procurement Management",
+            "Public Procurement"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Water and Sanitation Observatory for Latin America and the Caribbean (OLAS);Latin America Public Opinion Project (AB-LAPOP)",
@@ -2053,15 +2019,19 @@
         "temporal": "2018-2019",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Rural and Urban Development",
+            "Social Development",
+            "Public Sector",
+            "Health",
+            "Infrastructure Work"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Household Survey",
+            "WASH",
+            "Water Infrastructure",
+            "Water and Sanitation"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Water and Sanitation Observatory for Latin America and the Caribbean (OLAS);Latin America Public Opinion Project (AB-LAPOP)",
@@ -2096,15 +2066,19 @@
         "temporal": "2020-2020",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Rural and Urban Development",
+            "Social Development",
+            "Public Sector",
+            "Health",
+            "Infrastructure Work"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Household Survey",
+            "WASH",
+            "Water Infrastructure",
+            "Water and Sanitation"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "OLAS Population-based Water Stress and Risk Dataset for Latin America and the Caribbean",
@@ -2139,15 +2113,16 @@
         "temporal": "2020-2020",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Rural and Urban Development",
+            "Health",
+            "Private Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "WASH",
+            "Governance"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank with the support of the consulting firm IDEIA BIG DATA",
@@ -2187,15 +2162,13 @@
         "temporal": "2020-2022",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Infrastructure Work"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Urban Transport",
+            "Rail System"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Institute for the Integration of Latin America and the Caribbean (INTAL) ",
@@ -2230,15 +2203,18 @@
         "temporal": "1960 - 2017",
         "keyword": [],
         "theme": [
+            "Health",
             "Agriculture and Food Security",
-            "Public Sector"
+            "Rural and Urban Development",
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Obesity",
+            "Nutrition",
+            "Food Security",
+            "Human Health"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank (IDB)",
@@ -2275,15 +2251,17 @@
         "temporal": "2010-2024",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Rural and Urban Development",
+            "Health",
+            "Infrastructure Work"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "WASH",
+            "Water Infrastructure",
+            "Water and Sanitation"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Operational",
         "dataSource": "Independent Consultation and Investigation Mechanism (STC/MEC/MEC)",
@@ -2318,15 +2296,17 @@
         "temporal": "2020-2020",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Rural and Urban Development",
+            "Health",
+            "Infrastructure Work"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "WASH",
+            "Water Infrastructure",
+            "Water and Sanitation"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -2365,15 +2345,18 @@
         "temporal": "2017-2018",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Rural and Urban Development",
+            "Health",
+            "Infrastructure Work"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "WASH",
+            "Water Infrastructure",
+            "Water and Sanitation",
+            "Rural Water Supply"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -2411,15 +2394,16 @@
         "temporal": "2001-2016",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
+            "Science and Technology",
             "Public Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Digital Policy",
+            "Digital Transformation",
+            "Public Service Delivery",
+            "Innovation"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Ministry of Education and Executive Committee of the Bolivian University and administrative data of private universities.",
@@ -2458,15 +2442,18 @@
         "temporal": "2011-2016",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Integration and Trade",
+            "Economy",
+            "Private Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Export",
+            "International Trade",
+            "Free Trade",
+            "Trade Integration",
+            "Innovative Firm"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "",
@@ -2501,15 +2488,16 @@
         "temporal": "2013 - 2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Social Development",
+            "Education",
+            "Labor"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Census",
+            "Educational Level",
+            "Workforce and Employment"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -2544,15 +2532,18 @@
         "temporal": "2015-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Private Sector",
+            "Environment and Natural Resource",
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Environmental, Social and Governance",
+            "Government Accountability",
+            "Social Safeguard",
+            "Environment and Natural Resource"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -2591,15 +2582,15 @@
         "temporal": "2012-2012",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Health",
+            "Labor"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Coronavirus",
+            "Public Health Care",
+            "Labor Market Policy"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Ministries of Economic and Social Inclusion (MIES) and Social Development (MCDS) in Ecuador",
@@ -2634,15 +2625,14 @@
         "temporal": "2013-2014",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
             "Public Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Crime Prevention",
+            "Citizen Security and Crime Prevention",
+            "Public Policy"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -2677,15 +2667,15 @@
         "temporal": "2015-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Education",
+            "Social Development"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Higher Education",
+            "Gender and Education",
+            "Gender and Employment"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank, Mesoamérica Health Initiative",
@@ -2720,15 +2710,14 @@
         "temporal": "1999-2009",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Health"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Health Promotion",
+            "NewBorn Health",
+            "Undernutrition in children"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "",
@@ -2763,15 +2752,12 @@
         "temporal": "2014-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Social Protection"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -2806,15 +2792,13 @@
         "temporal": "2014-2014",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Social Development"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Early Childhood Development",
+            "Social Service"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "",
@@ -2851,15 +2835,12 @@
         "temporal": "2014-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Social Protection"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -2894,15 +2875,12 @@
         "temporal": "2015-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Social Protection"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -2937,15 +2915,14 @@
         "temporal": "2015-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Health"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Public Health",
+            "Maternal Health"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Inter-American Development Bank",
@@ -2980,15 +2957,13 @@
         "temporal": "2015-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Infrastructure Work"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Maritime Transport",
+            "Short Sea Shipping"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "",
@@ -3029,15 +3004,12 @@
         "temporal": "2000-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Social Development"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Gender-Based Violence"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "The Housing Finance and Information Network (HOFINET); Global Housing Policy Indicators (GHPI) of Habitat for Humanity International; United Nations: Compendium of Housing Statistics (UNCHS); the World Bank World Development Indicators (WB-WDI); data from national census agencies; and, specific surveys collected in areas where data is not available. ",
@@ -3072,15 +3044,15 @@
         "temporal": "2000-2010",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Social Development"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Penal Institution",
+            "Gender Equality",
+            "Women"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "The authors work with data on demographics and public services as well as economic and urban data from the national censuses and surveys, data on municipal budgets from municipal account databases, and climatic indicators from the University of East Anglia (UEA) and the National Oceanic and Atmospheric Administration (NOAA). Although they recognize that national statistics are different by nature, they combine information sources, resolve semantic conflicts, and harmonize concepts as much as is feasible to produce consistent variables. For more details please check: ‚ÄúGrowing Resources for Growing Cities: Density and the Cost of Municipal Public Services in Brazil, Chile, Ecuador, and Mexico‚Äù: https://publications.iadb.org/handle/11319/7332 (p. 9-13)",
@@ -3118,15 +3090,14 @@
         "temporal": "2014-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Social Development",
+            "Rural and Urban Development"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Gender-Based Violence",
+            "Household Survey"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Informe MERCOSUR N¬∞ 20 (2014-2015) ",
@@ -3161,15 +3132,14 @@
         "temporal": "2006-2021",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Social Development",
+            "Rural and Urban Development"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Gender-Based Violence",
+            "Household Survey"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Offices in charge of gathering public debt data in each of the LAC Debt Group member countries: http://www.iadb.org/en/topics/finance/lac-debt-group/representatives,6904.html",
@@ -3204,15 +3174,14 @@
         "temporal": "2015-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Social Development",
+            "Rural and Urban Development"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Gender-Based Violence",
+            "Household Survey"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "The data is the result of a documentary analysis and assessment conducted by the Center for Strategic International Studies (CSIS) based on the methodology of the Cybersecurity Capability Maturity Model (CMM) developed by the Global Cyber Security Capacity Centre (GCSCC) at the University of Oxford in collaboration with the Inter-American Development Bank (IDB), and the Organization of American States (OAS). ",
@@ -3249,15 +3218,13 @@
         "temporal": "1990-2014",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
             "Public Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Public Service Delivery",
+            "Citizen Service"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "The Early Years: Child Well - being and the Role of Public Policy",
@@ -3306,15 +3273,13 @@
         "temporal": "2013-2013",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Rural and Urban Development"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Housing System",
+            "Urban Area"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "The preparation of the answers to these questions (or requirements) is based primarily in the analysis of the collected documentation as a result of a \"desk work\" or as a result of documents cited by government officials from countries who were interviewed. Most of these documents are legal and regulatory documents; guides, manual, methodologies and plans; and descriptions of instruments, systems and processes. The institutions that most frequently were consulted in countries corresponded to the ministry of Planning or its equivalent, ministry of economy and finance or its equivalent, to line ministries such as Education, Health, Social development (or its equivalent ), and Infrastructure (or its equivalent). There were also consulted supreme audit bodies of the State.",
@@ -3352,15 +3317,16 @@
         "temporal": "2001-2011",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Rural and Urban Development",
+            "Public Sector",
+            "Management"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Urban Area",
+            "Public Service",
+            "Municipal Management"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "IMF‚Äôs International Financial Statistics (IFS). Stock Market Capitalization: World Bank‚Äôs Global Financial Development Database (GFDD). Outstanding Domestic Private Debt Securities: World Bank‚Äôs Global Financial Development Database (GFDD). Outstanding Domestic Public Debt Securities: World Bank‚Äôs Global Financial Development Database (GFDD) and ECLAC Statistics. Financial System Deposits: World Bank‚Äôs Global Financial Development Database (GFDD). Gross Foreign Assets: Lane and Milesi-Ferretti (2007), updated database. Central Bank Foreign Reserves: Lane and Milesi-Ferretti (2007), updated database. Outstanding International Public Debt Securities: World Bank‚Äôs Global Financial Development Database (GFDD) and ECLAC Statistics. Outstanding International Private Debt Securities: World Bank‚Äôs Global Financial Development Database (GFDD). Institutional Investor Portfolios: AIOS (LAC Pension Systems) and OECD (Pension Funds and Insurance Global Database). Household Deposits: IMF‚Äôs Financial Access Survey (FAS) Database. Gross National Saving: IMF‚Äôs World Economic Outlook (WEO) Database. Gross Private Saving: IMF‚Äôs World Economic Outlook (WEO) Database. Household and Business Saving: Bebczuk and Cavallo (2015), ‚ÄúIs Business Saving None of Our Business?‚Äù, IDB Research Department Working Paper. Capital Stock: Feenstra, Inklaar and Timmer (2013). GDP: World Bank‚Äôs World Development Indicators (WDI). Inflation: World Bank‚Äôs World Development Indicators (WDI). Rule of Law: World Bank‚Äôs Governance Database. Additional data sources and references: Feenstra, Robert C., Robert Inklaar and Marcel P. Timmer (2013), \"The Next Generation of the Penn World Table\", available for download at www.ggdc.net/pwt. IMF (International Monetary Fund). 2007. The System of Macroeconomic Accounts Statistics: An Overview.‚Äù IMF Pamphlet Series No. 56. Washington DC: IMF. Lane P. and G. Milesi-Ferretti. 2007. \"The External Wealth of Nations Mark II.\" Journal of International Economics, November. Available for download at http://www.philiplane.org/EWN.html. Patterson K. and M. Stephenson. 1988. ‚ÄúStock-Flow Consistent Accounting: A Macroeconomic Perspective.‚Äù The Economic Journal 98: 787‚Äì800. Schmitt-Grohé S. and M. Uribe. 2014. International Macroeconomics. New York: Columbia University. Unpublished.",
@@ -3397,15 +3363,14 @@
         "temporal": "2015-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Integration and Trade",
+            "Economy"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "MERCOSUR",
+            "International Trade"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "http://www.cybersecurityobservatory.com",
@@ -3441,15 +3406,14 @@
         "temporal": "2010-2015",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
+            "Financial Sector",
             "Public Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Public Debt Management",
+            "Public Debt"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Methodology for the Broadband Development Index (IDBA) for Latin America and the Caribbean: On the one hand, the IDBA was created and produced by a set of experts from Inter-American Development Bank and from the consulting firm of Deloitte. As for the information itself, the IDBA relies on a conglomerate of existing variables that were produced and consolidated by highly renowned institutions (see the variables section for the specific source for each particular variable). These sources are as follows (in alphabetical order): INSEAD, Inter-American Development Bank, International Telecommunications Union, United Nations, World Bank, and World Economic Forum.",
@@ -3488,15 +3452,14 @@
         "temporal": "2009-2009",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Science and Technology"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Cybersecurity",
+            "Cybersecurity Capacity ",
+            "Technology Adoption"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Ministry of Finance of Paraguay and Central Bank of Paraguay",
@@ -3534,15 +3497,14 @@
         "temporal": "2013-2013",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Social Development",
+            "Education"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Early Childhood Development",
+            "Preschool and Early Childhood Education"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "nter-American Development Bank (IDB). Organisation for Economic Co-operation and Development (OECD)",
@@ -3578,15 +3540,16 @@
         "temporal": "2008-2013",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Economy",
+            "Financial Sector",
+            "Management"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Public Expenditure",
+            "Strategic Planning"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Population: Argentina: INDEC; Belize: SIB; Bolivia: INE; Brazil: --; Chile: INE; Colombia: DANE; Costa Rica: INEC; Ecuador: INEC; El Salvador: DIGESTYC; Guatemala: INE; Guyana: BOS; Honduras: INE; Jamaica: STATIN; Mexico: CONAPO; Nicaragua: INIDE; Panama: INEC; Paraguay: DGEEC; Peru: INEI; Dominican Republic: ONE; Uruguay: INE / Cases: Argentina: --; Belize: MNS; Bolivia: Policía Boliviana; Brasil: ---; Chile: Ministerio Interior y SP; Colombia: Fiscalía General Nación; Costa Rica: Organismo Inv. Judicial; Ecuador: CESJ; El Salvador: Policía Nacional Civil; Guatemala: Ministerio Público; Guyana: --; Honduras: Ministerio Público; Jamaica: JCF; Mexico:\t SE del SNSP; Nicaragua: Policía Nacional; Panama: Policía Nacional; Paraguay: Ministerio Público; Peru: Ministerio Público; Dominican Republic: Procuraduría General; Uruguay: Ministerio del Interior",
@@ -3621,15 +3584,13 @@
         "temporal": "1990-2014",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Financial Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Banking Regulation"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "More than Revenue: Taxation as a Development Tool",
@@ -3664,15 +3625,14 @@
         "temporal": "1990-2014",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Science and Technology"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Cybersecurity",
+            "Cybersecurity Capacity ",
+            "Technology Adoption"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Central Banks, Ministries of Finance, and Latin America and the Caribbean Fiscal Burden Database (CIAT-BID), IMF World Economic Outlook Database, Economist Intelligent Unit (EIU),  and World Bank Commodity Price Data (The Pink Sheet).",
@@ -3711,15 +3671,13 @@
         "temporal": "1990-2002",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Science and Technology"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Broadband Service",
+            "Telecommunication"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Economatica, Buenos Aires SE, Regulatory Agencies, Nosis External Trade and IDB calculations. Part of the data drawn from Galiani, Levy-Yeyati and Schargrodsky (2003).",
@@ -3756,15 +3714,16 @@
         "temporal": "2009-2014",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Management",
+            "Economy"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Fiscal Transparency",
+            "Fiscal Burden",
+            "Government Revenue"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Economist Intelligence Unit",
@@ -3799,15 +3758,14 @@
         "temporal": "2007-2013",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Labor",
+            "Safeguard"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Labor Market",
+            "Pension"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "PET Database",
@@ -3846,15 +3804,12 @@
         "temporal": "2004-2017",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
             "Public Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Citizen Security and Crime Prevention"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Serving the citizens: A Decade of Civil Service Reforms in Latin America (2004‚Äì13) http://publications.iadb.org/handle/11319/6636",
@@ -3893,15 +3848,12 @@
         "temporal": "1960-2013",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Economy"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Taxation"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Rethinking Productive Development: Sound Policies and Institutions for Economic Transformation - DIA 2014",
@@ -3936,15 +3888,16 @@
         "temporal": "1981-2013",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Management",
+            "Economy"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Fiscal Transparency",
+            "Fiscal Burden",
+            "Government Revenue"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Outsiders? The Changing Patterns of Exclusion in Latin America and the Caribbean",
@@ -3985,15 +3938,14 @@
         "temporal": "1960-2013",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Economy",
+            "Private Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Fiscal Capacity",
+            "Firm Performance"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "The Age Of Productivity: Transforming Economies from the Bottom Up - DIA 2010",
@@ -4030,15 +3982,13 @@
         "temporal": "1990-2013",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Private Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Public Private Partnership"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Room for Development: Housing Markets in Latin America and the Caribbean - DIA 2012",
@@ -4073,15 +4023,16 @@
         "temporal": "1980-2013",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Economy",
+            "Financial Sector",
+            "Management"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Public Expenditure",
+            "Strategic Planning"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Living with Debt: How to Limit Risks of Sovereign Finance? ",
@@ -4116,15 +4067,13 @@
         "temporal": "2012-2012",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
             "Public Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Public Service",
+            "Citizen Service"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "The Politics of Policies",
@@ -4186,15 +4135,15 @@
         "temporal": "1990-2011",
         "keyword": [],
         "theme": [
-            "Agriculture and Food Security",
-            "Public Sector"
+            "Public Sector",
+            "Financial Sector"
         ],
         "detailedTheme": [
-            "Agriculture Support"
+            "Public Policy",
+            "Politics and Institution",
+            "Financial Inclusion"
         ],
-        "spatial": [
-            "Argentina"
-        ],
+        "spatial": [],
         "regional": "",
         "origin": "Research",
         "dataSource": "Development Connections: Unveiling the Impact of New Information Technologies ",
