@@ -3,6 +3,8 @@ import { DataService } from '../data.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+const MAX_DESCRIPTION_LENGTH = 300;
+
 @Component({
   selector: 'app-search-results',
   standalone: true,
@@ -41,6 +43,7 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
     if (changes['searchTerm'] || changes['sortBy'] || changes['filters'] || changes['currentPage']) {
       console.log('Cambios detectados en los inputs:', changes);
       this.applyFilters();
+      this.changeDetectorRef.detectChanges();
     }
   }
 
@@ -139,11 +142,9 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
     this.changeDetectorRef.detectChanges();
     this.filteredDatasets.forEach(dataset => {
       const descriptionElement = this.descriptions.toArray().find((desc: ElementRef) => desc.nativeElement.innerText.trim() === dataset.description.trim());
-      if (descriptionElement) {
-        const isTruncated = descriptionElement.nativeElement.scrollHeight > descriptionElement.nativeElement.offsetHeight;
-        this.showReadMoreButton[dataset.id] = isTruncated;
-        this.isDescriptionExpanded[dataset.id] = false;
-      }
+      const isTruncated = dataset.description.length > MAX_DESCRIPTION_LENGTH;
+      this.showReadMoreButton[dataset.id] = isTruncated;
+      this.isDescriptionExpanded[dataset.id] = false;
     });
   }
 
