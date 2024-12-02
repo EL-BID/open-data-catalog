@@ -1,6 +1,6 @@
 <div class="results-header">
-  <p *ngIf="resultCount > 0">{{ resultCount }} Results</p>
-  <p *ngIf="noResults">No Results</p>
+  <p *ngIf="resultCount > 0">{{ resultCount }} {{ resultCount === 1 ? 'Result' : 'Results' }}</p>
+  <p *ngIf="resultCount === 0 && (searchTerm || hasFilters)">No Results Found</p>
   <div *ngIf="hasFilters" class="filter-boxes-container">
     <div *ngFor="let filter of formatFilters(filters)" class="filter-boxes">
       <div class="filter-chip">
