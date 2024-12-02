@@ -109,8 +109,8 @@ export class DatasetDetailComponent implements OnInit {
   }
 
   getAuthors(): string {
-    const personalAuthors = this.dataset?.creator_personal?.trim() || '';
-    const organizationalAuthors = this.dataset?.creator_organizational?.trim() || '';
+    const personalAuthors = (this.dataset?.creator_personal?.join(', ') || '').trim();
+    const organizationalAuthors = (this.dataset?.creator_organizational?.join(', ') || '').trim();
     const authors = [personalAuthors, organizationalAuthors]
       .filter(author => author)
       .join('; ');
