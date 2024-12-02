@@ -46,12 +46,13 @@
         <h3>Basic Details</h3>
       </div>
       <ul>
-        <li>
+        <li *ngIf="getSortedKeywords().length > 0">
           <div>✓ Keyword(s):</div>
           <div>
             {{ getSortedKeywords().join(', ') }}
           </div>
         </li>
+
         <li>
           <div>✓ Published Date:</div>
           <div>{{ dataset?.issued }}</div>
