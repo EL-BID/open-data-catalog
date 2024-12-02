@@ -136,6 +136,7 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
   }
 
   private checkTruncation(): void {
+    this.changeDetectorRef.detectChanges();
     this.filteredDatasets.forEach(dataset => {
       const descriptionElement = this.descriptions.toArray().find((desc: ElementRef) => desc.nativeElement.innerText.trim() === dataset.description.trim());
       if (descriptionElement) {
