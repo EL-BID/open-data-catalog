@@ -1,21 +1,55 @@
 <div class="pagination-container">
   <nav role="navigation" aria-label="Paginación">
     <ul class="pagination">
+      <!-- First Button -->
+      <li *ngIf="currentPage > 1" class="pagination-item">
+        <a (click)="onPageChange(1)" [attr.aria-label]="'First page'" class="pagination-link">
+          &laquo;&laquo; First
+        </a>
+      </li>
+
+      <!-- Previous Button -->
       <li *ngIf="currentPage > 1" class="pagination-item">
         <a (click)="onPageChange(currentPage - 1)" [attr.aria-label]="'Previous page'" class="pagination-link">
           &laquo; Previous
         </a>
       </li>
 
+      <!-- Páginas con los puntos suspensivos -->
+      <li *ngIf="startPage > 2" class="pagination-item disabled">
+        <span class="pagination-link">...</span>
+      </li>
+
+      <!-- Page numbers -->
       <li *ngFor="let page of pages" [class.active]="page === currentPage" class="pagination-item">
         <a (click)="onPageChange(page)" [attr.aria-label]="'Ir a la página ' + page" class="pagination-link">
           {{ page }}
         </a>
       </li>
 
+      <!-- Puntos suspensivos después si es necesario -->
+      <li *ngIf="endPage < totalPages - 1" class="pagination-item disabled">
+        <span class="pagination-link">...</span>
+      </li>
+
+      <!-- Mostrar última página si es necesario -->
+      <li *ngIf="endPage < totalPages" class="pagination-item">
+        <a (click)="onPageChange(totalPages)" [attr.aria-label]="'Ir a la última página'" class="pagination-link">
+          {{ totalPages }}
+        </a>
+      </li>
+
+      <!-- Next Button -->
       <li *ngIf="currentPage < totalPages" class="pagination-item">
         <a (click)="onPageChange(currentPage + 1)" [attr.aria-label]="'Next page'" class="pagination-link">
           Next &raquo;
+        </a>
+      </li>
+
+      <!-- Last Button -->
+      <li *ngIf="currentPage < totalPages" class="pagination-item">
+        <a (click)="onPageChange(totalPages)" [attr.aria-label]="'Last page'" class="pagination-link">
+          Last &raquo;&raquo;
         </a>
       </li>
     </ul>
