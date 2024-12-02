@@ -23,22 +23,23 @@
 <section class="odl-section">
   <div class="odl-container">
     <h2 class="h2-metadata">Dataset Metadata</h2>
-    <div class="metadata-category">
+    <div class="metadata-category" *ngIf="dataset?.temporal || dataset?.spatial?.length > 0">
       <div class="metadata-category-title">
         <span class="metadata-icon" aria-hidden="true"><fa-icon [icon]="faEarthAmerica"></fa-icon></span>
         <h3>Coverage</h3>
       </div>
       <ul>
-        <li>
+        <li *ngIf="dataset?.temporal">
           <div>✓ Temporal:</div>
           <div>{{ dataset?.temporal }}</div>
         </li>
-        <li *ngIf="dataset?.spatial">
+        <li *ngIf="dataset?.spatial?.length > 0">
           <div>✓ Geographical:</div>
           <div>{{ sortCountries(dataset?.spatial) }}</div>
         </li>
       </ul>
     </div>
+
 
     <div class="metadata-category">
       <div class="metadata-category-title">
