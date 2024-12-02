@@ -1,47 +1,51 @@
 <header>
-  <div class="header-frame-1">
-    <div class="header-content">
-      <div class="header-actions-left">
-        <a
-          href="https://www.iadb.org/en/how-we-can-work-together/investors">Investors</a>
-        <a href="https://www.iadb.org/en/home/press-room">News</a>
-        <strong><a href="#">English</a></strong>
-      </div>
-    </div>
+
+  <div class="user-nav">
+    <nav class="odl-container">
+      <ul class="user-actions">
+        <li>
+          <a href="https://www.iadb.org/en/search" aria-label="Search">
+            <span><fa-icon [icon]="faMagnifyingGlass"></fa-icon><span class="sr-only">Search</span></span></a>
+        </li>
+        <li><a href="https://www.iadb.org/en/how-we-can-work-together/investors">Investors</a></li>
+        <li><a href="https://www.iadb.org/en/home/press-room">News</a></li>
+        <li><a href="#" class="semi-bold">English</a></li>
+      </ul>
+    </nav>
   </div>
 
-  <div class="header-frame-2">
-    <div class="header-content frame-2">
-      <div class="header-logo">
-        <img src="./assets/images/logos/idb-logos/idb-color.png" alt="IDB Logo">
-      </div>
-      <nav class="header-nav">
-        <ul>
-          <li><a href="https://www.iadb.org/en/who-we-are/about-idb">Who We
-              Are</a></li>
-          <li><a href="https://www.iadb.org/en/project-search">Projects</a></li>
-          <li><a
-              href="https://www.iadb.org/en/how-we-can-work-together/professionals">How
-              We Can Work Together</a></li>
-          <li><a href="https://www.iadb.org/en/knowledge-resources">Knowledge
-              Resources</a></li>
-        </ul>
-      </nav>
-    </div>
+  <div class="primary-nav">
+    <nav class="odl-container">
+      <ul>
+        <li class="header-logo">
+          <a href="https://www.iadb.org/en" aria-label="Go to IDB homepage">
+            <img src="./assets/images/logos/idb-logos/idb-color.png" alt="IDB logo">
+          </a>
+        </li>
+        <li class="primary">
+          <ul>
+            <li><a href="https://www.iadb.org/en/who-we-are/about-idb">Who We Are</a></li>
+            <li><a href="https://www.iadb.org/en/project-search">Projects</a></li>
+            <li><a href="https://www.iadb.org/en/how-we-can-work-together/professionals">How We Can Work Together</a></li>
+            <li><a href="https://www.iadb.org/en/knowledge-resources">Knowledge Resources</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </div>
 
-  <div class="header-frame-3">
-    <div class="header-content">
-      <nav class="header-breadcrumbs" aria-label="Breadcrumb">
+  <div class="breadcrumb">
+    <div class="odl-container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
         <a href="https://www.iadb.org/en">Home</a> &rarr;
         <span>Knowledge Resources</span> &rarr;
         <ng-container *ngFor="let breadcrumb of breadcrumbs; let last = last">
-          <a *ngIf="!last" [routerLink]="breadcrumb.url">{{ breadcrumb.label
-            }}</a>
+          <a *ngIf="!last" [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
           <span *ngIf="last" aria-current="page">{{ breadcrumb.label }}</span>
           <span *ngIf="!last"> &rarr; </span>
         </ng-container>
       </nav>
     </div>
   </div>
+
 </header>
