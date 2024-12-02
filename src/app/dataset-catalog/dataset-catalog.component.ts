@@ -155,6 +155,7 @@ export class DatasetCatalogComponent implements OnInit {
     console.log('Página cambiada a:', page);
     this.currentPage = page;
     this.updateUrlWithFilters();
+    this.cdr.detectChanges();
   }
 
   getTotalPages(): number {
