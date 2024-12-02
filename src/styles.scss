@@ -56,6 +56,9 @@ strong {
   --olive: #7a6e27;
   --forest-green: #308144;
   --white-color: #ffffff;
+  --blue-responsible-darken-1: #002536;
+  --blue-responsible-lighten-5: #f0f4f6;
+  --cyan-near-darken-1: #24506b;
 }
 
 /* Font colors */
@@ -125,6 +128,14 @@ hr {
 }
 
 /* General */
+
+.bold {
+  font-weight: 700;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
 
 .odl-section {
   display: flex;
