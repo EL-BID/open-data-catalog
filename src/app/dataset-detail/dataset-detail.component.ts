@@ -109,12 +109,9 @@ export class DatasetDetailComponent implements OnInit {
   }
 
   getAuthors(): string {
-    const personalAuthors = (this.dataset?.creator_personal?.join(', ') || '').trim();
-    const organizationalAuthors = (this.dataset?.creator_organizational?.join(', ') || '').trim();
-    const authors = [personalAuthors, organizationalAuthors]
-      .filter(author => author)
-      .join('; ');
-    return authors.replace(/;\s+/g, '; ').trim();
+    const personalAuthors = this.dataset?.creator_personal?.map((author: string) => author.trim()) || [];
+    const organizationalAuthors = this.dataset?.creator_organizational?.map((author: string) => author.trim()) || [];
+    return [...personalAuthors, ...organizationalAuthors].join('; ').trim();
   }
 
   getLicense(): string {
