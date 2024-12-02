@@ -586,7 +586,7 @@
         "source": "",
         "language": "en",
         "title": "Learning Improvement Information Center:  Regional Indicators for Learning",
-        "description": "This dataset consists of indicators capturing how much students know and are able to do. It includes statistics from international learning assessments such as OECD’s PISA, UNESCO’s SERCE and TERCE, and CSEC of the Caribbean Examination Council. Main indicators: Average score, passing rate, percentage of top performers, percentage of low achievers._x000D_\n<br><br><b>Click here to access the data: https://mydata.iadb.org/d/sqwh-9zsr</b></br></br>",
+        "description": "This dataset consists of indicators capturing how much students know and are able to do. It includes statistics from international learning assessments such as OECD’s PISA, UNESCO’s SERCE and TERCE, and CSEC of the Caribbean Examination Council. Main indicators: Average score, passing rate, percentage of top performers, percentage of low achievers.",
         "temporal": "2007-2017",
         "keyword": [],
         "theme": [
@@ -629,7 +629,7 @@
         "source": "",
         "language": "en",
         "title": "Learning Improvement Information Center: Regional Indicators for Financial Resources",
-        "description": "This dataset consists of statistics measuring the financial resources available to fund the education system. Main indicators: Government expenditure on education as % of GDP, in PPP, as % of total government expenditure, expenditure on salaries as % of education expenditure, expenditure on education per student as % of pc gdp._x000D_\n<br><br><b>Click here to access the data: https://mydata.iadb.org/d/y35v-i2ux/</b></br></br>",
+        "description": "This dataset consists of statistics measuring the financial resources available to fund the education system. Main indicators: Government expenditure on education as % of GDP, in PPP, as % of total government expenditure, expenditure on salaries as % of education expenditure, expenditure on education per student as % of pc gdp.",
         "temporal": "2005-2012",
         "keyword": [],
         "theme": [
@@ -672,7 +672,7 @@
         "source": "",
         "language": "en",
         "title": "Emerging and Sustainable Cities Initiative Datasets",
-        "description": "The Urban Dashboard allows to explore and compare more than 150 quantitative indicators, public opinion polls and interactive maps of intermediate cities in Latin America and the Caribbean. These are cities that have an outstanding economic and population growth, and receive technical assistance from the Emerging and Sustainable Cities Initiative (ESCI) of the IDB. This dataset was created to feed the urbandashboard.org platform. It contains all the cities data (country, area, population, longitud, latitude, etc).<br><br><b>Click here to access the data: https://mydata.iadb.org/idb/dataset/m7ru-9336</b></br></br>",
+        "description": "The Urban Dashboard allows to explore and compare more than 150 quantitative indicators, public opinion polls and interactive maps of intermediate cities in Latin America and the Caribbean. These are cities that have an outstanding economic and population growth, and receive technical assistance from the Emerging and Sustainable Cities Initiative (ESCI) of the IDB. This dataset was created to feed the urbandashboard.org platform. It contains all the cities data (country, area, population, longitud, latitude, etc).",
         "temporal": "1995-2015",
         "keyword": [],
         "theme": [
@@ -810,7 +810,7 @@
         "source": "",
         "language": "en",
         "title": "Harmonized LSPS (Longitudinal Social Protection Survey) Database 2016",
-        "description": "The Longitudinal Social Protection Survey harmonized database contains individual information from Chile, Colombia, El Salvador, Paraguay and Uruguay. It has 320 variables, and 120 of them can be compared in all countries._x000D_\n<br><br><b>Click here to access the data: https://mydata.iadb.org/d/ck3a-ui6v</b></br></br>",
+        "description": "The Longitudinal Social Protection Survey harmonized database contains individual information from Chile, Colombia, El Salvador, Paraguay and Uruguay. It has 320 variables, and 120 of them can be compared in all countries.",
         "temporal": "2016-2016",
         "keyword": [],
         "theme": [
@@ -853,7 +853,7 @@
         "source": "",
         "language": "en",
         "title": "Latin America and the Caribbean Fiscal Burden Database 2015",
-        "description": "This database is an ongoing effort to update official fiscal data by the Bank and the Inter-American Center of Tax Administrations, and with the collaboration of OECD and ECLAC. The Equivalent Fiscal Pressure indicator makes use of a methodology that better reflects the particularities of the mobilization of fiscal resources in the region, and consists of three elements: 1) Traditional tax collection, which includes all taxes and fees levied at all levels of government; 2) Compulsory social security contributions, whether public or private, mostly to pension and health systems; and 3) Non-tax revenues derived from the exploitation of natural resources, whether renewable or not; i.e., fees, royalties, dividends paid and net profits from public enterprises. The information is presented broken down by type of tax at every level of government. The series are adjusted with updated GDP values for each country and information that becomes available for municipalities and social security, which tend to have a longer lag period compared to other tax statistics.<br><br><b>Click here to access the data: https://mydata.iadb.org/d/wjva-jgbh</b></br></br>",
+        "description": "This database is an ongoing effort to update official fiscal data by the Bank and the Inter-American Center of Tax Administrations, and with the collaboration of OECD and ECLAC. The Equivalent Fiscal Pressure indicator makes use of a methodology that better reflects the particularities of the mobilization of fiscal resources in the region, and consists of three elements: 1) Traditional tax collection, which includes all taxes and fees levied at all levels of government; 2) Compulsory social security contributions, whether public or private, mostly to pension and health systems; and 3) Non-tax revenues derived from the exploitation of natural resources, whether renewable or not; i.e., fees, royalties, dividends paid and net profits from public enterprises. The information is presented broken down by type of tax at every level of government. The series are adjusted with updated GDP values for each country and information that becomes available for municipalities and social security, which tend to have a longer lag period compared to other tax statistics.",
         "temporal": "1990-2015",
         "keyword": [],
         "theme": [
@@ -1082,7 +1082,7 @@
         "source": "",
         "language": "en",
         "title": "Replication Package for: Grandmothers and the Gender Gap in the Mexican Labor Market",
-        "description": "Data associated with the IDB Publication \"Grandmothers and the Gender Gap in the Mexican Labor Market\".\n\nENESS data is available for 2009, 2013, and 2017. As an accompanying module of the ENOE, it covers all the households covered by the ENOE for two out of the three months in the quarter. Hence, the ENESS covers roughly two-thirds of the ENOE sample for the quarter. The ENESS data includes responses from 209,266 households. These households use public and private daycare providers for 3,991 and 1,177 children under seven years old",
+        "description": "Data associated with the IDB Publication \"Grandmothers and the Gender Gap in the Mexican Labor Market\". ENESS data is available for 2009, 2013, and 2017. As an accompanying module of the ENOE, it covers all the households covered by the ENOE for two out of the three months in the quarter. Hence, the ENESS covers roughly two-thirds of the ENOE sample for the quarter. The ENESS data includes responses from 209,266 households. These households use public and private daycare providers for 3,991 and 1,177 children under seven years old.",
         "temporal": "2005-2020",
         "keyword": [],
         "theme": [
@@ -1653,7 +1653,7 @@
         "source": "",
         "language": "en",
         "title": "What do crime observers observe? Past, present and future of crime and violence observatories in Latin America and the Caribbean: Survey Dataset",
-        "description": "This dataset is the main survey created for the publication \"¿Qué observan los que observan el delito? Pasado, presente y futuro de los observatorios del crimen y la violencia en América latina y el Caribe\". Contains information about aspects of the observatories and information systems, such as organizational structure, methodologies and management of information, functioning, and sustainability of Observatories in the Latin American and the Caribbean Region",
+        "description": "This dataset is the main survey created for the publication \"¿Qué observan los que observan el delito? Pasado, presente y futuro de los observatorios del crimen y la violencia en América latina y el Caribe\". Contains information about aspects of the observatories and information systems, such as organizational structure, methodologies and management of information, functioning, and sustainability of Observatories in the Latin American and the Caribbean Region.",
         "temporal": "2013-2013",
         "keyword": [],
         "theme": [
@@ -1745,7 +1745,7 @@
         "source": "",
         "language": "en",
         "title": "IDB Project Procurement Contract Awards Data",
-        "description": "This database compiles information on contract awards related to IDB financed, sovereign-guaranteed operations in Latin America and the Caribbean. This database spans information since 2010. Data can also be viewed at https://projectprocurement.iadb.org/en/awarded-contracts",
+        "description": "This database compiles information on contract awards related to IDB financed, sovereign-guaranteed operations in Latin America and the Caribbean. This database spans information since 2010. Data can also be viewed at https://projectprocurement.iadb.org/en/awarded-contracts.",
         "temporal": "2010-2023",
         "keyword": [],
         "theme": [
@@ -2540,7 +2540,7 @@
         "source": "",
         "language": "en",
         "title": "Measuring Quality and Characterizing Cuna Mas Home Visits",
-        "description": "This dataset contains information on Programa Nacional Cuna Más (Cuna Mas, hereinafter), Peru’s largest early childhood development program established in 2012. It focuses on one of the two services provided by Cuna Mas known as Servicio de Acompanamiento a Familias (SAF), a home visiting program that operates in rural areas and provides one-hour weekly home visits to children aged 0-36 months and their caregiver.\n\nThe objective of the study was to compare different instruments to measure the quality of home visiting programs. Between August and October 2015, three instruments were administered to a sample of 554 children enrolled in Cuna Mas and receiving home visits at the time of data collection, and on their 176 home visitors who regularly work with 80 supervisors.\n\nThe following quality instruments were administered:\n• Home Visit Rating Scale, version A+2 (HOVRS; Roggman et al. 2010)\n• Home Visit Content and Characteristics Form (HVCCF; Boller et al. 2009)\n• A supervisor checklist\n\nThe first two quality instruments are widely used among home visiting services in the United States. For each child in the sample, one home visit was filmed and the videos were later coded to create the scores, following the instruments’ manuals. The checklist, on the other hand, was designed based on record forms used by Cuna Mas and other home visiting programs in low- and middle- income countries, and was administered live during the visit by the home visitor’s supervisor.\n\nThe final, multilevel dataset includes:\n• 554 visits with an identical number of distinct children\n• 176 home visitors\n• 80 supervisors •",
+        "description": "This dataset contains information on Programa Nacional Cuna Más (Cuna Mas, hereinafter), Peru’s largest early childhood development program established in 2012. It focuses on one of the two services provided by Cuna Mas known as Servicio de Acompanamiento a Familias (SAF), a home visiting program that operates in rural areas and provides one-hour weekly home visits to children aged 0-36 months and their caregiver. The objective of the study was to compare different instruments to measure the quality of home visiting programs. Between August and October 2015, three instruments were administered to a sample of 554 children enrolled in Cuna Mas and receiving home visits at the time of data collection, and on their 176 home visitors who regularly work with 80 supervisors.",
         "temporal": "2015-2015",
         "keyword": [],
         "theme": [
@@ -2759,7 +2759,7 @@
         "source": "",
         "language": "en",
         "title": "Data of violence against women - Honduras Harmonized Data",
-        "description": "This file contains descriptive data derived from the end line data set collected for an evaluation study of the impact of participation in a psychological intervention designed by the NGO, Centro de Prevención de la Violencia (CEPREV), on intimate partner violence among at-risk youth living in three neighborhoods in the vicinity of San Pedro Sula, Honduras. The intervention ran from January 2015 through October 2015. Study participants were 934 young women and men (589 treatment and 345 controls) between the ages of 13 and 30. Baseline data collection took place in November of 2014 while final data was collected between December 2015 and February 2016.  <br><br><b>Click here to access the data: https://mydata.iadb.org/d/6vsc-i594</b></br></br>",
+        "description": "This file contains descriptive data derived from the end line data set collected for an evaluation study of the impact of participation in a psychological intervention designed by the NGO, Centro de Prevención de la Violencia (CEPREV), on intimate partner violence among at-risk youth living in three neighborhoods in the vicinity of San Pedro Sula, Honduras. The intervention ran from January 2015 through October 2015. Study participants were 934 young women and men (589 treatment and 345 controls) between the ages of 13 and 30. Baseline data collection took place in November of 2014 while final data was collected between December 2015 and February 2016.",
         "temporal": "2014-2015",
         "keyword": [],
         "theme": [
@@ -2802,7 +2802,7 @@
         "source": "",
         "language": "en",
         "title": "Invisible women: the costs of prison and indirect effects on women",
-        "description": "This study seeks to draw attention to the families of people who are detained in the local Mexican prison system. The results of this study are divided into two parts: the first part shows the socio-demographic characteristics of those who visit the Centers for Social Rehabilitation including information about their education, work, and economic status, among others. The second part provides quantitative information on the economic, social and health costs that are imposed by a criminal model that fails to recognize its existence, and by a prison system that frequently fails to comply with the obligation to pay the expenses of those that have been put in seclusion.<br><br><b>Click here to access the data: https://mydata.iadb.org/d/bttx-z673/</b></br></br>",
+        "description": "This study seeks to draw attention to the families of people who are detained in the local Mexican prison system. The results of this study are divided into two parts: the first part shows the socio-demographic characteristics of those who visit the Centers for Social Rehabilitation including information about their education, work, and economic status, among others. The second part provides quantitative information on the economic, social and health costs that are imposed by a criminal model that fails to recognize its existence, and by a prison system that frequently fails to comply with the obligation to pay the expenses of those that have been put in seclusion.",
         "temporal": "2014-2014",
         "keyword": [],
         "theme": [
@@ -2847,7 +2847,7 @@
         "source": "",
         "language": "en",
         "title": "Data of Violence against women - Honduras - Survey answers",
-        "description": "This file contains data from an evaluation study of the  impact of participation in a psychological intervention designed by the NGO, Centro de Prevención de la Violencia (CEPREV), on intimate partner violence among at-risk youth living in three neighborhoods in the vicinity of San Pedro Sula, Honduras. The intervention ran from January 2015 through October 2015. Study participants were 934 young women and men (589 treatment and 345 controls) between the ages of 13 and 30. Baseline data collection took place in November of 2014 while final data was collected between December 2015 and February 2016. <br><br><b>Click here to access the data: https://mydata.iadb.org/d/e985-424f</b></br></br>",
+        "description": "This file contains data from an evaluation study of the  impact of participation in a psychological intervention designed by the NGO, Centro de Prevención de la Violencia (CEPREV), on intimate partner violence among at-risk youth living in three neighborhoods in the vicinity of San Pedro Sula, Honduras. The intervention ran from January 2015 through October 2015. Study participants were 934 young women and men (589 treatment and 345 controls) between the ages of 13 and 30. Baseline data collection took place in November of 2014 while final data was collected between December 2015 and February 2016.",
         "temporal": "2014-2015",
         "keyword": [],
         "theme": [
@@ -2976,7 +2976,7 @@
         "source": "http://dx.doi.org/10.18235/0012841",
         "language": "en",
         "title": "Simplifying Lives: quality and satisfaction with public services",
-        "description": "This data set corresponds to a survey performed between July and September of 2015 on 6 countries from Latin America and the Caribbean. 11,500 citizens provided information about their experience with a specific set of government services._x000D_\n<br><br><b>Click here to access the data: https://mydata.iadb.org/d/5x5h-9j6p</b></br></br>",
+        "description": "This data set corresponds to a survey performed between July and September of 2015 on 6 countries from Latin America and the Caribbean. 11,500 citizens provided information about their experience with a specific set of government services.",
         "temporal": "2015-2015",
         "keyword": [],
         "theme": [
@@ -3200,7 +3200,7 @@
         "source": "",
         "language": "en",
         "title": "Advanced Experiences in Cybersecurity Policies and Practices Data Set",
-        "description": "This set comprises the data collected to inform the Discussion Paper: Advanced Experiences in Cybersecurity Policies and Practices- an Overview of Estonia, Israel, South Korea and the United States, result of the collaboration between Dr. James A. Lewis from the Center for Strategic International Studies (CSIS) and the Inter-American Development Bank (IDB). The data is based on the Cybersecurity Capability Maturity Model (CMM) jointly developed by the Organization of American States (OAS), the Inter-American Development Bank and the Global Cyber Security Capacity Center (GCSCC) at the University of Oxford and it supports the structured assessment of these four countries cybersecurity experiences and the lessons learned derived from them. This data set compliments the 2016 Cyber Security Report Data Set published in April 2016.<br><br><b>Click here to access the data: https://mydata.iadb.org/d/a9yc-jpsa</b></br></br>",
+        "description": "This set comprises the data collected to inform the Discussion Paper: Advanced Experiences in Cybersecurity Policies and Practices- an Overview of Estonia, Israel, South Korea and the United States, result of the collaboration between Dr. James A. Lewis from the Center for Strategic International Studies (CSIS) and the Inter-American Development Bank (IDB). The data is based on the Cybersecurity Capability Maturity Model (CMM) jointly developed by the Organization of American States (OAS), the Inter-American Development Bank and the Global Cyber Security Capacity Center (GCSCC) at the University of Oxford and it supports the structured assessment of these four countries cybersecurity experiences and the lessons learned derived from them. This data set compliments the 2016 Cyber Security Report Data Set published in April 2016.",
         "temporal": "2015-2015",
         "keyword": [],
         "theme": [
@@ -3302,7 +3302,7 @@
         "source": "",
         "language": "en",
         "title": "Managing for Development Results (MfDR) Indicators database",
-        "description": "This database delivers information about several management systems, classified in five “pillars” of the public sector management cycle that are considered important for the implementation of Management for Development Results (MfDR): (i) results-based planning, (ii) results-based budgeting, (iii) public financial management (including auditing and procurement), (iv) program and project management (including the public investment system), and (v) monitoring and evaluation of public management. These pillars are broken down into components that track the maturity of institutional systems. The components are in turn composed of indicators and minimum requirements that these systems must have in an MfDR environment.  The most of these requirements are categorized alternatively as: the requirement is met, partially met, or is not met.<br><br><b>Click here to access the data: https://mydata.iadb.org/d/wkuq-zrqa</b></br></br>",
+        "description": "This database delivers information about several management systems, classified in five “pillars” of the public sector management cycle that are considered important for the implementation of Management for Development Results (MfDR): (i) results-based planning, (ii) results-based budgeting, (iii) public financial management (including auditing and procurement), (iv) program and project management (including the public investment system), and (v) monitoring and evaluation of public management. These pillars are broken down into components that track the maturity of institutional systems. The components are in turn composed of indicators and minimum requirements that these systems must have in an MfDR environment.  The most of these requirements are categorized alternatively as: the requirement is met, partially met, or is not met.",
         "temporal": "2013-2013",
         "keyword": [],
         "theme": [
@@ -3484,7 +3484,7 @@
         "source": "",
         "language": "en",
         "title": "Social Accounting Matrix (SAM) for Paraguay 2009",
-        "description": "Social Accounting Matrix (SAM) for Paraguay for the year 2009 with 37 activities and 51 products._x000D_\n<br><br><b>Click here to access the data:  https://mydata.iadb.org/Economics/Social-Accounting-Matrix-SAM-for-Paraguay-2009/8gbp-twbk</b></br></br>",
+        "description": "Social Accounting Matrix (SAM) for Paraguay for the year 2009 with 37 activities and 51 products.",
         "temporal": "2009-2009",
         "keyword": [],
         "theme": [
@@ -3530,7 +3530,7 @@
         "source": "",
         "language": "en",
         "title": "Summary indicators of Employment protection Legislation (EPL) in Latin America and the Caribbean",
-        "description": "The OECD/IDB indicators of employment protection legislation measure the procedures and costs involved in dismissing individuals or groups of workers and the procedures involved in hiring workers on fixed-term or temporary work agency contracts. The indicators have been compiled using IDB and OECD own reading of statutory laws, collective bargaining agreements and case law. The OECD Secretariat and the IDB equally share the responsibility of the interpretation of LAC countries’ statutory laws, collective bargaining agreements and case law.\nThis data base constitutes the first systematic approach to review and compare employment protection regulations in LAC, in a way that is also comparable with countries around the world.",
+        "description": "The OECD/IDB indicators of employment protection legislation measure the procedures and costs involved in dismissing individuals or groups of workers and the procedures involved in hiring workers on fixed-term or temporary work agency contracts. The indicators have been compiled using IDB and OECD own reading of statutory laws, collective bargaining agreements and case law. The OECD Secretariat and the IDB equally share the responsibility of the interpretation of LAC countries’ statutory laws, collective bargaining agreements and case law. This database constitutes the first systematic approach to review and compare employment protection regulations in LAC, in a way that is also comparable with countries around the world.",
         "temporal": "2013-2013",
         "keyword": [],
         "theme": [
@@ -3574,7 +3574,7 @@
         "source": "",
         "language": "en",
         "title": "Regional System of Standardized Indicators in Peaceful Coexistence and Citizen Security",
-        "description": "The Regional system of standardized Indicators in peaceful coexistence and Citizen Security (RIC) is a project through which 15 countries and two capital cities of Latin America and the Caribbean, have partnered to improve and compare their statistics on crime and violence. This initiative has been promoted and financed by the Inter-American Development Bank - IDB through the Regional Public Goods program under the coordination and execution of CISALVA Institute at the Universidad del Valle in Cali, Colombia. The citizen security indicators were designed, reviewed and approved by the project's partner countries, along with established definitions and methodologies for the standardizing of  the collecting, processing and analyzing stages of the information flow in order to support the quality of the data published. These indicators were reviewed in various regional boards, resulting in the improvement of some of them and the selection of additional citizen security indicators. The indicators are obtained via administrative records and others via surveys. In order to ensure the comparability of the indicators, a standardization process of concepts relating to the variables of time, place, person and circumstance was developed.<br><br><b>Click here to access the data: https://mydata.iadb.org/idb/dataset/2gtw-dpqa</b></br></br>",
+        "description": "The Regional system of standardized Indicators in peaceful coexistence and Citizen Security (RIC) is a project through which 15 countries and two capital cities of Latin America and the Caribbean, have partnered to improve and compare their statistics on crime and violence. This initiative has been promoted and financed by the Inter-American Development Bank - IDB through the Regional Public Goods program under the coordination and execution of CISALVA Institute at the Universidad del Valle in Cali, Colombia. The citizen security indicators were designed, reviewed and approved by the project's partner countries, along with established definitions and methodologies for the standardizing of  the collecting, processing and analyzing stages of the information flow in order to support the quality of the data published. These indicators were reviewed in various regional boards, resulting in the improvement of some of them and the selection of additional citizen security indicators. The indicators are obtained via administrative records and others via surveys. In order to ensure the comparability of the indicators, a standardization process of concepts relating to the variables of time, place, person and circumstance was developed.",
         "temporal": "2008-2013",
         "keyword": [],
         "theme": [
@@ -3617,7 +3617,7 @@
         "source": "",
         "language": "en",
         "title": "More than Revenue: Taxation as a Development Tool - DIA 2013",
-        "description": "Taxation in Latin America is largely viewed as a means of generating income to keep the government in business. In recent years, progress has been made towards increasing total revenue, but most countries in the region still lag well behind other countries with similar levels of development. More importantly, Latin America policymakers still largely ignore the potential of taxation to contribute to other important development goals. Governments have repeatedly missed the chance to influence consumption and production patterns by using taxes to effect relative price changes. More than Revenue aims to provide an up-to-date overview of the current state of taxation in the Latin American and Caribbean (LAC) region, its main reform needs, and possible reform strategies that take into account the likely economic, institutional, and political constraints on the reform process._x000D_\n<br><br><b>Click here to access the data: https://mydata.iadb.org/d/edmz-xf2j  </b></br></br>",
+        "description": "Taxation in Latin America is largely viewed as a means of generating income to keep the government in business. In recent years, progress has been made towards increasing total revenue, but most countries in the region still lag well behind other countries with similar levels of development. More importantly, Latin America policymakers still largely ignore the potential of taxation to contribute to other important development goals. Governments have repeatedly missed the chance to influence consumption and production patterns by using taxes to effect relative price changes. More than Revenue aims to provide an up-to-date overview of the current state of taxation in the Latin American and Caribbean (LAC) region, its main reform needs, and possible reform strategies that take into account the likely economic, institutional, and political constraints on the reform process.",
         "temporal": "1990-2014",
         "keyword": [],
         "theme": [
@@ -3795,7 +3795,7 @@
         "source": "",
         "language": "en",
         "title": "Public Management Evaluation Tool",
-        "description": "The Public Management Evaluation Tool (PET) evaluates five “pillars” of the public policies' management cycle that are considered important for the implementation of Management for Development Results (MfDR): (i) results-based planning, (ii) results-based budgeting, (iii) public financial management (including auditing and procurement), (iv) program and project management (including the public investment system), and (v) monitoring and evaluation of public management. These pillars are broken down into components that track the maturity of institutional systems. The components are in turn composed of indicators and minimum requirements that these systems must have in an MfDR environment. All of these measures (minimum requirements, indicators, components, and pillars) are scored on a scale from 0 to 5, where a 5 indicates an ideal institutional situation. <br><br><b>Click here to access the data: https://mydata.iadb.org/idb/dataset/c89t-dh9r</b></br></br>",
+        "description": "The Public Management Evaluation Tool (PET) evaluates five “pillars” of the public policies' management cycle that are considered important for the implementation of Management for Development Results (MfDR): (i) results-based planning, (ii) results-based budgeting, (iii) public financial management (including auditing and procurement), (iv) program and project management (including the public investment system), and (v) monitoring and evaluation of public management. These pillars are broken down into components that track the maturity of institutional systems. The components are in turn composed of indicators and minimum requirements that these systems must have in an MfDR environment. All of these measures (minimum requirements, indicators, components, and pillars) are scored on a scale from 0 to 5, where a 5 indicates an ideal institutional situation.",
         "temporal": "2007-2013",
         "keyword": [],
         "theme": [
@@ -3842,7 +3842,7 @@
         "source": "",
         "language": "en",
         "title": "Civil Service Development Index",
-        "description": "Results of the Civil Service Development Index (CSDI), obtained from diagnostics of the institutional quality of civil service systems in 16 Latin American countries. The IDB supported the design of a methodology that evaluates critical points to assess the civil services and carried out country evaluations in 2004. Between 2011 and 2013, a second group of diagnostics second group of diagnostics were completed (with the support of the Inter-American Development Bank, and in the case of Central American countries and Dominican Republic with the support of the Spanish Agency for International Cooperation and Development –AECID- and the Central American Integration System-SICA). Scores are available for 2004, 2011, 2012, 2013, 2015, 2017 and 2019 (year of second and/or third measurement varies per country). In 2015, 2017 and 2019, the IDB completed the third series of diagnosis. During the first assessment, 93 critical points were identified; each of those fed a subsystem and an index. In 2010 the methodology was simplified to 33 critical points and the base line was recalibrated to ensure comparability. The methodology is based in the identification of critical points that feed 8 subsystems: 1. Human Resources Planning, 2. Work Organization, 3. Employment management, 4. Performance management, 5. Compensation management, 6. Development management, 7. Human and social relations management, 8. HR Function organization; and 5 indexes: 1. Efficiency, 2. Merit, 3. Structural consistency, 4. Functional capacity, and 5. Integrating capacity.<br><br><b>Click here to access the data: https://mydata.iadb.org/idb/dataset/ddw5-db4y</b></br></br>",
+        "description": "Results of the Civil Service Development Index (CSDI), obtained from diagnostics of the institutional quality of civil service systems in 16 Latin American countries. The IDB supported the design of a methodology that evaluates critical points to assess the civil services and carried out country evaluations in 2004. Between 2011 and 2013, a second group of diagnostics second group of diagnostics were completed (with the support of the Inter-American Development Bank, and in the case of Central American countries and Dominican Republic with the support of the Spanish Agency for International Cooperation and Development –AECID- and the Central American Integration System-SICA). Scores are available for 2004, 2011, 2012, 2013, 2015, 2017 and 2019 (year of second and/or third measurement varies per country). In 2015, 2017 and 2019, the IDB completed the third series of diagnosis. During the first assessment, 93 critical points were identified; each of those fed a subsystem and an index. In 2010 the methodology was simplified to 33 critical points and the base line was recalibrated to ensure comparability. The methodology is based in the identification of critical points that feed 8 subsystems: 1. Human Resources Planning, 2. Work Organization, 3. Employment management, 4. Performance management, 5. Compensation management, 6. Development management, 7. Human and social relations management, 8. HR Function organization; and 5 indexes: 1. Efficiency, 2. Merit, 3. Structural consistency, 4. Functional capacity, and 5. Integrating capacity.",
         "temporal": "2004-2017",
         "keyword": [],
         "theme": [
@@ -3889,7 +3889,7 @@
         "source": "",
         "language": "en",
         "title": "Rethinking Productive Development: Sound Policies and Institutions for Economic Transformation - DIA 2014",
-        "description": "This dataset was created to support 2014 DIA -  Rethinking Productive Development: Sound Policies and Institutions for Economic Transformation.<br><br><b>Click here to access the data: https://mydata.iadb.org/d/6gku-ip59 </b></br></br>",
+        "description": "This dataset was created to support 2014 DIA -  Rethinking Productive Development: Sound Policies and Institutions for Economic Transformation.",
         "temporal": "1960-2013",
         "keyword": [],
         "theme": [
@@ -3932,7 +3932,7 @@
         "source": "",
         "language": "en",
         "title": "Outsiders? The Changing Patterns of Exclusion in Latin America and the Caribbean - IPES 2008",
-        "description": "This dataset was created to support 2008 IPES - Outsiders? The Changing Patterns of Exclusion in Latin America and the Caribbean on the following topics: poverty reduction, labor, social exclusion.<br><br><b>Click here to access the data: https://mydata.iadb.org/d/cuj5-vq63</b></br></br>",
+        "description": "This dataset was created to support 2008 IPES - Outsiders? The Changing Patterns of Exclusion in Latin America and the Caribbean on the following topics: poverty reduction, labor, social exclusion.",
         "temporal": "1981-2013",
         "keyword": [],
         "theme": [
@@ -3981,7 +3981,7 @@
         "source": "",
         "language": "en",
         "title": "The Age Of Productivity: Transforming Economies from the Bottom Up - DIA 2010",
-        "description": "This dataset was created to support 2010 DIA -  on the following topics: macroeconomics, productivity, services sectors_x000D_\n_x000D_\n<br><br><b>Click here to access the data: https://mydata.iadb.org/d/8j8z-82tz</b></br></br>",
+        "description": "This dataset was created to support 2010 DIA -  on the following topics: macroeconomics, productivity, services sectors.",
         "temporal": "1960-2013",
         "keyword": [],
         "theme": [
@@ -4026,7 +4026,7 @@
         "source": "",
         "language": "en",
         "title": "Room for Development: Housing Markets in Latin America and the Caribbean - DIA 2012",
-        "description": "This dataset was created to support 2012 DIA -  Room for Development: Housing Markets in Latin America and the Caribbean on the following topics: housing markets, urban housing.<br><br><b>Click here to access the data: https://mydata.iadb.org/d/qnym-ipm8</b></br></br>",
+        "description": "This dataset was created to support 2012 DIA -  Room for Development: Housing Markets in Latin America and the Caribbean on the following topics: housing markets, urban housing.",
         "temporal": "1990-2013",
         "keyword": [],
         "theme": [
@@ -4069,7 +4069,7 @@
         "source": "",
         "language": "en",
         "title": "Living with Debt: How to Limit Risks of Sovereign Finance? - IPES 2007",
-        "description": "This dataset was created to support 2007 IPES Living with Debt: How to Limit Risks of Sovereign Finance? and includes data on the following  topics: macroeconomics, social progress,  sovereign debt in Latin America_x000D_\n_x000D_\n<br><br><b>Click here to access the data: https://mydata.iadb.org/d/7cm5-ndt4</b></br></br>",
+        "description": "This dataset was created to support 2007 IPES Living with Debt: How to Limit Risks of Sovereign Finance? and includes data on the following  topics: macroeconomics, social progress,  sovereign debt in Latin America.",
         "temporal": "1980-2013",
         "keyword": [],
         "theme": [
