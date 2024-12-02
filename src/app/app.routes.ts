@@ -10,15 +10,15 @@ export const routes: Routes = [
   { path: 'dataset-catalog', redirectTo: 'browse', pathMatch: 'full' },
 
   { path: 'dataset/:title_original', component: DatasetDetailComponent, data: { breadcrumb: 'Dataset Detail', title: 'IDB | Dataset' } },
-  { path: 'dataset/:title_original/about-data', redirectTo: 'dataset/:title_original', pathMatch: 'full' },
+  { path: 'dataset/:title_original/about_data', redirectTo: 'dataset/:title_original', pathMatch: 'full' },
 
   { path: 'dataset/:title_original/:mydata_id', component: DatasetDetailComponent, data: { breadcrumb: 'Dataset Detail', title: 'IDB | Dataset' } },
-  { path: 'dataset/:title_original/:mydata_id/about-data', redirectTo: 'dataset/:title_original/:mydata_id', pathMatch: 'full' },
+  { path: 'dataset/:title_original/:mydata_id/about_data', redirectTo: 'dataset/:title_original/:mydata_id', pathMatch: 'full' },
 
   { path: ':mydata_category/:title_original', component: DatasetDetailComponent, data: { breadcrumb: 'Dataset Detail', title: 'IDB | Dataset' } },
-  { path: ':mydata_category/:title_original/about-data', redirectTo: ':mydata_category/:title_original', pathMatch: 'full' },
+  { path: ':mydata_category/:title_original/about_data', redirectTo: ':mydata_category/:title_original', pathMatch: 'full' },
 
   { path: ':mydata_category/:title_original/:mydata_id', component: DatasetDetailComponent, data: { breadcrumb: 'Dataset Detail', title: 'IDB | Dataset' } },
-  { path: ':mydata_category/:title_original/:mydata_id/about-data', redirectTo: ':mydata_category/:title_original/:mydata_id', pathMatch: 'full' },
+  { path: ':mydata_category/:title_original/:mydata_id/about_data', redirectTo: ':mydata_category/:title_original/:mydata_id', pathMatch: 'full' },
 
 ];
