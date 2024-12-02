@@ -106,7 +106,7 @@
   text-overflow: ellipsis;
   position: relative;
   color: #555;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out, -webkit-line-clamp 0.3s ease-out;
 }
 
 .dataset-description.expanded {

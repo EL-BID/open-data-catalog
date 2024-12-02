@@ -3,8 +3,6 @@ import { DataService } from '../data.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-const MAX_DESCRIPTION_LENGTH = 300;
-
 @Component({
   selector: 'app-search-results',
   standalone: true,
@@ -139,13 +137,18 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
   }
 
   private checkTruncation(): void {
-    this.changeDetectorRef.detectChanges();
-    this.filteredDatasets.forEach(dataset => {
-      const descriptionElement = this.descriptions.toArray().find((desc: ElementRef) => desc.nativeElement.innerText.trim() === dataset.description.trim());
-      const isTruncated = dataset.description.length > MAX_DESCRIPTION_LENGTH;
-      this.showReadMoreButton[dataset.id] = isTruncated;
-      this.isDescriptionExpanded[dataset.id] = false;
+    this.descriptions.forEach((descRef, index) => {
+      const element = descRef.nativeElement;
+      const isOverflowing = element.scrollHeight > element.clientHeight;
+      const datasetId = this.filteredDatasets[index]?.id;
+
+      if (datasetId !== undefined) {
+        this.showReadMoreButton[datasetId] = isOverflowing;
+        this.isDescriptionExpanded[datasetId] = false;
+      }
     });
+
+    this.changeDetectorRef.detectChanges();
   }
 
   toggleDescription(datasetId: number): void {
