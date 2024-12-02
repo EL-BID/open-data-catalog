@@ -266,3 +266,33 @@ hr {
 .btn-catalog-portals.active {
   box-shadow: 0px 4px 8px rgba(122, 110, 39, 0.3); /* Sombra sutil de olive */
 }
+
+
+@media (max-width: 767.98px) {
+  .odl-section {
+      padding: 4rem 2rem;
+  }
+
+  .odl-two-1-2-columns-container {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .odl-two-1-2-columns-left {
+    max-width: 100%;
+  }
+
+  .odl-two-1-2-columns-right {
+    flex-direction: column;
+    gap: 2rem;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+}
+
