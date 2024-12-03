@@ -16,13 +16,21 @@
 
   <div class="primary-nav">
     <nav class="odl-container">
+      <button
+        class="menu-toggle"
+        aria-label="Toggle menu"
+        aria-hidden="true"
+        (click)="toggleMenu()">
+        <span *ngIf="!isMenuOpen"><fa-icon [icon]="faBars"></fa-icon></span>
+        <span *ngIf="isMenuOpen"><fa-icon [icon]="faXmark"></fa-icon></span>
+      </button>
       <ul>
         <li class="header-logo">
           <a href="https://www.iadb.org/en" aria-label="Go to IDB homepage">
             <img src="./assets/images/logos/idb-logos/idb-color.png" alt="IDB logo">
           </a>
         </li>
-        <li class="primary">
+        <li class="primary" [class.hidden]="!isMenuOpen">
           <ul>
             <li><a href="https://www.iadb.org/en/who-we-are/about-idb">Who We Are</a></li>
             <li><a href="https://www.iadb.org/en/project-search">Projects</a></li>

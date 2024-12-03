@@ -1,39 +1,30 @@
 footer {
-  background-color: #01374e;
-  padding:90px 30px;
-  color: white;
+  width: 100%;
   box-sizing: border-box;
-  width: 100%;
-
-}
-
-.footer-content {
-  width: 100%;
-  max-width: 1440px;
-  margin: auto;
+  padding: 2.4rem 2rem 16rem 2rem;
+  background-color: var(--blue-responsible-darken-2);
+  color: var(--neutral-white);
 }
 
 .footer-nav {
   text-align: center;
-  margin-bottom: 50px;
-}
+  margin-bottom: 5rem;
 
-.footer-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: inline-flex;
-  gap: 20px;
-}
+  ul {
+    display: inline-flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
 
-.footer-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
+    a {
+      color: var(--neutral-white);
+      text-decoration: none;
+    }
 
-.footer-nav ul li a:hover {
-  text-decoration: underline;
+    a:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .footer-second-line {
@@ -45,32 +36,59 @@ footer {
 
 .footer-social-media {
   display: flex;
-  gap: 30px;
-}
+  gap: 2rem;
 
-.social-icon {
-  font-size: 24px;
-  color: white;
-}
+  fa-icon {
+    font-size: 2.4rem;
+    color: var(--neutral-white);
+  }
 
-.footer-social-media img {
-  height: 30px;
-  width: auto;
-}
+  img {
+    height: 30px;
+    width: auto;
+  }
 
-.footer-social-media a:hover i,
-.footer-social-media a:hover img {
-  color: #ccc;
-  filter: brightness(80%);
+  a:hover fa-icon {
+    color: #ccc;
+    filter: brightness(100%);
+  }
 }
 
 .footer-logos {
   display: flex;
   justify-content: flex-end;
   margin-left: auto;
+
+  img {
+    max-height: 40px;
+    width: auto;
+  }
 }
 
-.footer-logos img.combined-logos {
-  max-height: 40px;
-  width: auto;
+@media (max-width: 576px) {
+  .footer-logos img {
+    max-height: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-nav ul {
+    flex-direction: column;
+  }
+
+  .footer-second-line {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+
+  .footer-social-media {
+    gap: 1.5rem;
+  }
+
+  .footer-logos {
+    margin-left: 0;
+  }
+
 }
