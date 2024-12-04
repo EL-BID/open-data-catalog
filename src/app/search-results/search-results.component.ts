@@ -99,16 +99,18 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
 
     console.log('Datos filtrados:', this.filteredDatasets);
 
+    this.sortDatasets();
+
     this.resultCountChange.emit(this.filteredDatasets.length);
     this.noResultsChange.emit(this.filteredDatasets.length === 0);
 
     const startIndex = (this.currentPage - 1) * this.rowsPerPage;
     const endIndex = startIndex + this.rowsPerPage;
-    console.log(`Mostrando resultados de ${startIndex} a ${endIndex}`);
 
     this.filteredDatasets = this.filteredDatasets.slice(startIndex, endIndex);
 
-    this.sortDatasets();
+    console.log(`Mostrando resultados de ${startIndex} a ${endIndex}`);
+
     setTimeout(() => this.checkTruncation(), 0);
 
   }
@@ -133,7 +135,6 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
       });
     }
     console.log('Datasets ordenados:', this.filteredDatasets);
-
   }
 
   private checkTruncation(): void {
