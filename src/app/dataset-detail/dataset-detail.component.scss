@@ -1,24 +1,9 @@
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-  border: 1px solid #ddd;
-}
-
-th {
-  background-color: #f2f2f2;
-}
 .dataset-header {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* Metadata Section */
 .dataset-detail-title {
   font-size: 3.4rem;
 }
@@ -55,14 +40,14 @@ th {
   border-bottom: none;
 }
 
-.metadata-category ul > li > div:first-child {
+.metadata-category ul>li>div:first-child {
   width: 150px;
   font-weight: bold;
 }
 
-.metadata-category ul > li > div:last-child {
-  flex: 1; /* Permite que el contenido crezca */
-  word-wrap: break-word; /* Ajusta el texto largo */
+.metadata-category ul>li>div:last-child {
+  flex: 1;
+  word-wrap: break-word;
 }
 
 .download-icon {
@@ -80,19 +65,46 @@ th {
 .metadata-icon {
   font-size: 1.8rem;
   color: var(--main-blue);
-  display: flex; /* Asegúrate de que se centre dentro del contenedor */
-  align-items: center; /* Centrado vertical dentro del icono */
+  display: flex;
+  align-items: center;
 }
 
 .metadata-category-title h3 {
-  margin: 0; /* Elimina márgenes innecesarios */
+  margin: 0;
 }
 
 a.metadata-link {
   color: var(--main-blue);
   text-decoration: none;
+  word-break: break-word;
 }
 
 .metadata-link:hover {
   text-decoration: underline;
+}
+
+
+@media (max-width: 576px) {
+
+  .dataset-detail-title {
+    font-size: 2.8rem;
+  }
+
+  .metadata-category {
+    margin: 3rem 0;
+    padding: 2rem;
+  }
+
+  .metadata-category ul {
+    margin: 1rem;
+  }
+
+  .metadata-category ul li {
+    gap: 2rem;
+  }
+
+  .metadata-category ul>li>div:first-child {
+    width: 130px;
+  }
+
 }

@@ -47,3 +47,13 @@
   color: var(--sky-blue);
 }
 
+@media (max-width: 767.98px) {
+
+  .select-container {
+    justify-content: center;
+  }
+
+  .select-input {
+    width: 100%;
+  }
+}
