@@ -23,3 +23,15 @@
 .odl-right {
   width: 100%;
 }
+
+
+@media (max-width: 576px) {
+  .top-bar {
+    flex-direction: column;
+  }
+
+}
+
+
+
+

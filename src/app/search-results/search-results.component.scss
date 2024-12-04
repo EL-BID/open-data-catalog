@@ -11,12 +11,12 @@
 
 .dataset-item {
   display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    margin-bottom: 3rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: transparent;
+  flex-direction: column;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent;
 }
 
 .dataset-metadata {
@@ -42,12 +42,10 @@
 }
 
 .metadata-sidebar p {
-  color: #605f59;
   margin: 5px 0;
 }
 
 .metadata-sidebar p strong {
-  color: #605f59;
   font-weight: bold;
 }
 
@@ -105,7 +103,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
-  color: #555;
   transition: max-height 0.3s ease-out, -webkit-line-clamp 0.3s ease-out;
 }
 
@@ -147,9 +144,19 @@
   max-height: calc(1.5rem * 5);
 }
 
-@media (max-width: 767.98px) {
-  .odl-two-1-4-columns-container {
+@media (max-width: 1024px) {
+
+  .dataset-metadata {
     flex-direction: column;
+    gap: 2rem;
+  }
+
+  .metadata-left {
     width: 100%;
-}
+  }
+
+  .metadata-sidebar {
+    width: 100%;
+  }
+
 }
