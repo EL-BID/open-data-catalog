@@ -49,34 +49,56 @@ export class DatasetDetailComponent implements OnInit {
       console.log('titleOriginal en la URL:', this.titleOriginal);
       console.log('mydataId:', this.mydataId);
 
+      const formatTitle = (title: string) => {
+        return title
+          .replace(/[^a-zA-Z0-9]+/g, '-')
+          .substring(0, 50)
+      };
+
+      const categoryToSearch = this.mydataCategory || 'dataset';
+
+      const findDataset = (title: string, category?: string, mydataId?: string) => {
+        return data.find(d => {
+          const formattedTitle = formatTitle(d.title_original || '');
+          const formattedTitleFromUrl = formatTitle(title);
+          const categoryMatches = category
+            ? (d.mydata_category?.toLowerCase() === category.toLowerCase() || !d.mydata_category || d.mydata_category === '')
+            : true;
+          const idMatches = mydataId ? d.mydata_id?.toLowerCase() === mydataId.toLowerCase() : true;
+          console.log('Comparando:', {
+            categoryMatches,
+            idMatches,
+            formattedTitle,
+            formattedTitleFromUrl,
+            category: d.mydata_category
+          });
+
+          return categoryMatches && idMatches && formattedTitle.toLocaleLowerCase() === formattedTitleFromUrl.toLocaleLowerCase();
+        });
+      };
+
       if (this.mydataCategory === 'resource' && this.titleOriginal) {
         this.dataset = data.find(d => d.mydata_id?.toLowerCase() === this.titleOriginal?.toLowerCase());
 
         if (!this.dataset) {
-          console.error('Dataset no encontrado para category: resource y ID:', this.titleOriginal);
-          // Redirigir a la página de error (404)
+          console.error('Dataset no encontrado para category: resource y ID:', this.mydataId);
           this.router.navigate(['/not-found']);
+        } else {
+          const mydataCategory = this.dataset.mydata_category || 'dataset';
+          const titleOriginal = this.dataset.title_original;
+          const mydataId = this.dataset.mydata_id;
+
+          const formattedTitle = formatTitle(titleOriginal);
+          this.router.navigate([`/${mydataCategory}/${formattedTitle}/${mydataId}`]);
         }
-      } else if (this.titleOriginal) {
-        const formattedTitleFromUrl = this.titleOriginal.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 50).toLowerCase();
+      }
+      else if (this.titleOriginal) {
+        this.dataset = findDataset(this.titleOriginal ?? '', categoryToSearch, this.mydataId ?? '');
 
-        this.dataset = data.find(d => {
-          const formattedTitleFromMetadata = d.title_original
-            ?.replace(/[^a-zA-Z0-9]+/g, '-')
-            .substring(0, 50)
-            .toLowerCase();
-          const categoryMatches = this.mydataCategory
-            ? d.mydata_category?.toLowerCase() === this.mydataCategory.toLowerCase()
-            : true;
-          const idMatches = d.mydata_id?.toLowerCase() === this.mydataId?.toLowerCase();
-
-          return categoryMatches && idMatches && formattedTitleFromMetadata === formattedTitleFromUrl;
-        });
-
-        if (!this.dataset) {
-          console.error('Dataset no encontrado en la metadata. Revisa los parámetros.');
-          // Redirigir a la página de error (404)
-          this.router.navigate(['/not-found']);
+        if (this.dataset) {
+          console.log('Dataset encontrado:', this.dataset);
+        } else {
+          console.error('Dataset no encontrado. Revisar parámetros.');
         }
       } else {
         console.error('Parámetros insuficientes para buscar el dataset.');
@@ -86,11 +108,9 @@ export class DatasetDetailComponent implements OnInit {
     }, error => {
       console.error('Error al cargar la metadata:', error);
       this.loading = false;
-      // Redirigir a la página de error (404)
       this.router.navigate(['/not-found']);
     });
   }
-
 
   sortCountries(spatial: string | string[]): string {
     if (!spatial) {
