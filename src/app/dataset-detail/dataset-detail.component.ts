@@ -89,7 +89,7 @@ export class DatasetDetailComponent implements OnInit {
           const mydataId = this.dataset.mydata_id;
 
           const formattedTitle = formatTitle(titleOriginal);
-          this.router.navigate([`/${mydataCategory}/${formattedTitle}/${mydataId}`]);
+          this.router.navigate([`/${mydataCategory}/${formattedTitle}`]);
         }
       }
       else if (this.titleOriginal) {
@@ -97,8 +97,12 @@ export class DatasetDetailComponent implements OnInit {
 
         if (this.dataset) {
           console.log('Dataset encontrado:', this.dataset);
+          const formattedTitle = formatTitle(this.dataset.title_original);
+          const category = this.dataset.mydata_category || 'dataset';
+          this.router.navigate([`/${category}/${formattedTitle}`], { replaceUrl: true });
         } else {
           console.error('Dataset no encontrado. Revisar parámetros.');
+          this.router.navigate(['/not-found']);
         }
       } else {
         console.error('Parámetros insuficientes para buscar el dataset.');
