@@ -12,13 +12,9 @@ export const routes: Routes = [
   { path: 'dataset-catalog', redirectTo: 'browse', pathMatch: 'full' },
 
   { path: ':mydata_category/:title_original', component: DatasetDetailComponent, data: { breadcrumb: 'Dataset Detail', title: 'IDB | Dataset' } },
-  { path: ':mydata_category/:title_original/about_data', redirectTo: ':mydata_category/:title_original', pathMatch: 'full' },
-  { path: ':mydata_category/:title_original/data', redirectTo: ':mydata_category/:title_original', pathMatch: 'full' },
 
-  { path: ':mydata_category/:title_original/:mydata_id', component: DatasetDetailComponent, data: { breadcrumb: 'Dataset Detail', title: 'IDB | Dataset' } },
-  { path: ':mydata_category/:title_original/:mydata_id/about_data', redirectTo: ':mydata_category/:title_original/:mydata_id', pathMatch: 'full' },
-  { path: ':mydata_category/:title_original/:mydata_id/data', redirectTo: ':mydata_category/:title_original/:mydata_id', pathMatch: 'full' },
-
+  { path: ':mydata_category/:title_original/:section', redirectTo: ':mydata_category/:title_original', pathMatch: 'full' },
+  { path: ':mydata_category/:title_original/:mydata_id/:section', redirectTo: ':mydata_category/:title_original', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent, data: { breadcrumb: '404 Page not found', title: '404 | Page Not Found' } }
 
 ];
