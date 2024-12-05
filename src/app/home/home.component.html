@@ -28,7 +28,7 @@
         </div>
         <div class="card-text">
           <span class="card-number">{{ counts.linkedResearchDatasets }}</span>
-          <p>Linked research datasets</p>
+          <p>Data-driven research publications</p>
           <a [routerLink]="['/browse']" [queryParams]="{ idbKnowledges: 'Tied research publication' }"
             class="catalog-link">
             Dig into our research →
@@ -44,7 +44,7 @@
           <span class="card-number">+20 </span>
           <p>Data Portals powered by IDB data</p>
           <a href="https://www.iadb.org/en/knowledge-resources/data/data-platforms" target="_blank" rel="noopener"
-            class="catalog-link">Discover IDB dashboards →</a>
+            class="catalog-link">Discover IDB portals →</a>
         </div>
       </div>
       <!--Card 4: Indicators-->
@@ -80,8 +80,11 @@
       </div>
       <!--Buttons to Navigate to Catalog and Publications-->
       <div>
-        <a [routerLink]="['/dataset-catalog']" class="btn-catalog btn-catalog-dataset">Explore the dataset
-          catalog</a>
+        <a [routerLink]="['/browse']" [queryParams]="{ idbKnowledges: 'Tied research publication' }"
+          class="btn-catalog btn-catalog-dataset">
+          Explore the dataset
+          catalog
+        </a>
         <a href="https://publications.iadb.org/" target="_blank" rel="noopener"
           class="btn-catalog btn-catalog-publication">See the publication
           catalog</a>

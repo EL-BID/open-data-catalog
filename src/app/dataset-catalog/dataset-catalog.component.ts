@@ -1,3 +1,4 @@
+import { Meta, Title } from '@angular/platform-browser';
 import { ChangeDetectorRef, Component, NgZone, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SearchBarComponent } from "../search-bar/search-bar.component";
@@ -25,12 +26,36 @@ export class DatasetCatalogComponent implements OnInit {
   currentPage: number = 1;
   rowsPerPage: number = 10;
 
-  constructor(private cdr: ChangeDetectorRef, private route: ActivatedRoute, private router: Router, private zone: NgZone) { }
+  constructor(
+    private metaService: Meta,
+    private titleService: Title,
+    private cdr: ChangeDetectorRef,
+    private route: ActivatedRoute,
+    private router: Router,
+    private zone: NgZone
+  ) { }
 
   ngOnInit(): void {
     console.log('ngOnInit: Verificando parámetros de categoría');
     this.checkCategoryParam();
     this.loadFiltersFromUrl();
+    this.setMetaTags();
+  }
+
+  setMetaTags(): void {
+    const pageDescription = 'Explore comprehensive datasets on Latin America and the Caribbean in the IDB open data catalog. Search and filter by topics, countries, regions, publication year, languages, and linked IDB knowledge products.';
+    const keywords = 'open data, datasets, Latin America, Caribbean, research data, indicators, data catalog, IDB, filter datasets, regional data, open data LAC';
+
+    this.titleService.setTitle('IDB Open Data LAC | Dataset Catalog');
+    this.metaService.updateTag({ name: 'description', content: pageDescription });
+    this.metaService.updateTag({ name: 'keywords', content: keywords });
+    this.metaService.updateTag({ name: 'robots', content: 'index, follow' });
+    this.metaService.updateTag({ name: 'author', content: 'Inter-American Development Bank (IDB)' });
+    this.metaService.updateTag({ property: 'og:title', content: 'IDB Open Data LAC | Dataset Catalog' });
+    this.metaService.updateTag({ property: 'og:description', content: pageDescription });
+    this.metaService.updateTag({ property: 'og:type', content: 'website' });
+    this.metaService.updateTag({ property: 'og:image', content: '' });
+    this.metaService.updateTag({ property: 'og:image:alt', content: 'Screenshot of the Dataset Catalog' });
   }
 
   checkCategoryParam(): void {
@@ -72,7 +97,7 @@ export class DatasetCatalogComponent implements OnInit {
       this.sortBy = params['sortBy'] || this.sortBy;
       console.log('Filtros cargados:', this.filters);
       console.log('Página actual:', this.currentPage, 'Ordenar por:', this.sortBy);
-       });
+    });
   }
 
   onSearch(searchTerm: string): void {
@@ -88,8 +113,8 @@ export class DatasetCatalogComponent implements OnInit {
     console.log('Filtros cambiados a:', updatedFilters);
     this.filters = updatedFilters;
     this.syncFilters();
-     this.currentPage = 1;
-     this.updateUrlWithFilters();
+    this.currentPage = 1;
+    this.updateUrlWithFilters();
   }
 
   removeFilter(event: { category: string, value: string }): void {
