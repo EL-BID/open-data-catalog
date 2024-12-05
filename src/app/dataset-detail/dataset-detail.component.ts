@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../data.service';
+import { Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faDownload, faEarthAmerica, faCircleInfo, faDatabase, faUserShield, faLink } from '@fortawesome/free-solid-svg-icons';
@@ -21,7 +22,6 @@ export class DatasetDetailComponent implements OnInit {
   faLink = faLink;
   mydataCategory: string | null = null;
   titleOriginal: string | null = null;
-  mydataId: string | null = null;
   filename: string | null = null;
   dataset: any;
   datasetContent: any[] = [];
@@ -30,90 +30,81 @@ export class DatasetDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService,
-    private router: Router
+    private router: Router,
+    private titleService: Title
   ) { }
 
   ngOnInit(): void {
+    console.log("Ruta actual:", this.router.url); // Esto te dará la ruta actual
+    console.log("Snapshot params:", this.route.snapshot.paramMap.keys);
     this.mydataCategory = this.route.snapshot.paramMap.get('mydata_category');
     this.titleOriginal = this.route.snapshot.paramMap.get('title_original');
-    this.mydataId = this.route.snapshot.paramMap.get('mydata_id');
     console.log("mydataCategory:", this.mydataCategory);
     console.log("titleOriginal:", this.titleOriginal);
-    console.log("mydataId:", this.mydataId);
     this.loadMetadata();
   }
 
   loadMetadata(): void {
-    this.dataService.getMetadata().subscribe(data => {
-      console.log('Metadata:', data);
-      console.log('titleOriginal en la URL:', this.titleOriginal);
-      console.log('mydataId:', this.mydataId);
+    this.dataService.getMetadata().subscribe(
+      (data) => {
+        console.log("Metadata cargada:", data);
 
-      const formatTitle = (title: string) => {
-        return title
-          .replace(/[^a-zA-Z0-9]+/g, '-')
-          .substring(0, 50)
-      };
+        const formatTitle = (title: string) =>
+          title.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 50);
 
-      const categoryToSearch = this.mydataCategory || 'dataset';
+        const findDataset = (): any => {
+          if (this.mydataCategory === "resource" && this.titleOriginal) {
+            return data.find(
+              (d) => d.mydata_id?.toLowerCase() === this.titleOriginal?.toLowerCase()
+            );
+          }
 
-      const findDataset = (title: string, category?: string, mydataId?: string) => {
-        return data.find(d => {
-          const formattedTitle = formatTitle(d.title_original || '');
-          const formattedTitleFromUrl = formatTitle(title);
-          const categoryMatches = category
-            ? (d.mydata_category?.toLowerCase() === category.toLowerCase() || !d.mydata_category || d.mydata_category === '')
-            : true;
-          const idMatches = mydataId ? d.mydata_id?.toLowerCase() === mydataId.toLowerCase() : true;
-          console.log('Comparando:', {
-            categoryMatches,
-            idMatches,
-            formattedTitle,
-            formattedTitleFromUrl,
-            category: d.mydata_category
-          });
+          if (this.titleOriginal) {
+            const formattedTitle = formatTitle(this.titleOriginal);
+            const categoryToSearch = this.mydataCategory || "dataset";
 
-          return categoryMatches && idMatches && formattedTitle.toLocaleLowerCase() === formattedTitleFromUrl.toLocaleLowerCase();
-        });
-      };
+            return data.find((d) => {
+              const matchesCategory =
+                d.mydata_category?.toLowerCase() === categoryToSearch.toLowerCase() ||
+                !d.mydata_category;
+              const matchesTitle =
+                formatTitle(d.title_original).toLowerCase() === formattedTitle.toLowerCase();
 
-      if (this.mydataCategory === 'resource' && this.titleOriginal) {
-        this.dataset = data.find(d => d.mydata_id?.toLowerCase() === this.titleOriginal?.toLowerCase());
+              return matchesCategory && matchesTitle;
+            });
+          }
 
-        if (!this.dataset) {
-          console.error('Dataset no encontrado para category: resource y ID:', this.mydataId);
-          this.router.navigate(['/not-found']);
+          return null;
+        };
+
+        const dataset = findDataset();
+
+        if (dataset) {
+          console.log("Dataset encontrado:", dataset);
+          this.dataset = dataset;
+          this.loading = false;
+
+          const dynamicTitle = dataset.title || 'Dataset';
+          this.titleService.setTitle(`IDB | ${dynamicTitle}`);
+
+          if (this.mydataCategory === "resource") {
+            const formattedTitle = formatTitle(dataset.title_original || "");
+            const category = dataset.mydata_category || "dataset";
+
+            this.router.navigate([`/${category}/${formattedTitle}`], { replaceUrl: true }).then(() => {
+            this.titleService.setTitle(`IDB | ${dynamicTitle}`);
+            });
+          }
         } else {
-          const mydataCategory = this.dataset.mydata_category || 'dataset';
-          const titleOriginal = this.dataset.title_original;
-          const mydataId = this.dataset.mydata_id;
-
-          const formattedTitle = formatTitle(titleOriginal);
-          this.router.navigate([`/${mydataCategory}/${formattedTitle}`]);
+          console.error("Dataset no encontrado. Redirigiendo...");
+          this.router.navigate(["/not-found"]);
         }
+      },
+      (error) => {
+        console.error("Error al cargar la metadata:", error);
+        this.router.navigate(["/not-found"]);
       }
-      else if (this.titleOriginal) {
-        this.dataset = findDataset(this.titleOriginal ?? '', categoryToSearch, this.mydataId ?? '');
-
-        if (this.dataset) {
-          console.log('Dataset encontrado:', this.dataset);
-          const formattedTitle = formatTitle(this.dataset.title_original);
-          const category = this.dataset.mydata_category || 'dataset';
-          this.router.navigate([`/${category}/${formattedTitle}`], { replaceUrl: true });
-        } else {
-          console.error('Dataset no encontrado. Revisar parámetros.');
-          this.router.navigate(['/not-found']);
-        }
-      } else {
-        console.error('Parámetros insuficientes para buscar el dataset.');
-      }
-
-      this.loading = false;
-    }, error => {
-      console.error('Error al cargar la metadata:', error);
-      this.loading = false;
-      this.router.navigate(['/not-found']);
-    });
+    );
   }
 
   sortCountries(spatial: string | string[]): string {
