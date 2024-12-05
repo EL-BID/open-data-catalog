@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       if (routeURL !== '') {
         url += `/${routeURL}`;
         let breadcrumbLabel = child.snapshot.data['breadcrumb'] || routeURL;
-        if (breadcrumbLabel === 'Dataset Detail') {
+        if (breadcrumbLabel === 'Dataset') {
           breadcrumbLabel = 'Dataset';
           const catalogExists = breadcrumbs.some(breadcrumb => breadcrumb.label === 'Dataset Catalog');
           if (!catalogExists) {

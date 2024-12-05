@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../data.service';
-import { Title } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faDownload, faEarthAmerica, faCircleInfo, faDatabase, faUserShield, faLink } from '@fortawesome/free-solid-svg-icons';
@@ -31,11 +31,12 @@ export class DatasetDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private dataService: DataService,
     private router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private metaService: Meta
   ) { }
 
   ngOnInit(): void {
-    console.log("Ruta actual:", this.router.url); // Esto te dará la ruta actual
+    console.log("Ruta actual:", this.router.url);
     console.log("Snapshot params:", this.route.snapshot.paramMap.keys);
     this.mydataCategory = this.route.snapshot.paramMap.get('mydata_category');
     this.titleOriginal = this.route.snapshot.paramMap.get('title_original');
@@ -85,14 +86,16 @@ export class DatasetDetailComponent implements OnInit {
           this.loading = false;
 
           const dynamicTitle = dataset.title || 'Dataset';
-          this.titleService.setTitle(`IDB | ${dynamicTitle}`);
+          this.titleService.setTitle(`IDB Open Data LAC | ${dynamicTitle}`);
+
+          this.updateMetaTags(dataset);
 
           if (this.mydataCategory === "resource") {
             const formattedTitle = formatTitle(dataset.title_original || "");
             const category = dataset.mydata_category || "dataset";
 
             this.router.navigate([`/${category}/${formattedTitle}`], { replaceUrl: true }).then(() => {
-            this.titleService.setTitle(`IDB | ${dynamicTitle}`);
+              this.titleService.setTitle(`IDB Open Data LAC | ${dynamicTitle}`);
             });
           }
         } else {
@@ -105,6 +108,21 @@ export class DatasetDetailComponent implements OnInit {
         this.router.navigate(["/not-found"]);
       }
     );
+  }
+
+  updateMetaTags(dataset: any): void {
+    const description = dataset.description;
+    const keywords = (dataset.keyword || '').join(', ');
+    const datePublished = dataset.issued;
+    const dateModified = dataset.modified;
+    const license = dataset.license || '';
+
+    this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.updateTag({ name: 'keywords', content: keywords });
+    this.metaService.updateTag({ name: 'robots', content: 'index, follow' });
+    this.metaService.updateTag({ name: 'datePublished', content: datePublished });
+    this.metaService.updateTag({ name: 'dateModified', content: dateModified });
+    this.metaService.updateTag({ name: 'license', content: license });
   }
 
   sortCountries(spatial: string | string[]): string {
