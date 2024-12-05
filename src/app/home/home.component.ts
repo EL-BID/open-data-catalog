@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
     this.metaService.updateTag({ property: 'og:title', content: 'IDB Open Data LAC' });
     this.metaService.updateTag({ property: 'og:description', content: pageDescription });
     this.metaService.updateTag({ property: 'og:type', content: 'website' });
-    this.metaService.updateTag({ property: 'og:image', content: '' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://github.com/EL-BID/open-data-catalog/raw/878f649543aca6b14bfc082c5d27866df27cab7b/public/assets/images/open-graph/open-data-lac.png' });
     this.metaService.updateTag({ property: 'og:image:alt', content: 'Screenshot of the IDB Open Data LAC' });
   }
 
