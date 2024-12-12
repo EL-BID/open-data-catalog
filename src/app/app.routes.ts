@@ -3,12 +3,15 @@ import { HomeComponent } from './home/home.component';
 import { DatasetCatalogComponent } from './dataset-catalog/dataset-catalog.component';
 import { DatasetDetailComponent } from './dataset-detail/dataset-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CkanTestComponent } from './ckan-test/ckan-test.component';
+
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { breadcrumb: 'Open Data LAC' } },
   { path: 'home', component: HomeComponent, data: { breadcrumb: 'Open Data LAC' } },
   { path: 'browse', component: DatasetCatalogComponent, data: { breadcrumb: 'Dataset Catalog' } },
   { path: 'dataset-catalog', redirectTo: 'browse', pathMatch: 'full' },
+  { path: 'test-ckan', component: CkanTestComponent },
   { path: ':mydata_category/:title_original', component: DatasetDetailComponent, data: { breadcrumb: 'Dataset' } },
   { path: ':mydata_category/:title_original/:mydata_id', redirectTo: ':mydata_category/:title_original', pathMatch: 'full' },
   { path: ':mydata_category/:title_original/:mydata_id/:section', redirectTo: ':mydata_category/:title_original', pathMatch: 'full'},
