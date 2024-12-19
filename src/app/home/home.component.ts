@@ -3,11 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterModule} from '@angular/router';
 import { DataService } from '../data.service';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faArrowRight, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, RouterModule, CommonModule],
+  imports: [RouterLink, RouterModule, CommonModule, FontAwesomeModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -18,6 +20,9 @@ export class HomeComponent implements OnInit {
   };
 
   recentDatasets: any[] = [];
+
+  faArrowRight = faArrowRight;
+  faPlus = faPlus;
 
   constructor(private dataService: DataService, private metaService: Meta, private titleService: Title,) {}
 
