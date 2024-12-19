@@ -262,19 +262,18 @@ hr {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
-  gap: 6rem;
+  gap: 5rem;
 }
 
 .odl-two-1-2-columns-left {
-  flex: 0 0 25%;
-  max-width: 25%;
+  max-width: 30%;
   box-sizing: border-box;
 }
 
 .odl-two-1-2-columns-right {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2.5rem;
   align-self: center;
   justify-content: center;
   box-sizing: border-box;
@@ -346,9 +345,8 @@ hr {
 }
 
 .btn-catalog-publication {
-  color: var(--sky-blue);
-  background-color: white;
-  border: 2px solid var(--sky-blue);
+  background-color: var(--sky-blue);
+  border-color: var(--sky-blue);
 }
 
 .btn-catalog-portals {
@@ -359,22 +357,22 @@ hr {
 .btn-catalog-dataset:hover,
 .btn-catalog-dataset:focus,
 .btn-catalog-dataset.active {
-  box-shadow: 0px 4px 8px rgba(0, 78, 112, 0.3);
-  /* Sombra sutil de main blue */
+  box-shadow: 0 6px 10px rgba(0, 78, 112, 0.4);
+  transition: box-shadow 0.3s ease;
 }
 
 .btn-catalog-publication:hover,
 .btn-catalog-publication:focus,
 .btn-catalog-publication.active {
-  box-shadow: 0px 4px 8px rgba(25, 110, 140, 0.3);
-  /* Sombra sutil de sky blue */
+  box-shadow: 0 6px 10px rgba(25, 110, 140, 0.4);
+  transition: box-shadow 0.3s ease;
 }
 
 .btn-catalog-portals:hover,
 .btn-catalog-portals:focus,
 .btn-catalog-portals.active {
-  box-shadow: 0px 4px 8px rgba(122, 110, 39, 0.3);
-  /* Sombra sutil de olive */
+  box-shadow: 0 6px 10px rgba(122, 110, 39, 0.4);
+  transition: box-shadow 0.3s ease;
 }
 
 
