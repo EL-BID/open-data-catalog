@@ -45,6 +45,24 @@
   font-weight: 600;
 }
 
+.hyperlink-arrow {
+ margin-left: 1rem;
+ font-weight: 500;
+}
+
+.title-icons {
+  display: flex;
+  align-items: center;
+}
+
+.title-icon img {
+  width: 5rem;
+}
+
+.title-icons span {
+  margin: 0 0.5rem;
+}
+
 .research-links table {
   width: 100%;
   border-collapse: collapse;
@@ -85,27 +103,29 @@
 
 .card-1 .card-number,
 .card-1 .catalog-link,
-.card-1 .card-icon i,
-.dataset-link {
+.card-1 .hyperlink-arrow,
+.datasets-td a,
+.datasets-td .hyperlink-arrow {
   color: var(--main-blue);
 }
 
 .card-2 .card-number,
 .card-2 .catalog-link,
-.card-2 .card-icon i,
-.publication-link {
+.card-2 .hyperlink-arrow,
+.publications-td a,
+.publications-td .hyperlink-arrow {
   color: var(--sky-blue);
 }
 
 .card-3 .card-number,
 .card-3 .catalog-link,
-.card-3 .card-icon i {
+.card-3 .hyperlink-arrow {
   color: var(--olive);
 }
 
 .card-4 .card-number,
 .card-4 .catalog-link,
-.card-4 .card-icon i {
+.card-4 .hyperlink-arrow {
   color: var(--forest-green);
 }
 

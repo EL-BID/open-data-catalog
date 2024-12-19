@@ -18,7 +18,8 @@
         <div class="card-text">
           <span class="card-number">{{ counts.datasets }}</span>
           <p>Unique datasets in our open data catalog</p>
-          <a [routerLink]="['/dataset-catalog']" class="catalog-link">Browse the catalog →</a>
+          <a [routerLink]="['/dataset-catalog']" class="catalog-link">Browse the catalog</a>
+          <span class="hyperlink-arrow" aria-hidden="true"><fa-icon [icon]="faArrowRight"></fa-icon></span>
         </div>
       </div>
       <!--Card 2: Research Publications-->
@@ -30,12 +31,11 @@
           <span class="card-number">{{ counts.linkedResearchDatasets }}</span>
           <p>Data-driven research publications</p>
           <a [routerLink]="['/browse']" [queryParams]="{ idbKnowledges: 'Tied research publication' }"
-            class="catalog-link">
-            Dig into our research →
-          </a>
+            class="catalog-link">Dig into our research</a>
+          <span class="hyperlink-arrow" aria-hidden="true"><fa-icon [icon]="faArrowRight"></fa-icon></span>
         </div>
       </div>
-      <!--Card 3: Dashboards-->
+      <!--Card 3: Data Portals-->
       <div class="catalog-card card-3">
         <div class="card-icon">
           <img src="./assets/images/icons/thematic-platforms-icon.png" alt="thematic platforms icon">
@@ -44,7 +44,8 @@
           <span class="card-number">+20 </span>
           <p>Specialized data portals powered by IDB data</p>
           <a href="https://www.iadb.org/en/knowledge-resources/data/data-platforms" target="_blank" rel="noopener"
-            class="catalog-link">Discover IDB portals →</a>
+            class="catalog-link">Discover IDB portals</a>
+          <span class="hyperlink-arrow" aria-hidden="true"><fa-icon [icon]="faArrowRight"></fa-icon></span>
         </div>
       </div>
       <!--Card 4: Indicators-->
@@ -55,7 +56,8 @@
         <div class="card-text">
           <span class="card-number">+400</span>
           <p>Indicators focused on Latin America and the Caribbean</p>
-          <a [routerLink]="['/browse']" [queryParams]="{ idbKnowledges: 'Feeds indicators' }" class="catalog-link">View our indicators datasets →</a>
+          <a [routerLink]="['/browse']" [queryParams]="{ idbKnowledges: 'Feeds indicators' }" class="catalog-link">View our indicators datasets</a>
+          <span class="hyperlink-arrow" aria-hidden="true"><fa-icon [icon]="faArrowRight"></fa-icon></span>
         </div>
       </div>
     </div>
@@ -68,6 +70,15 @@
     <div class="odl-two-1-2-columns-left">
       <!--Intro of Data-driven research-->
       <div>
+        <div class="title-icons">
+          <div class="title-icon">
+            <img src="./assets/images/icons/dataset-icon.png" alt="dataset icon">
+          </div>
+          <span aria-hidden="true"><fa-icon [icon]="faPlus"></fa-icon></span>
+          <div class="title-icon">
+            <img src="./assets/images/icons/research-icon.png" alt="research icon">
+          </div>
+        </div>
         <h2 class="odl-sky-blue-color">Data-driven research</h2>
         <p>Our researchers analyze and process data to share knowledge
           that
@@ -96,11 +107,13 @@
           <tbody>
             <tr *ngFor="let dataset of recentDatasets">
               <td>{{ dataset.title }}</td>
-              <td>
-                <a [routerLink]="generateDatasetUrl(dataset)" class="dataset-link">Dataset →</a>
+              <td class="datasets-td">
+                <a [routerLink]="generateDatasetUrl(dataset)">Dataset</a>
+                <span class="hyperlink-arrow" aria-hidden="true"><fa-icon [icon]="faArrowRight"></fa-icon></span>
               </td>
-              <td>
-                <a href="{{ dataset.source }}" target="_blank" rel="noopener" class="publication-link">Publication →</a>
+              <td class="publications-td">
+                <a href="{{ dataset.source }}" target="_blank" rel="noopener">Publication</a>
+                <span class="hyperlink-arrow" aria-hidden="true"><fa-icon [icon]="faArrowRight"></fa-icon></span>
               </td>
             </tr>
           </tbody>
@@ -110,10 +123,15 @@
   </div>
 </section>
 <hr>
-<!-- Thematic Dashboard Section -->
+<!-- Data Portals Section -->
 <section class="odl-section">
   <div class="odl-container">
     <div>
+      <div class="title-icons">
+        <div class="title-icon">
+          <img src="./assets/images/icons/thematic-platforms-icon.png" alt="thematic platforms icon">
+        </div>
+      </div>
       <h2 class="odl-olive-color">Data Portals</h2>
       <p>Our teams work tirelessly to gather and harmonize data to power
         interactive data portals that visualize and expose the state of
