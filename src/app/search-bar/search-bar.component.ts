@@ -120,8 +120,12 @@ export class SearchBarComponent implements OnInit {
       this.selectedIndex++;
     } else if (event.key === 'ArrowUp' && this.selectedIndex > 0) {
       this.selectedIndex--;
-    } else if (event.key === 'Enter' && this.selectedIndex !== -1) {
-      this.selectSuggestion(this.filteredSuggestions[this.selectedIndex].title, this.selectedIndex);
+    }  else if (event.key === 'Enter') {
+      if (this.selectedIndex !== -1) {
+        this.selectSuggestion(this.filteredSuggestions[this.selectedIndex].title, this.selectedIndex);
+      } else {
+        this.onSearch();
+      }
     }
   }
 
