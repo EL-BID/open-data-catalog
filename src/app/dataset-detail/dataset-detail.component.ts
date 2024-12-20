@@ -27,6 +27,8 @@ export class DatasetDetailComponent implements OnInit {
   datasetContent: any[] = [];
   loading = true;
 
+  sortedThemes: string[] = [];
+
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService,
@@ -84,6 +86,8 @@ export class DatasetDetailComponent implements OnInit {
           console.log("Dataset encontrado:", dataset);
           this.dataset = dataset;
           this.loading = false;
+
+          this.sortedThemes = dataset.theme ? dataset.theme.sort() : [];
 
           const dynamicTitle = dataset.title || 'Dataset';
           this.titleService.setTitle(`IDB Open Data LAC | ${dynamicTitle}`);

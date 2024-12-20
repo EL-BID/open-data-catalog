@@ -7,7 +7,7 @@
         <span>By <strong>{{ dataset.unitResponsible }}</strong></span>
       </div>
       <div class="dataset-categories">
-        <span class="category-box" *ngFor="let theme of dataset.theme">{{ theme
+        <span class="category-box" *ngFor="let theme of sortedThemes">{{ theme
           }}</span>
       </div>
       <p>{{ dataset?.description }}</p>

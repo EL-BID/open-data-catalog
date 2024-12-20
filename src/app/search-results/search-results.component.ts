@@ -99,6 +99,12 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
 
     console.log('Datos filtrados:', this.filteredDatasets);
 
+    this.filteredDatasets.forEach(dataset => {
+      if (Array.isArray(dataset.theme)) {
+        dataset.theme.sort();
+      }
+    });
+
     this.sortDatasets();
 
     this.resultCountChange.emit(this.filteredDatasets.length);

@@ -12,5 +12,5 @@ export const routes: Routes = [
   { path: ':mydata_category/:title_original', component: DatasetDetailComponent, data: { breadcrumb: 'Dataset' } },
   { path: ':mydata_category/:title_original/:mydata_id', redirectTo: ':mydata_category/:title_original', pathMatch: 'full' },
   { path: ':mydata_category/:title_original/:mydata_id/:section', redirectTo: ':mydata_category/:title_original', pathMatch: 'full'},
-  { path: '**', component: NotFoundComponent, data: { breadcrumb: '404 Page not found', title: '404 | Page Not Found' } }
+  { path: '**', component: NotFoundComponent, data: { breadcrumb: '404 Page not found', title: '404 Page Not Found' } }
 ];
