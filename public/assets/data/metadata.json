@@ -82,8 +82,8 @@
         "source": "",
         "language": "en",
         "title": "Social Indicators of Latin America and the Caribbean",
-        "description": "Social Indicator is a diverse dataset of indicators designed to capture social conditions in Latin America and the Caribbean. The indicators are derived from national household survey data, Censuses, and other sources covering 21 countries from 1990 to date. While the Sociómetro includes traditional global indicators, the database also includes tailor-made indicators in five areas: Demographics, Education, Labor Market, Housing, and Income, to better capture conditions in LAC. Moreover, unlike traditional aggregate indicators, the Sociómetro indicators are disaggregated by ethnicity and race (when available) and by gender, geographic residence, education, and income quintile. The management and implementation of the Sociómetro are provided by the Social Sector (SCL) of the Vice Presidency of Knowledge and Sectors to strengthen the analytical content of projects and studies. The indicators are not intended to serve as official data for any particular country but instead aim to provide a comparable set of social indicators for the Latin American region.",
-        "temporal": "1990 - 2022",
+        "description": "Social Indicators of Latin America and the Caribbean is a diverse dataset of indicators designed to capture social conditions in Latin America and the Caribbean. The indicators are derived from national household survey data, Censuses, and other sources covering 21 countries from 1990 to date. While the Sociómetro includes traditional global indicators, the database also includes tailor-made indicators in five areas: Demographics, Education, Labor Market, Housing, and Income, to better capture conditions in LAC. Moreover, unlike traditional aggregate indicators, the Sociómetro indicators are disaggregated by ethnicity and race (when available) and by gender, geographic residence, education, and income quintile. The indicators are not intended to serve as official data for any particular country but instead aim to provide a comparable set of social indicators for the Latin American region.",
+        "temporal": "1990-2022",
         "keyword": [
             "Poverty Level"
         ],
@@ -269,7 +269,7 @@
         "language": "es",
         "title": "Latin Macro Watch Dataset",
         "description": "The Latin Macro Watch (LMW) is a macroeconomic and financial database that offers indicators on economic activity, fiscal and external accounts, financial markets, and forecasts. Historical data at monthly, quarterly, and annual frequencies will be available starting in 1990 and cover the 26 borrowing members of the Inter-American Development Bank. The database is currently undergoing a revision and enhancement process.",
-        "temporal": "1990 - 2024",
+        "temporal": "1990-2024",
         "keyword": [
             "Macroeconomy"
         ],
@@ -340,7 +340,7 @@
         "source": "",
         "language": "es",
         "title": "Database of Labor Markets and Social Security Information System (SIMS)",
-        "description": "The Database of Labor Markets and Social Security Information System (SIMS) is the most important source of information about jobs and pensions in Latin America and the Caribbean.  It encompasses harmonized statistics of 25 countries in the region, assuring the comparability of the indicators among them and also over time.  The dataset includes data since 1990 and it presents 72 main indicators, which can be broken down by age group, gender, zone, level of education and other.  The SIMS contains information in 6 broad categories: population, employment, unemployment, income, social security and poverty. This database seeks to contribute to public policies design based on evidence to strengthen the development of the region. Also, visit the SIMS Website: https://www.iadb.org/es/sectores/inversion-social/sims/inicio",
+        "description": "The Database of Labor Markets and Social Security Information System (SIMS) is the most important source of information about jobs and pensions in Latin America and the Caribbean.  It encompasses harmonized statistics of 25 countries in the region, assuring the comparability of the indicators among them and also over time.  The dataset includes data since 1990 and it presents 72 main indicators, which can be broken down by age group, gender, zone, level of education and other.  The SIMS contains information in 6 broad categories: population, employment, unemployment, income, social security and poverty. This database seeks to contribute to public policies design based on evidence to strengthen the development of the region.",
         "temporal": "1990-2020",
         "keyword": [
             "Labor Market",
@@ -410,7 +410,7 @@
         "language": "es",
         "title": "IDB Agrimonitor - PSE Agricultural Policy Monitoring System (data)",
         "description": "Agrimonitor is the IDB Product Support Estimates (PSE) country-level database for Latin American and Caribbean countries. It enables policy makers and policy analysts to track agricultural policies and to assess and measure the composition of the support to agriculture. PSE indicators related to magnitudes and composition help to better describe and address the key challenges facing agriculture in the coming decade.",
-        "temporal": "2003-2017",
+        "temporal": "1986-2023",
         "keyword": [
             "Agriculture Support",
             "Agricultural Policy"
@@ -463,7 +463,7 @@
         "relation": [
             "https://agrimonitor.iadb.org/en"
         ],
-        "modified": "2023-01-23",
+        "modified": "2024-12-02",
         "issued": "2016-01-15",
         "accrualPeriodicity": "",
         "publisher": "Inter-American Development Bank",
@@ -483,7 +483,7 @@
         "mydata_category": "research-catalog",
         "title_original": "Análisis modal y tiempos de viaje en el sistema Mi Teleférico, La Paz El Alto, Bolivia, 2015: Hogares Dataset",
         "mydata_id": "9ujx-kdcb",
-        "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/mi_teleferico_data.csv",
+        "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/mi_teleferico_data.zip",
         "source": "",
         "language": "en",
         "title": "Replication Data for: Aerial Cable Cars as an urban transportation alternative?: Time savings in the largest urban cable car system in the world: La Paz-El Alto (Bolivia)",
@@ -533,7 +533,7 @@
         "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/iati_data.zip",
         "source": "",
         "language": "es",
-        "title": "IDB IATI DatasetS",
+        "title": "IDB IATI Datasets",
         "description": "This dataset provides links to key project documents for sovereign guaranteed (SG) loans that IDB is publishing through the International Aid Transparency Initiative (IATI). Consistent with our IATI reporting and the requirements of the IATI standard, this dataset includes only SG loan and guarantee operations approved since 2004 which are currently in execution or repayment and for which a disbursement expiration date has been established. When available, information is presented in both English and Spanish. For access to IDB’s complete IATI datasets in .xml form, visit www.iatiregistry.org",
         "temporal": "2004-2017",
         "keyword": [
@@ -598,13 +598,13 @@
     {
         "id": 9,
         "mydata_category": "education",
-        "title_original": "Learning Improvement Information Center:  Regional Indicators for Learning",
+        "title_original": "Learning Improvement Information Center: Regional Indicators for Learning",
         "mydata_id": "sqwh-9zsr",
-        "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/regional_indicators_learning_data.zip",
+        "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/cima_indicators.zip",
         "source": "",
         "language": "es",
-        "title": "Learning Improvement Information Center:  Regional Indicators for Learning",
-        "description": "This dataset consists of indicators capturing how much students know and are able to do. It includes statistics from international learning assessments such as OECD’s PISA, UNESCO’s SERCE and TERCE, and CSEC of the Caribbean Examination Council. Main indicators: Average score, passing rate, percentage of top performers, percentage of low achievers.",
+        "title": "Learning Improvement Information Center (CIMA): Regional Indicators",
+        "description": "This dataset provides an ample list of education indicators, including statistics from international learning assessments such as OECD’s PISA, UNESCO’s SERCE and TERCE, and CSEC of the Caribbean Examination Council. Some of the indicators include: Average score, passing rate, percentage of top performers, percentage of low achievers.",
         "temporal": "2007-2017",
         "keyword": [
             "Learning",
@@ -666,80 +666,6 @@
             "Inter-American Development Bank"
         ],
         "dataNotes": "Own calculations based on PISA, SERCE, TERCE, and CSEC.",
-        "unitResponsible": "Education Division (VPS/SCL/EDU)",
-        "license": "https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode"
-    },
-    {
-        "id": 10,
-        "mydata_category": "education",
-        "title_original": "Learning Improvement Information Center: Regional Indicators for Financial Resources",
-        "mydata_id": "y35v-i2ux",
-        "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/regional_indicators_financial_resources_data.csv",
-        "source": "",
-        "language": "es",
-        "title": "Learning Improvement Information Center: Regional Indicators for Financial Resources",
-        "description": "This dataset consists of statistics measuring the financial resources available to fund the education system. Main indicators: Government expenditure on education as % of GDP, in PPP, as % of total government expenditure, expenditure on salaries as % of education expenditure, expenditure on education per student as % of pc gdp.",
-        "temporal": "2005-2012",
-        "keyword": [
-            "Education Expenditure",
-            "Educational Test"
-        ],
-        "theme": [
-            "Public Sector",
-            "Economy",
-            "Financial Sector",
-            "Education"
-        ],
-        "detailedTheme": [
-            "Education Expenditure",
-            "Educational Test"
-        ],
-        "spatial": [
-            "Argentina",
-            "Bahamas",
-            "Belize",
-            "Bolivia",
-            "Brazil",
-            "Barbados",
-            "Chile",
-            "Colombia",
-            "Costa Rica",
-            "Dominican Republic",
-            "Ecuador",
-            "Guatemala",
-            "Guyana",
-            "Honduras",
-            "Haiti",
-            "Jamaica",
-            "Mexico",
-            "Nicaragua",
-            "Panama",
-            "Peru",
-            "Paraguay",
-            "El Salvador",
-            "Suriname",
-            "Trinidad and Tobago",
-            "Uruguay",
-            "Venezuela"
-        ],
-        "regional": "",
-        "origin": "Research",
-        "dataSource": "Centro de Información para la Mejora de los Aprendizajes",
-        "dataStructure": "Structured Data",
-        "statisticalType": "Panel Data",
-        "type": "Observational Data",
-        "unitObservation": "",
-        "inSeries": "",
-        "relation": [],
-        "modified": "2019-05-13",
-        "issued": "2015-07-22",
-        "accrualPeriodicity": "",
-        "publisher": "Inter-American Development Bank",
-        "creator_personal": [],
-        "creator_organizational": [
-            "Inter-American Development Bank"
-        ],
-        "dataNotes": "Data downloaded from UNESCO",
         "unitResponsible": "Education Division (VPS/SCL/EDU)",
         "license": "https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode"
     },
@@ -1706,7 +1632,7 @@
         "source": "",
         "language": "en",
         "title": "Replication Package for: Grandmothers and the Gender Gap in the Mexican Labor Market",
-        "description": "Data associated with the IDB Publication \"Grandmothers and the Gender Gap in the Mexican Labor Market\". ENESS data is available for 2009, 2013, and 2017. As an accompanying module of the ENOE, it covers all the households covered by the ENOE for two out of the three months in the quarter. Hence, the ENESS covers roughly two-thirds of the ENOE sample for the quarter. The ENESS data includes responses from 209,266 households. These households use public and private daycare providers for 3,991 and 1,177 children under seven years old.",
+        "description": "Data and code associated with the IDB Publication \"Grandmothers and the Gender Gap in the Mexican Labor Market\". ENESS data is available for 2009, 2013, and 2017. As an accompanying module of the ENOE, it covers all the households covered by the ENOE for two out of the three months in the quarter. Hence, the ENESS covers roughly two-thirds of the ENOE sample for the quarter. The ENESS data includes responses from 209,266 households. These households use public and private daycare providers for 3,991 and 1,177 children under seven years old.",
         "temporal": "2005-2020",
         "keyword": [
             "Gender Role",
@@ -1980,7 +1906,7 @@
         "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/migrants_latin_america_data.zip",
         "source": "http://dx.doi.org/10.18235/0004850",
         "language": "es",
-        "title": "A Better World for Migrants in Latin America and the Caribbean: Dataset",
+        "title": "Replication Data for: A Better World for Migrants in Latin America and the Caribbean",
         "description": "This dataset is the result of an experiment conducted in nine countries in Latin America and the Caribbean and published as the book \"A Better World for Migrants in Latin America and the Caribbean\". This project is joint work between the IDB and UNDP. The databases contain data collected for the impact evaluation of an intervention designed to explore which mechanisms are more effective in changing people's beliefs and attitudes toward migrants. The experiment was conducted in nine countries in Latin America and the Caribbean and consisted of two video interventions. The first video, the informative video, aimed to correct misinformation about the impact of migration by providing accurate information about the size of the migrant population and its characteristics. The second video, an emotive video, intended to appeal to the emotions and empathy of the local population.",
         "temporal": "2021-2021",
         "keyword": [
@@ -2044,10 +1970,10 @@
         "title_original": "Encuesta de mercado laboral en Bolivia: Demanda 2022 (Datos Agregados)",
         "mydata_id": "8atj-6ifh",
         "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/labor_market_demand_bolivia_2022.zip",
-        "source": "",
+        "source": "http://dx.doi.org/10.18235/0005213",
         "language": "es",
-        "title": "Bolivia Labor Market Survey: Demand 2022 (Aggregate Data)",
-        "description": "In 2014, the Inter-American Development Bank began work to design a survey to obtain information on the Bolivian labor market, which was conducted in 2015 and 2016 in the metropolitan areas of La Paz, Cochabamba, and Santa Cruz. This database is an update of the data for the cities of La Paz, Cochabamba, and Santa Cruz. The data correspond to the year 2022 and come from a survey conducted by the Center for Information and Statistics Generation (CEGIE) of the Universidad Privada Boliviana (UPB) in the second half of 2022 and the first four months of 2023. The data were published in Urquidi et al (2023) Labor market survey in Bolivia: demand 2022 available at http://dx.doi.org/10.18235/0005213_x000D_\nThe objective of the survey was to obtain information that, on the one hand, allows a general characterization of companies small, medium and large; and, on the other hand, facilitate the characterization of their workforce, including hiring and dismissal dynamics. Finally, the aim was to obtain the skills and training requirements of the human resources they employ.",
+        "title": "Bolivia Labor Market Survey: Demand 2022 (Aggregated Data)",
+        "description": "In 2014, the Inter-American Development Bank began work to design a survey to obtain information on the Bolivian labor market, which was conducted in 2015 and 2016 in the metropolitan areas of La Paz, Cochabamba, and Santa Cruz. This database is an update of the data for the cities of La Paz, Cochabamba, and Santa Cruz. The data correspond to the year 2022 and come from a survey conducted by the Center for Information and Statistics Generation (CEGIE) of the Universidad Privada Boliviana (UPB) in the second half of 2022 and the first four months of 2023. The data were published in Urquidi et al (2023) Labor market survey in Bolivia: demand 2022 available at http://dx.doi.org/10.18235/0005213. The objective of the survey was to obtain information that, on the one hand, allows a general characterization of companies small, medium and large; and, on the other hand, facilitate the characterization of their workforce, including hiring and dismissal dynamics. Finally, the aim was to obtain the skills and training requirements of the human resources they employ.",
         "temporal": "2022-2023",
         "keyword": [
             "Skills"
@@ -2094,10 +2020,10 @@
         "title_original": "Encuesta de mercado laboral en Bolivia: Oferta 2022 (Datos Agregados)",
         "mydata_id": "6azy-ze6j",
         "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/labor_market_supply_bolivia_2022.zip",
-        "source": "",
+        "source": "http://dx.doi.org/10.18235/0005374",
         "language": "es",
-        "title": "Bolivia Labor Market Survey: Supply 2022 (Aggregate Data)",
-        "description": "The database includes information on the evolution of the number of undergraduate students at universities along the central axis of Bolivia between the periods 2020-2021, according to the type of enrollment (new, enrolled and graduates). For each of these groups, the evolution of the number of students was shown according to the legal nature of the university, the department and the area of ​​knowledge. On the other hand, the same information was included for students at technical level universities. This information allows to characterize the number and distribution of professionals from both public and private universities in the central axis of the country. The data correspond to the publication: Urquidi et. Al (2023). Labor market survey in Bolivia: offer 2022 at http://dx.doi.org/10.18235/0005374",
+        "title": "Bolivia Labor Market Survey: Supply 2022 (Aggregated Data)",
+        "description": "The database includes information on the evolution of the number of undergraduate students at universities along the central axis of Bolivia between the periods 2020-2021, according to the type of enrollment (new, enrolled, and graduates). For each of these groups, the evolution of the number of students was shown according to the legal nature of the university, the department, and the area of ​​knowledge. On the other hand, the same information was included for students at technical-level universities. This information allows us to characterize the number and distribution of professionals from both public and private universities in the central axis of the country. The data corresponds to the publication: Urquidi et al. (2023). Labor market survey in Bolivia: Supply 2022 at http://dx.doi.org/10.18235/0005374",
         "temporal": "2020-2021",
         "keyword": [
             "Labor Market"
@@ -2144,10 +2070,10 @@
         "title_original": "Encuesta de mercado laboral en Bolivia: Diversidad y políticas de inclusión en empresas formales 2023 (Datos agregados)",
         "mydata_id": "nenf-3tui",
         "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/diversity_inclusion_bolivia_2023.zip",
-        "source": "",
+        "source": "http://dx.doi.org/10.18235/0012986",
         "language": "es",
-        "title": "Bolivia Labor Market Survey: Diversity and Inclusion Policies in Formal Companies 2023 (Aggregate Data)",
-        "description": "The data collected in this study allow to characterize the diversity in companies in the cities of La Paz, El Alto, Cochabamba and Santa Cruz. This information was collected through a survey conducted during the third quarter of 2023. The objective of the surveys was to obtain a proxy for information that allows characterizing, on the one hand, in a general way the composition of the representation of the various groups in companies; the existence of hiring policies for these diverse groups and the obstacles that companies have faced during the hiring process. To obtain this information, the survey was conducted with the person in charge of human resources or the person in charge of hiring and human talent management. The data were published in Urquidi et al (2024) Labor market survey in Bolivia: Diversity and inclusion policies in formal companies 2023 available at http://dx.doi.org/10.18235/0012986",
+        "title": "Bolivia Labor Market Survey: Diversity and Inclusion Policies in Formal Companies 2023 (Aggregated Data)",
+        "description": "The data collected in this study allows to characterize the diversity in companies in the cities of La Paz, El Alto, Cochabamba and Santa Cruz. This information was collected through a survey conducted during the third quarter of 2023. The objective of the surveys was to obtain a proxy for information that allows characterizing, on the one hand, in a general way the composition of the representation of the various groups in companies; the existence of hiring policies for these diverse groups and the obstacles that companies have faced during the hiring process. To obtain this information, the survey was conducted with the person in charge of human resources or the person in charge of hiring and human talent management. The data were published in Urquidi et al (2024) Labor market survey in Bolivia: Diversity and inclusion policies in formal companies 2023 available at http://dx.doi.org/10.18235/0012986",
         "temporal": "2023-2023",
         "keyword": [
             "Labor Market"
@@ -2194,11 +2120,11 @@
         "title_original": "Encuestas a empresas en áreas urbanas intermedias sobre mercado laboral en Bolivia: 2022",
         "mydata_id": "ypcz-i7x6",
         "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/urban_labor_market_bolivia_2022.zip",
-        "source": "",
+        "source": "http://dx.doi.org/10.18235/0005379",
         "language": "es",
-        "title": "Surveys of companies in intermediate urban areas on the labor market in Bolivia: 2022",
-        "description": "The data come from a survey carried out on a sample of 25 intermediate and small cities in Bolivia, carried out in the period 2022. This updates the data from the labor market survey carried out in 2017 in intermediate and small cities that was used for this same analysis in 2020. The main characteristics of companies and the workforce in a post-pandemic context are described, and the training challenges facing the Bolivian labor market are identified. Information on the employment prospects of students in their last year of high school is also included.",
-        "temporal": "",
+        "title": "Survey of firms in intermediate urban areas on the labor market in Bolivia: 2022",
+        "description": "The data comes from a survey carried out on a sample of 25 intermediate and small cities in Bolivia, carried out in the period 2022. This updates the data from the labor market survey carried out in 2017 in intermediate and small cities that was used for this same analysis in 2020. The main characteristics of companies and the workforce in a post-pandemic context are described, and the training challenges facing the Bolivian labor market are identified. Information on the employment prospects of students in their last year of high school is also included.",
+        "temporal": "2022-2022",
         "keyword": [
             "Small Business"
         ],
@@ -2244,11 +2170,11 @@
         "title_original": "Encuesta a empresas sobre el impacto de la COVID-19 en Bolivia: PNUD-BID Empleo 2020-2021",
         "mydata_id": "rzq7-gjwx",
         "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/covid_impact_employment_bolivia_2020_2021.zip",
-        "source": "",
+        "source": "http://dx.doi.org/10.18235/0004909",
         "language": "en",
-        "title": "Survey of companies on the impact of COVID-19 in Bolivia: UNDP-IDB Employment 2020-2021",
+        "title": "Survey of firms on the impact of COVID-19 in Bolivia: UNDP-IDB Employment 2020-2021",
         "description": "The COVID-19 impact survey collects economic, financial, and health information for a representative sample of companies. The information provided allows us to characterize micro, small and medium-sized enterprises in order to measure the impact of the pandemic in the period 2020-2021.",
-        "temporal": "2020 – 2021",
+        "temporal": "2020–2021",
         "keyword": [
             "Small Business"
         ],
@@ -2468,7 +2394,7 @@
         "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/crime_observatories_survey_dataset.zip",
         "source": "",
         "language": "en",
-        "title": "What do crime observers observe? Past, present and future of crime and violence observatories in Latin America and the Caribbean: Survey Dataset",
+        "title": "Past, present and future of crime and violence observatories in Latin America and the Caribbean: Survey Dataset",
         "description": "This dataset is the main survey created for the publication \"¿Qué observan los que observan el delito? Pasado, presente y futuro de los observatorios del crimen y la violencia en América latina y el Caribe\". Contains information about aspects of the observatories and information systems, such as organizational structure, methodologies and management of information, functioning, and sustainability of Observatories in the Latin American and the Caribbean Region.",
         "temporal": "2013-2013",
         "keyword": [
@@ -2592,7 +2518,7 @@
         "language": "en",
         "title": "IDB Project Procurement Contract Awards Data",
         "description": "This database compiles information on contract awards related to IDB financed, sovereign-guaranteed operations in Latin America and the Caribbean. This database spans information since 2010. Data can also be viewed at https://projectprocurement.iadb.org/en/awarded-contracts.",
-        "temporal": "2010-2023",
+        "temporal": "2010-2024",
         "keyword": [
             "Public Expenditure",
             "Contract Management",
@@ -2648,7 +2574,7 @@
         "unitObservation": "",
         "inSeries": "",
         "relation": [],
-        "modified": "2024-12-01",
+        "modified": "2025-01-01",
         "issued": "2023-10-23",
         "accrualPeriodicity": "",
         "publisher": "Inter-American Development Bank",
@@ -3360,7 +3286,7 @@
         "language": "en",
         "title": "Population and Housing Censuses Indicators of Latin America and the Caribbean",
         "description": "The Population and Housing Censuses database contains the censuses harmonized in such a way as to provide comparable census information over time and across countries. The variables in these databases are constructed under a common approach and structure, with standardized names, definitions, and disaggregations, and stored in a single file for each country. Currently, the harmonization of Population and Housing Censuses includes databases for 22 countries. The indicators are categorized into seven themes: demographics, education, labor market, housing, income, migration, and diversity. When possible, we add multiple disaggregations for indicators. The available disaggregations are ethnicity, gender, age, education level, and area of geographic residence. The management and harmonization of this database are provided by the Social Sector (SCL) of the Vice Presidency of Knowledge and Sectors to strengthen the analytical content of projects and studies.",
-        "temporal": "1960 - 2017",
+        "temporal": "1960-2017",
         "keyword": [
             "Census",
             "Educational Level",
@@ -3737,7 +3663,7 @@
         "language": "en",
         "title": "Quality of Parenting Programs and Child Development Outcomes",
         "description": "This dataset contains information on Programa Nacional Cuna Más (Cuna Mas, hereinafter), Peru’s largest early childhood development program established in 2012. It focuses on one of the two services provided by Cuna Mas known as Servicio de Acompañamiento a Familias (SAF), a home visiting program that operates in rural areas and provides one-hour weekly home visits to children aged 0-36 months and their caregiver.",
-        "temporal": "2013 - 2015",
+        "temporal": "2013-2015",
         "keyword": [
             "Social Protection"
         ],
@@ -3817,7 +3743,7 @@
         "creator_organizational": [
             "Inter-American Development Bank"
         ],
-        "dataNotes": "",
+        "dataNotes": "The following quality instruments were administered: 1) Home Visit Rating Scale, version A+2 (HOVRS; Roggman et al. 2010), 2) Home Visit Content and Characteristics Form (HVCCF; Boller et al. 2009), 3) A supervisor checklist. The first two quality instruments are widely used among home visiting services in the United States. For each child in the sample, one home visit was filmed and the videos were later coded to create the scores, following the instruments’ manuals. The checklist, on the other hand, was designed based on record forms used by Cuna Mas and other home visiting programs in low- and middle- income countries, and was administered live during the visit by the home visitor’s supervisor. The final, multilevel dataset includes: 1) 554 visits with an identical number of distinct children, 2) 176 home visitors, 3) 80 supervisors",
         "unitResponsible": "Social Protection and Health Division (VPS/SCL/SPH)",
         "license": "https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode"
     },
@@ -4269,7 +4195,7 @@
         "source": "https://publications.iadb.org/en/simplifying-lives-quality-and-satisfaction-public-services",
         "language": "es",
         "title": "Simplifying Lives: quality and satisfaction with public services",
-        "description": "This data set corresponds to a survey performed between July and September of 2015 on 6 countries from Latin America and the Caribbean. 11,500 citizens provided information about their experience with a specific set of government services.",
+        "description": "This dataset corresponds to a survey performed between July and September of 2015 on 6 countries from Latin America and the Caribbean. 11,500 citizens provided information about their experience with a specific set of government services.",
         "temporal": "2015-2015",
         "keyword": [
             "Public Service Delivery",
@@ -6208,5 +6134,288 @@
         "dataNotes": "",
         "unitResponsible": "Department of Research and Chief Economist (VPS/RES/RES)",
         "license": "https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode"
+    },
+    {
+        "id": 89,
+        "mydata_category": "Financial-Markets-and-Institutions",
+        "title_original": "Survey Data for Stylized Facts on the Quality of Banking Regulation in Latin America and the Caribbean.",
+        "mydata_id": "vckn-9t7x",
+        "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/stylized-facts-quality-banking-latin-america.zip",
+        "source": "http://dx.doi.org/10.18235/0013121",
+        "language": "en",
+        "title": "Survey Data for \"Stylized Facts on the Quality of Banking Regulation in Latin America and the Caribbean\"",
+        "description": "The survey dataset consolidates responses from central banks and banking supervisor authorities from 18 countries in Latin America and the Caribbean. The main objective of the survey was to examine the adoption of Basel III standards across Latin American and Caribbean nations, focusing on capital and liquidity regulations, supervisory agency autonomy, and asset classification practices. The survey covers nine topics: 1. Application of regulation and supervision, 2. Concentration, 3. Capital requirements, 4.\tLiquidity requirements, 5. Financial investment classification, 6. Other prudential requirements, 7. On supervision, 8. On stress tests, 9.\tOther",
+        "temporal": "2023-2023",
+        "keyword": [
+            "Banking Regulation"
+        ],
+        "theme": [
+            "Public Sector",
+            "Financial Sector"
+        ],
+        "detailedTheme": [
+            "Banking Regulation"
+        ],
+        "spatial": [
+            "Argentina",
+            "Bahamas",
+            "Belize",
+            "Brazil",
+            "Chile",
+            "Colombia",
+            "Costa Rica",
+            "Dominican Republic",
+            "Ecuador",
+            "Honduras",
+            "Jamaica",
+            "Mexico",
+            "Panama",
+            "Peru",
+            "Paraguay",
+            "El Salvador",
+            "Trinidad and Tobago",
+            "Uruguay"
+        ],
+        "regional": "",
+        "origin": "Research",
+        "dataSource": "",
+        "dataStructure": "Structured Data",
+        "statisticalType": "Cross-sectional Data",
+        "type": "Survey Data",
+        "unitObservation": "Question",
+        "inSeries": "",
+        "relation": [],
+        "modified": "2024-07-15",
+        "issued": "2024-07-15",
+        "accrualPeriodicity": "",
+        "publisher": "Inter-American Development Bank",
+        "creator_personal": [
+            "Celis,Carolina",
+            "Galindo,Arturo J.",
+            "Rojas Suarez, Liliana"
+        ],
+        "creator_organizational": [
+            "Inter-American Development Bank"
+        ],
+        "dataNotes": "",
+        "unitResponsible": "Department of Research and Chief Economist (VPS/RES/RES)",
+        "license": "https://creativecommons.org/licenses/by/4.0/legalcode"
+    },
+    {
+        "id": 90,
+        "mydata_category": "Water-and-Sanitation",
+        "title_original": "OLAS/SCL WASH Household Survey Interpolated Dataset",
+        "mydata_id": "qjym-9u3k",
+        "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/household-survey-interpolated-dataset.cvs",
+        "source": "",
+        "language": "en",
+        "title": "OLAS/SCL WASH Household Survey Interpolated Dataset",
+        "description": "This dataset is an interpolated version of the OLAS/SCL Household Survey Data Set, and includes data from Latin America and Caribbean countries from 2003-2023. The interpolation can be used for understanding trends in water and sanitation access in the region.",
+        "temporal": "2003-2023",
+        "keyword": [
+            "Household Survey",
+            "WASH",
+            "Water Infrastructure",
+            "Water and Sanitation"
+        ],
+        "theme": [
+            "Rural and Urban Development",
+            "Social Development",
+            "Public Sector",
+            "Health",
+            "Infrastructure Work"
+        ],
+        "detailedTheme": [
+            "Household Survey",
+            "WASH",
+            "Water Infrastructure",
+            "Water and Sanitation"
+        ],
+        "spatial": [
+            "Argentina",
+            "Bahamas",
+            "Belize",
+            "Bolivia",
+            "Brazil",
+            "Barbados",
+            "Chile",
+            "Colombia",
+            "Costa Rica",
+            "Dominican Republic",
+            "Ecuador",
+            "Guatemala",
+            "Guyana",
+            "Honduras",
+            "Haiti",
+            "Jamaica",
+            "Mexico",
+            "Nicaragua",
+            "Panama",
+            "Peru",
+            "Paraguay",
+            "El Salvador",
+            "Suriname",
+            "Trinidad and Tobago",
+            "Uruguay",
+            "Venezuela"
+        ],
+        "regional": "",
+        "origin": "",
+        "dataSource": "",
+        "dataStructure": "Structured Data",
+        "statisticalType": "Panel Data",
+        "type": "Observational Data",
+        "unitObservation": "",
+        "inSeries": "",
+        "relation": [],
+        "modified": "2024-09-20",
+        "issued": "2024-09-20",
+        "accrualPeriodicity": "",
+        "publisher": "Inter-American Development Bank",
+        "creator_personal": [],
+        "creator_organizational": [
+            "Inter-American Development Bank"
+        ],
+        "dataNotes": "",
+        "unitResponsible": "Water and Sanitation Division (VPS/INE/WSA)",
+        "license": "https://creativecommons.org/licenses/by/4.0/legalcode"
+    },
+    {
+        "id": 91,
+        "mydata_category": "Water-and-Sanitation",
+        "title_original": "Summary Dataset: Water and Sanitation Tariffs in Latin America",
+        "mydata_id": "nayd-dpjr",
+        "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/water-sanitation-tariffs-latin-america.cvs",
+        "source": "http://dx.doi.org/10.18235/0012956",
+        "language": "en",
+        "title": "Summary Dataset: Water and Sanitation Tariffs in Latin America",
+        "description": "This dataset was generated by the Knowledge team in the Inter-American Development Bank's Water and Sanitation division from publicly available information to allow for the characterization and comparison of tariff systems and subsidies. It contains data on residential drinking water supply and sanitation tariffs, and includes data on subsidies, tariff types, metering, and more. The tariff dataset has been simplified and made available to the public via the Water and Sanitation Observatory for Latin America and the Caribbean (OLAS), consistent with the OLAS goals to provide consistent, reliable, and updated data to understand the water and sanitation sector at the national and regional levels, within the framework of SDG 6. For more information about this process and general trends in the dataset please see \"How Much Do Households Pay for Water Supply and Sanitation Services in Latin America? A Descriptive Analysis of Tariffs and Subsidies in the Region.\"",
+        "temporal": "2022-2022",
+        "keyword": [
+            "Household Survey",
+            "WASH",
+            "Water Infrastructure",
+            "Water and Sanitation"
+        ],
+        "theme": [
+            "Rural and Urban Development",
+            "Social Development",
+            "Public Sector",
+            "Health",
+            "Infrastructure Work"
+        ],
+        "detailedTheme": [
+            "Household Survey",
+            "WASH",
+            "Water Infrastructure",
+            "Water and Sanitation"
+        ],
+        "spatial": [
+            "Bolivia",
+            "Brazil",
+            "Colombia",
+            "Costa Rica",
+            "Ecuador",
+            "El Salvador",
+            "Guatemala",
+            "Honduras",
+            "Mexico",
+            "Panama",
+            "Paraguay",
+            "Uruguay"
+        ],
+        "regional": "",
+        "origin": "",
+        "dataSource": "WSA-IADB",
+        "dataStructure": "Structured Data",
+        "statisticalType": "Cross-sectional Data",
+        "type": "Administrative Data",
+        "unitObservation": "",
+        "inSeries": "",
+        "relation": [],
+        "modified": "2024-09-26",
+        "issued": "2024-09-26",
+        "accrualPeriodicity": "",
+        "publisher": "Inter-American Development Bank",
+        "creator_personal": [],
+        "creator_organizational": [
+            "Inter-American Development Bank"
+        ],
+        "dataNotes": "",
+        "unitResponsible": "Water and Sanitation Division (VPS/INE/WSA)",
+        "license": "https://creativecommons.org/licenses/by/4.0/legalcode"
+    },
+    {
+        "id": 92,
+        "mydata_category": "",
+        "title_original": "IDB Data Portals",
+        "mydata_id": "",
+        "fileUrl": "https://github.com/EL-BID/open-data-catalog/releases/download/dataset-v1.0.0/idb_data_portals.csv",
+        "source": "",
+        "language": "en",
+        "title": "IDB Data Portals",
+        "description": "This dataset contains the list and related metadata of all IDB Data Portals available on https://www.iadb.org/en/knowledge-resources/data/data-platforms.",
+        "temporal": "1990-2025",
+        "keyword": [
+            "Open Data",
+            "Open Knowledge"
+        ],
+        "theme": [
+            "Public Sector",
+            "Science and Technology",
+            "Education"
+        ],
+        "detailedTheme": [
+            "Open Data",
+            "Open Knowledge"
+        ],
+        "spatial": [
+            "Argentina",
+            "Barbados",
+            "Bahamas",
+            "Belize",
+            "Bolivia",
+            "Brazil",
+            "Chile",
+            "Colombia",
+            "Costa Rica",
+            "Dominican Republic",
+            "Ecuador",
+            "El Salvador",
+            "Guatemala",
+            "Guyana",
+            "Haiti",
+            "Honduras",
+            "Jamaica",
+            "Mexico",
+            "Nicaragua",
+            "Panama",
+            "Puerto Rico",
+            "Peru",
+            "Suriname",
+            "Trinidad and Tobago",
+            "Uruguay",
+            "Venezuela"
+        ],
+        "regional": "",
+        "origin": "",
+        "dataSource": "",
+        "dataStructure": "Structured Data",
+        "statisticalType": "Cross-sectional Data",
+        "type": "Administrative Data",
+        "unitObservation": "portal-language",
+        "inSeries": "",
+        "relation": [],
+        "modified": "2025-01-02",
+        "issued": "2025-01-02",
+        "accrualPeriodicity": "",
+        "publisher": "Inter-American Development Bank",
+        "creator_personal": [],
+        "creator_organizational": [
+            "Inter-American Development Bank"
+        ],
+        "dataNotes": "",
+        "unitResponsible": "Knowledge and Learning Division (VPS/KIC/KLD)",
+        "license": "https://creativecommons.org/licenses/by/4.0/legalcode"
     }
 ]
