@@ -156,8 +156,6 @@ export class FiltersComponent implements OnInit {
       .map(language => this.languageMapping[language]);
     const selectedIdbKnowledges = this.idbKnowledges.filter(idbKnowledge => this.selectedFilters[idbKnowledge]);
 
-    console.log(this.selectedFilters);
-
     this.filtersChanged.emit({
       topics: selectedTopics,
       countries: selectedCountries,

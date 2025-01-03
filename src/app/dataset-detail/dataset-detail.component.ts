@@ -38,19 +38,14 @@ export class DatasetDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log("Ruta actual:", this.router.url);
-    console.log("Snapshot params:", this.route.snapshot.paramMap.keys);
     this.mydataCategory = this.route.snapshot.paramMap.get('mydata_category');
     this.titleOriginal = this.route.snapshot.paramMap.get('title_original');
-    console.log("mydataCategory:", this.mydataCategory);
-    console.log("titleOriginal:", this.titleOriginal);
     this.loadMetadata();
   }
 
   loadMetadata(): void {
     this.dataService.getMetadata().subscribe(
       (data) => {
-        console.log("Metadata cargada:", data);
 
         const formatTitle = (title: string) =>
           title.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 50);
@@ -83,7 +78,6 @@ export class DatasetDetailComponent implements OnInit {
         const dataset = findDataset();
 
         if (dataset) {
-          console.log("Dataset encontrado:", dataset);
           this.dataset = dataset;
           this.loading = false;
 

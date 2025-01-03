@@ -36,7 +36,6 @@ export class DatasetCatalogComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log('ngOnInit: Verificando parámetros de categoría');
     this.checkCategoryParam();
     this.loadFiltersFromUrl();
     this.setMetaTags();
@@ -60,10 +59,8 @@ export class DatasetCatalogComponent implements OnInit {
 
   checkCategoryParam(): void {
     this.route.queryParams.subscribe(params => {
-      console.log('queryParams en checkCategoryParam:', params);
       if (params['category']) {
         if (params['category'] === 'Research Catalog') {
-          console.log('Redirigiendo a Research Catalog');
           this.router.navigate([], {
             relativeTo: this.route,
             queryParams: { idbKnowledges: 'Tied research publication' },
@@ -71,7 +68,6 @@ export class DatasetCatalogComponent implements OnInit {
           });
         }
         else if (params['category'] === 'Indicator Catalog') {
-          console.log('Redirigiendo a Indicator Catalog');
           this.router.navigate([], {
             relativeTo: this.route,
             queryParams: { idbKnowledges: 'Feeds indicators' },
@@ -83,9 +79,7 @@ export class DatasetCatalogComponent implements OnInit {
   }
 
   loadFiltersFromUrl(): void {
-    console.log('Cargando filtros desde la URL...');
     this.route.queryParams.subscribe(params => {
-      console.log('Filtros desde la URL:', params);
       this.filters = {
         topics: params['topics'] ? params['topics'].split(',') : [],
         countries: params['countries'] ? params['countries'].split(',') : [],
@@ -95,13 +89,10 @@ export class DatasetCatalogComponent implements OnInit {
       };
       this.currentPage = params['page'] ? +params['page'] : 1;
       this.sortBy = params['sortBy'] || this.sortBy;
-      console.log('Filtros cargados:', this.filters);
-      console.log('Página actual:', this.currentPage, 'Ordenar por:', this.sortBy);
     });
   }
 
   onSearch(searchTerm: string): void {
-    console.log('Término de búsqueda recibido en DatasetCatalog:', searchTerm);
     this.zone.run(() => {
       this.searchTerm = searchTerm;
       this.cdr.detectChanges();
@@ -110,7 +101,6 @@ export class DatasetCatalogComponent implements OnInit {
   }
 
   onFiltersChanged(updatedFilters: any): void {
-    console.log('Filtros cambiados a:', updatedFilters);
     this.filters = updatedFilters;
     this.syncFilters();
     this.currentPage = 1;
@@ -132,7 +122,6 @@ export class DatasetCatalogComponent implements OnInit {
   }
 
   updateUrlWithFilters(): void {
-    console.log('Actualizando URL con filtros...');
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: {
@@ -147,37 +136,23 @@ export class DatasetCatalogComponent implements OnInit {
       },
       queryParamsHandling: 'merge'
     });
-    console.log('URL actualizada con:', {
-      search: this.searchTerm,
-      topics: this.filters.topics,
-      countries: this.filters.countries,
-      years: this.filters.years,
-      languages: this.filters.languages,
-      idbKnowledges: this.filters.idbKnowledges,
-      sortBy: this.sortBy,
-      page: this.currentPage
-    });
   }
 
   onSortChanged(sortBy: string): void {
-    console.log('Criterio de ordenamiento cambiado a:', sortBy);
     this.sortBy = sortBy;
     this.updateUrlWithFilters();
   }
 
   updateResultCount(count: number): void {
-    console.log('Actualizando el contador de resultados a:', count);
     this.resultCount = count;
     this.cdr.detectChanges();
   }
 
   updateNoResults(noResults: boolean): void {
-    console.log('Actualizando la bandera de resultados vacíos a:', noResults);
     this.noResults = noResults;
   }
 
   onPageChange(page: number): void {
-    console.log('Página cambiada a:', page);
     this.currentPage = page;
     this.updateUrlWithFilters();
     this.cdr.detectChanges();
@@ -185,7 +160,6 @@ export class DatasetCatalogComponent implements OnInit {
 
   getTotalPages(): number {
     const totalPages = Math.ceil(this.resultCount / this.rowsPerPage);
-    console.log('Total de páginas:', totalPages);
     return totalPages;
   }
 }
