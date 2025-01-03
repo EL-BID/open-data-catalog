@@ -30,7 +30,6 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
 
   ngOnInit(): void {
     this.dataService.getMetadata().subscribe(data => {
-      console.log("Datos obtenidos desde el servicio:", data);
       this.datasets = data;
       this.applyFilters();
       setTimeout(() => this.checkTruncation(), 0);
@@ -39,7 +38,6 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['searchTerm'] || changes['sortBy'] || changes['filters'] || changes['currentPage']) {
-      console.log('Cambios detectados en los inputs:', changes);
       this.applyFilters();
       this.changeDetectorRef.detectChanges();
     }
@@ -50,13 +48,11 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
   }
 
   onPageChanged(page: number): void {
-    console.log('Cambio de página recibido:', page);
     this.currentPage = page;
     this.applyFilters();
   }
 
   private applyFilters(): void {
-    console.log("Aplicando filtros:", this.filters, "Página actual:", this.currentPage);
 
     const { topics = [], countries = [], years = [], languages = [], idbKnowledges = [] } = this.filters || {};
 
@@ -85,19 +81,8 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
         return true;
       });
 
-      console.log(`Dataset ${dataset.title} - Filtro aplicado:`, {
-        matchSearchTerm,
-        matchTopic,
-        matchCountries,
-        matchYear,
-        matchLanguage,
-        matchIdbKnowledge
-      });
-
       return matchSearchTerm && matchTopic && matchCountries && matchYear && matchLanguage && matchIdbKnowledge;
     });
-
-    console.log('Datos filtrados:', this.filteredDatasets);
 
     this.filteredDatasets.forEach(dataset => {
       if (Array.isArray(dataset.theme)) {
@@ -114,8 +99,6 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
     const endIndex = startIndex + this.rowsPerPage;
 
     this.filteredDatasets = this.filteredDatasets.slice(startIndex, endIndex);
-
-    console.log(`Mostrando resultados de ${startIndex} a ${endIndex}`);
 
     setTimeout(() => this.checkTruncation(), 0);
 
@@ -140,7 +123,6 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
         return issuedB - issuedA;
       });
     }
-    console.log('Datasets ordenados:', this.filteredDatasets);
   }
 
   private checkTruncation(): void {
