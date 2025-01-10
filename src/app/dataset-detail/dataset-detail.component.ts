@@ -40,11 +40,8 @@ export class DatasetDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.mydataCategory = this.route.snapshot.paramMap.get('mydata_category');
-    console.log(this.mydataCategory);
     this.titleOriginal = this.route.snapshot.paramMap.get('title_original');
-    console.log (this.titleOriginal);
     this.mydataId = this.route.snapshot.paramMap.get('mydata_id');
-    console.log(this.mydataId);
     this.loadMetadata();
   }
 
@@ -53,7 +50,7 @@ export class DatasetDetailComponent implements OnInit {
       (data) => {
 
         const formatSocrataTitle = (title: string) =>
-          title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase().substring(0, 50);
+          title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase().replace(/-+$/g, '').substring(0, 50);
 
         const formatGithubTitle = (title: string) =>
           title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase().replace(/-+$/g, '');
@@ -70,8 +67,8 @@ export class DatasetDetailComponent implements OnInit {
               const matchesResource = this.mydataCategory === 'resource' && d.mydata_id?.toLowerCase() === this.titleOriginal?.toLowerCase();
 
               return (this.mydataCategory === 'idb' && this.titleOriginal === 'dataset' && matchesId) ||
-                     matchesResource ||
-                     (matchesCategory && matchesTitle);
+                matchesResource ||
+                (matchesCategory && matchesTitle);
             });
           }
 
@@ -94,7 +91,7 @@ export class DatasetDetailComponent implements OnInit {
           const category = dataset.mydata_category || "dataset";
 
           this.router.navigate([`/${category.toLowerCase()}/${formatGithubTitle(dataset.title_original)}`], { replaceUrl: true }).then(() => {
-              this.titleService.setTitle(`IDB Open Data LAC | ${dynamicTitle}`);
+            this.titleService.setTitle(`IDB Open Data LAC | ${dynamicTitle}`);
           });
 
         } else {
