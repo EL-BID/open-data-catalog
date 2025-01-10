@@ -66,19 +66,13 @@ export class DataService {
 
   generateDatasetRoute(mydata_category: string, title_original: string, mydata_id?: string): string {
     const formattedCategory = mydata_category
-      ? mydata_category.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 50)
+      ? mydata_category.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()
       : '';
-    const formattedTitle = title_original
-      .replace(/[^a-zA-Z0-9]+/g, '-')
-      .substring(0, 50);
+    const formattedTitle = title_original.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase().replace(/-+$/g, '');
 
     let route = '';
-    if (formattedCategory && mydata_id) {
-      route = `/${formattedCategory}/${formattedTitle}/${mydata_id}`;
-    } else if (formattedCategory) {
+    if (formattedCategory) {
       route = `/${formattedCategory}/${formattedTitle}`;
-    } else if (mydata_id) {
-      route = `/dataset/${formattedTitle}/${mydata_id}`;
     } else {
       route = `/dataset/${formattedTitle}`;
     }

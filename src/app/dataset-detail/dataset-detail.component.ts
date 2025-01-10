@@ -22,6 +22,7 @@ export class DatasetDetailComponent implements OnInit {
   faLink = faLink;
   mydataCategory: string | null = null;
   titleOriginal: string | null = null;
+  mydataId: string | null = null;
   filename: string | null = null;
   dataset: any;
   datasetContent: any[] = [];
@@ -39,7 +40,11 @@ export class DatasetDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.mydataCategory = this.route.snapshot.paramMap.get('mydata_category');
+    console.log(this.mydataCategory);
     this.titleOriginal = this.route.snapshot.paramMap.get('title_original');
+    console.log (this.titleOriginal);
+    this.mydataId = this.route.snapshot.paramMap.get('mydata_id');
+    console.log(this.mydataId);
     this.loadMetadata();
   }
 
@@ -47,28 +52,26 @@ export class DatasetDetailComponent implements OnInit {
     this.dataService.getMetadata().subscribe(
       (data) => {
 
-        const formatTitle = (title: string) =>
-          title.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 50);
+        const formatSocrataTitle = (title: string) =>
+          title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase().substring(0, 50);
+
+        const formatGithubTitle = (title: string) =>
+          title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase().replace(/-+$/g, '');
 
         const findDataset = (): any => {
-          if (this.mydataCategory === "resource" && this.titleOriginal) {
-            return data.find(
-              (d) => d.mydata_id?.toLowerCase() === this.titleOriginal?.toLowerCase()
-            );
-          }
-
           if (this.titleOriginal) {
-            const formattedTitle = formatTitle(this.titleOriginal);
-            const categoryToSearch = this.mydataCategory || "dataset";
+            const formattedSocrataTitle = formatSocrataTitle(this.titleOriginal);
+            const categoryToSearch = this.mydataCategory || 'dataset';
 
             return data.find((d) => {
-              const matchesCategory =
-                d.mydata_category?.toLowerCase() === categoryToSearch.toLowerCase() ||
-                !d.mydata_category;
-              const matchesTitle =
-                formatTitle(d.title_original).toLowerCase() === formattedTitle.toLowerCase();
+              const matchesId = this.mydataId && d.mydata_id?.toLowerCase() === this.mydataId?.toLowerCase();
+              const matchesCategory = d.mydata_category?.toLowerCase() === categoryToSearch.toLowerCase() || !d.mydata_category;
+              const matchesTitle = formatSocrataTitle(d.title_original) === formattedSocrataTitle;
+              const matchesResource = this.mydataCategory === 'resource' && d.mydata_id?.toLowerCase() === this.titleOriginal?.toLowerCase();
 
-              return matchesCategory && matchesTitle;
+              return (this.mydataCategory === 'idb' && this.titleOriginal === 'dataset' && matchesId) ||
+                     matchesResource ||
+                     (matchesCategory && matchesTitle);
             });
           }
 
@@ -88,22 +91,18 @@ export class DatasetDetailComponent implements OnInit {
 
           this.updateMetaTags(dataset);
 
-          if (this.mydataCategory === "resource") {
-            const formattedTitle = formatTitle(dataset.title_original || "");
-            const category = dataset.mydata_category || "dataset";
+          const category = dataset.mydata_category || "dataset";
 
-            this.router.navigate([`/${category}/${formattedTitle}`], { replaceUrl: true }).then(() => {
+          this.router.navigate([`/${category.toLowerCase()}/${formatGithubTitle(dataset.title_original)}`], { replaceUrl: true }).then(() => {
               this.titleService.setTitle(`IDB Open Data LAC | ${dynamicTitle}`);
-            });
-          }
+          });
+
         } else {
-          console.error("Dataset no encontrado. Redirigiendo...");
-          this.router.navigate(["/not-found"]);
+          this.router.navigate(["/browse"]);
         }
       },
       (error) => {
-        console.error("Error al cargar la metadata:", error);
-        this.router.navigate(["/not-found"]);
+        this.router.navigate(["/"]);
       }
     );
   }
