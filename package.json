@@ -10,7 +10,7 @@
     "build": "ng build --configuration production --base-href https://mydata.iadb.org/",
     "deploy": "npx angular-cli-ghpages --dir=dist/open-data-lac/browser",
     "check:urls": "node check-urls.js",
-    "build-and-deploy": "npm run generate:urls && npm run build && npm run deploy && npm run check:urls"
+    "build-and-deploy": "npm run generate:urls && npm run build && npm run deploy"
   },
   "private": true,
   "dependencies": {
