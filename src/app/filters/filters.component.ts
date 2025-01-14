@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Input, Output, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, EventEmitter, Input, Output, ChangeDetectorRef } from '@angular/core';
 import { DataService } from '../data.service';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -12,7 +12,7 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './filters.component.html',
   styleUrl: './filters.component.scss'
 })
-export class FiltersComponent implements OnInit {
+export class FiltersComponent implements OnInit, AfterViewInit {
   @Input() filters: { [key: string]: string[] } = {};
   @Output() filtersChanged = new EventEmitter<any>();
 
@@ -45,6 +45,10 @@ export class FiltersComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadFilters();
+  }
+
+  ngAfterViewInit(): void {
+    this.updateVisibleFilters();
   }
 
   ngOnChanges(): void {
