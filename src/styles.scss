@@ -320,6 +320,7 @@ hr {
 
 /* Button styles */
 .btn-catalog {
+  width: fit-content;
   padding: 10px 25px;
   text-decoration: none;
   border-radius: 1rem;
@@ -376,7 +377,7 @@ hr {
 }
 
 
-@media (max-width: 767.98px) {
+@media (max-width: 1200px) {
   .odl-section {
     padding: 4rem 2rem;
   }
@@ -420,9 +421,17 @@ hr {
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1200px)  {
   .odl-two-1-4-columns-left {
     max-width: 25%;
+  }
+
+  .odl-two-1-2-columns-right {
+    flex-direction: row;
+    gap: 2rem;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
   }
 
 }
