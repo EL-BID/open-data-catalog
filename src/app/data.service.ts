@@ -64,7 +64,7 @@ export class DataService {
     };
   }
 
-  generateDatasetRoute(mydata_category: string, title_original: string, mydata_id?: string): string {
+  generateDatasetRoute(mydata_category: string, title_original: string): string {
     const formattedCategory = mydata_category ? mydata_category.toLowerCase() : '';
     const formattedTitle = title_original.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase().replace(/-+$/g, '');
 

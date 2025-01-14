@@ -4,9 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "generate:urls": "node generate-urls.js",
+    "build": "ng build --configuration production --base-href https://mydata.iadb.org/",
+    "deploy": "npx angular-cli-ghpages --dir=dist/open-data-lac/browser",
+    "check:urls": "node check-urls.js",
+    "build-and-deploy": "npm run generate:urls && npm run build && npm run deploy && npm run check:urls"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +26,7 @@
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "axios": "^1.7.9",
     "https-proxy-agent": "^7.0.5",
     "papaparse": "^5.4.1",
     "rxjs": "~7.8.0",

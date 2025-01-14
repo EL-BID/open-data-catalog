@@ -144,8 +144,8 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
     this.isDescriptionExpanded[datasetId] = !this.isDescriptionExpanded[datasetId];
   }
 
-  viewDataset(mydata_category: string, title_original: string, mydata_id?: string): void {
-    const route = this.dataService.generateDatasetRoute(mydata_category, title_original, mydata_id);
+  viewDataset(mydata_category: string, title_original: string): void {
+    const route = this.dataService.generateDatasetRoute(mydata_category, title_original);
     this.router.navigate([route]);
   }
 
