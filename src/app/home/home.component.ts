@@ -54,6 +54,6 @@ export class HomeComponent implements OnInit {
   }
 
   generateDatasetUrl(dataset: any): string {
-    return this.dataService.generateDatasetRoute(dataset.mydata_category, dataset.title_original, dataset.mydata_id);
+    return this.dataService.generateDatasetRoute(dataset.mydata_category, dataset.title_original);
   }
 }
