@@ -1,5 +1,425 @@
 [
   {
+    "id": 17,
+    "mydata_category": "Reform-Modernization-of-the-State",
+    "title": "Database of Political Institutions: 2017",
+    "title_original": "Database of Political Institutions 2017",
+    "url": "https://mydata.iadb.org/reform-modernization-of-the-state/database-of-political-institutions-2017"
+  },
+  {
+    "id": 187,
+    "mydata_category": "",
+    "title": "Data Associated with: Panorama de envejecimiento y dependencia en América Latina y el Caribe",
+    "title_original": "Data Associated with the “Overview of Aging and Dependency in Latin America and the Caribbean”",
+    "url": "https://mydata.iadb.org/dataset/data-associated-with-the-overview-of-aging-and-dependency-in-latin-america-and-the-caribbean"
+  },
+  {
+    "id": 188,
+    "mydata_category": "",
+    "title": "Model for Estimating the Costs of Managing Recyclable Waste with the Inclusion of Recyclers",
+    "title_original": "Model for Estimating the Costs of Managing Recyclable Waste with the Inclusion of Recyclers",
+    "url": "https://mydata.iadb.org/dataset/model-for-estimating-the-costs-of-managing-recyclable-waste-with-the-inclusion-of-recyclers"
+  },
+  {
+    "id": 119,
+    "mydata_category": "",
+    "title": "Suriname Survey of Living Conditions: 2016-2017",
+    "title_original": "Suriname Survey of Living Conditions: 2016-2017",
+    "url": "https://mydata.iadb.org/dataset/suriname-survey-of-living-conditions-2016-2017"
+  },
+  {
+    "id": 118,
+    "mydata_category": "",
+    "title": "Barbados Survey of Living Conditions: 2016",
+    "title_original": "Barbados Survey of Living Conditions: 2016",
+    "url": "https://mydata.iadb.org/dataset/barbados-survey-of-living-conditions-2016"
+  },
+  {
+    "id": 133,
+    "mydata_category": "",
+    "title": "Guyana Labor Force Survey: Fourth Quarter 2017",
+    "title_original": "Guyana Labor Force Survey: Fourth Quarter 2017",
+    "url": "https://mydata.iadb.org/dataset/guyana-labor-force-survey-fourth-quarter-2017"
+  },
+  {
+    "id": 132,
+    "mydata_category": "",
+    "title": "Guyana Labor Force Survey: Third Quarter 2017",
+    "title_original": "Guyana Labor Force Survey: Third Quarter 2017",
+    "url": "https://mydata.iadb.org/dataset/guyana-labor-force-survey-third-quarter-2017"
+  },
+  {
+    "id": 18,
+    "mydata_category": "Financial-Markets-and-Institutions",
+    "title": "FINLAC Data: Latin America and the Caribbean financial inclusion and performance dataset: 2005-2015",
+    "title_original": "FINLAC Data: Datos de desempeño e inclusión financiera de América Latina y el Caribe-dataset",
+    "url": "https://mydata.iadb.org/financial-markets-and-institutions/finlac-data-datos-de-desempe-o-e-inclusi-n-financiera-de-am-rica-latina-y-el-caribe-dataset"
+  },
+  {
+    "id": 160,
+    "mydata_category": "",
+    "title": "Primary Healthcare Access, Experience, and Coordination in Latin America and the Caribbean 2013 (PRIMLAC) Data: 2013",
+    "title_original": "Primary Healthcare Access, Experience, and Coordination in Latin America and the Caribbean 2013 (PRIMLAC)",
+    "url": "https://mydata.iadb.org/dataset/primary-healthcare-access-experience-and-coordination-in-latin-america-and-the-caribbean-2013-primlac"
+  },
+  {
+    "id": 189,
+    "mydata_category": "",
+    "title": "2018 Global Microscope on Financial Inclusion: Dataset",
+    "title_original": "2018 Global Microscope on Financial Inclusion: Dataset",
+    "url": "https://mydata.iadb.org/dataset/2018-global-microscope-on-financial-inclusion-dataset"
+  },
+  {
+    "id": 161,
+    "mydata_category": "",
+    "title": "Non-contributory Public Spending in Latin America and the Caribbean Data: 2010-2015",
+    "title_original": "Non-contributory Public Spending in Latin America and the Caribbean",
+    "url": "https://mydata.iadb.org/dataset/non-contributory-public-spending-in-latin-america-and-the-caribbean"
+  },
+  {
+    "id": 21,
+    "mydata_category": "Environmental-and-Natural-Disasters",
+    "title": "2017 IDB Climate Finance Database",
+    "title_original": "IDB Climate Finance 2017",
+    "url": "https://mydata.iadb.org/environmental-and-natural-disasters/idb-climate-finance-2017"
+  },
+  {
+    "id": 162,
+    "mydata_category": "",
+    "title": "Community Nutrition Program in El Alto, Bolivia Data: 2014-2017",
+    "title_original": "Community Nutrition Program in El Alto, Bolivia",
+    "url": "https://mydata.iadb.org/dataset/community-nutrition-program-in-el-alto-bolivia"
+  },
+  {
+    "id": 190,
+    "mydata_category": "",
+    "title": "Labor Market Survey Data in Bolivia: 2015-2016",
+    "title_original": "Labor Market Survey Data in Bolivia",
+    "url": "https://mydata.iadb.org/dataset/labor-market-survey-data-in-bolivia"
+  },
+  {
+    "id": 163,
+    "mydata_category": "",
+    "title": "Urban Integration and Coexistence Program: Baseline Report (Dataset) 2014",
+    "title_original": "Urban Integration and Coexistence Program: Baseline Report (Dataset)",
+    "url": "https://mydata.iadb.org/dataset/urban-integration-and-coexistence-program-baseline-report-dataset"
+  },
+  {
+    "id": 191,
+    "mydata_category": "",
+    "title": "Data Associated with: Programa de Integración y Convivencia Urbana: Resultados de la estrategia de pareamiento",
+    "title_original": "Urban Integration and Coexistence Program: Results of the Pairing Strategy (Dataset)",
+    "url": "https://mydata.iadb.org/dataset/urban-integration-and-coexistence-program-results-of-the-pairing-strategy-dataset"
+  },
+  {
+    "id": 164,
+    "mydata_category": "",
+    "title": "Survey data of Platform Workers in Argentina 2018 (ETP18) from the Publication Platform Economy and Employment: What Is It Like to Work for an App in Argentina?",
+    "title_original": "Survey data of Platform Workers in Argentina 2018 (ETP18) from the Publication Platform Economy and Employment: What Is It Like to Work for an App in Argentina?",
+    "url": "https://mydata.iadb.org/dataset/survey-data-of-platform-workers-in-argentina-2018-etp18-from-the-publication-platform-economy-and-employment-what-is-it-like-to-work-for-an-app-in-argentina"
+  },
+  {
+    "id": 192,
+    "mydata_category": "",
+    "title": "Database of Public Investment Expenditures in Latin America (BDD-GIPAL): 2000-2016",
+    "title_original": "Database of Public Investment Expenditures in Latin America (BDD-GIPAL)",
+    "url": "https://mydata.iadb.org/dataset/database-of-public-investment-expenditures-in-latin-america-bdd-gipal"
+  },
+  {
+    "id": 20,
+    "mydata_category": "Environmental-and-Natural-Disasters",
+    "title": "2016 IDB Climate Finance Database",
+    "title_original": "IDB Climate Finance 2016",
+    "url": "https://mydata.iadb.org/environmental-and-natural-disasters/idb-climate-finance-2016"
+  },
+  {
+    "id": 22,
+    "mydata_category": "Environmental-and-Natural-Disasters",
+    "title": "2018 IDB Climate Finance Database",
+    "title_original": "IDB Climate Finance 2018",
+    "url": "https://mydata.iadb.org/environmental-and-natural-disasters/idb-climate-finance-2018"
+  },
+  {
+    "id": 139,
+    "mydata_category": "",
+    "title": "Database of Equivalent Fiscal Pressure in Latin America and the Caribbean - 1990-2018",
+    "title_original": "Equivalent Fiscal Pressure in Latin America and the Caribbean (Dataset)",
+    "url": "https://mydata.iadb.org/dataset/equivalent-fiscal-pressure-in-latin-america-and-the-caribbean-dataset"
+  },
+  {
+    "id": 165,
+    "mydata_category": "",
+    "title": "Departmental GDP Data and Regional Inequality Analysis in Peru (1795-2017)",
+    "title_original": "Departmental GDP Data and Regional Inequality Analysis in Peru (1795-2017)",
+    "url": "https://mydata.iadb.org/dataset/departmental-gdp-data-and-regional-inequality-analysis-in-peru-1795-2017"
+  },
+  {
+    "id": 166,
+    "mydata_category": "",
+    "title": "2020 Better Jobs Index Database: Latin America",
+    "title_original": "2020 Better Jobs Index Database",
+    "url": "https://mydata.iadb.org/dataset/2020-better-jobs-index-database"
+  },
+  {
+    "id": 167,
+    "mydata_category": "",
+    "title": "Replication Data for: How Effective is Energy-efficient Housing?: Evidence From a Field Experiment in Mexico",
+    "title_original": "Energy-Efficient Housing in Mexico Data Set",
+    "url": "https://mydata.iadb.org/dataset/energy-efficient-housing-in-mexico-data-set"
+  },
+  {
+    "id": 168,
+    "mydata_category": "",
+    "title": "Ecuador Longitudinal Survey of Child Health and Development, Rounds 1-5 (2003-2014)",
+    "title_original": "Ecuador Longitudinal Survey of Child Health and Development, Rounds 1-5 (2003-2014)",
+    "url": "https://mydata.iadb.org/dataset/ecuador-longitudinal-survey-of-child-health-and-development-rounds-1-5-2003-2014"
+  },
+  {
+    "id": 169,
+    "mydata_category": "",
+    "title": "Survey on Living Conditions and Social Development in Northern Haiti (LCSDS): 2014-2015",
+    "title_original": "Survey on Living Conditions and Social Development in Northern Haiti (LCSDS)",
+    "url": "https://mydata.iadb.org/dataset/survey-on-living-conditions-and-social-development-in-northern-haiti-lcsds"
+  },
+  {
+    "id": 198,
+    "mydata_category": "",
+    "title": "IDB/Cornell Coronavirus Survey: 2020",
+    "title_original": "IDB/Cornell Coronavirus Survey",
+    "url": "https://mydata.iadb.org/dataset/idb-cornell-coronavirus-survey"
+  },
+  {
+    "id": 199,
+    "mydata_category": "",
+    "title": "Cost Simulation Tool for Long-Term Care Systems in Latin America and the Caribbean",
+    "title_original": "Cost Simulation Tool for Long-Term Care Systems",
+    "url": "https://mydata.iadb.org/dataset/cost-simulation-tool-for-long-term-care-systems"
+  },
+  {
+    "id": 120,
+    "mydata_category": "",
+    "title": "COVID-19 Household Telephone Survey in Barbados: 2020",
+    "title_original": "COVID-19 Household Telephone Survey in Barbados",
+    "url": "https://mydata.iadb.org/dataset/covid-19-household-telephone-survey-in-barbados"
+  },
+  {
+    "id": 193,
+    "mydata_category": "",
+    "title": "Data associated with: Análisis del mercado laboral: Demanda de empleo, habilidades y necesidades de formación en Bolivia",
+    "title_original": "Labor Market Analysis in Bolivia: Skills and Training Needs (Dataset)",
+    "url": "https://mydata.iadb.org/dataset/labor-market-analysis-in-bolivia-skills-and-training-needs-dataset"
+  },
+  {
+    "id": 107,
+    "mydata_category": "",
+    "title": "2019 IDB Climate Finance Database",
+    "title_original": "2019 IDBG Climate Finance Data",
+    "url": "https://mydata.iadb.org/dataset/2019-idbg-climate-finance-data"
+  },
+  {
+    "id": 110,
+    "mydata_category": "",
+    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of December 2019",
+    "title_original": "December 2019: Latin America and the Caribbean Standardized Public Debt Database",
+    "url": "https://mydata.iadb.org/dataset/december-2019-latin-america-and-the-caribbean-standardized-public-debt-database"
+  },
+  {
+    "id": 170,
+    "mydata_category": "",
+    "title": "2019 Pension Indicators for Latin America and the Caribbean",
+    "title_original": "2019 Pension Indicators for Latin America and the Caribbean",
+    "url": "https://mydata.iadb.org/dataset/2019-pension-indicators-for-latin-america-and-the-caribbean"
+  },
+  {
+    "id": 171,
+    "mydata_category": "",
+    "title": "2020 Pension Indicators for Latin America and the Caribbean",
+    "title_original": "2020 Pension Indicators for Latin America and the Caribbean",
+    "url": "https://mydata.iadb.org/dataset/2020-pension-indicators-for-latin-america-and-the-caribbean"
+  },
+  {
+    "id": 94,
+    "mydata_category": "",
+    "title": "The Database of Political Institutions (DPI): 2020",
+    "title_original": "The Database of Political Institutions 2020 (DPI2020)",
+    "url": "https://mydata.iadb.org/dataset/the-database-of-political-institutions-2020-dpi2020"
+  },
+  {
+    "id": 172,
+    "mydata_category": "",
+    "title": "Business Surveys on the Impact of COVID-19 on Jamaican Firms: 2020",
+    "title_original": "Business Surveys on the Impact of COVID-19 on Jamaican Firms",
+    "url": "https://mydata.iadb.org/dataset/business-surveys-on-the-impact-of-covid-19-on-jamaican-firms"
+  },
+  {
+    "id": 108,
+    "mydata_category": "",
+    "title": "2020 IDB Climate Finance Database",
+    "title_original": "2020 IDB Climate Finance",
+    "url": "https://mydata.iadb.org/dataset/2020-idb-climate-finance"
+  },
+  {
+    "id": 117,
+    "mydata_category": "",
+    "title": "COVID-19 Household Telephone Survey in Barbados - Round 2: 2020",
+    "title_original": "COVID-19 Household Telephone Survey in Barbados - Round 2",
+    "url": "https://mydata.iadb.org/dataset/covid-19-household-telephone-survey-in-barbados-round-2"
+  },
+  {
+    "id": 116,
+    "mydata_category": "",
+    "title": "Suriname COVID-19 Survey: 2020",
+    "title_original": "Suriname COVID-19 Survey",
+    "url": "https://mydata.iadb.org/dataset/suriname-covid-19-survey"
+  },
+  {
+    "id": 173,
+    "mydata_category": "",
+    "title": "What Public Policies Do Citizens Want for Combating Crime in Latin America and the Caribbean? A Dataset",
+    "title_original": "What Public Policies Do Citizens Want for Combating Crime in Latin America and the Caribbean? A Dataset",
+    "url": "https://mydata.iadb.org/dataset/what-public-policies-do-citizens-want-for-combating-crime-in-latin-america-and-the-caribbean-a-dataset"
+  },
+  {
+    "id": 114,
+    "mydata_category": "",
+    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of December 2020",
+    "title_original": "December 2020: Latin America and the Caribbean Standardized Public Debt Database",
+    "url": "https://mydata.iadb.org/dataset/december-2020-latin-america-and-the-caribbean-standardized-public-debt-database"
+  },
+  {
+    "id": 140,
+    "mydata_category": "",
+    "title": "Survey of Exporting Firms in Latin America and the Caribbean: Understanding the New Export DNA (Second Edition, September 2021 Dataset)",
+    "title_original": "Survey of Exporting Firms in Latin America and the Caribbean: Understanding the New Export DNA: Second Edition, September 2021 (Dataset)",
+    "url": "https://mydata.iadb.org/dataset/survey-of-exporting-firms-in-latin-america-and-the-caribbean-understanding-the-new-export-dna-second-edition-september-2021-dataset"
+  },
+  {
+    "id": 200,
+    "mydata_category": "",
+    "title": "Transmission Risk Assessment Checklist",
+    "title_original": "Transmission Risk Assessment Checklist",
+    "url": "https://mydata.iadb.org/dataset/transmission-risk-assessment-checklist"
+  },
+  {
+    "id": 174,
+    "mydata_category": "",
+    "title": "Bioinformatics for Researchers in Life Sciences: Tools and Learning Resources",
+    "title_original": "Bioinformatics for Researchers in Life Sciences: Tools and Learning Resources",
+    "url": "https://mydata.iadb.org/dataset/bioinformatics-for-researchers-in-life-sciences-tools-and-learning-resources"
+  },
+  {
+    "id": 194,
+    "mydata_category": "",
+    "title": "Harmonized Latin American Innovation Surveys Database (LAIS): Firm-Level Microdata for the Study of Innovation: 2007-2017",
+    "title_original": "Harmonized Latin American Innovation Surveys Database (LAIS): Firm-Level Microdata for the Study of Innovation: Dataset",
+    "url": "https://mydata.iadb.org/dataset/harmonized-latin-american-innovation-surveys-database-lais-firm-level-microdata-for-the-study-of-innovation-dataset"
+  },
+  {
+    "id": 141,
+    "mydata_category": "",
+    "title": "Towards Latin America 2026: The Impact of Exports on Gender Equity Database of Indicators on Productive and Export Structure by Gender in Argentina, Colombia, Mexico, and Peru",
+    "title_original": "Towards Latin America 2026: The Impact of Exports on Gender Equity: Database of Indicators on Productive and Export Structure by Gender in Argentina, Colombia, Mexico, and Peru",
+    "url": "https://mydata.iadb.org/dataset/towards-latin-america-2026-the-impact-of-exports-on-gender-equity-database-of-indicators-on-productive-and-export-structure-by-gender-in-argentina-colombia-mexico-and-peru"
+  },
+  {
+    "id": 201,
+    "mydata_category": "",
+    "title": "Data associated with: Aging in Latin America and the Caribbean: Social Protection and Quality of Life of Older Persons",
+    "title_original": "Aging in Latin America and the Caribbean: Social Protection and Quality of Life of Older Persons: Associated Data",
+    "url": "https://mydata.iadb.org/dataset/aging-in-latin-america-and-the-caribbean-social-protection-and-quality-of-life-of-older-persons-associated-data"
+  },
+  {
+    "id": 111,
+    "mydata_category": "",
+    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of December 2021",
+    "title_original": "December 2021: Latin America and the Caribbean Standardized Public Debt Database",
+    "url": "https://mydata.iadb.org/dataset/december-2021-latin-america-and-the-caribbean-standardized-public-debt-database"
+  },
+  {
+    "id": 106,
+    "mydata_category": "",
+    "title": "2021 IDB Climate Finance Database",
+    "title_original": "2021 IDB Climate Finance Database",
+    "url": "https://mydata.iadb.org/dataset/2021-idb-climate-finance-database"
+  },
+  {
+    "id": 202,
+    "mydata_category": "",
+    "title": "Tool for Calculating Human Resource Needs for the Care of Older Adults with Dependency",
+    "title_original": "Tool for Calculating Human Resource Needs for the Care of Older Adults with Dependency",
+    "url": "https://mydata.iadb.org/dataset/tool-for-calculating-human-resource-needs-for-the-care-of-older-adults-with-dependency"
+  },
+  {
+    "id": 115,
+    "mydata_category": "",
+    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of June 2022",
+    "title_original": "June 2022: Latin America and the Caribbean Standardized Public Debt Database",
+    "url": "https://mydata.iadb.org/dataset/june-2022-latin-america-and-the-caribbean-standardized-public-debt-database"
+  },
+  {
+    "id": 19,
+    "mydata_category": "Research-Catalog",
+    "title": "Replication Data for: Grandmothers and the Gender Gap in the Mexican Labor Market",
+    "title_original": "Grandmothers and the Gender Gap in the Mexican Labor Market: ENESS Dataset",
+    "url": "https://mydata.iadb.org/research-catalog/grandmothers-and-the-gender-gap-in-the-mexican-labor-market-eness-dataset"
+  },
+  {
+    "id": 113,
+    "mydata_category": "",
+    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of December 2022",
+    "title_original": "December 2022: Latin America and the Caribbean Standardized Public Debt Database",
+    "url": "https://mydata.iadb.org/dataset/december-2022-latin-america-and-the-caribbean-standardized-public-debt-database"
+  },
+  {
+    "id": 109,
+    "mydata_category": "",
+    "title": "2022 IDB Climate Finance Database",
+    "title_original": "2022 IDB Climate Finance Database",
+    "url": "https://mydata.iadb.org/dataset/2022-idb-climate-finance-database"
+  },
+  {
+    "id": 195,
+    "mydata_category": "",
+    "title": "Database of Equivalent Fiscal Pressure in Latin America and the Caribbean - 1990-2021: Update and Status in the Post-COVID-19 Pandemic Recovery",
+    "title_original": "Equivalent Fiscal Pressure in Latin America and the Caribbean (1990-2021): Update and Status in the Post-COVID-19 Pandemic Recovery: Database",
+    "url": "https://mydata.iadb.org/dataset/equivalent-fiscal-pressure-in-latin-america-and-the-caribbean-1990-2021-update-and-status-in-the-post-covid-19-pandemic-recovery-database"
+  },
+  {
+    "id": 196,
+    "mydata_category": "",
+    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of June 2023",
+    "title_original": "June 2023: Latin America and the Caribbean Standardized Public Debt Database",
+    "url": "https://mydata.iadb.org/dataset/june-2023-latin-america-and-the-caribbean-standardized-public-debt-database"
+  },
+  {
+    "id": 197,
+    "mydata_category": "",
+    "title": "2023 IDB Climate Finance Database",
+    "title_original": "2023 Climate Finance Database",
+    "url": "https://mydata.iadb.org/dataset/2023-climate-finance-database"
+  },
+  {
+    "id": 65,
+    "mydata_category": "Finance",
+    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of December 2023",
+    "title_original": "Standardized Public Debt Database",
+    "url": "https://mydata.iadb.org/finance/standardized-public-debt-database"
+  },
+  {
+    "id": 144,
+    "mydata_category": "",
+    "title": "Structural Fiscal Balances Database for LAC: A Tool to Assess Fiscal Performance in the Region",
+    "title_original": "Structural Fiscal Balances Database for LAC: A Tool to Assess Fiscal Performance in the Region",
+    "url": "https://mydata.iadb.org/dataset/structural-fiscal-balances-database-for-lac-a-tool-to-assess-fiscal-performance-in-the-region"
+  },
+  {
+    "id": 23,
+    "mydata_category": "Research-Catalog",
+    "title": "Survey Data associated with: A Better World for Migrants in Latin America and the Caribbean",
+    "title_original": "A Better World for Migrants in Latin America and the Caribbean: Dataset",
+    "url": "https://mydata.iadb.org/research-catalog/a-better-world-for-migrants-in-latin-america-and-the-caribbean-dataset"
+  },
+  {
     "id": 1,
     "mydata_category": "indicator-catalog",
     "title": "Risk Monitor",
@@ -112,55 +532,6 @@
     "url": "https://mydata.iadb.org/economics/productivity-database-2014"
   },
   {
-    "id": 17,
-    "mydata_category": "Reform-Modernization-of-the-State",
-    "title": "Database of Political Institutions: 2017",
-    "title_original": "Database of Political Institutions 2017",
-    "url": "https://mydata.iadb.org/reform-modernization-of-the-state/database-of-political-institutions-2017"
-  },
-  {
-    "id": 18,
-    "mydata_category": "Financial-Markets-and-Institutions",
-    "title": "FINLAC Data: Latin America and the Caribbean financial inclusion and performance dataset: 2005-2015",
-    "title_original": "FINLAC Data: Datos de desempeño e inclusión financiera de América Latina y el Caribe-dataset",
-    "url": "https://mydata.iadb.org/financial-markets-and-institutions/finlac-data-datos-de-desempe-o-e-inclusi-n-financiera-de-am-rica-latina-y-el-caribe-dataset"
-  },
-  {
-    "id": 19,
-    "mydata_category": "Research-Catalog",
-    "title": "Replication Data for: Grandmothers and the Gender Gap in the Mexican Labor Market",
-    "title_original": "Grandmothers and the Gender Gap in the Mexican Labor Market: ENESS Dataset",
-    "url": "https://mydata.iadb.org/research-catalog/grandmothers-and-the-gender-gap-in-the-mexican-labor-market-eness-dataset"
-  },
-  {
-    "id": 20,
-    "mydata_category": "Environmental-and-Natural-Disasters",
-    "title": "2016 IDB Climate Finance Database",
-    "title_original": "IDB Climate Finance 2016",
-    "url": "https://mydata.iadb.org/environmental-and-natural-disasters/idb-climate-finance-2016"
-  },
-  {
-    "id": 21,
-    "mydata_category": "Environmental-and-Natural-Disasters",
-    "title": "2017 IDB Climate Finance Database",
-    "title_original": "IDB Climate Finance 2017",
-    "url": "https://mydata.iadb.org/environmental-and-natural-disasters/idb-climate-finance-2017"
-  },
-  {
-    "id": 22,
-    "mydata_category": "Environmental-and-Natural-Disasters",
-    "title": "2018 IDB Climate Finance Database",
-    "title_original": "IDB Climate Finance 2018",
-    "url": "https://mydata.iadb.org/environmental-and-natural-disasters/idb-climate-finance-2018"
-  },
-  {
-    "id": 23,
-    "mydata_category": "Research-Catalog",
-    "title": "Survey Data associated with: A Better World for Migrants in Latin America and the Caribbean",
-    "title_original": "A Better World for Migrants in Latin America and the Caribbean: Dataset",
-    "url": "https://mydata.iadb.org/research-catalog/a-better-world-for-migrants-in-latin-america-and-the-caribbean-dataset"
-  },
-  {
     "id": 24,
     "mydata_category": "",
     "title": "Bolivia Labor Market Survey: Demand 2022 (Aggregated Data)",
@@ -212,7 +583,7 @@
   {
     "id": 31,
     "mydata_category": "Research-Catalog",
-    "title": "Survey Data associated with: Past, present and future of crime and violence observatories in Latin America and the Caribbean",
+    "title": "Survey Data associated with: ¿Qué observan los que observan el delito?: Pasado, presente y futuro de los observatorios del crimen y la violencia en América Latina y el Caribe",
     "title_original": "¿Qué observan los que observan el delito? Pasado, presente y futuro de los observatorios del crimen y la violencia en América latina y el Caribe: Survey Dataset",
     "url": "https://mydata.iadb.org/research-catalog/-qu-observan-los-que-observan-el-delito-pasado-presente-y-futuro-de-los-observatorios-del-crimen-y-la-violencia-en-am-rica-latina-y-el-caribe-survey-dataset"
   },
@@ -261,7 +632,7 @@
   {
     "id": 38,
     "mydata_category": "Health",
-    "title": "Replication Data for: Sustained Program for Improving Nutrition (SPOON) Guatemala",
+    "title": "Replication Data for: SPOON: Programa continuo para mejorar la nutrición: Resultados de la encuesta de línea base en Baja Verapaz, Guatemala",
     "title_original": "SPOON: Sustained Program for Improving Nutrition: Guatemala - Replication Package",
     "url": "https://mydata.iadb.org/health/spoon-sustained-program-for-improving-nutrition-guatemala-replication-package"
   },
@@ -289,7 +660,7 @@
   {
     "id": 42,
     "mydata_category": "Research-Catalog",
-    "title": "Data associated with: Digital transformation of Brazilian governments Citizen satisfaction with digital public services in the states and the Federal District",
+    "title": "Data associated with: Transformação digital dos governos brasileiros: Satisfação dos cidadãos com os serviços públicos digitais",
     "title_original": "Transformação digital dos governos brasileiros: Satisfação dos cidadãos com os serviços públicos digitais nos estados e no Distrito Federal. Dataset",
     "url": "https://mydata.iadb.org/research-catalog/transforma-o-digital-dos-governos-brasileiros-satisfa-o-dos-cidad-os-com-os-servi-os-p-blicos-digitais-nos-estados-e-no-distrito-federal-dataset"
   },
@@ -310,7 +681,7 @@
   {
     "id": 45,
     "mydata_category": "Social-and-Environmental-safeguards",
-    "title": "Accountability Data - Social and environmental claims managed by MICI",
+    "title": "AccountabilityData - Social and environmental claims managed by MICI",
     "title_original": "Accountability Data - Social and environmental claims managed by MICI",
     "url": "https://mydata.iadb.org/social-and-environmental-safeguards/accountability-data-social-and-environmental-claims-managed-by-mici"
   },
@@ -359,7 +730,7 @@
   {
     "id": 52,
     "mydata_category": "Research-Catalog",
-    "title": "Data associated with: Child care quality in Ecuador: Centros Infantiles del Buen Vivir (CIBV)",
+    "title": "Data associated with: The Quality of Centros Infantiles del Buen Vivir in Ecuador",
     "title_original": "Child care quality in Ecuador: Centros Infantiles del Buen Vivir (CIBV)",
     "url": "https://mydata.iadb.org/research-catalog/child-care-quality-in-ecuador-centros-infantiles-del-buen-vivir-cibv"
   },
@@ -394,7 +765,7 @@
   {
     "id": 57,
     "mydata_category": "Research-Catalog",
-    "title": "Survey Data associated with: Invisible women The costs of prison and indirect effects on women",
+    "title": "Survey Data associated with: Las mujeres invisibles: Los costos de la prisión y los efectos indirectos en las mujeres",
     "title_original": "Invisible women: the costs of prison and indirect effects on women",
     "url": "https://mydata.iadb.org/research-catalog/invisible-women-the-costs-of-prison-and-indirect-effects-on-women"
   },
@@ -422,7 +793,7 @@
   {
     "id": 61,
     "mydata_category": "Research-Catalog",
-    "title": "Survey Data associated with: Simplifying Lives Quality and satisfaction with public services",
+    "title": "Survey Data associated with: Simplifying Lives: Quality and Satisfaction in Public Services",
     "title_original": "Simplifying Lives: quality and satisfaction with public services",
     "url": "https://mydata.iadb.org/research-catalog/simplifying-lives-quality-and-satisfaction-with-public-services"
   },
@@ -443,21 +814,21 @@
   {
     "id": 64,
     "mydata_category": "Research-Catalog",
-    "title": "Data associated with: MERCOSUR Report No. 20: 2014-2015",
+    "title": "Data associated with: Informe MERCOSUR N° 20 (2014-2015)",
     "title_original": "Informe MERCOSUR N° 20 (2014-2015)",
     "url": "https://mydata.iadb.org/research-catalog/informe-mercosur-n-20-2014-2015"
   },
   {
-    "id": 65,
-    "mydata_category": "Finance",
-    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of December 2023",
-    "title_original": "Standardized Public Debt Database",
-    "url": "https://mydata.iadb.org/finance/standardized-public-debt-database"
+    "id": 143,
+    "mydata_category": "",
+    "title": "Database for Revelation of Expectations in Latin America (REVELA): 2006-2010",
+    "title_original": "Database for Revelation of Expectations in Latin America (REVELA)",
+    "url": "https://mydata.iadb.org/dataset/database-for-revelation-of-expectations-in-latin-america-revela"
   },
   {
     "id": 66,
     "mydata_category": "Research-Catalog",
-    "title": "Data associated with: Advanced Experiences in Cybersecurity Policies and Practices",
+    "title": "Data associated with: Advanced Experiences in Cybersecurity Policies and Practices: An Overview of Estonia, Israel, South Korea, and the United States",
     "title_original": "Advanced Experiences in Cybersecurity Policies and Practices Data Set",
     "url": "https://mydata.iadb.org/research-catalog/advanced-experiences-in-cybersecurity-policies-and-practices-data-set"
   },
@@ -520,7 +891,7 @@
   {
     "id": 75,
     "mydata_category": "Research-Catalog",
-    "title": "Tables and Figures for: More than Revenue: Taxation as a Development Tool - DIA 2013",
+    "title": "Tables and Figures for: Recaudar no basta: Los impuestos como instrumento de desarrollo",
     "title_original": "More than Revenue: Taxation as a Development Tool - DIA 2013",
     "url": "https://mydata.iadb.org/research-catalog/more-than-revenue-taxation-as-a-development-tool-dia-2013"
   },
@@ -569,14 +940,14 @@
   {
     "id": 82,
     "mydata_category": "Research-Catalog",
-    "title": "Data associated with: The Age Of Productivity: Transforming Economies from the Bottom Up - DIA 2010",
+    "title": "Data associated with: La era de la productividad: Cómo transformar las economías desde sus cimientos",
     "title_original": "The Age Of Productivity: Transforming Economies from the Bottom Up - DIA 2010",
     "url": "https://mydata.iadb.org/research-catalog/the-age-of-productivity-transforming-economies-from-the-bottom-up-dia-2010"
   },
   {
     "id": 83,
     "mydata_category": "Research-Catalog",
-    "title": "Data associated with: Room for Development: Housing Markets in Latin America and the Caribbean - DIA 2012",
+    "title": "Data associated with: Un espacio para el desarrollo: Los mercados de vivienda en América Latina y el Caribe",
     "title_original": "Room for Development: Housing Markets in Latin America and the Caribbean - DIA 2012",
     "url": "https://mydata.iadb.org/research-catalog/room-for-development-housing-markets-in-latin-america-and-the-caribbean-dia-2012"
   },
@@ -597,14 +968,14 @@
   {
     "id": 86,
     "mydata_category": "Research-Catalog",
-    "title": "Tables and Figures for: Development Connections Unveiling the Impact of New Information Technologies DIA 2011",
+    "title": "Tables and Figures for: Conexiones del desarrollo: Impacto de las nuevas tecnologías de la información",
     "title_original": "Development Connections: Unveiling the Impact of New Information Technologies - DIA 2011",
     "url": "https://mydata.iadb.org/research-catalog/development-connections-unveiling-the-impact-of-new-information-technologies-dia-2011"
   },
   {
     "id": 87,
     "mydata_category": "Financial-Markets-and-Institutions",
-    "title": "Survey Data associated with: Stylized Facts on the Quality of Banking Regulation in Latin America and the Caribbean",
+    "title": "Survey Data for Stylized Facts on the Quality of Banking Regulation in Latin America and the Caribbean",
     "title_original": "Survey Data for Stylized Facts on the Quality of Banking Regulation in Latin America and the Caribbean.",
     "url": "https://mydata.iadb.org/financial-markets-and-institutions/survey-data-for-stylized-facts-on-the-quality-of-banking-regulation-in-latin-america-and-the-caribbean"
   },
@@ -630,18 +1001,25 @@
     "url": "https://mydata.iadb.org/dataset/idb-data-portals"
   },
   {
-    "id": 91,
+    "id": 176,
     "mydata_category": "",
-    "title": "Tables and Figures for: Development in the Americas 2016",
-    "title_original": "Development in the Americas 2016: Tables and Figures",
-    "url": "https://mydata.iadb.org/dataset/development-in-the-americas-2016-tables-and-figures"
+    "title": "Benchmarking Index 2009: Economist Intelligence Unit",
+    "title_original": "Benchmarking Index 2009: Economist Intelligence Unit",
+    "url": "https://mydata.iadb.org/dataset/benchmarking-index-2009-economist-intelligence-unit"
   },
   {
-    "id": 92,
+    "id": 142,
     "mydata_category": "",
-    "title": "Tables and Figures for: Is there a Caribbean sclerosis?: stagnating economic growth in the Caribbean",
-    "title_original": "Is there a Caribbean sclerosis?: stagnating economic growth in the Caribbean: Tables and Figures",
-    "url": "https://mydata.iadb.org/dataset/is-there-a-caribbean-sclerosis-stagnating-economic-growth-in-the-caribbean-tables-and-figures"
+    "title": "2010 InfraScope Index for Latin America and the Caribbean",
+    "title_original": "2010 InfraScope Index for Latin America and the Caribbean",
+    "url": "https://mydata.iadb.org/dataset/2010-infrascope-index-for-latin-america-and-the-caribbean"
+  },
+  {
+    "id": 177,
+    "mydata_category": "",
+    "title": "GVAR Data associated with: China's Emergence in the World Economy and Business Cycles in Latin America",
+    "title_original": "GVAR Dataset: China's Emergence in the World Economy and Business Cycles in Latin America",
+    "url": "https://mydata.iadb.org/dataset/gvar-dataset-china-s-emergence-in-the-world-economy-and-business-cycles-in-latin-america"
   },
   {
     "id": 93,
@@ -651,11 +1029,291 @@
     "url": "https://mydata.iadb.org/dataset/political-institutions-state-capabilities-and-public-policy-an-international-dataset-2014-update"
   },
   {
-    "id": 94,
+    "id": 146,
     "mydata_category": "",
-    "title": "The Database of Political Institutions (DPI): 2020",
-    "title_original": "The Database of Political Institutions 2020 (DPI2020)",
-    "url": "https://mydata.iadb.org/dataset/the-database-of-political-institutions-2020-dpi2020"
+    "title": "Tax Reforms in Latin America in an Era of Democracy. A Database (2014 Update)",
+    "title_original": "Tax Reforms in Latin America in an Era of Democracy. A Database (2014 Update)",
+    "url": "https://mydata.iadb.org/dataset/tax-reforms-in-latin-america-in-an-era-of-democracy-a-database-2014-update"
+  },
+  {
+    "id": 147,
+    "mydata_category": "",
+    "title": "Political Particularism around the World: 1978-2001",
+    "title_original": "Political Particularism around the World",
+    "url": "https://mydata.iadb.org/dataset/political-particularism-around-the-world"
+  },
+  {
+    "id": 148,
+    "mydata_category": "",
+    "title": "Medium-Term Frameworks and the Budgetary Process in Latin America. A Database: 2003-2007",
+    "title_original": "Medium-Term Frameworks and the Budgetary Process in Latin America. A Database",
+    "url": "https://mydata.iadb.org/dataset/medium-term-frameworks-and-the-budgetary-process-in-latin-america-a-database"
+  },
+  {
+    "id": 153,
+    "mydata_category": "",
+    "title": "Economic Experiments to Measure Trust and Cooperation among Latin America: 2007",
+    "title_original": "Economic Experiments to Measure Trust and Cooperation among Latin America",
+    "url": "https://mydata.iadb.org/dataset/economic-experiments-to-measure-trust-and-cooperation-among-latin-america"
+  },
+  {
+    "id": 156,
+    "mydata_category": "",
+    "title": "Politics, Policies, and Productivity: An International Dataset: 2010",
+    "title_original": "Politics, Policies, and Productivity: An International Dataset",
+    "url": "https://mydata.iadb.org/dataset/politics-policies-and-productivity-an-international-dataset"
+  },
+  {
+    "id": 157,
+    "mydata_category": "",
+    "title": "Trade Integration and Business Cycle Synchronization Data: 1960-1990",
+    "title_original": "Trade Integration and Business Cycle Synchronization",
+    "url": "https://mydata.iadb.org/dataset/trade-integration-and-business-cycle-synchronization"
+  },
+  {
+    "id": 158,
+    "mydata_category": "",
+    "title": "Public Debt around the World: A New Dataset of Central Government Debt: 1970-2005",
+    "title_original": "Public Debt around the World: A New Dataset of Central Government Debt",
+    "url": "https://mydata.iadb.org/dataset/public-debt-around-the-world-a-new-dataset-of-central-government-debt"
+  },
+  {
+    "id": 178,
+    "mydata_category": "",
+    "title": "RAIS industry level Data associated with: Access to Credit and the Size of the Formal Sector in Brazil",
+    "title_original": "RAIS industry level data: Access to Credit and the Size of the Formal Sector in Brazil",
+    "url": "https://mydata.iadb.org/dataset/rais-industry-level-data-access-to-credit-and-the-size-of-the-formal-sector-in-brazil"
+  },
+  {
+    "id": 155,
+    "mydata_category": "",
+    "title": "Brazilian Electoral Panel Studies (BEPS) Data: 2010",
+    "title_original": "Brazilian Electoral Panel Studies (BEPS)",
+    "url": "https://mydata.iadb.org/dataset/brazilian-electoral-panel-studies-beps"
+  },
+  {
+    "id": 181,
+    "mydata_category": "",
+    "title": "Urban Informal Economy survey (ECINF) Aggregated Data for Brazil: 2003",
+    "title_original": "ECINF Aggregated Data",
+    "url": "https://mydata.iadb.org/dataset/ecinf-aggregated-data"
+  },
+  {
+    "id": 203,
+    "mydata_category": "",
+    "title": "Freight Transport and Logistics Statistics Yearbook: 2012-2014",
+    "title_original": "Freight Transport and Logistics Statistics Yearbook",
+    "url": "https://mydata.iadb.org/dataset/freight-transport-and-logistics-statistics-yearbook"
+  },
+  {
+    "id": 92,
+    "mydata_category": "",
+    "title": "Tables and Figures for: Is there a Caribbean sclerosis?: stagnating economic growth in the Caribbean",
+    "title_original": "Is there a Caribbean sclerosis?: stagnating economic growth in the Caribbean: Tables and Figures",
+    "url": "https://mydata.iadb.org/dataset/is-there-a-caribbean-sclerosis-stagnating-economic-growth-in-the-caribbean-tables-and-figures"
+  },
+  {
+    "id": 184,
+    "mydata_category": "",
+    "title": "Tables and Figures for: Better Pensions, Better Jobs: Towards Universal Coverage in Latin America and the Caribbean",
+    "title_original": "Better Pensions, Better Jobs: Towards Universal Coverage in Latin America and the Caribbean",
+    "url": "https://mydata.iadb.org/dataset/better-pensions-better-jobs-towards-universal-coverage-in-latin-america-and-the-caribbean"
+  },
+  {
+    "id": 121,
+    "mydata_category": "",
+    "title": "Finance and Gender Data for Barbados, Jamaica and Trinidad and Tobago: 2012",
+    "title_original": "Finance and Gender Data",
+    "url": "https://mydata.iadb.org/dataset/finance-and-gender-data"
+  },
+  {
+    "id": 150,
+    "mydata_category": "",
+    "title": "Survey data of Productivity, Technology, Innovation in the Caribbean: 2014",
+    "title_original": "Productivity, Technology, Innovation in the Caribbean",
+    "url": "https://mydata.iadb.org/dataset/productivity-technology-innovation-in-the-caribbean"
+  },
+  {
+    "id": 154,
+    "mydata_category": "",
+    "title": "Latin American and Caribbean Enterprise Survey: 2011",
+    "title_original": "Latin American and Caribbean Enterprise Survey",
+    "url": "https://mydata.iadb.org/dataset/latin-american-and-caribbean-enterprise-survey"
+  },
+  {
+    "id": 145,
+    "mydata_category": "",
+    "title": "Priorities for Productivity and Income (PPIs) Database: 2000-2012",
+    "title_original": "Priorities for Productivity and Income (PPIs) Database",
+    "url": "https://mydata.iadb.org/dataset/priorities-for-productivity-and-income-ppis-database"
+  },
+  {
+    "id": 183,
+    "mydata_category": "",
+    "title": "Setting Targets for Results: Target Setting Tool",
+    "title_original": "Setting Targets for Results: Target Setting Tool",
+    "url": "https://mydata.iadb.org/dataset/setting-targets-for-results-target-setting-tool"
+  },
+  {
+    "id": 149,
+    "mydata_category": "",
+    "title": "Data Associated with: Social Pulse in Latin America and the Caribbean 2016",
+    "title_original": "Social Pulse in Latin America and the Caribbean 2016 - Statistical Annex",
+    "url": "https://mydata.iadb.org/dataset/social-pulse-in-latin-america-and-the-caribbean-2016-statistical-annex"
+  },
+  {
+    "id": 91,
+    "mydata_category": "",
+    "title": "Tables and Figures for: Development in the Americas 2016",
+    "title_original": "Development in the Americas 2016: Tables and Figures",
+    "url": "https://mydata.iadb.org/dataset/development-in-the-americas-2016-tables-and-figures"
+  },
+  {
+    "id": 152,
+    "mydata_category": "",
+    "title": "Data of Violence against women - Colombia - Survey answers: 2014",
+    "title_original": "Data of Violence against women - Colombia - Survey answers",
+    "url": "https://mydata.iadb.org/dataset/data-of-violence-against-women-colombia-survey-answers"
+  },
+  {
+    "id": 185,
+    "mydata_category": "",
+    "title": "Tables and Figures for: A Snapshot on the Quality of Seven Home Visit Parenting Programs in Latin America and the Caribbean",
+    "title_original": "A Snapshot on the Quality of Seven Home Visit Parenting Programs in Latin America and the Caribbean",
+    "url": "https://mydata.iadb.org/dataset/a-snapshot-on-the-quality-of-seven-home-visit-parenting-programs-in-latin-america-and-the-caribbean"
+  },
+  {
+    "id": 125,
+    "mydata_category": "",
+    "title": "Productivity, Technology and Innovation Survey Jamaica: 2013-2014",
+    "title_original": "Productivity, Technology and Innovation Survey Jamaica",
+    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-jamaica"
+  },
+  {
+    "id": 179,
+    "mydata_category": "",
+    "title": "Tables and Figures for: Jobs For Growth",
+    "title_original": "Jobs For Growth: Tables and Figures",
+    "url": "https://mydata.iadb.org/dataset/jobs-for-growth-tables-and-figures"
+  },
+  {
+    "id": 122,
+    "mydata_category": "",
+    "title": "Productivity, Technology and Innovation Survey Trinidad and Tobago: 2013-2014",
+    "title_original": "Productivity, Technology and Innovation Survey Trinidad and Tobago",
+    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-trinidad-and-tobago"
+  },
+  {
+    "id": 123,
+    "mydata_category": "",
+    "title": "Productivity, Technology and Innovation Survey Suriname: 2013-2014",
+    "title_original": "Productivity, Technology and Innovation Survey Suriname",
+    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-suriname"
+  },
+  {
+    "id": 126,
+    "mydata_category": "",
+    "title": "Productivity, Technology and Innovation Survey Guyana: 2013-2014",
+    "title_original": "Productivity, Technology and Innovation Survey Guyana",
+    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-guyana"
+  },
+  {
+    "id": 127,
+    "mydata_category": "",
+    "title": "Productivity, Technology and Innovation Survey Barbados: 2013-2014",
+    "title_original": "Productivity, Technology and Innovation Survey Barbados",
+    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-barbados"
+  },
+  {
+    "id": 128,
+    "mydata_category": "",
+    "title": "Productivity, Technology and Innovation Survey Bahamas: 2013-2014",
+    "title_original": "Productivity, Technology and Innovation Survey Bahamas",
+    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-bahamas"
+  },
+  {
+    "id": 134,
+    "mydata_category": "",
+    "title": "Barbados: Latin American Public Opinion Project - Victimization and Crime survey 2014",
+    "title_original": "Barbados: Latin American Public Opinion Project - Victimization and Crime survey",
+    "url": "https://mydata.iadb.org/dataset/barbados-latin-american-public-opinion-project-victimization-and-crime-survey"
+  },
+  {
+    "id": 135,
+    "mydata_category": "",
+    "title": "Guyana: Latin American Public Opinion Project - Victimization and Crime survey 2016",
+    "title_original": "Guyana: Latin American Public Opinion Project - Victimization and Crime survey",
+    "url": "https://mydata.iadb.org/dataset/guyana-latin-american-public-opinion-project-victimization-and-crime-survey"
+  },
+  {
+    "id": 136,
+    "mydata_category": "",
+    "title": "Jamaica: Latin American Public Opinion Project - Victimization and Crime survey 2014",
+    "title_original": "Jamaica: Latin American Public Opinion Project - Victimization and Crime survey",
+    "url": "https://mydata.iadb.org/dataset/jamaica-latin-american-public-opinion-project-victimization-and-crime-survey"
+  },
+  {
+    "id": 137,
+    "mydata_category": "",
+    "title": "Suriname: Latin American Public Opinion Project - Victimization and Crime survey 2014",
+    "title_original": "Suriname: Latin American Public Opinion Project - Victimization and Crime survey",
+    "url": "https://mydata.iadb.org/dataset/suriname-latin-american-public-opinion-project-victimization-and-crime-survey"
+  },
+  {
+    "id": 138,
+    "mydata_category": "",
+    "title": "Trinidad and Tobago: Latin American Public Opinion Project - Victimization and Crime survey 2014",
+    "title_original": "Trinidad and Tobago: Latin American Public Opinion Project - Victimization and Crime survey",
+    "url": "https://mydata.iadb.org/dataset/trinidad-and-tobago-latin-american-public-opinion-project-victimization-and-crime-survey"
+  },
+  {
+    "id": 186,
+    "mydata_category": "",
+    "title": "Latin American Public Opinion Project - Victimization and Crime survey Bahamas: 2014",
+    "title_original": "Bahamas: Latin American Public Opinion Project - Victimization and Crime survey",
+    "url": "https://mydata.iadb.org/dataset/bahamas-latin-american-public-opinion-project-victimization-and-crime-survey"
+  },
+  {
+    "id": 124,
+    "mydata_category": "",
+    "title": "Productivity, Technology and Innovation Survey OECS: 2013-2014",
+    "title_original": "Productivity, Technology and Innovation Survey OECS",
+    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-oecs"
+  },
+  {
+    "id": 129,
+    "mydata_category": "",
+    "title": "Finance and Gender Issues Survey Jamaica: 2011",
+    "title_original": "Finance and Gender Issues Survey Jamaica",
+    "url": "https://mydata.iadb.org/dataset/finance-and-gender-issues-survey-jamaica"
+  },
+  {
+    "id": 130,
+    "mydata_category": "",
+    "title": "Finance and Gender Issues Survey - Trinidad and Tobago: 2011",
+    "title_original": "Finance and Gender Issues Survey - Trinidad and Tobago",
+    "url": "https://mydata.iadb.org/dataset/finance-and-gender-issues-survey-trinidad-and-tobago"
+  },
+  {
+    "id": 131,
+    "mydata_category": "",
+    "title": "Finance and Gender Issues Survey Barbados: 2011",
+    "title_original": "Finance and Gender Issues Survey Barbados",
+    "url": "https://mydata.iadb.org/dataset/finance-and-gender-issues-survey-barbados"
+  },
+  {
+    "id": 180,
+    "mydata_category": "",
+    "title": "Bogota Measurements - Concurrent Validity Bayley-Short Tests Survey Data: Early Childhood Development in Large Scale Studies",
+    "title_original": "Bogota Measurements - Concurrent Validity Bayley-Short Tests: Early Childhood Development in Large Scale Studies",
+    "url": "https://mydata.iadb.org/dataset/bogota-measurements-concurrent-validity-bayley-short-tests-early-childhood-development-in-large-scale-studies"
+  },
+  {
+    "id": 151,
+    "mydata_category": "",
+    "title": "Data associated with: Development Effects of Rural Electrification",
+    "title_original": "Development Effects of Rural Electrification",
+    "url": "https://mydata.iadb.org/dataset/development-effects-of-rural-electrification"
   },
   {
     "id": 95,
@@ -735,538 +1393,6 @@
     "url": "https://mydata.iadb.org/dataset/baseline-salud-mesoamerica-panama-household-survey"
   },
   {
-    "id": 106,
-    "mydata_category": "",
-    "title": "2021 IDB Climate Finance Database",
-    "title_original": "2021 IDB Climate Finance Database",
-    "url": "https://mydata.iadb.org/dataset/2021-idb-climate-finance-database"
-  },
-  {
-    "id": 107,
-    "mydata_category": "",
-    "title": "2019 IDB Climate Finance Database",
-    "title_original": "2019 IDBG Climate Finance Data",
-    "url": "https://mydata.iadb.org/dataset/2019-idbg-climate-finance-data"
-  },
-  {
-    "id": 108,
-    "mydata_category": "",
-    "title": "2020 IDB Climate Finance Database",
-    "title_original": "2020 IDB Climate Finance",
-    "url": "https://mydata.iadb.org/dataset/2020-idb-climate-finance"
-  },
-  {
-    "id": 109,
-    "mydata_category": "",
-    "title": "2022 IDB Climate Finance Database",
-    "title_original": "2022 IDB Climate Finance Database",
-    "url": "https://mydata.iadb.org/dataset/2022-idb-climate-finance-database"
-  },
-  {
-    "id": 110,
-    "mydata_category": "",
-    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of December 2019",
-    "title_original": "December 2019: Latin America and the Caribbean Standardized Public Debt Database",
-    "url": "https://mydata.iadb.org/dataset/december-2019-latin-america-and-the-caribbean-standardized-public-debt-database"
-  },
-  {
-    "id": 111,
-    "mydata_category": "",
-    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of December 2021",
-    "title_original": "December 2021: Latin America and the Caribbean Standardized Public Debt Database",
-    "url": "https://mydata.iadb.org/dataset/december-2021-latin-america-and-the-caribbean-standardized-public-debt-database"
-  },
-  {
-    "id": 112,
-    "mydata_category": "",
-    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of June 2019",
-    "title_original": "June 2019: Latin America and the Caribbean Standardized Public Debt Database",
-    "url": "https://mydata.iadb.org/dataset/june-2019-latin-america-and-the-caribbean-standardized-public-debt-database"
-  },
-  {
-    "id": 113,
-    "mydata_category": "",
-    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of December 2022",
-    "title_original": "December 2022: Latin America and the Caribbean Standardized Public Debt Database",
-    "url": "https://mydata.iadb.org/dataset/december-2022-latin-america-and-the-caribbean-standardized-public-debt-database"
-  },
-  {
-    "id": 114,
-    "mydata_category": "",
-    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of December 2020",
-    "title_original": "December 2020: Latin America and the Caribbean Standardized Public Debt Database",
-    "url": "https://mydata.iadb.org/dataset/december-2020-latin-america-and-the-caribbean-standardized-public-debt-database"
-  },
-  {
-    "id": 115,
-    "mydata_category": "",
-    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of June 2022",
-    "title_original": "June 2022: Latin America and the Caribbean Standardized Public Debt Database",
-    "url": "https://mydata.iadb.org/dataset/june-2022-latin-america-and-the-caribbean-standardized-public-debt-database"
-  },
-  {
-    "id": 116,
-    "mydata_category": "",
-    "title": "Suriname COVID-19 Survey: 2020",
-    "title_original": "Suriname COVID-19 Survey",
-    "url": "https://mydata.iadb.org/dataset/suriname-covid-19-survey"
-  },
-  {
-    "id": 117,
-    "mydata_category": "",
-    "title": "COVID-19 Household Telephone Survey in Barbados - Round 2: 2020",
-    "title_original": "COVID-19 Household Telephone Survey in Barbados - Round 2",
-    "url": "https://mydata.iadb.org/dataset/covid-19-household-telephone-survey-in-barbados-round-2"
-  },
-  {
-    "id": 118,
-    "mydata_category": "",
-    "title": "Barbados Survey of Living Conditions: 2016",
-    "title_original": "Barbados Survey of Living Conditions: 2016",
-    "url": "https://mydata.iadb.org/dataset/barbados-survey-of-living-conditions-2016"
-  },
-  {
-    "id": 119,
-    "mydata_category": "",
-    "title": "Suriname Survey of Living Conditions: 2016-2017",
-    "title_original": "Suriname Survey of Living Conditions: 2016-2017",
-    "url": "https://mydata.iadb.org/dataset/suriname-survey-of-living-conditions-2016-2017"
-  },
-  {
-    "id": 120,
-    "mydata_category": "",
-    "title": "COVID-19 Household Telephone Survey in Barbados: 2020",
-    "title_original": "COVID-19 Household Telephone Survey in Barbados",
-    "url": "https://mydata.iadb.org/dataset/covid-19-household-telephone-survey-in-barbados"
-  },
-  {
-    "id": 121,
-    "mydata_category": "",
-    "title": "Finance and Gender Data for Barbados, Jamaica and Trinidad and Tobago: 2012",
-    "title_original": "Finance and Gender Data",
-    "url": "https://mydata.iadb.org/dataset/finance-and-gender-data"
-  },
-  {
-    "id": 122,
-    "mydata_category": "",
-    "title": "Productivity, Technology and Innovation Survey Trinidad and Tobago: 2013-2014",
-    "title_original": "Productivity, Technology and Innovation Survey Trinidad and Tobago",
-    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-trinidad-and-tobago"
-  },
-  {
-    "id": 123,
-    "mydata_category": "",
-    "title": "Productivity, Technology and Innovation Survey Suriname: 2013-2014",
-    "title_original": "Productivity, Technology and Innovation Survey Suriname",
-    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-suriname"
-  },
-  {
-    "id": 124,
-    "mydata_category": "",
-    "title": "Productivity, Technology and Innovation Survey OECS: 2013-2014",
-    "title_original": "Productivity, Technology and Innovation Survey OECS",
-    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-oecs"
-  },
-  {
-    "id": 125,
-    "mydata_category": "",
-    "title": "Productivity, Technology and Innovation Survey Jamaica: 2013-2014",
-    "title_original": "Productivity, Technology and Innovation Survey Jamaica",
-    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-jamaica"
-  },
-  {
-    "id": 126,
-    "mydata_category": "",
-    "title": "Productivity, Technology and Innovation Survey Guyana: 2013-2014",
-    "title_original": "Productivity, Technology and Innovation Survey Guyana",
-    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-guyana"
-  },
-  {
-    "id": 127,
-    "mydata_category": "",
-    "title": "Productivity, Technology and Innovation Survey Barbados: 2013-2014",
-    "title_original": "Productivity, Technology and Innovation Survey Barbados",
-    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-barbados"
-  },
-  {
-    "id": 128,
-    "mydata_category": "",
-    "title": "Productivity, Technology and Innovation Survey Bahamas: 2013-2014",
-    "title_original": "Productivity, Technology and Innovation Survey Bahamas",
-    "url": "https://mydata.iadb.org/dataset/productivity-technology-and-innovation-survey-bahamas"
-  },
-  {
-    "id": 129,
-    "mydata_category": "",
-    "title": "Finance and Gender Issues Survey Jamaica: 2011",
-    "title_original": "Finance and Gender Issues Survey Jamaica",
-    "url": "https://mydata.iadb.org/dataset/finance-and-gender-issues-survey-jamaica"
-  },
-  {
-    "id": 130,
-    "mydata_category": "",
-    "title": "Finance and Gender Issues Survey - Trinidad and Tobago: 2011",
-    "title_original": "Finance and Gender Issues Survey - Trinidad and Tobago",
-    "url": "https://mydata.iadb.org/dataset/finance-and-gender-issues-survey-trinidad-and-tobago"
-  },
-  {
-    "id": 131,
-    "mydata_category": "",
-    "title": "Finance and Gender Issues Survey Barbados: 2011",
-    "title_original": "Finance and Gender Issues Survey Barbados",
-    "url": "https://mydata.iadb.org/dataset/finance-and-gender-issues-survey-barbados"
-  },
-  {
-    "id": 132,
-    "mydata_category": "",
-    "title": "Guyana Labor Force Survey: Third Quarter 2017",
-    "title_original": "Guyana Labor Force Survey: Third Quarter 2017",
-    "url": "https://mydata.iadb.org/dataset/guyana-labor-force-survey-third-quarter-2017"
-  },
-  {
-    "id": 133,
-    "mydata_category": "",
-    "title": "Guyana Labor Force Survey: Fourth Quarter 2017",
-    "title_original": "Guyana Labor Force Survey: Fourth Quarter 2017",
-    "url": "https://mydata.iadb.org/dataset/guyana-labor-force-survey-fourth-quarter-2017"
-  },
-  {
-    "id": 134,
-    "mydata_category": "",
-    "title": "Barbados: Latin American Public Opinion Project - Victimization and Crime survey 2014",
-    "title_original": "Barbados: Latin American Public Opinion Project - Victimization and Crime survey",
-    "url": "https://mydata.iadb.org/dataset/barbados-latin-american-public-opinion-project-victimization-and-crime-survey"
-  },
-  {
-    "id": 135,
-    "mydata_category": "",
-    "title": "Guyana: Latin American Public Opinion Project - Victimization and Crime survey 2016",
-    "title_original": "Guyana: Latin American Public Opinion Project - Victimization and Crime survey",
-    "url": "https://mydata.iadb.org/dataset/guyana-latin-american-public-opinion-project-victimization-and-crime-survey"
-  },
-  {
-    "id": 136,
-    "mydata_category": "",
-    "title": "Jamaica: Latin American Public Opinion Project - Victimization and Crime survey 2014",
-    "title_original": "Jamaica: Latin American Public Opinion Project - Victimization and Crime survey",
-    "url": "https://mydata.iadb.org/dataset/jamaica-latin-american-public-opinion-project-victimization-and-crime-survey"
-  },
-  {
-    "id": 137,
-    "mydata_category": "",
-    "title": "Suriname: Latin American Public Opinion Project - Victimization and Crime survey 2014",
-    "title_original": "Suriname: Latin American Public Opinion Project - Victimization and Crime survey",
-    "url": "https://mydata.iadb.org/dataset/suriname-latin-american-public-opinion-project-victimization-and-crime-survey"
-  },
-  {
-    "id": 138,
-    "mydata_category": "",
-    "title": "Trinidad and Tobago: Latin American Public Opinion Project - Victimization and Crime survey 2014",
-    "title_original": "Trinidad and Tobago: Latin American Public Opinion Project - Victimization and Crime survey",
-    "url": "https://mydata.iadb.org/dataset/trinidad-and-tobago-latin-american-public-opinion-project-victimization-and-crime-survey"
-  },
-  {
-    "id": 139,
-    "mydata_category": "",
-    "title": "Database of Equivalent Fiscal Pressure in Latin America and the Caribbean - 1990-2018",
-    "title_original": "Equivalent Fiscal Pressure in Latin America and the Caribbean (Dataset)",
-    "url": "https://mydata.iadb.org/dataset/equivalent-fiscal-pressure-in-latin-america-and-the-caribbean-dataset"
-  },
-  {
-    "id": 140,
-    "mydata_category": "",
-    "title": "Survey of Exporting Firms in Latin America and the Caribbean: Understanding the New Export DNA (Second Edition, September 2021 Dataset)",
-    "title_original": "Survey of Exporting Firms in Latin America and the Caribbean: Understanding the New Export DNA: Second Edition, September 2021 (Dataset)",
-    "url": "https://mydata.iadb.org/dataset/survey-of-exporting-firms-in-latin-america-and-the-caribbean-understanding-the-new-export-dna-second-edition-september-2021-dataset"
-  },
-  {
-    "id": 141,
-    "mydata_category": "",
-    "title": "Towards Latin America 2026: The Impact of Exports on Gender Equity Database of Indicators on Productive and Export Structure by Gender in Argentina, Colombia, Mexico, and Peru",
-    "title_original": "Towards Latin America 2026: The Impact of Exports on Gender Equity: Database of Indicators on Productive and Export Structure by Gender in Argentina, Colombia, Mexico, and Peru",
-    "url": "https://mydata.iadb.org/dataset/towards-latin-america-2026-the-impact-of-exports-on-gender-equity-database-of-indicators-on-productive-and-export-structure-by-gender-in-argentina-colombia-mexico-and-peru"
-  },
-  {
-    "id": 142,
-    "mydata_category": "",
-    "title": "2010 InfraScope Index for Latin America and the Caribbean",
-    "title_original": "2010 InfraScope Index for Latin America and the Caribbean",
-    "url": "https://mydata.iadb.org/dataset/2010-infrascope-index-for-latin-america-and-the-caribbean"
-  },
-  {
-    "id": 143,
-    "mydata_category": "",
-    "title": "Database for Revelation of Expectations in Latin America (REVELA): 2006-2010",
-    "title_original": "Database for Revelation of Expectations in Latin America (REVELA)",
-    "url": "https://mydata.iadb.org/dataset/database-for-revelation-of-expectations-in-latin-america-revela"
-  },
-  {
-    "id": 144,
-    "mydata_category": "",
-    "title": "Structural Fiscal Balances Database for LAC: A Tool to Assess Fiscal Performance in the Region",
-    "title_original": "Structural Fiscal Balances Database for LAC: A Tool to Assess Fiscal Performance in the Region",
-    "url": "https://mydata.iadb.org/dataset/structural-fiscal-balances-database-for-lac-a-tool-to-assess-fiscal-performance-in-the-region"
-  },
-  {
-    "id": 145,
-    "mydata_category": "",
-    "title": "Priorities for Productivity and Income (PPIs) Database: 2000-2012",
-    "title_original": "Priorities for Productivity and Income (PPIs) Database",
-    "url": "https://mydata.iadb.org/dataset/priorities-for-productivity-and-income-ppis-database"
-  },
-  {
-    "id": 146,
-    "mydata_category": "",
-    "title": "Tax Reforms in Latin America in an Era of Democracy. A Database (2014 Update)",
-    "title_original": "Tax Reforms in Latin America in an Era of Democracy. A Database (2014 Update)",
-    "url": "https://mydata.iadb.org/dataset/tax-reforms-in-latin-america-in-an-era-of-democracy-a-database-2014-update"
-  },
-  {
-    "id": 147,
-    "mydata_category": "",
-    "title": "Political Particularism around the World: 1978-2001",
-    "title_original": "Political Particularism around the World",
-    "url": "https://mydata.iadb.org/dataset/political-particularism-around-the-world"
-  },
-  {
-    "id": 148,
-    "mydata_category": "",
-    "title": "Medium-Term Frameworks and the Budgetary Process in Latin America. A Database: 2003-2007",
-    "title_original": "Medium-Term Frameworks and the Budgetary Process in Latin America. A Database",
-    "url": "https://mydata.iadb.org/dataset/medium-term-frameworks-and-the-budgetary-process-in-latin-america-a-database"
-  },
-  {
-    "id": 149,
-    "mydata_category": "",
-    "title": "Data Associated with: Social Pulse in Latin America and the Caribbean 2016 - Statistical Annex",
-    "title_original": "Social Pulse in Latin America and the Caribbean 2016 - Statistical Annex",
-    "url": "https://mydata.iadb.org/dataset/social-pulse-in-latin-america-and-the-caribbean-2016-statistical-annex"
-  },
-  {
-    "id": 150,
-    "mydata_category": "",
-    "title": "Survey data of Productivity, Technology, Innovation in the Caribbean: 2014",
-    "title_original": "Productivity, Technology, Innovation in the Caribbean",
-    "url": "https://mydata.iadb.org/dataset/productivity-technology-innovation-in-the-caribbean"
-  },
-  {
-    "id": 151,
-    "mydata_category": "",
-    "title": "Data associated with: Development Effects of Rural Electrification",
-    "title_original": "Development Effects of Rural Electrification",
-    "url": "https://mydata.iadb.org/dataset/development-effects-of-rural-electrification"
-  },
-  {
-    "id": 152,
-    "mydata_category": "",
-    "title": "Data of Violence against women - Colombia - Survey answers: 2014",
-    "title_original": "Data of Violence against women - Colombia - Survey answers",
-    "url": "https://mydata.iadb.org/dataset/data-of-violence-against-women-colombia-survey-answers"
-  },
-  {
-    "id": 153,
-    "mydata_category": "",
-    "title": "Economic Experiments to Measure Trust and Cooperation among Latin America: 2007",
-    "title_original": "Economic Experiments to Measure Trust and Cooperation among Latin America",
-    "url": "https://mydata.iadb.org/dataset/economic-experiments-to-measure-trust-and-cooperation-among-latin-america"
-  },
-  {
-    "id": 154,
-    "mydata_category": "",
-    "title": "Latin American and Caribbean Enterprise Survey: 2011",
-    "title_original": "Latin American and Caribbean Enterprise Survey",
-    "url": "https://mydata.iadb.org/dataset/latin-american-and-caribbean-enterprise-survey"
-  },
-  {
-    "id": 155,
-    "mydata_category": "",
-    "title": "Brazilian Electoral Panel Studies (BEPS) Data: 2010",
-    "title_original": "Brazilian Electoral Panel Studies (BEPS)",
-    "url": "https://mydata.iadb.org/dataset/brazilian-electoral-panel-studies-beps"
-  },
-  {
-    "id": 156,
-    "mydata_category": "",
-    "title": "Politics, Policies, and Productivity: An International Dataset: 2010",
-    "title_original": "Politics, Policies, and Productivity: An International Dataset",
-    "url": "https://mydata.iadb.org/dataset/politics-policies-and-productivity-an-international-dataset"
-  },
-  {
-    "id": 157,
-    "mydata_category": "",
-    "title": "Trade Integration and Business Cycle Synchronization Data: 1960-1990",
-    "title_original": "Trade Integration and Business Cycle Synchronization",
-    "url": "https://mydata.iadb.org/dataset/trade-integration-and-business-cycle-synchronization"
-  },
-  {
-    "id": 158,
-    "mydata_category": "",
-    "title": "Public Debt around the World: A New Dataset of Central Government Debt: 1970-2005",
-    "title_original": "Public Debt around the World: A New Dataset of Central Government Debt",
-    "url": "https://mydata.iadb.org/dataset/public-debt-around-the-world-a-new-dataset-of-central-government-debt"
-  },
-  {
-    "id": 159,
-    "mydata_category": "",
-    "title": "Dataset Learning Better Public Policy for Skills Development: 1990-2016",
-    "title_original": "Dataset Learning Better Public Policy for Skills Development",
-    "url": "https://mydata.iadb.org/dataset/dataset-learning-better-public-policy-for-skills-development"
-  },
-  {
-    "id": 160,
-    "mydata_category": "",
-    "title": "Primary Healthcare Access, Experience, and Coordination in Latin America and the Caribbean 2013 (PRIMLAC) Data: 2013",
-    "title_original": "Primary Healthcare Access, Experience, and Coordination in Latin America and the Caribbean 2013 (PRIMLAC)",
-    "url": "https://mydata.iadb.org/dataset/primary-healthcare-access-experience-and-coordination-in-latin-america-and-the-caribbean-2013-primlac"
-  },
-  {
-    "id": 161,
-    "mydata_category": "",
-    "title": "Non-contributory Public Spending in Latin America and the Caribbean Data: 2010-2015",
-    "title_original": "Non-contributory Public Spending in Latin America and the Caribbean",
-    "url": "https://mydata.iadb.org/dataset/non-contributory-public-spending-in-latin-america-and-the-caribbean"
-  },
-  {
-    "id": 162,
-    "mydata_category": "",
-    "title": "Community Nutrition Program in El Alto, Bolivia Data: 2014-2017",
-    "title_original": "Community Nutrition Program in El Alto, Bolivia",
-    "url": "https://mydata.iadb.org/dataset/community-nutrition-program-in-el-alto-bolivia"
-  },
-  {
-    "id": 163,
-    "mydata_category": "",
-    "title": "Urban Integration and Coexistence Program: Baseline Report (Dataset) 2014",
-    "title_original": "Urban Integration and Coexistence Program: Baseline Report (Dataset)",
-    "url": "https://mydata.iadb.org/dataset/urban-integration-and-coexistence-program-baseline-report-dataset"
-  },
-  {
-    "id": 164,
-    "mydata_category": "",
-    "title": "Survey data of Platform Workers in Argentina 2018 (ETP18) from the Publication Platform Economy and Employment: What Is It Like to Work for an App in Argentina?",
-    "title_original": "Survey data of Platform Workers in Argentina 2018 (ETP18) from the Publication Platform Economy and Employment: What Is It Like to Work for an App in Argentina?",
-    "url": "https://mydata.iadb.org/dataset/survey-data-of-platform-workers-in-argentina-2018-etp18-from-the-publication-platform-economy-and-employment-what-is-it-like-to-work-for-an-app-in-argentina"
-  },
-  {
-    "id": 165,
-    "mydata_category": "",
-    "title": "Departmental GDP Data and Regional Inequality Analysis in Peru (1795-2017)",
-    "title_original": "Departmental GDP Data and Regional Inequality Analysis in Peru (1795-2017)",
-    "url": "https://mydata.iadb.org/dataset/departmental-gdp-data-and-regional-inequality-analysis-in-peru-1795-2017"
-  },
-  {
-    "id": 166,
-    "mydata_category": "",
-    "title": "2020 Better Jobs Index Database: Latin America",
-    "title_original": "2020 Better Jobs Index Database",
-    "url": "https://mydata.iadb.org/dataset/2020-better-jobs-index-database"
-  },
-  {
-    "id": 167,
-    "mydata_category": "",
-    "title": "Replication Data for: How Effective is Energy-efficient Housing?: Evidence From a Field Experiment in Mexico",
-    "title_original": "Energy-Efficient Housing in Mexico Data Set",
-    "url": "https://mydata.iadb.org/dataset/energy-efficient-housing-in-mexico-data-set"
-  },
-  {
-    "id": 168,
-    "mydata_category": "",
-    "title": "Ecuador Longitudinal Survey of Child Health and Development, Rounds 1-5 (2003-2014)",
-    "title_original": "Ecuador Longitudinal Survey of Child Health and Development, Rounds 1-5 (2003-2014)",
-    "url": "https://mydata.iadb.org/dataset/ecuador-longitudinal-survey-of-child-health-and-development-rounds-1-5-2003-2014"
-  },
-  {
-    "id": 169,
-    "mydata_category": "",
-    "title": "Survey on Living Conditions and Social Development in Northern Haiti (LCSDS): 2014-2015",
-    "title_original": "Survey on Living Conditions and Social Development in Northern Haiti (LCSDS)",
-    "url": "https://mydata.iadb.org/dataset/survey-on-living-conditions-and-social-development-in-northern-haiti-lcsds"
-  },
-  {
-    "id": 170,
-    "mydata_category": "",
-    "title": "2019 Pension Indicators for Latin America and the Caribbean",
-    "title_original": "2019 Pension Indicators for Latin America and the Caribbean",
-    "url": "https://mydata.iadb.org/dataset/2019-pension-indicators-for-latin-america-and-the-caribbean"
-  },
-  {
-    "id": 171,
-    "mydata_category": "",
-    "title": "2020 Pension Indicators for Latin America and the Caribbean",
-    "title_original": "2020 Pension Indicators for Latin America and the Caribbean",
-    "url": "https://mydata.iadb.org/dataset/2020-pension-indicators-for-latin-america-and-the-caribbean"
-  },
-  {
-    "id": 172,
-    "mydata_category": "",
-    "title": "Business Surveys on the Impact of COVID-19 on Jamaican Firms: 2020",
-    "title_original": "Business Surveys on the Impact of COVID-19 on Jamaican Firms",
-    "url": "https://mydata.iadb.org/dataset/business-surveys-on-the-impact-of-covid-19-on-jamaican-firms"
-  },
-  {
-    "id": 173,
-    "mydata_category": "",
-    "title": "What Public Policies Do Citizens Want for Combating Crime in Latin America and the Caribbean? A Dataset",
-    "title_original": "What Public Policies Do Citizens Want for Combating Crime in Latin America and the Caribbean? A Dataset",
-    "url": "https://mydata.iadb.org/dataset/what-public-policies-do-citizens-want-for-combating-crime-in-latin-america-and-the-caribbean-a-dataset"
-  },
-  {
-    "id": 174,
-    "mydata_category": "",
-    "title": "Bioinformatics for Researchers in Life Sciences: Tools and Learning Resources",
-    "title_original": "Bioinformatics for Researchers in Life Sciences: Tools and Learning Resources",
-    "url": "https://mydata.iadb.org/dataset/bioinformatics-for-researchers-in-life-sciences-tools-and-learning-resources"
-  },
-  {
-    "id": 175,
-    "mydata_category": "",
-    "title": "Data associated with: Social Pulse: 2017 Statistical Annex in Latin America and the Caribbean",
-    "title_original": "Social Pulse: 2017 Statistical Annex in Latin America and the Caribbean",
-    "url": "https://mydata.iadb.org/dataset/social-pulse-2017-statistical-annex-in-latin-america-and-the-caribbean"
-  },
-  {
-    "id": 176,
-    "mydata_category": "",
-    "title": "Benchmarking Index 2009: Economist Intelligence Unit",
-    "title_original": "Benchmarking Index 2009: Economist Intelligence Unit",
-    "url": "https://mydata.iadb.org/dataset/benchmarking-index-2009-economist-intelligence-unit"
-  },
-  {
-    "id": 177,
-    "mydata_category": "",
-    "title": "GVAR Data associated with: China's Emergence in the World Economy and Business Cycles in Latin America",
-    "title_original": "GVAR Dataset: China's Emergence in the World Economy and Business Cycles in Latin America",
-    "url": "https://mydata.iadb.org/dataset/gvar-dataset-china-s-emergence-in-the-world-economy-and-business-cycles-in-latin-america"
-  },
-  {
-    "id": 178,
-    "mydata_category": "",
-    "title": "RAIS industry level Data associated with: Access to Credit and the Size of the Formal Sector in Brazil",
-    "title_original": "RAIS industry level data: Access to Credit and the Size of the Formal Sector in Brazil",
-    "url": "https://mydata.iadb.org/dataset/rais-industry-level-data-access-to-credit-and-the-size-of-the-formal-sector-in-brazil"
-  },
-  {
-    "id": 179,
-    "mydata_category": "",
-    "title": "Tables and Figures for: Jobs For Growth",
-    "title_original": "Jobs For Growth: Tables and Figures",
-    "url": "https://mydata.iadb.org/dataset/jobs-for-growth-tables-and-figures"
-  },
-  {
-    "id": 180,
-    "mydata_category": "",
-    "title": "Bogota Measurements - Concurrent Validity Bayley-Short Tests Survey Data: Early Childhood Development in Large Scale Studies",
-    "title_original": "Bogota Measurements - Concurrent Validity Bayley-Short Tests: Early Childhood Development in Large Scale Studies",
-    "url": "https://mydata.iadb.org/dataset/bogota-measurements-concurrent-validity-bayley-short-tests-early-childhood-development-in-large-scale-studies"
-  },
-  {
-    "id": 181,
-    "mydata_category": "",
-    "title": "Urban Informal Economy survey (ECINF) Aggregated Data for Brazil: 2003",
-    "title_original": "ECINF Aggregated Data",
-    "url": "https://mydata.iadb.org/dataset/ecinf-aggregated-data"
-  },
-  {
     "id": 182,
     "mydata_category": "",
     "title": "Tables and Figures for: Measuring the Cost of Salaried Labor in Latin America and the Caribbean",
@@ -1274,150 +1400,24 @@
     "url": "https://mydata.iadb.org/dataset/nt-labor-costs-annex-1-and-graphs-measuring-the-cost-of-salaried-labor-in-latin-america-and-the-caribbean"
   },
   {
-    "id": 183,
+    "id": 159,
     "mydata_category": "",
-    "title": "Setting Targets for Results: Target Setting Tool",
-    "title_original": "Setting Targets for Results: Target Setting Tool",
-    "url": "https://mydata.iadb.org/dataset/setting-targets-for-results-target-setting-tool"
+    "title": "Dataset Learning Better: Public Policy for Skills Development: 1990-2016",
+    "title_original": "Dataset Learning Better Public Policy for Skills Development",
+    "url": "https://mydata.iadb.org/dataset/dataset-learning-better-public-policy-for-skills-development"
   },
   {
-    "id": 184,
+    "id": 175,
     "mydata_category": "",
-    "title": "Tables and Figures for: Better Pensions, Better Jobs: Towards Universal Coverage in Latin America and the Caribbean",
-    "title_original": "Better Pensions, Better Jobs: Towards Universal Coverage in Latin America and the Caribbean",
-    "url": "https://mydata.iadb.org/dataset/better-pensions-better-jobs-towards-universal-coverage-in-latin-america-and-the-caribbean"
+    "title": "Data associated with: Social Pulse in Latin America and the Caribbean 2017",
+    "title_original": "Social Pulse: 2017 Statistical Annex in Latin America and the Caribbean",
+    "url": "https://mydata.iadb.org/dataset/social-pulse-2017-statistical-annex-in-latin-america-and-the-caribbean"
   },
   {
-    "id": 185,
+    "id": 112,
     "mydata_category": "",
-    "title": "Tables and Figures for: A Snapshot on the Quality of Seven Home Visit Parenting Programs in Latin America and the Caribbean",
-    "title_original": "A Snapshot on the Quality of Seven Home Visit Parenting Programs in Latin America and the Caribbean",
-    "url": "https://mydata.iadb.org/dataset/a-snapshot-on-the-quality-of-seven-home-visit-parenting-programs-in-latin-america-and-the-caribbean"
-  },
-  {
-    "id": 186,
-    "mydata_category": "",
-    "title": "Latin American Public Opinion Project - Victimization and Crime survey Bahamas: 2014",
-    "title_original": "Bahamas: Latin American Public Opinion Project - Victimization and Crime survey",
-    "url": "https://mydata.iadb.org/dataset/bahamas-latin-american-public-opinion-project-victimization-and-crime-survey"
-  },
-  {
-    "id": 187,
-    "mydata_category": "",
-    "title": "Data Associated with: Overview of Aging and Dependency in Latin America and the Caribbean",
-    "title_original": "Data Associated with the “Overview of Aging and Dependency in Latin America and the Caribbean”",
-    "url": "https://mydata.iadb.org/dataset/data-associated-with-the-overview-of-aging-and-dependency-in-latin-america-and-the-caribbean"
-  },
-  {
-    "id": 188,
-    "mydata_category": "",
-    "title": "Model for Estimating the Costs of Managing Recyclable Waste with the Inclusion of Recyclers",
-    "title_original": "Model for Estimating the Costs of Managing Recyclable Waste with the Inclusion of Recyclers",
-    "url": "https://mydata.iadb.org/dataset/model-for-estimating-the-costs-of-managing-recyclable-waste-with-the-inclusion-of-recyclers"
-  },
-  {
-    "id": 189,
-    "mydata_category": "",
-    "title": "2018 Global Microscope on Financial Inclusion: Dataset",
-    "title_original": "2018 Global Microscope on Financial Inclusion: Dataset",
-    "url": "https://mydata.iadb.org/dataset/2018-global-microscope-on-financial-inclusion-dataset"
-  },
-  {
-    "id": 190,
-    "mydata_category": "",
-    "title": "Labor Market Survey Data in Bolivia: 2015-2016",
-    "title_original": "Labor Market Survey Data in Bolivia",
-    "url": "https://mydata.iadb.org/dataset/labor-market-survey-data-in-bolivia"
-  },
-  {
-    "id": 191,
-    "mydata_category": "",
-    "title": "Data Associated with: Urban Integration and Coexistence Program: Results of the Pairing Strategy",
-    "title_original": "Urban Integration and Coexistence Program: Results of the Pairing Strategy (Dataset)",
-    "url": "https://mydata.iadb.org/dataset/urban-integration-and-coexistence-program-results-of-the-pairing-strategy-dataset"
-  },
-  {
-    "id": 192,
-    "mydata_category": "",
-    "title": "Database of Public Investment Expenditures in Latin America (BDD-GIPAL): 2000-2016",
-    "title_original": "Database of Public Investment Expenditures in Latin America (BDD-GIPAL)",
-    "url": "https://mydata.iadb.org/dataset/database-of-public-investment-expenditures-in-latin-america-bdd-gipal"
-  },
-  {
-    "id": 193,
-    "mydata_category": "",
-    "title": "Data associated with: Labor Market Analysis in Bolivia: Skills and Training Needs: 2015-2017",
-    "title_original": "Labor Market Analysis in Bolivia: Skills and Training Needs (Dataset)",
-    "url": "https://mydata.iadb.org/dataset/labor-market-analysis-in-bolivia-skills-and-training-needs-dataset"
-  },
-  {
-    "id": 194,
-    "mydata_category": "",
-    "title": "Harmonized Latin American Innovation Surveys Database (LAIS): Firm-Level Microdata for the Study of Innovation: 2007-2017",
-    "title_original": "Harmonized Latin American Innovation Surveys Database (LAIS): Firm-Level Microdata for the Study of Innovation: Dataset",
-    "url": "https://mydata.iadb.org/dataset/harmonized-latin-american-innovation-surveys-database-lais-firm-level-microdata-for-the-study-of-innovation-dataset"
-  },
-  {
-    "id": 195,
-    "mydata_category": "",
-    "title": "Database of Equivalent Fiscal Pressure in Latin America and the Caribbean - 1990-2021: Update and Status in the Post-COVID-19 Pandemic Recovery",
-    "title_original": "Equivalent Fiscal Pressure in Latin America and the Caribbean (1990-2021): Update and Status in the Post-COVID-19 Pandemic Recovery: Database",
-    "url": "https://mydata.iadb.org/dataset/equivalent-fiscal-pressure-in-latin-america-and-the-caribbean-1990-2021-update-and-status-in-the-post-covid-19-pandemic-recovery-database"
-  },
-  {
-    "id": 196,
-    "mydata_category": "",
-    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of June 2023",
-    "title_original": "June 2023: Latin America and the Caribbean Standardized Public Debt Database",
-    "url": "https://mydata.iadb.org/dataset/june-2023-latin-america-and-the-caribbean-standardized-public-debt-database"
-  },
-  {
-    "id": 197,
-    "mydata_category": "",
-    "title": "2023 IDB Climate Finance Database",
-    "title_original": "2023 Climate Finance Database",
-    "url": "https://mydata.iadb.org/dataset/2023-climate-finance-database"
-  },
-  {
-    "id": 198,
-    "mydata_category": "",
-    "title": "IDB/Cornell Coronavirus Survey: 2020",
-    "title_original": "IDB/Cornell Coronavirus Survey",
-    "url": "https://mydata.iadb.org/dataset/idb-cornell-coronavirus-survey"
-  },
-  {
-    "id": 199,
-    "mydata_category": "",
-    "title": "Cost Simulation Tool for Long-Term Care Systems in Latin America and the Caribbean",
-    "title_original": "Cost Simulation Tool for Long-Term Care Systems",
-    "url": "https://mydata.iadb.org/dataset/cost-simulation-tool-for-long-term-care-systems"
-  },
-  {
-    "id": 200,
-    "mydata_category": "",
-    "title": "Transmission Risk Assessment Checklist",
-    "title_original": "Transmission Risk Assessment Checklist",
-    "url": "https://mydata.iadb.org/dataset/transmission-risk-assessment-checklist"
-  },
-  {
-    "id": 201,
-    "mydata_category": "",
-    "title": "Data associated with: Aging in Latin America and the Caribbean: Social Protection and Quality of Life of Older Persons",
-    "title_original": "Aging in Latin America and the Caribbean: Social Protection and Quality of Life of Older Persons: Associated Data",
-    "url": "https://mydata.iadb.org/dataset/aging-in-latin-america-and-the-caribbean-social-protection-and-quality-of-life-of-older-persons-associated-data"
-  },
-  {
-    "id": 202,
-    "mydata_category": "",
-    "title": "Tool for Calculating Human Resource Needs for the Care of Older Adults with Dependency",
-    "title_original": "Tool for Calculating Human Resource Needs for the Care of Older Adults with Dependency",
-    "url": "https://mydata.iadb.org/dataset/tool-for-calculating-human-resource-needs-for-the-care-of-older-adults-with-dependency"
-  },
-  {
-    "id": 203,
-    "mydata_category": "",
-    "title": "Freight Transport and Logistics Statistics Yearbook: 2012-2014",
-    "title_original": "Freight Transport and Logistics Statistics Yearbook",
-    "url": "https://mydata.iadb.org/dataset/freight-transport-and-logistics-statistics-yearbook"
+    "title": "Latin America and the Caribbean Standardized Public Debt Database: Data as of June 2019",
+    "title_original": "June 2019: Latin America and the Caribbean Standardized Public Debt Database",
+    "url": "https://mydata.iadb.org/dataset/june-2019-latin-america-and-the-caribbean-standardized-public-debt-database"
   }
 ]
