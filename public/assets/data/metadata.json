@@ -5960,7 +5960,7 @@
         "language": "en",
         "title": "IDB Project Procurement Contract Awards Data",
         "description": "This database compiles information on contract awards related to IDB financed, sovereign-guaranteed operations in Latin America and the Caribbean. This database spans information since 2010. Data can also be viewed at https://projectprocurement.iadb.org/en/awarded-contracts.",
-        "temporal": "2010-2024",
+        "temporal": "2010-2023",
         "keyword": [
             "Public Procurement",
             "Contract Awards"
