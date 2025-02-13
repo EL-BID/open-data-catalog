@@ -4,7 +4,7 @@ import { DataService } from '../data.service';
 import { Title, Meta } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faDownload, faEarthAmerica, faCircleInfo, faDatabase, faUserShield, faLink } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faEarthAmerica, faCircleInfo, faDatabase, faUserShield, faLink, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dataset-detail',
@@ -20,6 +20,7 @@ export class DatasetDetailComponent implements OnInit {
   faDatabase = faDatabase;
   faUserShield = faUserShield;
   faLink = faLink;
+  faCheck = faCheck;
   mydataCategory: string | null = null;
   titleOriginal: string | null = null;
   mydataId: string | null = null;

@@ -26,9 +26,11 @@
           <p class="metadata-item">
             <fa-icon [icon]="faCheck"></fa-icon> Geographic Coverage:
             <strong [title]="dataset.spatial.join(', ')">{{ getLimitedCountries(dataset.spatial) }}</strong>
-            <span class="tooltip-container" (mouseenter)="toggleTooltip(true)" (mouseleave)="toggleTooltip(false)">
-              <fa-icon *ngIf="hasMoreCountries" [icon]="faCircleInfo"></fa-icon>
-              <div class="tooltip-content" [hidden]="!showTooltip">
+            <span class="tooltip-container" (mouseenter)="toggleTooltip(true)" (mouseleave)="toggleTooltip(false)"
+              (focus)="toggleTooltip(true)" (blur)="toggleTooltip(false)" tabindex="0" role="tooltip"
+              aria-label="More information about geographic coverage" aria-describedby="tooltip-content">
+              <fa-icon *ngIf="hasMoreCountries" [icon]="faCircleInfo" aria-hidden="true"></fa-icon>
+              <div class="tooltip-content" [hidden]="!showTooltip" id="tooltip-content">
                 <span>{{ dataset.spatial.join(', ') }}</span>
               </div>
             </span>
