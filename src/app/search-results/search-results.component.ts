@@ -2,11 +2,13 @@ import { ChangeDetectorRef, Component, Input, Output, EventEmitter, OnChanges, S
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faCircleInfo, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-search-results',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FontAwesomeModule],
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.scss']
 })
@@ -25,6 +27,10 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
   filteredDatasets: any[] = [];
   isDescriptionExpanded: { [key: number]: boolean } = {};
   showReadMoreButton: { [key: number]: boolean } = {};
+  faCircleInfo = faCircleInfo;
+  faCheck = faCheck;
+  showTooltip = false;
+  hasMoreCountries = false;
 
   constructor(private dataService: DataService, private router: Router, private changeDetectorRef: ChangeDetectorRef) { }
 
@@ -154,7 +160,14 @@ export class SearchResultsComponent implements OnChanges, AfterViewInit {
       return spatial;
     }
     const sortedCountries = spatial.sort((a, b) => a.localeCompare(b));
-    const limitedCountries = sortedCountries.slice(0, 5);
-    return limitedCountries.join(', ') + (spatial.length > 5 ? ',...' : '');
+    const limitedCountries = sortedCountries.slice(0, 3);
+    this.hasMoreCountries = spatial.length > 3;
+    return limitedCountries.join(', ') + (this.hasMoreCountries ? ',...' : '');
   }
+
+  toggleTooltip(show: boolean) {
+    this.showTooltip = show;
+    this.changeDetectorRef.detectChanges();
+  }
+
 }
