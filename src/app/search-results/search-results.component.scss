@@ -142,6 +142,7 @@
 .truncated-description {
   display: -webkit-box;
   -webkit-line-clamp: 5;
+  line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -192,6 +193,17 @@
 .tooltip-container:hover .tooltip-content,
 .tooltip-container:focus-within .tooltip-content {
   display: block;
+}
+
+@media (max-width: 576px) {
+
+  .tooltip-content {
+    min-width: 180px;
+  }
+
+  .tooltip-content::before {
+    left: 51%;
+  }
 }
 
 @media (max-width: 1024px) {
