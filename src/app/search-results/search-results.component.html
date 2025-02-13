@@ -24,14 +24,21 @@
           </div>
         </div>
         <div class="metadata-sidebar">
-          <p class="metadata-item">✓ Geographic Coverage:
-            <strong [title]="dataset.spatial.join(', ')">{{
-              getLimitedCountries(dataset.spatial) }}</strong>
-          </p>
-          <p class="metadata-item">✓ Temporal Coverage:
+          <p class="metadata-item">
+            <fa-icon [icon]="faCheck"></fa-icon> Geographic Coverage:
+            <strong [title]="dataset.spatial.join(', ')">{{ getLimitedCountries(dataset.spatial) }}</strong>
+            <span class="tooltip-container" (mouseenter)="toggleTooltip(true)" (mouseleave)="toggleTooltip(false)">
+                <fa-icon *ngIf="hasMoreCountries" [icon]="faCircleInfo"></fa-icon>
+                <div class="tooltip-content" [hidden]="!showTooltip">
+                    <span>{{ dataset.spatial.join(', ') }}</span>
+                </div>
+            </span>
+        </p>
+
+          <p class="metadata-item"><fa-icon [icon]="faCheck"></fa-icon> Temporal Coverage:
             <strong>{{ dataset.temporal }}</strong>
           </p>
-          <p class="metadata-item">✓ Published Date:
+          <p class="metadata-item"><fa-icon [icon]="faCheck"></fa-icon> Published Date:
             <strong>{{ dataset.issued }}</strong>
           </p>
         </div>
