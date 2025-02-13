@@ -2,8 +2,7 @@
   <div class="dataset-list" *ngFor="let dataset of filteredDatasets">
     <div class="dataset-item">
       <div class="dataset-header">
-        <h2 (click)="viewDataset(dataset.mydata_category, dataset.title_original)"
-          class="clickable-title" tabindex="0">
+        <h2 (click)="viewDataset(dataset.mydata_category, dataset.title_original)" class="clickable-title" tabindex="0">
           {{ dataset.title }}
         </h2>
         <span>By <strong>{{ dataset.unitResponsible }}</strong></span>
@@ -28,13 +27,12 @@
             <fa-icon [icon]="faCheck"></fa-icon> Geographic Coverage:
             <strong [title]="dataset.spatial.join(', ')">{{ getLimitedCountries(dataset.spatial) }}</strong>
             <span class="tooltip-container" (mouseenter)="toggleTooltip(true)" (mouseleave)="toggleTooltip(false)">
-                <fa-icon *ngIf="hasMoreCountries" [icon]="faCircleInfo"></fa-icon>
-                <div class="tooltip-content" [hidden]="!showTooltip">
-                    <span>{{ dataset.spatial.join(', ') }}</span>
-                </div>
+              <fa-icon *ngIf="hasMoreCountries" [icon]="faCircleInfo"></fa-icon>
+              <div class="tooltip-content" [hidden]="!showTooltip">
+                <span>{{ dataset.spatial.join(', ') }}</span>
+              </div>
             </span>
-        </p>
-
+          </p>
           <p class="metadata-item"><fa-icon [icon]="faCheck"></fa-icon> Temporal Coverage:
             <strong>{{ dataset.temporal }}</strong>
           </p>
