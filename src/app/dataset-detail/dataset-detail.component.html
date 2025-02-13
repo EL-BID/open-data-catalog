@@ -30,11 +30,11 @@
       </div>
       <ul>
         <li *ngIf="dataset?.temporal">
-          <div>✓ Temporal:</div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> Temporal:</div>
           <div>{{ dataset?.temporal }}</div>
         </li>
         <li *ngIf="dataset?.spatial?.length > 0">
-          <div>✓ Geographical:</div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> Geographical:</div>
           <div>{{ sortCountries(dataset?.spatial) }}</div>
         </li>
       </ul>
@@ -47,17 +47,17 @@
       </div>
       <ul>
         <li *ngIf="getSortedKeywords().length > 0">
-          <div>✓ Keyword(s):</div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> Keyword(s):</div>
           <div>
             {{ getSortedKeywords().join(', ') }}
           </div>
         </li>
         <li>
-          <div>✓ Published Date:</div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> Published Date:</div>
           <div>{{ dataset?.issued }}</div>
         </li>
         <li>
-          <div>✓ Last Updated:</div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> Last Updated:</div>
           <div>{{ dataset?.modified }}</div>
         </li>
       </ul>
@@ -70,15 +70,15 @@
       </div>
       <ul>
         <li>
-          <div>✓ Structure:</div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> Structure:</div>
           <div>{{ dataset?.dataStructure }}</div>
         </li>
         <li>
-          <div>✓ Statistical Type:</div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> Statistical Type:</div>
           <div>{{ dataset?.statisticalType }}</div>
         </li>
         <li>
-          <div>✓ Dataset Type:</div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> Dataset Type:</div>
           <div>{{ dataset?.type }}</div>
         </li>
       </ul>
@@ -91,11 +91,11 @@
       </div>
       <ul>
         <li>
-          <div>✓ Publisher:</div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> Publisher:</div>
           <div>{{ dataset?.publisher }}</div>
         </li>
         <li>
-          <div>✓ License:</div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> License:</div>
           <div>
             <a *ngIf="dataset?.license" [href]="getLicense()" target="_blank" rel="noopener noreferrer"
               class="metadata-link">
@@ -104,7 +104,7 @@
           </div>
         </li>
         <li>
-          <div>✓ Author(s): </div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> Author(s): </div>
           <div>{{ getAuthors() }}</div>
         </li>
       </ul>
@@ -123,7 +123,7 @@
       </div>
       <ul>
         <li>
-          <div>✓ Source:</div>
+          <div><fa-icon [icon]="faCheck"></fa-icon> Source:</div>
           <div>
             <a [href]="dataset.source" target="_blank" rel="noopener noreferrer" class="metadata-link">
               {{ dataset.source }}

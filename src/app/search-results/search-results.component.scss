@@ -104,6 +104,7 @@
 .dataset-description {
   display: -webkit-box;
   -webkit-line-clamp: 5;
+  line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -113,6 +114,7 @@
 
 .dataset-description.expanded {
   -webkit-line-clamp: unset;
+  line-clamp: unset;
   max-height: none;
   overflow: visible;
 }
@@ -159,7 +161,6 @@
 .tooltip-container fa-icon {
   margin-left: 5px;
   font-size: 1.6rem;
-  cursor: pointer;
 }
 
 .tooltip-content {
